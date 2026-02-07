@@ -1,0 +1,852 @@
+[
+  {
+    "id": "CD0001",
+    "name": "Quỹ Nhịp Tim Việt Nam (Vết sẹo cuộc đời)",
+    "field": "Y tế & Sức khỏe",
+    "date": "2006-11-21",
+    "id_owner": "CC0001",
+    "phone": "0908555001",
+    "goal": 15000000000,
+    "currency": "VND",
+    "introduction": "Chương trình y tế nhân đạo nhằm hỗ trợ chi phí phẫu thuật tim cho trẻ em nghèo mắc bệnh tim bẩm sinh, giúp các em có cơ hội sống khỏe mạnh và theo đuổi ước mơ.",
+    "activities": [
+      "Tài trợ chi phí phẫu thuật tim cho trẻ em nghèo",
+      "Khám sàng lọc tim bẩm sinh tại các tỉnh xa",
+      "Hỗ trợ hậu phẫu và dinh dưỡng cho bệnh nhi"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0002",
+    "name": "Operation Smile Vietnam (Phẫu thuật Nụ cười)",
+    "field": "Y tế & Sức khỏe",
+    "date": "1989-02-06",
+    "id_owner": "CC0002",
+    "phone": "0913666002",
+    "goal": 12000000000,
+    "currency": "VND",
+    "introduction": "Cung cấp các ca phẫu thuật miễn phí cho trẻ em bị dị tật hàm mặt, chủ yếu là sứt môi và hở hàm ếch, giúp các em tự tin hòa nhập cộng đồng.",
+    "activities": [
+      "Phẫu thuật hàm mặt miễn phí cho trẻ em",
+      "Điều trị nha khoa và trị liệu ngôn ngữ",
+      "Đào tạo chuyên môn y khoa cho bác sĩ địa phương"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0003",
+    "name": "Quỹ Ngày mai tươi sáng (Hỗ trợ bệnh nhi ung thư)",
+    "field": "Y tế & Sức khỏe",
+    "date": "2011-08-18",
+    "id_owner": "CC0003",
+    "phone": "0989777003",
+    "goal": 10000000000,
+    "currency": "VND",
+    "introduction": "Hỗ trợ bệnh nhân ung thư nghèo trên toàn quốc, đặc biệt là trẻ em, đồng thời thúc đẩy nghiên cứu và nâng cao nhận thức về ung thư.",
+    "activities": [
+      "Hỗ trợ tiền thuốc và viện phí cho bệnh nhân nghèo",
+      "Tổ chức các chuyến xe miễn phí cho bệnh nhân",
+      "Tặng quà động viên bệnh nhi vào các dịp lễ"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0004",
+    "name": "Hỗ trợ nạn nhân Chất độc Da cam (VAVA)",
+    "field": "An sinh Xã hội",
+    "date": "2004-01-10",
+    "id_owner": "CC0004",
+    "phone": "0903888004",
+    "goal": 8000000000,
+    "currency": "VND",
+    "introduction": "Chăm sóc, giúp đỡ và bảo vệ quyền lợi cho các nạn nhân chất độc da cam, giúp họ vượt qua mặc cảm và cải thiện đời sống.",
+    "activities": [
+      "Xây dựng nhà tình nghĩa cho gia đình nạn nhân",
+      "Hỗ trợ phục hồi chức năng và dạy nghề",
+      "Cung cấp trợ cấp khó khăn hàng tháng"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0005",
+    "name": "Quỹ Trò nghèo vùng cao (Cơm có thịt)",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2014-02-25",
+    "id_owner": "CC0005",
+    "phone": "0912999005",
+    "goal": 12000000000,
+    "currency": "VND",
+    "introduction": "Mang lại những bữa ăn đủ chất dinh dưỡng cho học sinh vùng cao, giúp giảm tỷ lệ bỏ học và nâng cao thể trạng cho trẻ em.",
+    "activities": [
+      "Tài trợ bữa ăn trưa dinh dưỡng tại trường",
+      "Cung cấp quần áo ấm, chăn màn cho học sinh",
+      "Xây dựng phòng học và ký túc xá"
+    ],
+    "scale": "Miền núi phía Bắc"
+  },
+  {
+    "id": "CD0006",
+    "name": "Dự án Nuôi Em",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2019-06-04",
+    "id_owner": "CC0006",
+    "phone": "0933635156",
+    "goal": 20000000000,
+    "currency": "VND",
+    "introduction": "Mô hình nuôi cơm trưa cho trẻ em bản cao bằng cách kết nối người nuôi và em nhỏ thông qua mã số định danh cụ thể.",
+    "activities": [
+      "Tổ chức nuôi cơm trưa cho trẻ em vùng cao",
+      "Xây dựng trường học (Sức mạnh 2000)",
+      "Lắp đặt hệ thống lọc nước và điện mặt trời"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0007",
+    "name": "Nam Phuong Foundation (Kiến tạo nhịp cầu)",
+    "field": "An sinh Xã hội",
+    "date": "2013-09-19",
+    "id_owner": "CC0007",
+    "phone": "0909111007",
+    "goal": 5000000000,
+    "currency": "VND",
+    "introduction": "Thay thế những cây cầu tạm, cầu khỉ nguy hiểm bằng cầu bê tông vững chãi, đảm bảo an toàn cho trẻ em đến trường.",
+    "activities": [
+      "Khảo sát và xây dựng cầu bê tông tại nông thôn",
+      "Trao tặng học bổng cho học sinh nghèo tại địa phương",
+      "Tổ chức các buổi truyền thông an toàn giao thông"
+    ],
+    "scale": "Đồng bằng sông Cửu Long"
+  },
+  {
+    "id": "CD0008",
+    "name": "Chiến dịch Hiến máu nhân đạo Quốc gia",
+    "field": "Văn hóa & Cộng đồng",
+    "date": "2018-11-12",
+    "id_owner": "CC0008",
+    "phone": "0944000111",
+    "goal": 1000000000,
+    "currency": "VND",
+    "introduction": "Vận động cộng đồng tham gia hiến máu tình nguyện để cứu người, đảm bảo nguồn máu dự trữ cho các bệnh viện.",
+    "activities": [
+      "Tổ chức ngày hội hiến máu (Lễ hội Xuân Hồng)",
+      "Tuyên truyền và vận động hiến máu",
+      "Quản lý và hỗ trợ người hiến máu tình nguyện"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0009",
+    "name": "Saigon Children's Charity (Học bổng giáo dục)",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "1992-05-20",
+    "id_owner": "CC0009",
+    "phone": "0901333009",
+    "goal": 7000000000,
+    "currency": "VND",
+    "introduction": "Giúp trẻ em có hoàn cảnh khó khăn tiếp cận giáo dục chất lượng để vượt qua nghèo đói và phát triển tương lai.",
+    "activities": [
+      "Trao học bổng dài hạn cho trẻ em nghèo",
+      "Xây dựng và cải tạo trường học",
+      "Đào tạo nghề cho thanh thiếu niên khó khăn"
+    ],
+    "scale": "Miền Nam Việt Nam"
+  },
+  {
+    "id": "CD0010",
+    "name": "Quỹ Charity 2000 (Quán cơm 2.000đ)",
+    "field": "An sinh Xã hội",
+    "date": "2021-03-15",
+    "id_owner": "CC0010",
+    "phone": "0905222333",
+    "goal": 3000000000,
+    "currency": "VND",
+    "introduction": "Cung cấp các bữa ăn giá rẻ 2.000 đồng cho người lao động nghèo, sinh viên khó khăn với tinh thần tôn trọng và sẻ chia.",
+    "activities": [
+      "Duy trì hoạt động quán cơm xã hội hàng ngày",
+      "Phát quà nhu yếu phẩm cho người già neo đơn",
+      "Hỗ trợ y tế khẩn cấp cho người vô gia cư"
+    ],
+    "scale": "TP. Hồ Chí Minh"
+  },
+  {
+    "id": "CD0011",
+    "name": "Cứu trợ lũ lụt Miền Trung (Phan Anh)",
+    "field": "An sinh Xã hội",
+    "date": "2020-10-20",
+    "id_owner": "CC0011",
+    "phone": "0918777888",
+    "goal": 50000000000,
+    "currency": "VND",
+    "introduction": "Hỗ trợ khẩn cấp lương thực, nước uống và tiền mặt cho đồng bào miền Trung trong và sau các đợt bão lũ lịch sử.",
+    "activities": [
+      "Phát lương thực và nhu yếu phẩm cứu trợ",
+      "Hỗ trợ sửa chữa nhà cửa sau lũ",
+      "Tặng sinh kế (con giống, cây giống) để tái sản xuất"
+    ],
+    "scale": "Miền Trung"
+  },
+  {
+    "id": "CD0012",
+    "name": "Chống hạn mặn Miền Tây (Thủy Tiên)",
+    "field": "Môi trường & Động vật",
+    "date": "2020-04-01",
+    "id_owner": "CC0012",
+    "phone": "0919222444",
+    "goal": 15000000000,
+    "currency": "VND",
+    "introduction": "Lắp đặt các trạm lọc nước mặn thành nước ngọt công suất lớn để phục vụ sinh hoạt và tưới tiêu cho bà con vùng hạn mặn.",
+    "activities": [
+      "Lắp đặt máy lọc nước RO công nghiệp",
+      "Tặng bồn chứa nước sạch cho hộ nghèo",
+      "Vận chuyển nước ngọt cứu trợ khẩn cấp"
+    ],
+    "scale": "Đồng bằng sông Cửu Long"
+  },
+  {
+    "id": "CD0013",
+    "name": "Blue Dragon (Giải cứu trẻ em đường phố)",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2003-06-02",
+    "id_owner": "CC0013",
+    "phone": "0982555666",
+    "goal": 7000000000,
+    "currency": "VND",
+    "introduction": "Giải cứu trẻ em khỏi cảnh bị bóc lột, buôn bán và cung cấp các dịch vụ hỗ trợ tâm lý, giáo dục để các em làm lại cuộc đời.",
+    "activities": [
+      "Giải cứu trẻ em đường phố và nạn nhân buôn người",
+      "Cung cấp nhà nội trú an toàn và ăn uống",
+      "Hỗ trợ pháp lý và tái hòa nhập gia đình"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0014",
+    "name": "Mái ấm Thiên Ân (Dạy trẻ khiếm thị)",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "1994-07-15",
+    "id_owner": "CC0014",
+    "phone": "0937292111",
+    "goal": 2000000000,
+    "currency": "VND",
+    "introduction": "Nuôi dưỡng và giáo dục trẻ em khiếm thị, dạy các em chữ nổi và các kỹ năng nghề nghiệp để tự lập.",
+    "activities": [
+      "Dạy chữ Braille và chương trình phổ thông",
+      "Đào tạo nghề (massage, tin học) cho người mù",
+      "Tổ chức các hoạt động văn nghệ, thể thao chuyên biệt"
+    ],
+    "scale": "TP. Hồ Chí Minh"
+  },
+  {
+    "id": "CD0015",
+    "name": "Quỹ Hy Vọng (Xây trường vùng cao)",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2022-01-05",
+    "id_owner": "CC0015",
+    "phone": "0903111222",
+    "goal": 10000000000,
+    "currency": "VND",
+    "introduction": "Thay thế các phòng học tranh tre nứa lá bằng trường lớp kiên cố, khang trang, tạo môi trường học tập tốt nhất cho học sinh nghèo.",
+    "activities": [
+      "Xây dựng điểm trường và nhà vệ sinh sạch sẽ",
+      "Tài trợ trang thiết bị dạy học hiện đại",
+      "Dự án ánh sáng học đường (lắp đèn chống cận)"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0016",
+    "name": "Chương trình Máy tính cho em",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2021-09-01",
+    "id_owner": "CC0016",
+    "phone": "0913999888",
+    "goal": 25000000000,
+    "currency": "VND",
+    "introduction": "Cung cấp máy tính và hạ tầng internet cho học sinh, sinh viên nghèo phục vụ việc học tập trực tuyến và tiếp cận tri thức.",
+    "activities": [
+      "Trao tặng máy tính bảng và laptop",
+      "Tài trợ gói cước internet học tập miễn phí",
+      "Xây dựng phòng máy tính cộng đồng tại các bản"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0017",
+    "name": "Ánh sáng cho người nghèo (Mổ mắt miễn phí)",
+    "field": "Y tế & Sức khỏe",
+    "date": "2020-08-15",
+    "id_owner": "CC0017",
+    "phone": "0945666777",
+    "goal": 4000000000,
+    "currency": "VND",
+    "introduction": "Đem lại ánh sáng cho người già neo đơn và bệnh nhân nghèo thông qua các đợt phẫu thuật đục thủy tinh thể miễn phí.",
+    "activities": [
+      "Tài trợ chi phí thay thủy tinh thể nhân tạo",
+      "Khám mắt và phát thuốc miễn phí lưu động",
+      "Tặng kính thuốc cho học sinh vùng sâu"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0018",
+    "name": "Save the Children (Bảo vệ trẻ em)",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2022-02-14",
+    "id_owner": "CC0018",
+    "phone": "0902444555",
+    "goal": 9000000000,
+    "currency": "VND",
+    "introduction": "Bảo vệ quyền trẻ em, giúp các em được sống an toàn, được học tập và được chăm sóc y tế đầy đủ.",
+    "activities": [
+      "Ứng phó khẩn cấp bảo vệ trẻ em trong thiên tai",
+      "Tuyên truyền chống bạo lực và xâm hại trẻ em",
+      "Cải thiện dinh dưỡng học đường cho trẻ mầm non"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0019",
+    "name": "Trồng rừng đại ngàn (Green Việt)",
+    "field": "Môi trường & Động vật",
+    "date": "2021-10-04",
+    "id_owner": "CC0019",
+    "phone": "0966333444",
+    "goal": 3500000000,
+    "currency": "VND",
+    "introduction": "Phục hồi rừng đầu nguồn và bảo vệ đa dạng sinh học thông qua việc trồng cây bản địa và giáo dục môi trường.",
+    "activities": [
+      "Tổ chức các đợt trồng rừng phòng hộ",
+      "Giám sát và bảo vệ các loài động vật quý hiếm",
+      "Xây dựng trung tâm giáo dục thiên nhiên"
+    ],
+    "scale": "Miền Trung"
+  },
+  {
+    "id": "CD0020",
+    "name": "Nước sạch cho bản làng (UNICEF)",
+    "field": "Môi trường & Động vật",
+    "date": "2022-01-01",
+    "id_owner": "CC0020",
+    "phone": "0912111222",
+    "goal": 12000000000,
+    "currency": "VND",
+    "introduction": "Cải thiện điều kiện vệ sinh và nước sạch cho trẻ em và cộng đồng dân tộc thiểu số tại các vùng khó khăn.",
+    "activities": [
+      "Xây dựng giếng khoan và hệ thống tháp nước",
+      "Lắp đặt thiết bị vệ sinh tại các điểm trường",
+      "Tuyên truyền giữ gìn vệ sinh nguồn nước"
+    ],
+    "scale": "Tây Nguyên"
+  },
+  {
+    "id": "CD0021",
+    "name": "Dự án Cải thiện Dinh dưỡng Trẻ em nghèo",
+    "field": "Y tế & Sức khỏe",
+    "date": "2021-05-10",
+    "id_owner": "CC0021",
+    "phone": "0988555222",
+    "goal": 5500000000,
+    "currency": "VND",
+    "introduction": "Chương trình cung cấp thực phẩm bổ sung và vi chất thiết yếu cho trẻ em tại các xã đặc biệt khó khăn, giúp giảm tỷ lệ suy dinh dưỡng thấp còi.",
+    "activities": [
+      "Cung cấp sữa và thực phẩm bổ sung dinh dưỡng hàng tháng",
+      "Khám tư vấn dinh dưỡng định kỳ cho trẻ mầm non",
+      "Tập huấn kiến thức chăm sóc trẻ cho phụ huynh và giáo viên"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0022",
+    "name": "Quỹ Học bổng Thắp sáng Niềm tin",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2019-06-15",
+    "id_owner": "CC0022",
+    "phone": "0914222333",
+    "goal": 30000000000,
+    "currency": "VND",
+    "introduction": "Hỗ trợ học phí và sinh hoạt phí cho những sinh viên học giỏi nhưng có hoàn cảnh đặc biệt khó khăn, giúp các em không phải bỏ học giữa chừng.",
+    "activities": [
+      "Trao học bổng toàn phần cho sinh viên đại học",
+      "Tổ chức các khóa đào tạo kỹ năng mềm và ngoại ngữ",
+      "Hỗ trợ tìm kiếm việc làm và thực tập cho sinh viên năm cuối"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0023",
+    "name": "Dự án Xây trường cho em (Vùng cao)",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2020-12-20",
+    "id_owner": "CC0023",
+    "phone": "0908111999",
+    "goal": 15000000000,
+    "currency": "VND",
+    "introduction": "Xây dựng các điểm trường kiên cố tại vùng sâu, vùng xa để thay thế lớp học tạm tranh tre, giúp học sinh có môi trường an toàn để học tập.",
+    "activities": [
+      "Thi công lớp học, nhà công vụ và sân chơi",
+      "Tặng bàn ghế, bảng viết và thiết bị giáo dục",
+      "Tổ chức lễ khánh thành và bàn giao cho địa phương"
+    ],
+    "scale": "Vùng núi phía Bắc"
+  },
+  {
+    "id": "CD0024",
+    "name": "Chương trình Vì phụ nữ nghèo nông thôn",
+    "field": "An sinh Xã hội",
+    "date": "2021-08-08",
+    "id_owner": "CC0024",
+    "phone": "0915666888",
+    "goal": 4500000000,
+    "currency": "VND",
+    "introduction": "Cung cấp vốn vay không lãi suất và hướng dẫn kỹ thuật sản xuất để phụ nữ nghèo tự chủ kinh tế, thoát nghèo bền vững.",
+    "activities": [
+      "Giải ngân vốn vay quay vòng cho các hộ phụ nữ",
+      "Đào tạo kỹ thuật canh tác và chăn nuôi bền vững",
+      "Kết nối chuỗi cung ứng tiêu thụ nông sản sạch"
+    ],
+    "scale": "Nông thôn Việt Nam"
+  },
+  {
+    "id": "CD0025",
+    "name": "Phổ cập Tin học cho trẻ em xa xôi",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2020-03-12",
+    "id_owner": "CC0025",
+    "phone": "0912444777",
+    "goal": 18000000000,
+    "currency": "VND",
+    "introduction": "Mang công nghệ đến với các xã đảo và vùng sâu thông qua các phòng máy tính cộng đồng và lớp dạy kỹ năng số miễn phí.",
+    "activities": [
+      "Lắp đặt phòng máy tính kết nối internet tại xã",
+      "Tổ chức lớp dạy kỹ năng tin học văn phòng cơ bản",
+      "Tặng tài khoản học tiếng Anh trực tuyến cho học sinh"
+    ],
+    "scale": "Vùng xa và hải đảo"
+  },
+  {
+    "id": "CD0026",
+    "name": "Chiến dịch Áo ấm mùa đông",
+    "field": "An sinh Xã hội",
+    "date": "2020-05-05",
+    "id_owner": "CC0026",
+    "phone": "0903555222",
+    "goal": 2000000000,
+    "currency": "VND",
+    "introduction": "Quyên góp và tặng áo khoác mới, chăn ấm, tất và ủng cho trẻ em vùng cao trước khi mùa đông khắc nghiệt tràn về.",
+    "activities": [
+      "Mua sắm và vận chuyển trang phục giữ ấm",
+      "Tổ chức các chuyến đi trao quà trực tiếp tại bản",
+      "Hỗ trợ sửa chữa cửa sổ, mái nhà chống gió lùa cho lớp học"
+    ],
+    "scale": "Miền Bắc Việt Nam"
+  },
+  {
+    "id": "CD0027",
+    "name": "Dự án Đăng ký hiến tạng nhân đạo",
+    "field": "Văn hóa & Cộng đồng",
+    "date": "2021-09-18",
+    "id_owner": "CC0027",
+    "phone": "0913888555",
+    "goal": 500000000,
+    "currency": "VND",
+    "introduction": "Nâng cao nhận thức cộng đồng về nghĩa cử cao đẹp hiến tạng cứu người, xóa bỏ các định kiến về tâm linh.",
+    "activities": [
+      "Tuyên truyền vận động đăng ký hiến tạng trực tuyến",
+      "Tổ chức hội thảo tư vấn pháp lý và y khoa",
+      "Tôn vinh các gia đình có người hiến tạng cứu người"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0028",
+    "name": "Ngôi nhà bình yên (Bảo vệ phụ nữ)",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2021-10-30",
+    "id_owner": "CC0028",
+    "phone": "0944111333",
+    "goal": 6000000000,
+    "currency": "VND",
+    "introduction": "Cung cấp nơi trú ẩn an toàn và hỗ trợ khẩn cấp cho phụ nữ và trẻ em là nạn nhân của bạo lực gia đình và buôn bán người.",
+    "activities": [
+      "Vận hành hệ thống nhà tạm lánh bí mật",
+      "Tư vấn tâm lý và hỗ trợ pháp lý miễn phí",
+      "Hỗ trợ dạy nghề và tạo việc làm cho nạn nhân"
+    ],
+    "scale": "Các thành phố lớn"
+  },
+  {
+    "id": "CD0029",
+    "name": "Bảo tồn động vật hoang dã (WWF)",
+    "field": "Môi trường & Động vật",
+    "date": "2023-01-01",
+    "id_owner": "CC0029",
+    "phone": "0987444111",
+    "goal": 2000000000,
+    "currency": "VND",
+    "introduction": "Ngăn chặn tình trạng săn bắn trái phép và bảo vệ môi trường sống tự nhiên cho các loài động vật quý hiếm tại Việt Nam.",
+    "activities": [
+      "Hỗ trợ tuần tra chống bẫy thú tại rừng quốc gia",
+      "Chiến dịch truyền thông giảm nhu cầu tiêu thụ thịt rừng",
+      "Cứu hộ và chăm sóc động vật trước khi tái thả"
+    ],
+    "scale": "Các vườn quốc gia"
+  },
+  {
+    "id": "CD0030",
+    "name": "Quỹ Tết cho người nghèo",
+    "field": "An sinh Xã hội",
+    "date": "2022-12-15",
+    "id_owner": "CC0030",
+    "phone": "0919333222",
+    "goal": 5000000000,
+    "currency": "VND",
+    "introduction": "Kêu gọi cộng đồng chung tay mang cái Tết ấm áp đến với các hộ nghèo, người già neo đơn và trẻ em mồ côi.",
+    "activities": [
+      "Tổ chức 'Phiên chợ Tết 0 đồng' cho hộ khó khăn",
+      "Tặng giỏ quà Tết (gạo, dầu ăn, bánh chưng...)",
+      "Tặng vé xe cho công nhân nghèo về quê ăn Tết"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0031",
+    "name": "Nước sạch cho vùng hạn mặn 2024",
+    "field": "Môi trường & Động vật",
+    "date": "2024-03-10",
+    "id_owner": "CC0012",
+    "phone": "0919222444",
+    "goal": 5000000000,
+    "currency": "VND",
+    "introduction": "Chiến dịch khẩn cấp cung cấp túi chứa nước ngọt và lắp đặt máy lọc nước mặn cho bà con miền Tây trong cao điểm hạn mặn.",
+    "activities": [
+      "Phát tặng túi chứa nước dung tích 15m3",
+      "Lắp đặt trạm lọc nước ngọt cộng đồng tại xã",
+      "Vận chuyển xe bồn chở nước ngọt cứu trợ khẩn cấp"
+    ],
+    "scale": "Miền Tây Nam Bộ"
+  },
+  {
+    "id": "CD0032",
+    "name": "Tủ sách cho em (Vùng cao phía Bắc)",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2023-05-20",
+    "id_owner": "CC0015",
+    "phone": "0903111222",
+    "goal": 1200000000,
+    "currency": "VND",
+    "introduction": "Xây dựng các tủ sách thiếu nhi tại các điểm trường khó khăn, khơi dậy thói quen đọc sách và văn hóa đọc cho trẻ em.",
+    "activities": [
+      "Quyên góp sách mới và sách cũ còn tốt",
+      "Đóng tủ gỗ và trang trí góc đọc thân thiện",
+      "Tổ chức hội thi kể chuyện theo sách cho học sinh"
+    ],
+    "scale": "Sơn La, Điện Biên"
+  },
+  {
+    "id": "CD0033",
+    "name": "Hỗ trợ can thiệp sớm cho trẻ tự kỷ",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2022-04-02",
+    "id_owner": "CC0009",
+    "phone": "0901333009",
+    "goal": 4000000000,
+    "currency": "VND",
+    "introduction": "Tài trợ chi phí can thiệp và giáo dục đặc biệt cho trẻ em tự kỷ thuộc gia đình nghèo, giúp các em hòa nhập.",
+    "activities": [
+      "Hỗ trợ học phí tại các trung tâm giáo dục đặc biệt",
+      "Đào tạo kỹ năng can thiệp cho cha mẹ tại nhà",
+      "Tổ chức các hoạt động dã ngoại hòa nhập cộng đồng"
+    ],
+    "scale": "TP. Hồ Chí Minh"
+  },
+  {
+    "id": "CD0034",
+    "name": "Ánh sáng bản xa (Điện mặt trời)",
+    "field": "Văn hóa & Cộng đồng",
+    "date": "2023-08-15",
+    "id_owner": "CC0006",
+    "phone": "0933635156",
+    "goal": 3500000000,
+    "currency": "VND",
+    "introduction": "Lắp đặt hệ thống điện năng lượng mặt trời cho các điểm trường bản chưa có điện lưới quốc gia, phục vụ việc dạy và học.",
+    "activities": [
+      "Lắp đặt tấm pin mặt trời và bộ lưu trữ điện",
+      "Lắp đèn LED chiếu sáng lớp học và sân trường",
+      "Tặng đèn pin sạc năng lượng mặt trời cho học sinh"
+    ],
+    "scale": "Các tỉnh biên giới"
+  },
+  {
+    "id": "CD0035",
+    "name": "Phẫu thuật Xương thủy tinh cho trẻ",
+    "field": "Y tế & Sức khỏe",
+    "date": "2022-11-20",
+    "id_owner": "CC0017",
+    "phone": "0945666777",
+    "goal": 5000000000,
+    "currency": "VND",
+    "introduction": "Tài trợ chi phí mổ đóng đinh nội tủy và vật lý trị liệu cho trẻ mắc bệnh xương thủy tinh, giúp các em giảm đau đớn và có thể đi lại.",
+    "activities": [
+      "Chi trả 100% viện phí phẫu thuật chỉnh hình",
+      "Tặng xe lăn chuyên dụng cho bệnh nhi",
+      "Tập huấn phục hồi chức năng cho người nhà"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0036",
+    "name": "Dự án Vì một Việt Nam xanh (Trồng cây)",
+    "field": "Môi trường & Động vật",
+    "date": "2024-01-10",
+    "id_owner": "CC0019",
+    "phone": "0966333444",
+    "goal": 2500000000,
+    "currency": "VND",
+    "introduction": "Trồng cây phủ xanh đô thị và phục hồi rừng đầu nguồn bị tàn phá, góp phần giảm thiểu tác động của biến đổi khí hậu.",
+    "activities": [
+      "Tổ chức ngày hội trồng cây tại các khu đô thị",
+      "Chăm sóc và giám sát cây trồng trong 3 năm đầu",
+      "Tuyên truyền bảo vệ rừng cho học sinh địa phương"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0037",
+    "name": "Bữa cơm hạnh phúc (Dành cho người già)",
+    "field": "An sinh Xã hội",
+    "date": "2023-09-05",
+    "id_owner": "CC0010",
+    "phone": "0905222333",
+    "goal": 1500000000,
+    "currency": "VND",
+    "introduction": "Cung cấp các suất ăn miễn phí tận nhà và tổ chức các bữa cơm thân mật cho người già neo đơn, không nơi nương tựa.",
+    "activities": [
+      "Phát cơm trưa và chiều tận nơi cho cụ già yếu",
+      "Thăm khám sức khỏe và tặng thuốc bổ định kỳ",
+      "Tổ chức sinh nhật tập thể cho các cụ tại mái ấm"
+    ],
+    "scale": "Bình Dương, Đồng Nai"
+  },
+  {
+    "id": "CD0038",
+    "name": "Dạy nghề cho thanh niên khuyết tật",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2022-06-12",
+    "id_owner": "CC0013",
+    "phone": "0982555666",
+    "goal": 4500000000,
+    "currency": "VND",
+    "introduction": "Đào tạo các nghề như thiết kế đồ họa, làm bánh, thủ công mỹ nghệ cho thanh niên khuyết tật để các em tự nuôi sống bản thân.",
+    "activities": [
+      "Xây dựng xưởng thực hành đào tạo nghề",
+      "Hợp tác doanh nghiệp bao tiêu sản phẩm",
+      "Tặng bộ dụng cụ nghề cho học viên tốt nghiệp"
+    ],
+    "scale": "Hà Nội"
+  },
+  {
+    "id": "CD0039",
+    "name": "Nâng bước em đến trường (Xe đạp)",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2023-08-20",
+    "id_owner": "CC0016",
+    "phone": "0913999888",
+    "goal": 8000000000,
+    "currency": "VND",
+    "introduction": "Tặng xe đạp cho học sinh nghèo hiếu học phải đi bộ quãng đường xa (trên 5km) để đến trường hàng ngày.",
+    "activities": [
+      "Rà soát danh sách học sinh cần hỗ trợ xe đạp",
+      "Trao tặng xe đạp mới và mũ bảo hiểm",
+      "Tổ chức lớp dạy kỹ năng an toàn giao thông"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0040",
+    "name": "Dẫn nước sạch về bản dân tộc",
+    "field": "Môi trường & Động vật",
+    "date": "2023-03-22",
+    "id_owner": "CC0020",
+    "phone": "0912111222",
+    "goal": 6000000000,
+    "currency": "VND",
+    "introduction": "Xây dựng hệ thống đường ống dẫn nước từ suối cao về các bể chứa tập trung tại bản để bà con không phải gùi nước xa.",
+    "activities": [
+      "Khảo sát địa hình và lắp đặt đường ống dẫn",
+      "Xây dựng các bể lọc và bể chứa nước cộng đồng",
+      "Hướng dẫn người dân bảo trì hệ thống dẫn nước"
+    ],
+    "scale": "Tây Nguyên"
+  },
+  {
+    "id": "CD0041",
+    "name": "Nước sạch học đường (Quỹ Trò nghèo vùng cao)",
+    "field": "Môi trường & Động vật",
+    "date": "2023-10-15",
+    "id_owner": "CC0005",
+    "phone": "0912999005",
+    "goal": 2000000000,
+    "currency": "VND",
+    "introduction": "Dự án chuyên sâu nhằm lắp đặt hệ thống lọc nước tinh khiết tại vòi cho các trường nội trú, đảm bảo sức khỏe tiêu hóa cho học sinh và giáo viên vùng cao.",
+    "activities": [
+      "Lắp đặt máy lọc nước công nghiệp tại các trường",
+      "Xây dựng bể chứa nước mưa an toàn",
+      "Kiểm định chất lượng nước định kỳ theo tiêu chuẩn Bộ Y tế"
+    ],
+    "scale": "Tây Bắc"
+  },
+  {
+    "id": "CD0042",
+    "name": "Quỹ khuyến học – Nâng bước em sau lũ",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2021-11-20",
+    "id_owner": "CC0011",
+    "phone": "0918777888",
+    "goal": 1500000000,
+    "currency": "VND",
+    "introduction": "Hỗ trợ khẩn cấp sách vở, dụng cụ học tập và xe đạp cho học sinh vùng rốn lũ miền Trung để các em có thể quay lại trường ngay sau thiên tai.",
+    "activities": [
+      "Trao tặng bộ sách giáo khoa và đồ dùng học tập mới",
+      "Tặng 'Cặp phao' cứu sinh cho học sinh vùng ngập lụt",
+      "Trao học bổng tiền mặt cho học sinh mất người thân do bão"
+    ],
+    "scale": "Quảng Bình, Quảng Trị"
+  },
+  {
+    "id": "CD0043",
+    "name": "Hành trình Lập chí vĩ đại (Tủ sách đổi đời)",
+    "field": "Văn hóa & Cộng đồng",
+    "date": "2020-05-15",
+    "id_owner": "CC0022",
+    "phone": "0914222333",
+    "goal": 5000000000,
+    "currency": "VND",
+    "introduction": "Trao tặng những cuốn sách quý về tư duy khởi nghiệp và khát vọng lớn cho thanh niên, học sinh tại các vùng sâu và các đơn vị quân đội.",
+    "activities": [
+      "Thiết lập các trạm đọc sách miễn phí",
+      "Tổ chức hành trình xuyên Việt tặng sách cho thanh niên",
+      "Tổ chức các buổi diễn thuyết truyền cảm hứng sáng tạo"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0044",
+    "name": "Hỗ trợ nạn nhân hỏa hoạn khẩn cấp",
+    "field": "An sinh Xã hội",
+    "date": "2023-09-15",
+    "id_owner": "CC0026",
+    "phone": "0903555222",
+    "goal": 2500000000,
+    "currency": "VND",
+    "introduction": "Kêu gọi cộng đồng hỗ trợ tài chính và nơi ở tạm thời cho các gia đình chịu thiệt hại nặng nề trong các vụ cháy chung cư và nhà ở.",
+    "activities": [
+      "Hỗ trợ tiền mặt chi trả viện phí cho nạn nhân",
+      "Tặng nhu yếu phẩm và đồ dùng gia đình cơ bản",
+      "Hỗ trợ chi phí mai táng và ổn định tâm lý hậu sang chấn"
+    ],
+    "scale": "Hà Nội và TP. Hồ Chí Minh"
+  },
+  {
+    "id": "CD0045",
+    "name": "Quỹ Thiện Tâm – Phẫu thuật thay khớp miễn phí",
+    "field": "Y tế & Sức khỏe",
+    "date": "2019-01-01",
+    "id_owner": "CC0030",
+    "phone": "0919333222",
+    "goal": 20000000000,
+    "currency": "VND",
+    "introduction": "Tài trợ toàn bộ chi phí phẫu thuật thay khớp háng, khớp gối cho người có công và người nghèo bị dị tật vận động.",
+    "activities": [
+      "Khám sàng lọc và chỉ định phẫu thuật miễn phí",
+      "Tài trợ vật tư y tế và thuốc đặc trị",
+      "Hỗ trợ chi phí đi lại và ăn ở cho bệnh nhân tại bệnh viện"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0046",
+    "name": "Xây dựng Nhà đại đoàn kết",
+    "field": "An sinh Xã hội",
+    "date": "2020-03-10",
+    "id_owner": "CC0024",
+    "phone": "0915666888",
+    "goal": 10000000000,
+    "currency": "VND",
+    "introduction": "Xóa nhà tạm, nhà dột nát cho các hộ đặc biệt khó khăn thông qua việc xây dựng nhà tình nghĩa kiên cố.",
+    "activities": [
+      "Khảo sát địa phương và thi công nhà 3 cứng (mái, tường, nền)",
+      "Vận động nhân dân hỗ trợ ngày công xây dựng",
+      "Tặng đồ gia dụng thiết yếu khi bàn giao nhà"
+    ],
+    "scale": "Toàn quốc"
+  },
+  {
+    "id": "CD0047",
+    "name": "Sóng và máy tính cho em (Vùng lõm)",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2021-06-21",
+    "id_owner": "CC0025",
+    "phone": "0912444777",
+    "goal": 12000000000,
+    "currency": "VND",
+    "introduction": "Kết hợp lắp đặt trạm phát sóng di động và tặng thiết bị học tập cho học sinh tại các thôn bản chưa có hạ tầng số.",
+    "activities": [
+      "Lắp đặt trạm phát sóng tại các vùng lõm thông tin",
+      "Trao tặng máy tính bảng cho học sinh nghèo",
+      "Hướng dẫn sử dụng internet an toàn cho trẻ em"
+    ],
+    "scale": "Các tỉnh miền núi"
+  },
+  {
+    "id": "CD0048",
+    "name": "Thư viện số cho trường học biên giới",
+    "field": "Giáo dục & Khởi nghiệp",
+    "date": "2022-09-05",
+    "id_owner": "CC0016",
+    "phone": "0913999888",
+    "goal": 5000000000,
+    "currency": "VND",
+    "introduction": "Xây dựng hệ thống thư viện điện tử với hàng ngàn đầu sách và tài liệu giảng dạy trực tuyến cho các trường học vùng biên giới.",
+    "activities": [
+      "Trang bị máy tính và máy chiếu cho thư viện",
+      "Cài đặt phần mềm quản lý thư viện số",
+      "Đào tạo kỹ năng tra cứu trực tuyến cho học sinh"
+    ],
+    "scale": "Các tỉnh biên giới"
+  },
+  {
+    "id": "CD0049",
+    "name": "Chương trình Sữa học đường – Vì tầm vóc Việt",
+    "field": "Y tế & Sức khỏe",
+    "date": "2018-08-15",
+    "id_owner": "CC0021",
+    "phone": "0988555222",
+    "goal": 40000000000,
+    "currency": "VND",
+    "introduction": "Cung cấp sữa tươi sạch đạt chuẩn cho học sinh mầm non và tiểu học, hướng tới mục tiêu cải thiện chiều cao và thể lực trẻ em Việt Nam.",
+    "activities": [
+      "Cấp sữa miễn phí hàng ngày tại các trường nghèo",
+      "Đo chỉ số phát triển chiều cao, cân nặng định kỳ",
+      "Giáo dục dinh dưỡng cho cộng đồng học đường"
+    ],
+    "scale": "Nông thôn và miền núi"
+  },
+  {
+    "id": "CD0050",
+    "name": "Mùa xuân gắn kết – Tết cho trẻ em SOS",
+    "field": "Trẻ em & Người yếu thế",
+    "date": "2023-12-01",
+    "id_owner": "CC0028",
+    "phone": "0944111333",
+    "goal": 3000000000,
+    "currency": "VND",
+    "introduction": "Tổ chức các hoạt động đón Tết cổ truyền ấm áp cho trẻ em tại các làng trẻ em SOS, giúp các em cảm nhận hơi ấm gia đình.",
+    "activities": [
+      "Tổ chức lễ hội gói bánh chưng và trang trí Tết",
+      "Trao tặng quần áo mới và lì xì đầu xuân",
+      "Tổ chức các trò chơi dân gian và biểu diễn nghệ thuật"
+    ],
+    "scale": "Toàn quốc"
+  }
+]
