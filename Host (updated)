@@ -1,0 +1,535 @@
+[
+  {
+    "id": "CC0001",
+    "full_name": "Rad Kivette",
+    "email": "rad.kivette@gmail.com",
+    "phone": "0908555001",
+    "owned_campaigns": [
+      "CD0001"
+    ],
+    "password": "$2b$10$XNz8/RealHashVCF",
+    "date_of_birth": "15-05-1970",
+    "gender": "Nam",
+    "address": "Hồ Chí Minh",
+    "cccd": "079070001234",
+    "account_creation_date": "21-11-2019"
+  },
+  {
+    "id": "CC0002",
+    "full_name": "Nguyễn Việt Phương",
+    "email": "phuong.nguyen@gmail.com",
+    "phone": "0913666002",
+    "owned_campaigns": [
+      "CD0002"
+    ],
+    "password": "OpSmile@2024!",
+    "date_of_birth": "20-08-1975",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001075005678",
+    "account_creation_date": "10-01-2020"
+  },
+  {
+    "id": "CC0003",
+    "full_name": "Nguyễn Thị Xuyên",
+    "email": "xuyen.nguyen@gmail.com",
+    "phone": "0989777003",
+    "owned_campaigns": [
+      "CD0003"
+    ],
+    "password": "TuoiSang#DrXuyen",
+    "date_of_birth": "12-10-1950",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001150009999",
+    "account_creation_date": "18-08-2020"
+  },
+  {
+    "id": "CC0004",
+    "full_name": "Nguyễn Văn Rinh",
+    "email": "rinh.nguyen@gmail.com",
+    "phone": "0903888004",
+    "owned_campaigns": [
+      "CD0004"
+    ],
+    "password": "VAVA@Hero2024",
+    "date_of_birth": "01-01-1942",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001042004444",
+    "account_creation_date": "10-01-2020"
+  },
+  {
+    "id": "CC0005",
+    "full_name": "Trần Đăng Tuấn",
+    "email": "tuan.tran@gmail.com",
+    "phone": "0912999005",
+    "owned_campaigns": [
+      "CD0005",
+      "CD0041"
+    ],
+    "password": "ComCoThit@Tuan",
+    "date_of_birth": "04-09-1957",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001057003333",
+    "account_creation_date": "25-02-2020"
+  },
+  {
+    "id": "CC0006",
+    "full_name": "Hoàng Hoa Trung",
+    "email": "trung.hoang@gmail.com",
+    "phone": "0933635156",
+    "owned_campaigns": [
+      "CD0006"
+    ],
+    "password": "NuoiEm@Trung2025",
+    "date_of_birth": "18-06-1990",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001090001111",
+    "account_creation_date": "04-06-2019"
+  },
+  {
+    "id": "CC0007",
+    "full_name": "Đinh Thị Nam Phương",
+    "email": "namphuong@gmail.com",
+    "phone": "0909111007",
+    "owned_campaigns": [
+      "CD0007"
+    ],
+    "password": "NPF@BridgeBuilder",
+    "date_of_birth": "25-12-1993",
+    "gender": "Nữ",
+    "address": "Hồ Chí Minh",
+    "cccd": "079193002222",
+    "account_creation_date": "19-09-2019"
+  },
+  {
+    "id": "CC0008",
+    "full_name": "Lê Văn Tám",
+    "email": "tam.le@gmail.com",
+    "phone": "0944000111",
+    "owned_campaigns": [
+      "CD0008"
+    ],
+    "password": "VuADinh@Love",
+    "date_of_birth": "18-08-1945",
+    "gender": "Nữ",
+    "address": "Hồ Chí Minh",
+    "cccd": "079145008888",
+    "account_creation_date": "05-03-2020"
+  },
+  {
+    "id": "CC0009",
+    "full_name": "Damien Roberts",
+    "email": "damien@gmail.com",
+    "phone": "0901333009",
+    "owned_campaigns": [
+      "CD0009"
+    ],
+    "password": "SCC@DamienUK",
+    "date_of_birth": "30-04-1980",
+    "gender": "Nam",
+    "address": "Hồ Chí Minh",
+    "cccd": "079080007777",
+    "account_creation_date": "20-05-2019"
+  },
+  {
+    "id": "CC0010",
+    "full_name": "Nguyễn Thị Kim Oanh",
+    "email": "oanh.nguyen@gmail.com",
+    "phone": "0905222333",
+    "owned_campaigns": [
+      "CD0010"
+    ],
+    "password": "SOS@VillageVN",
+    "date_of_birth": "05-09-1972",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001072005555",
+    "account_creation_date": "22-12-2020"
+  },
+  {
+    "id": "CC0011",
+    "full_name": "Phan Anh",
+    "email": "phananh@gmail.com",
+    "phone": "0918777888",
+    "owned_campaigns": [
+      "CD0011",
+      "CD0042"
+    ],
+    "password": "NFVC@HaiDinh",
+    "date_of_birth": "12-12-1968",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001068006666",
+    "account_creation_date": "04-05-2020"
+  },
+  {
+    "id": "CC0012",
+    "full_name": "Nguyễn Thủy Tiên",
+    "email": "thuytien@gmail.com",
+    "phone": "0919222444",
+    "owned_campaigns": [
+      "CD0012"
+    ],
+    "password": "BlueDragon@Rescue",
+    "date_of_birth": "20-11-1978",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001078009900",
+    "account_creation_date": "02-06-2019"
+  },
+  {
+    "id": "CC0013",
+    "full_name": "Trần Khoa Việt",
+    "email": "viet.tran@gmail.com",
+    "phone": "0982555666",
+    "owned_campaigns": [
+      "CD0013"
+    ],
+    "password": "Com2000@BongSen",
+    "date_of_birth": "05-09-1965",
+    "gender": "Nam",
+    "address": "Hồ Chí Minh",
+    "cccd": "079065003322",
+    "account_creation_date": "05-09-2020"
+  },
+  {
+    "id": "CC0014",
+    "full_name": "Sơ Nguyễn Thị Oanh",
+    "email": "oanh.s@gmail.com",
+    "phone": "0937292111",
+    "owned_campaigns": [
+      "CD0014"
+    ],
+    "password": "ThienAn@SoOanh",
+    "date_of_birth": "15-07-1960",
+    "gender": "Nữ",
+    "address": "Hồ Chí Minh",
+    "cccd": "079160004411",
+    "account_creation_date": "15-07-2021"
+  },
+  {
+    "id": "CC0015",
+    "full_name": "Lê Huỳnh Thảo",
+    "email": "thao.le@gmail.com",
+    "phone": "0903111222",
+    "owned_campaigns": [
+      "CD0015"
+    ],
+    "password": "NamMo@LamQuang",
+    "date_of_birth": "01-10-1958",
+    "gender": "Nữ",
+    "address": "Hồ Chí Minh",
+    "cccd": "079158007788",
+    "account_creation_date": "01-10-2020"
+  },
+  {
+    "id": "CC0016",
+    "full_name": "Trương Gia Bình",
+    "email": "binh.tg@gmail.com",
+    "phone": "0913999888",
+    "owned_campaigns": [
+      "CD0016"
+    ]
+  },
+  {
+    "id": "CC0017",
+    "full_name": "Vũ Anh Tuấn",
+    "email": "tuan.vu@gmail.com",
+    "phone": "0945666777",
+    "owned_campaigns": [
+      "CD0017"
+    ]
+  },
+  {
+    "id": "CC0018",
+    "full_name": "Phạm Minh Thảo",
+    "email": "thao.pm@gmail.com",
+    "phone": "0902444555",
+    "owned_campaigns": [
+      "CD0018"
+    ]
+  },
+  {
+    "id": "CC0019",
+    "full_name": "Lý Thị Hà",
+    "email": "ha.ly@gmail.com",
+    "phone": "0966333444",
+    "owned_campaigns": [
+      "CD0019"
+    ]
+  },
+  {
+    "id": "CC0020",
+    "full_name": "Bùi Văn Nam",
+    "email": "nam.bv@gmail.com",
+    "phone": "0912111222",
+    "owned_campaigns": [
+      "CD0020"
+    ]
+  },
+  {
+    "id": "CC0021",
+    "full_name": "Ngô Thị Tuyết",
+    "email": "tuyet.ngo@gmail.com",
+    "phone": "0988555222",
+    "owned_campaigns": [
+      "CD0022"
+    ]
+  },
+  {
+    "id": "CC0022",
+    "full_name": "Đặng Lê Nguyên Vũ",
+    "email": "vu.dang@gmail.com",
+    "phone": "0914222333",
+    "owned_campaigns": [
+      "CD0023",
+      "CD0043"
+    ]
+  },
+  {
+    "id": "CC0023",
+    "full_name": "Lý Nhã Kỳ",
+    "email": "ky.ly@gmail.com",
+    "phone": "0908111999",
+    "owned_campaigns": [
+      "CD0024"
+    ]
+  },
+  {
+    "id": "CC0024",
+    "full_name": "Nguyễn Thị Thảo",
+    "email": "thao.nt@gmail.com",
+    "phone": "0915666888",
+    "owned_campaigns": [
+      "CD0025"
+    ]
+  },
+  {
+    "id": "CC0025",
+    "full_name": "Hoàng Nam Tiến",
+    "email": "tien.hn@gmail.com",
+    "phone": "0912444777",
+    "owned_campaigns": [
+      "CD0026"
+    ]
+  },
+  {
+    "id": "CC0026",
+    "full_name": "Lê Quốc Minh",
+    "email": "minh.lq@gmail.com",
+    "phone": "0903555222",
+    "owned_campaigns": [
+      "CD0027"
+    ]
+  },
+  {
+    "id": "CC0027",
+    "full_name": "Nguyễn Hoàng Phúc",
+    "email": "phuc.nh@gmail.com",
+    "phone": "0913888555",
+    "owned_campaigns": [
+      "CD0028"
+    ]
+  },
+  {
+    "id": "CC0028",
+    "full_name": "Trần Thị Kim",
+    "email": "kim.tt@gmail.com",
+    "phone": "0944111333",
+    "owned_campaigns": [
+      "CD0029"
+    ]
+  },
+  {
+    "id": "CC0029",
+    "full_name": "Phạm Văn Long",
+    "email": "long.pv@gmail.com",
+    "phone": "0987444111",
+    "owned_campaigns": [
+      "CD0030"
+    ]
+  },
+  {
+    "id": "CC0030",
+    "full_name": "Đỗ Mỹ Linh",
+    "email": "linh.dm@gmail.com",
+    "phone": "0919333222",
+    "owned_campaigns": [
+      "CD0031"
+    ]
+  },
+  {
+    "id": "CC0031",
+    "full_name": "Trần Thành",
+    "email": "thanh.tr@gmail.com",
+    "phone": "0902666999",
+    "owned_campaigns": [
+      "CD0032",
+      "CD0044"
+    ]
+  },
+  {
+    "id": "CC0032",
+    "full_name": "Quyền Linh",
+    "email": "linh.q@gmail.com",
+    "phone": "0913777444",
+    "owned_campaigns": [
+      "CD0033"
+    ]
+  },
+  {
+    "id": "CC0033",
+    "full_name": "Đặng Hoàng Giang",
+    "email": "giang.dh@gmail.com",
+    "phone": "0981222333",
+    "owned_campaigns": [
+      "CD0034"
+    ]
+  },
+  {
+    "id": "CC0034",
+    "full_name": "Lâm Việt Tùng",
+    "email": "tung.lv@gmail.com",
+    "phone": "0942555888",
+    "owned_campaigns": [
+      "CD0035"
+    ]
+  },
+  {
+    "id": "CC0035",
+    "full_name": "Vũ Đức Đam",
+    "email": "dam.vd@gmail.com",
+    "phone": "0904111999",
+    "owned_campaigns": [
+      "CD0036"
+    ]
+  },
+  {
+    "id": "CC0036",
+    "full_name": "Nguyễn Tuấn Khởi",
+    "email": "khoi.nt@gmail.com",
+    "phone": "0915999222",
+    "owned_campaigns": [
+      "CD0037"
+    ]
+  },
+  {
+    "id": "CC0037",
+    "full_name": "Trần Mai Anh",
+    "email": "anh.tm@gmail.com",
+    "phone": "0903444888",
+    "owned_campaigns": [
+      "CD0038"
+    ]
+  },
+  {
+    "id": "CC0038",
+    "full_name": "Nguyễn Hương Giang",
+    "email": "giang.nh@gmail.com",
+    "phone": "0918333555",
+    "owned_campaigns": [
+      "CD0039"
+    ]
+  },
+  {
+    "id": "CC0039",
+    "full_name": "Võ Thị Hoàng Yến",
+    "email": "yen.vth@gmail.com",
+    "phone": "0933111777",
+    "owned_campaigns": [
+      "CD0040"
+    ]
+  },
+  {
+    "id": "CC0040",
+    "full_name": "Phạm Nhật Vượng",
+    "email": "vuong.pn@gmail.com",
+    "phone": "0912333444",
+    "owned_campaigns": [
+      "CD0045",
+      "CD0046"
+    ]
+  },
+  {
+    "id": "CC0041",
+    "full_name": "Nguyễn Mạnh Hùng",
+    "email": "hung.nm@gmail.com",
+    "phone": "0901555666",
+    "owned_campaigns": [
+      "CD0047"
+    ]
+  },
+  {
+    "id": "CC0042",
+    "full_name": "Lê Đăng Dũng",
+    "email": "dung.ld@gmail.com",
+    "phone": "0988000999",
+    "owned_campaigns": [
+      "CD0048"
+    ]
+  },
+  {
+    "id": "CC0043",
+    "full_name": "Thái Hương",
+    "email": "huong.t@gmail.com",
+    "phone": "0912888111",
+    "owned_campaigns": [
+      "CD0049"
+    ]
+  },
+  {
+    "id": "CC0044",
+    "full_name": "Nguyễn Xuân Bắc",
+    "email": "bac.nx@gmail.com",
+    "phone": "0915777333",
+    "owned_campaigns": [
+      "CD0050"
+    ]
+  },
+  {
+    "id": "CC0045",
+    "full_name": "Đoàn Hiếu Minh",
+    "email": "minh.dh@gmail.com",
+    "phone": "0904888333",
+    "owned_campaigns": []
+  },
+  {
+    "id": "CC0046",
+    "full_name": "Lê Diệp Kiều Trang",
+    "email": "trang.ldk@gmail.com",
+    "phone": "0903999444",
+    "owned_campaigns": []
+  },
+  {
+    "id": "CC0047",
+    "full_name": "H'Hen Niê",
+    "email": "hen.h@gmail.com",
+    "phone": "0938555111",
+    "owned_campaigns": []
+  },
+  {
+    "id": "CC0048",
+    "full_name": "Nguyễn Thúc Thùy Tiên",
+    "email": "tien.ntt@gmail.com",
+    "phone": "0906333777",
+    "owned_campaigns": []
+  },
+  {
+    "id": "CC0049",
+    "full_name": "Đen Vâu",
+    "email": "den.vau@gmail.com",
+    "phone": "0988111222",
+    "owned_campaigns": []
+  },
+  {
+    "id": "CC0050",
+    "full_name": "Lê Phước Vũ",
+    "email": "vu.lp@gmail.com",
+    "phone": "0902777888",
+    "owned_campaigns": []
+  }
+]
