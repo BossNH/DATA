@@ -1,0 +1,1543 @@
+import json
+[
+  {
+    "id": "DN0101",
+    "full_name": "Nguyễn Thị Cường",
+    "email": "nguyenthicuong@gmail.com",
+    "phone": "0313717587",
+    "password": "yr1sc!Px*NV*",
+    "date_of_birth": "28-06-1993",
+    "gender": "Nam",
+    "address": "Thái Nguyên",
+    "cccd": "862518151809",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 21,
+      "An sinh Xã hội": 49
+    },
+    "donation_history": [
+      {
+        "amount": 50000,
+        "date": "17-05-2024",
+        "time": "03:31:20",
+        "campaign_id": "CD0001"
+      },
+      {
+        "amount": 500000,
+        "date": "21-07-2024",
+        "time": "17:23:47",
+        "campaign_id": "CD0002"
+      },
+      {
+        "amount": 500000,
+        "date": "16-11-2024",
+        "time": "03:04:07",
+        "campaign_id": "CD0005"
+      }
+    ]
+  },
+  {
+    "id": "DN0102",
+    "full_name": "Trần Văn Hùng",
+    "email": "tranvanhung@gmail.com",
+    "phone": "0987654321",
+    "password": "aB3#dEfG9!",
+    "date_of_birth": "15-03-1988",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001088012345",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 15,
+      "Trẻ em & Người yếu thế": 32
+    },
+    "donation_history": [
+      {
+        "amount": 200000,
+        "date": "12-02-2024",
+        "time": "09:15:30",
+        "campaign_id": "CD0003"
+      },
+      {
+        "amount": 300000,
+        "date": "28-06-2024",
+        "time": "14:22:15",
+        "campaign_id": "CD0007"
+      }
+    ]
+  },
+  {
+    "id": "DN0103",
+    "full_name": "Lê Thị Hoa",
+    "email": "lethihoa@gmail.com",
+    "phone": "0901234567",
+    "password": "xY7@zK2!mN",
+    "date_of_birth": "22-11-1995",
+    "gender": "Nữ",
+    "address": "Hải Phòng",
+    "cccd": "031095023456",
+    "interaction_history": {
+      "Môi trường & Động vật": 28,
+      "Văn hóa & Cộng đồng": 18
+    },
+    "donation_history": [
+      {
+        "amount": 150000,
+        "date": "05-01-2024",
+        "time": "11:45:22",
+        "campaign_id": "CD0001"
+      },
+      {
+        "amount": 400000,
+        "date": "19-08-2024",
+        "time": "16:30:55",
+        "campaign_id": "CD0012"
+      },
+      {
+        "amount": 250000,
+        "date": "03-12-2024",
+        "time": "08:12:40",
+        "campaign_id": "CD0020"
+      }
+    ]
+  },
+  {
+    "id": "DN0104",
+    "full_name": "Phạm Minh Tuấn",
+    "email": "phamminhtuan@gmail.com",
+    "phone": "0912345678",
+    "password": "qW9#rT5$yU",
+    "date_of_birth": "08-07-1990",
+    "gender": "Nam",
+    "address": "Đà Nẵng",
+    "cccd": "048090034567",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 42,
+      "An sinh Xã hội": 25
+    },
+    "donation_history": [
+      {
+        "amount": 600000,
+        "date": "14-03-2024",
+        "time": "13:20:18",
+        "campaign_id": "CD0004"
+      },
+      {
+        "amount": 800000,
+        "date": "07-09-2024",
+        "time": "10:55:33",
+        "campaign_id": "CD0015"
+      }
+    ]
+  },
+  {
+    "id": "DN0105",
+    "full_name": "Hoàng Thị Mai",
+    "email": "hoangthimai@gmail.com",
+    "phone": "0923456789",
+    "password": "pL4!oK8@iU",
+    "date_of_birth": "30-05-1992",
+    "gender": "Nữ",
+    "address": "Hồ Chí Minh",
+    "cccd": "079092045678",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 55,
+      "Giáo dục & Khởi nghiệp": 22
+    },
+    "donation_history": [
+      {
+        "amount": 100000,
+        "date": "23-04-2024",
+        "time": "15:40:12",
+        "campaign_id": "CD0006"
+      },
+      {
+        "amount": 350000,
+        "date": "11-10-2024",
+        "time": "09:25:48",
+        "campaign_id": "CD0018"
+      },
+      {
+        "amount": 450000,
+        "date": "29-12-2024",
+        "time": "12:18:35",
+        "campaign_id": "CD0025"
+      }
+    ]
+  },
+  {
+    "id": "DN0106",
+    "full_name": "Vũ Đức Thắng",
+    "email": "vuducthang@gmail.com",
+    "phone": "0934567890",
+    "password": "nM6#bV3!cX",
+    "date_of_birth": "17-02-1987",
+    "gender": "Nam",
+    "address": "Cần Thơ",
+    "cccd": "092087056789",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 38,
+      "Môi trường & Động vật": 14
+    },
+    "donation_history": [
+      {
+        "amount": 550000,
+        "date": "08-05-2024",
+        "time": "14:55:20",
+        "campaign_id": "CD0008"
+      }
+    ]
+  },
+  {
+    "id": "DN0107",
+    "full_name": "Đỗ Thị Lan",
+    "email": "dothilan@gmail.com",
+    "phone": "0945678901",
+    "password": "zA2@sD4!fG",
+    "date_of_birth": "12-09-1994",
+    "gender": "Nữ",
+    "address": "Nghệ An",
+    "cccd": "038094067890",
+    "interaction_history": {
+      "An sinh Xã hội": 31,
+      "Y tế & Sức khỏe": 27
+    },
+    "donation_history": [
+      {
+        "amount": 220000,
+        "date": "16-06-2024",
+        "time": "11:30:45",
+        "campaign_id": "CD0009"
+      },
+      {
+        "amount": 380000,
+        "date": "25-11-2024",
+        "time": "16:45:28",
+        "campaign_id": "CD0022"
+      }
+    ]
+  },
+  {
+    "id": "DN0108",
+    "full_name": "Bùi Văn Nam",
+    "email": "buivannam@gmail.com",
+    "phone": "0956789012",
+    "password": "hJ5!gF8@dS",
+    "date_of_birth": "03-12-1991",
+    "gender": "Nam",
+    "address": "Bình Dương",
+    "cccd": "074091078901",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 46,
+      "Trẻ em & Người yếu thế": 19
+    },
+    "donation_history": [
+      {
+        "amount": 700000,
+        "date": "22-07-2024",
+        "time": "10:20:15",
+        "campaign_id": "CD0011"
+      },
+      {
+        "amount": 520000,
+        "date": "14-12-2024",
+        "time": "13:35:50",
+        "campaign_id": "CD0024"
+      }
+    ]
+  },
+  {
+    "id": "DN0109",
+    "full_name": "Ngô Thị Thu",
+    "email": "ngothithu@gmail.com",
+    "phone": "0967890123",
+    "password": "kL9#jH6!mN",
+    "date_of_birth": "25-04-1989",
+    "gender": "Nữ",
+    "address": "Quảng Ninh",
+    "cccd": "022089089012",
+    "interaction_history": {
+      "Môi trường & Động vật": 52,
+      "Văn hóa & Cộng đồng": 33
+    },
+    "donation_history": [
+      {
+        "amount": 180000,
+        "date": "09-08-2024",
+        "time": "15:10:38",
+        "campaign_id": "CD0013"
+      },
+      {
+        "amount": 420000,
+        "date": "30-10-2024",
+        "time": "09:50:22",
+        "campaign_id": "CD0019"
+      }
+    ]
+  },
+  {
+    "id": "DN0110",
+    "full_name": "Đinh Văn Đức",
+    "email": "dinhvanduc@gmail.com",
+    "phone": "0978901234",
+    "password": "pO3!iU7@yT",
+    "date_of_birth": "19-10-1986",
+    "gender": "Nam",
+    "address": "Thanh Hóa",
+    "cccd": "036086090123",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 37,
+      "An sinh Xã hội": 44
+    },
+    "donation_history": [
+      {
+        "amount": 290000,
+        "date": "02-09-2024",
+        "time": "12:25:15",
+        "campaign_id": "CD0014"
+      },
+      {
+        "amount": 640000,
+        "date": "18-11-2024",
+        "time": "14:40:55",
+        "campaign_id": "CD0021"
+      },
+      {
+        "amount": 310000,
+        "date": "27-12-2024",
+        "time": "10:15:30",
+        "campaign_id": "CD0026"
+      }
+    ]
+  },
+  {
+    "id": "DN0111",
+    "full_name": "Lý Thị Ngọc",
+    "email": "lythingoc@gmail.com",
+    "phone": "0989012345",
+    "password": "rE4#wQ9!aS",
+    "date_of_birth": "06-01-1993",
+    "gender": "Nữ",
+    "address": "Khánh Hòa",
+    "cccd": "058093101234",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 29,
+      "Giáo dục & Khởi nghiệp": 36
+    },
+    "donation_history": [
+      {
+        "amount": 460000,
+        "date": "11-04-2024",
+        "time": "16:55:42",
+        "campaign_id": "CD0005"
+      },
+      {
+        "amount": 270000,
+        "date": "20-10-2024",
+        "time": "11:20:18",
+        "campaign_id": "CD0017"
+      }
+    ]
+  },
+  {
+    "id": "DN0112",
+    "full_name": "Trịnh Văn Long",
+    "email": "trinhvanlong@gmail.com",
+    "phone": "0990123456",
+    "password": "tY6!uI3@oP",
+    "date_of_birth": "14-08-1990",
+    "gender": "Nam",
+    "address": "Lâm Đồng",
+    "cccd": "068090112345",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 23,
+      "Môi trường & Động vật": 41
+    },
+    "donation_history": [
+      {
+        "amount": 330000,
+        "date": "26-05-2024",
+        "time": "13:45:25",
+        "campaign_id": "CD0010"
+      },
+      {
+        "amount": 590000,
+        "date": "08-12-2024",
+        "time": "15:30:40",
+        "campaign_id": "CD0023"
+      }
+    ]
+  },
+  {
+    "id": "DN0113",
+    "full_name": "Võ Thị Hương",
+    "email": "vothihuong@gmail.com",
+    "phone": "0901234568",
+    "password": "gF5#hJ8!kL",
+    "date_of_birth": "29-03-1988",
+    "gender": "Nữ",
+    "address": "Bà Rịa - Vũng Tàu",
+    "cccd": "077088123456",
+    "interaction_history": {
+      "An sinh Xã hội": 48,
+      "Y tế & Sức khỏe": 20
+    },
+    "donation_history": [
+      {
+        "amount": 410000,
+        "date": "13-06-2024",
+        "time": "10:35:52",
+        "campaign_id": "CD0016"
+      }
+    ]
+  },
+  {
+    "id": "DN0114",
+    "full_name": "Dương Văn Hải",
+    "email": "duongvanhai@gmail.com",
+    "phone": "0912345679",
+    "password": "xC7!vB2@nM",
+    "date_of_birth": "07-11-1992",
+    "gender": "Nam",
+    "address": "Thừa Thiên Huế",
+    "cccd": "046092134567",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 34,
+      "Trẻ em & Người yếu thế": 26
+    },
+    "donation_history": [
+      {
+        "amount": 510000,
+        "date": "01-07-2024",
+        "time": "14:50:33",
+        "campaign_id": "CD0027"
+      },
+      {
+        "amount": 245000,
+        "date": "22-09-2024",
+        "time": "09:15:47",
+        "campaign_id": "CD0030"
+      },
+      {
+        "amount": 365000,
+        "date": "10-11-2024",
+        "time": "16:25:12",
+        "campaign_id": "CD0035"
+      }
+    ]
+  },
+  {
+    "id": "DN0115",
+    "full_name": "Phan Thị Linh",
+    "email": "phanthilinh@gmail.com",
+    "phone": "0923456780",
+    "password": "qA9#wS4!eD",
+    "date_of_birth": "21-05-1995",
+    "gender": "Nữ",
+    "address": "Kiên Giang",
+    "cccd": "091095145678",
+    "interaction_history": {
+      "Môi trường & Động vật": 39,
+      "Văn hóa & Cộng đồng": 17
+    },
+    "donation_history": [
+      {
+        "amount": 175000,
+        "date": "15-08-2024",
+        "time": "11:40:28",
+        "campaign_id": "CD0028"
+      },
+      {
+        "amount": 485000,
+        "date": "04-10-2024",
+        "time": "13:55:15",
+        "campaign_id": "CD0032"
+      }
+    ]
+  },
+  {
+    "id": "DN0116",
+    "full_name": "Hồ Văn Sơn",
+    "email": "hovanson@gmail.com",
+    "phone": "0934567891",
+    "password": "zX6!cV9@bN",
+    "date_of_birth": "10-02-1987",
+    "gender": "Nam",
+    "address": "Gia Lai",
+    "cccd": "064087156789",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 51,
+      "An sinh Xã hội": 30
+    },
+    "donation_history": [
+      {
+        "amount": 395000,
+        "date": "28-03-2024",
+        "time": "15:20:50",
+        "campaign_id": "CD0029"
+      },
+      {
+        "amount": 720000,
+        "date": "17-11-2024",
+        "time": "10:45:35",
+        "campaign_id": "CD0036"
+      }
+    ]
+  },
+  {
+    "id": "DN0117",
+    "full_name": "Mai Thị Phương",
+    "email": "maithiphuong@gmail.com",
+    "phone": "0945678902",
+    "password": "lK3!mN7@jH",
+    "date_of_birth": "04-09-1991",
+    "gender": "Nữ",
+    "address": "Bắc Ninh",
+    "cccd": "027091167890",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 43,
+      "Giáo dục & Khởi nghiệp": 24
+    },
+    "donation_history": [
+      {
+        "amount": 260000,
+        "date": "06-04-2024",
+        "time": "12:30:45",
+        "campaign_id": "CD0031"
+      },
+      {
+        "amount": 530000,
+        "date": "24-08-2024",
+        "time": "14:15:22",
+        "campaign_id": "CD0033"
+      },
+      {
+        "amount": 340000,
+        "date": "19-12-2024",
+        "time": "09:50:18",
+        "campaign_id": "CD0038"
+      }
+    ]
+  },
+  {
+    "id": "DN0118",
+    "full_name": "Tạ Văn Minh",
+    "email": "tavanminh@gmail.com",
+    "phone": "0956789013",
+    "password": "pO5!iU8@yT",
+    "date_of_birth": "18-12-1989",
+    "gender": "Nam",
+    "address": "Hưng Yên",
+    "cccd": "033089178901",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 35,
+      "Môi trường & Động vật": 28
+    },
+    "donation_history": [
+      {
+        "amount": 425000,
+        "date": "12-05-2024",
+        "time": "16:40:38",
+        "campaign_id": "CD0034"
+      },
+      {
+        "amount": 295000,
+        "date": "30-09-2024",
+        "time": "11:25:55",
+        "campaign_id": "CD0037"
+      }
+    ]
+  },
+  {
+    "id": "DN0119",
+    "full_name": "Châu Thị Tâm",
+    "email": "chauthitam@gmail.com",
+    "phone": "0967890124",
+    "password": "rE2#tY6!uI",
+    "date_of_birth": "26-07-1994",
+    "gender": "Nữ",
+    "address": "Sóc Trăng",
+    "cccd": "094094189012",
+    "interaction_history": {
+      "An sinh Xã hội": 40,
+      "Y tế & Sức khỏe": 33
+    },
+    "donation_history": [
+      {
+        "amount": 155000,
+        "date": "20-06-2024",
+        "time": "10:10:28",
+        "campaign_id": "CD0039"
+      },
+      {
+        "amount": 575000,
+        "date": "05-11-2024",
+        "time": "15:35:42",
+        "campaign_id": "CD0040"
+      }
+    ]
+  },
+  {
+    "id": "DN0120",
+    "full_name": "Lưu Văn Tùng",
+    "email": "luuvantung@gmail.com",
+    "phone": "0978901235",
+    "password": "wQ9#aS3!dF",
+    "date_of_birth": "09-04-1986",
+    "gender": "Nam",
+    "address": "Ninh Bình",
+    "cccd": "037086190123",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 47,
+      "Trẻ em & Người yếu thế": 21
+    },
+    "donation_history": [
+      {
+        "amount": 680000,
+        "date": "03-07-2024",
+        "time": "13:50:15",
+        "campaign_id": "CD0041"
+      },
+      {
+        "amount": 230000,
+        "date": "28-10-2024",
+        "time": "09:20:50",
+        "campaign_id": "CD0042"
+      },
+      {
+        "amount": 445000,
+        "date": "15-12-2024",
+        "time": "14:45:32",
+        "campaign_id": "CD0044"
+      }
+    ]
+  },
+  {
+    "id": "DN0121",
+    "full_name": "Cao Thị Bích",
+    "email": "caothibich@gmail.com",
+    "phone": "0989012346",
+    "password": "gH4!jK7@lZ",
+    "date_of_birth": "13-01-1993",
+    "gender": "Nữ",
+    "address": "Nam Định",
+    "cccd": "035093201234",
+    "interaction_history": {
+      "Môi trường & Động vật": 26,
+      "Văn hóa & Cộng đồng": 45
+    },
+    "donation_history": [
+      {
+        "amount": 315000,
+        "date": "18-04-2024",
+        "time": "11:15:40",
+        "campaign_id": "CD0043"
+      },
+      {
+        "amount": 560000,
+        "date": "12-09-2024",
+        "time": "16:30:25",
+        "campaign_id": "CD0045"
+      }
+    ]
+  },
+  {
+    "id": "DN0122",
+    "full_name": "Đặng Văn Phong",
+    "email": "dangvanphong@gmail.com",
+    "phone": "0990123457",
+    "password": "xC8!vB5@nM",
+    "date_of_birth": "27-10-1990",
+    "gender": "Nam",
+    "address": "Hà Tĩnh",
+    "cccd": "042090212345",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 38,
+      "An sinh Xã hội": 36
+    },
+    "donation_history": [
+      {
+        "amount": 490000,
+        "date": "25-05-2024",
+        "time": "12:40:55",
+        "campaign_id": "CD0046"
+      },
+      {
+        "amount": 205000,
+        "date": "07-10-2024",
+        "time": "10:05:18",
+        "campaign_id": "CD0047"
+      }
+    ]
+  },
+  {
+    "id": "DN0123",
+    "full_name": "Từ Thị Yến",
+    "email": "tuthiyen@gmail.com",
+    "phone": "0901234569",
+    "password": "qW1!eR6@tY",
+    "date_of_birth": "02-06-1988",
+    "gender": "Nữ",
+    "address": "Quảng Bình",
+    "cccd": "044088223456",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 50,
+      "Giáo dục & Khởi nghiệp": 19
+    },
+    "donation_history": [
+      {
+        "amount": 370000,
+        "date": "10-08-2024",
+        "time": "15:25:33",
+        "campaign_id": "CD0048"
+      },
+      {
+        "amount": 625000,
+        "date": "02-12-2024",
+        "time": "11:50:45",
+        "campaign_id": "CD0049"
+      }
+    ]
+  },
+  {
+    "id": "DN0124",
+    "full_name": "Ông Văn Khải",
+    "email": "ongvankhai@gmail.com",
+    "phone": "0912345680",
+    "password": "aS9#dF3!gH",
+    "date_of_birth": "16-11-1992",
+    "gender": "Nam",
+    "address": "Bắc Giang",
+    "cccd": "024092234567",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 31,
+      "Môi trường & Động vật": 34
+    },
+    "donation_history": [
+      {
+        "amount": 135000,
+        "date": "29-03-2024",
+        "time": "09:35:20",
+        "campaign_id": "CD0050"
+      },
+      {
+        "amount": 455000,
+        "date": "16-07-2024",
+        "time": "14:10:52",
+        "campaign_id": "CD0001"
+      },
+      {
+        "amount": 285000,
+        "date": "23-11-2024",
+        "time": "10:55:38",
+        "campaign_id": "CD0003"
+      }
+    ]
+  },
+  {
+    "id": "DN0125",
+    "full_name": "Khương Thị Diệu",
+    "email": "khuongthidieu@gmail.com",
+    "phone": "0923456781",
+    "password": "zX4!cV7@bN",
+    "date_of_birth": "23-08-1995",
+    "gender": "Nữ",
+    "address": "Phú Thọ",
+    "cccd": "025095245678",
+    "interaction_history": {
+      "An sinh Xã hội": 27,
+      "Y tế & Sức khỏe": 42
+    },
+    "donation_history": [
+      {
+        "amount": 540000,
+        "date": "04-04-2024",
+        "time": "16:20:15",
+        "campaign_id": "CD0002"
+      },
+      {
+        "amount": 190000,
+        "date": "21-08-2024",
+        "time": "12:45:28",
+        "campaign_id": "CD0004"
+      }
+    ]
+  },
+  {
+    "id": "DN0126",
+    "full_name": "Huỳnh Văn Tài",
+    "email": "huynhvantai@gmail.com",
+    "phone": "0934567892",
+    "password": "lK6!jH9@mN",
+    "date_of_birth": "05-03-1987",
+    "gender": "Nam",
+    "address": "Bến Tre",
+    "cccd": "083087256789",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 53,
+      "Trẻ em & Người yếu thế": 16
+    },
+    "donation_history": [
+      {
+        "amount": 265000,
+        "date": "14-05-2024",
+        "time": "11:05:42",
+        "campaign_id": "CD0006"
+      },
+      {
+        "amount": 615000,
+        "date": "26-09-2024",
+        "time": "15:40:18",
+        "campaign_id": "CD0008"
+      },
+      {
+        "amount": 345000,
+        "date": "12-12-2024",
+        "time": "09:25:55",
+        "campaign_id": "CD0010"
+      }
+    ]
+  },
+  {
+    "id": "DN0127",
+    "full_name": "Quách Thị Như",
+    "email": "quachthinhu@gmail.com",
+    "phone": "0945678903",
+    "password": "pO7!uI2@yT",
+    "date_of_birth": "20-09-1991",
+    "gender": "Nữ",
+    "address": "Vĩnh Long",
+    "cccd": "086091267890",
+    "interaction_history": {
+      "Môi trường & Động vật": 44,
+      "Văn hóa & Cộng đồng": 22
+    },
+    "donation_history": [
+      {
+        "amount": 420000,
+        "date": "07-06-2024",
+        "time": "13:30:25",
+        "campaign_id": "CD0007"
+      },
+      {
+        "amount": 235000,
+        "date": "18-10-2024",
+        "time": "10:15:50",
+        "campaign_id": "CD0009"
+      }
+    ]
+  },
+  {
+    "id": "DN0128",
+    "full_name": "La Văn Dũng",
+    "email": "lavandung@gmail.com",
+    "phone": "0956789014",
+    "password": "rE3#wQ8!aS",
+    "date_of_birth": "11-12-1989",
+    "gender": "Nam",
+    "address": "Yên Bái",
+    "cccd": "015089278901",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 29,
+      "An sinh Xã hội": 47
+    },
+    "donation_history": [
+      {
+        "amount": 595000,
+        "date": "31-07-2024",
+        "time": "14:55:38",
+        "campaign_id": "CD0011"
+      },
+      {
+        "amount": 170000,
+        "date": "09-11-2024",
+        "time": "11:20:12",
+        "campaign_id": "CD0013"
+      }
+    ]
+  },
+  {
+    "id": "DN0129",
+    "full_name": "Hà Thị Xuân",
+    "email": "hathixuan@gmail.com",
+    "phone": "0967890125",
+    "password": "tY5!uI9@oP",
+    "date_of_birth": "24-05-1994",
+    "gender": "Nữ",
+    "address": "Tuyên Quang",
+    "cccd": "008094289012",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 37,
+      "Giáo dục & Khởi nghiệp": 30
+    },
+    "donation_history": [
+      {
+        "amount": 305000,
+        "date": "19-04-2024",
+        "time": "15:45:22",
+        "campaign_id": "CD0012"
+      },
+      {
+        "amount": 475000,
+        "date": "03-09-2024",
+        "time": "12:10:45",
+        "campaign_id": "CD0014"
+      },
+      {
+        "amount": 255000,
+        "date": "20-12-2024",
+        "time": "10:35:30",
+        "campaign_id": "CD0016"
+      }
+    ]
+  },
+  {
+    "id": "DN0130",
+    "full_name": "Lâm Văn Bình",
+    "email": "lamvanbinh@gmail.com",
+    "phone": "0978901236",
+    "password": "gF6!hJ3@kL",
+    "date_of_birth": "08-02-1986",
+    "gender": "Nam",
+    "address": "Kon Tum",
+    "cccd": "062086290123",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 41,
+      "Môi trường & Động vật": 25
+    },
+    "donation_history": [
+      {
+        "amount": 385000,
+        "date": "27-05-2024",
+        "time": "09:50:35",
+        "campaign_id": "CD0015"
+      },
+      {
+        "amount": 655000,
+        "date": "13-10-2024",
+        "time": "16:15:48",
+        "campaign_id": "CD0017"
+      }
+    ]
+  },
+  {
+    "id": "DN0131",
+    "full_name": "Đoàn Thị Nga",
+    "email": "doanthinga@gmail.com",
+    "phone": "0989012347",
+    "password": "xC2!vB6@nM",
+    "date_of_birth": "01-07-1993",
+    "gender": "Nữ",
+    "address": "Bạc Liêu",
+    "cccd": "095093301234",
+    "interaction_history": {
+      "An sinh Xã hội": 35,
+      "Y tế & Sức khỏe": 39
+    },
+    "donation_history": [
+      {
+        "amount": 215000,
+        "date": "08-08-2024",
+        "time": "11:25:20",
+        "campaign_id": "CD0018"
+      },
+      {
+        "amount": 505000,
+        "date": "24-11-2024",
+        "time": "13:50:42",
+        "campaign_id": "CD0020"
+      }
+    ]
+  },
+  {
+    "id": "DN0132",
+    "full_name": "Tô Văn Lợi",
+    "email": "tovanloi@gmail.com",
+    "phone": "0990123458",
+    "password": "qW7!eR4@tY",
+    "date_of_birth": "15-11-1990",
+    "gender": "Nam",
+    "address": "Hòa Bình",
+    "cccd": "017090312345",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 28,
+      "Trẻ em & Người yếu thế": 43
+    },
+    "donation_history": [
+      {
+        "amount": 445000,
+        "date": "02-03-2024",
+        "time": "14:40:15",
+        "campaign_id": "CD0019"
+      },
+      {
+        "amount": 325000,
+        "date": "17-07-2024",
+        "time": "10:05:38",
+        "campaign_id": "CD0021"
+      },
+      {
+        "amount": 580000,
+        "date": "05-12-2024",
+        "time": "15:30:52",
+        "campaign_id": "CD0023"
+      }
+    ]
+  },
+  {
+    "id": "DN0133",
+    "full_name": "Thái Thị Oanh",
+    "email": "thaithioanh@gmail.com",
+    "phone": "0901234570",
+    "password": "aS5#dF8!gH",
+    "date_of_birth": "28-04-1988",
+    "gender": "Nữ",
+    "address": "Cao Bằng",
+    "cccd": "004088323456",
+    "interaction_history": {
+      "Môi trường & Động vật": 32,
+      "Văn hóa & Cộng đồng": 38
+    },
+    "donation_history": [
+      {
+        "amount": 275000,
+        "date": "22-06-2024",
+        "time": "12:15:28",
+        "campaign_id": "CD0022"
+      },
+      {
+        "amount": 435000,
+        "date": "06-10-2024",
+        "time": "09:40:15",
+        "campaign_id": "CD0024"
+      }
+    ]
+  },
+  {
+    "id": "DN0134",
+    "full_name": "Phùng Văn Chiến",
+    "email": "phungvanchien@gmail.com",
+    "phone": "0912345681",
+    "password": "zX1!cV5@bN",
+    "date_of_birth": "12-09-1992",
+    "gender": "Nam",
+    "address": "Lạng Sơn",
+    "cccd": "012092334567",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 46,
+      "An sinh Xã hội": 23
+    },
+    "donation_history": [
+      {
+        "amount": 360000,
+        "date": "11-05-2024",
+        "time": "16:50:42",
+        "campaign_id": "CD0025"
+      },
+      {
+        "amount": 695000,
+        "date": "29-09-2024",
+        "time": "13:25:18",
+        "campaign_id": "CD0027"
+      }
+    ]
+  },
+  {
+    "id": "DN0135",
+    "full_name": "Ưng Thị Kim",
+    "email": "ungthikim@gmail.com",
+    "phone": "0923456782",
+    "password": "lK8!mN2@jH",
+    "date_of_birth": "03-01-1995",
+    "gender": "Nữ",
+    "address": "Đắk Nông",
+    "cccd": "067095345678",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 54,
+      "Giáo dục & Khởi nghiệp": 18
+    },
+    "donation_history": [
+      {
+        "amount": 125000,
+        "date": "26-04-2024",
+        "time": "10:30:55",
+        "campaign_id": "CD0026"
+      },
+      {
+        "amount": 520000,
+        "date": "14-08-2024",
+        "time": "14:55:32",
+        "campaign_id": "CD0028"
+      },
+      {
+        "amount": 240000,
+        "date": "01-12-2024",
+        "time": "11:20:18",
+        "campaign_id": "CD0030"
+      }
+    ]
+  },
+  {
+    "id": "DN0136",
+    "full_name": "Âu Văn Tâm",
+    "email": "auvantam@gmail.com",
+    "phone": "0934567893",
+    "password": "pO9!iU4@yT",
+    "date_of_birth": "17-10-1987",
+    "gender": "Nam",
+    "address": "Lai Châu",
+    "cccd": "011087356789",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 26,
+      "Môi trường & Động vật": 49
+    },
+    "donation_history": [
+      {
+        "amount": 465000,
+        "date": "09-07-2024",
+        "time": "15:10:25",
+        "campaign_id": "CD0029"
+      },
+      {
+        "amount": 195000,
+        "date": "22-11-2024",
+        "time": "12:35:48",
+        "campaign_id": "CD0031"
+      }
+    ]
+  },
+  {
+    "id": "DN0137",
+    "full_name": "Nghiêm Thị Thảo",
+    "email": "nghiemthithao@gmail.com",
+    "phone": "0945678904",
+    "password": "rE6!tY3@uI",
+    "date_of_birth": "30-06-1991",
+    "gender": "Nữ",
+    "address": "Sơn La",
+    "cccd": "014091367890",
+    "interaction_history": {
+      "An sinh Xã hội": 42,
+      "Y tế & Sức khỏe": 24
+    },
+    "donation_history": [
+      {
+        "amount": 335000,
+        "date": "23-05-2024",
+        "time": "09:45:15",
+        "campaign_id": "CD0032"
+      },
+      {
+        "amount": 635000,
+        "date": "10-10-2024",
+        "time": "16:20:38",
+        "campaign_id": "CD0034"
+      }
+    ]
+  },
+  {
+    "id": "DN0138",
+    "full_name": "Dư Văn Quang",
+    "email": "duvanquang@gmail.com",
+    "phone": "0956789015",
+    "password": "wQ2!aS7!dF",
+    "date_of_birth": "14-03-1989",
+    "gender": "Nam",
+    "address": "Điện Biên",
+    "cccd": "003089378901",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 39,
+      "Trẻ em & Người yếu thế": 27
+    },
+    "donation_history": [
+      {
+        "amount": 280000,
+        "date": "05-08-2024",
+        "time": "11:55:28",
+        "campaign_id": "CD0033"
+      },
+      {
+        "amount": 495000,
+        "date": "27-11-2024",
+        "time": "13:10:42",
+        "campaign_id": "CD0035"
+      },
+      {
+        "amount": 355000,
+        "date": "18-12-2024",
+        "time": "10:25:55",
+        "campaign_id": "CD0037"
+      }
+    ]
+  },
+  {
+    "id": "DN0139",
+    "full_name": "Bành Thị Vân",
+    "email": "banhthivan@gmail.com",
+    "phone": "0967890126",
+    "password": "gH3!jK6@lZ",
+    "date_of_birth": "21-08-1994",
+    "gender": "Nữ",
+    "address": "Hà Giang",
+    "cccd": "002094389012",
+    "interaction_history": {
+      "Môi trường & Động vật": 36,
+      "Văn hóa & Cộng đồng": 33
+    },
+    "donation_history": [
+      {
+        "amount": 405000,
+        "date": "16-04-2024",
+        "time": "14:30:18",
+        "campaign_id": "CD0036"
+      },
+      {
+        "amount": 220000,
+        "date": "02-09-2024",
+        "time": "11:45:52",
+        "campaign_id": "CD0038"
+      }
+    ]
+  },
+  {
+    "id": "DN0140",
+    "full_name": "Kiều Văn Hoàng",
+    "email": "kieuvanhoang@gmail.com",
+    "phone": "0978901237",
+    "password": "xC9!vB1@nM",
+    "date_of_birth": "07-12-1986",
+    "gender": "Nam",
+    "address": "Bắc Kạn",
+    "cccd": "006086390123",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 33,
+      "An sinh Xã hội": 45
+    },
+    "donation_history": [
+      {
+        "amount": 565000,
+        "date": "30-06-2024",
+        "time": "15:50:35",
+        "campaign_id": "CD0039"
+      },
+      {
+        "amount": 165000,
+        "date": "15-11-2024",
+        "time": "09:15:20",
+        "campaign_id": "CD0041"
+      }
+    ]
+  },
+  {
+    "id": "DN0141",
+    "full_name": "Lục Thị Hằng",
+    "email": "lucthihang@gmail.com",
+    "phone": "0989012348",
+    "password": "qW4!eR9@tY",
+    "date_of_birth": "19-05-1993",
+    "gender": "Nữ",
+    "address": "An Giang",
+    "cccd": "089093401234",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 48,
+      "Giáo dục & Khởi nghiệp": 20
+    },
+    "donation_history": [
+      {
+        "amount": 145000,
+        "date": "12-07-2024",
+        "time": "12:20:45",
+        "campaign_id": "CD0040"
+      },
+      {
+        "amount": 535000,
+        "date": "28-10-2024",
+        "time": "14:45:28",
+        "campaign_id": "CD0042"
+      },
+      {
+        "amount": 320000,
+        "date": "09-12-2024",
+        "time": "10:10:15",
+        "campaign_id": "CD0044"
+      }
+    ]
+  },
+  {
+    "id": "DN0142",
+    "full_name": "Liêu Văn Thành",
+    "email": "lieuvanthanh@gmail.com",
+    "phone": "0990123459",
+    "password": "aS8#dF2!gH",
+    "date_of_birth": "04-02-1990",
+    "gender": "Nam",
+    "address": "Tiền Giang",
+    "cccd": "082090412345",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 40,
+      "Môi trường & Động vật": 29
+    },
+    "donation_history": [
+      {
+        "amount": 375000,
+        "date": "24-05-2024",
+        "time": "16:35:52",
+        "campaign_id": "CD0043"
+      },
+      {
+        "amount": 605000,
+        "date": "11-09-2024",
+        "time": "13:00:18",
+        "campaign_id": "CD0045"
+      }
+    ]
+  },
+  {
+    "id": "DN0143",
+    "full_name": "Mạc Thị Dung",
+    "email": "macthidung@gmail.com",
+    "phone": "0901234571",
+    "password": "zX3!cV8@bN",
+    "date_of_birth": "25-09-1988",
+    "gender": "Nữ",
+    "address": "Đồng Tháp",
+    "cccd": "087088423456",
+    "interaction_history": {
+      "An sinh Xã hội": 37,
+      "Y tế & Sức khỏe": 31
+    },
+    "donation_history": [
+      {
+        "amount": 255000,
+        "date": "06-08-2024",
+        "time": "10:50:25",
+        "campaign_id": "CD0046"
+      },
+      {
+        "amount": 475000,
+        "date": "20-11-2024",
+        "time": "15:15:40",
+        "campaign_id": "CD0048"
+      }
+    ]
+  },
+  {
+    "id": "DN0144",
+    "full_name": "Nhan Văn Đạt",
+    "email": "nhanvandat@gmail.com",
+    "phone": "0912345682",
+    "password": "lK1!jH5@mN",
+    "date_of_birth": "10-11-1992",
+    "gender": "Nam",
+    "address": "Long An",
+    "cccd": "080092434567",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 45,
+      "Trẻ em & Người yếu thế": 22
+    },
+    "donation_history": [
+      {
+        "amount": 485000,
+        "date": "18-03-2024",
+        "time": "13:25:15",
+        "campaign_id": "CD0047"
+      },
+      {
+        "amount": 210000,
+        "date": "04-07-2024",
+        "time": "09:50:38",
+        "campaign_id": "CD0049"
+      },
+      {
+        "amount": 545000,
+        "date": "25-12-2024",
+        "time": "16:40:22",
+        "campaign_id": "CD0050"
+      }
+    ]
+  },
+  {
+    "id": "DN0145",
+    "full_name": "Ông Thị Loan",
+    "email": "ongthiloan@gmail.com",
+    "phone": "0923456783",
+    "password": "pO6!uI1@yT",
+    "date_of_birth": "02-04-1995",
+    "gender": "Nữ",
+    "address": "Trà Vinh",
+    "cccd": "084095445678",
+    "interaction_history": {
+      "Môi trường & Động vật": 50,
+      "Văn hóa & Cộng đồng": 17
+    },
+    "donation_history": [
+      {
+        "amount": 325000,
+        "date": "01-06-2024",
+        "time": "11:10:48",
+        "campaign_id": "CD0001"
+      },
+      {
+        "amount": 435000,
+        "date": "19-10-2024",
+        "time": "14:35:12",
+        "campaign_id": "CD0003"
+      }
+    ]
+  },
+  {
+    "id": "DN0146",
+    "full_name": "Phó Văn Cường",
+    "email": "phovancuong@gmail.com",
+    "phone": "0934567894",
+    "password": "rE7!wQ4@aS",
+    "date_of_birth": "16-07-1987",
+    "gender": "Nam",
+    "address": "Hậu Giang",
+    "cccd": "093087456789",
+    "interaction_history": {
+      "Y tế & Sức khỏe": 25,
+      "An sinh Xã hội": 52
+    },
+    "donation_history": [
+      {
+        "amount": 665000,
+        "date": "13-04-2024",
+        "time": "15:55:28",
+        "campaign_id": "CD0002"
+      },
+      {
+        "amount": 185000,
+        "date": "30-08-2024",
+        "time": "12:20:42",
+        "campaign_id": "CD0005"
+      }
+    ]
+  },
+  {
+    "id": "DN0147",
+    "full_name": "Quản Thị Nhung",
+    "email": "quanthinhung@gmail.com",
+    "phone": "0945678905",
+    "password": "tY8!uI3@oP",
+    "date_of_birth": "29-10-1991",
+    "gender": "Nữ",
+    "address": "Vĩnh Phúc",
+    "cccd": "026091467890",
+    "interaction_history": {
+      "Trẻ em & Người yếu thế": 41,
+      "Giáo dục & Khởi nghiệp": 25
+    },
+    "donation_history": [
+      {
+        "amount": 295000,
+        "date": "21-05-2024",
+        "time": "09:40:15",
+        "campaign_id": "CD0004"
+      },
+      {
+        "amount": 515000,
+        "date": "08-09-2024",
+        "time": "16:05:38",
+        "campaign_id": "CD0006"
+      },
+      {
+        "amount": 225000,
+        "date": "16-12-2024",
+        "time": "11:30:52",
+        "campaign_id": "CD0008"
+      }
+    ]
+  },
+  {
+    "id": "DN0148",
+    "full_name": "Sầm Văn Tuấn",
+    "email": "samvantuan@gmail.com",
+    "phone": "0956789016",
+    "password": "gF9!hJ5@kL",
+    "date_of_birth": "13-01-1989",
+    "gender": "Nam",
+    "address": "Quảng Trị",
+    "cccd": "045089478901",
+    "interaction_history": {
+      "Văn hóa & Cộng đồng": 34,
+      "Môi trường & Động vật": 37
+    },
+    "donation_history": [
+      {
+        "amount": 415000,
+        "date": "10-06-2024",
+        "time": "13:50:22",
+        "campaign_id": "CD0007"
+      },
+      {
+        "amount": 245000,
+        "date": "25-10-2024",
+        "time": "10:25:45",
+        "campaign_id": "CD0009"
+      }
+    ]
+  },
+  {
+    "id": "DN0149",
+    "full_name": "Tề Thị Trang",
+    "email": "tethitrang@gmail.com",
+    "phone": "0967890127",
+    "password": "xC5!vB9@nM",
+    "date_of_birth": "27-06-1994",
+    "gender": "Nữ",
+    "address": "Quảng Ngãi",
+    "cccd": "051094489012",
+    "interaction_history": {
+      "An sinh Xã hội": 44,
+      "Y tế & Sức khỏe": 28
+    },
+    "donation_history": [
+      {
+        "amount": 355000,
+        "date": "03-07-2024",
+        "time": "15:15:35",
+        "campaign_id": "CD0011"
+      },
+      {
+        "amount": 625000,
+        "date": "17-11-2024",
+        "time": "12:40:18",
+        "campaign_id": "CD0013"
+      }
+    ]
+  },
+  {
+    "id": "DN0150",
+    "full_name": "Ứng Văn Phúc",
+    "email": "ungvanphuc@gmail.com",
+    "phone": "0978901238",
+    "password": "qW6!eR2@tY",
+    "date_of_birth": "09-11-1986",
+    "gender": "Nam",
+    "address": "Bình Thuận",
+    "cccd": "060086490123",
+    "interaction_history": {
+      "Giáo dục & Khởi nghiệp": 51,
+      "Trẻ em & Người yếu thế": 15
+    },
+    "donation_history": [
+      {
+        "amount": 570000,
+        "date": "26-08-2024",
+        "time": "14:05:48",
+        "campaign_id": "CD0012"
+      },
+      {
+        "amount": 160000,
+        "date": "12-12-2024",
+        "time": "10:30:25",
+        "campaign_id": "CD0015"
+      },
+      {
+        "amount": 440000,
+        "date": "28-12-2024",
+        "time": "16:55:12",
+        "campaign_id": "CD0014"
+      }
+    ]
+  }
+]
