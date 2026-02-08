@@ -1,4 +1,4 @@
-import jsonrt json
+import json
 [
   {
     "id": "DN0101",
