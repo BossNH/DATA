@@ -1,0 +1,466 @@
+[
+  {
+    "id": "CC0001",
+    "full_name": "Rad Kivette",
+    "email": "rad.kivette@gmail.com",
+    "phone": "0908555001",
+    "owned_campaigns": [
+      "CD0001"
+    ],
+    "password": "$2b$10$XNz8/RealHashVCF",
+    "date_of_birth": "15-05-1970",
+    "gender": "Nam",
+    "address": "Hồ Chí Minh",
+    "cccd": "079070001234",
+    "account_creation_date": "21-11-2019"
+  },
+  {
+    "id": "CC0002",
+    "full_name": "Nguyễn Việt Phương",
+    "email": "phuong.nguyen@gmail.com",
+    "phone": "0913666002",
+    "owned_campaigns": [
+      "CD0002"
+    ],
+    "password": "OpSmile@2024!",
+    "date_of_birth": "20-08-1975",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001075005678",
+    "account_creation_date": "10-01-2020"
+  },
+  {
+    "id": "CC0003",
+    "full_name": "Nguyễn Thị Xuyên",
+    "email": "xuyen.nguyen@gmail.com",
+    "phone": "0989777003",
+    "owned_campaigns": [
+      "CD0003"
+    ],
+    "password": "TuoiSang#DrXuyen",
+    "date_of_birth": "12-10-1950",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001150009999",
+    "account_creation_date": "18-08-2020"
+  },
+  {
+    "id": "CC0004",
+    "full_name": "Nguyễn Văn Rinh",
+    "email": "rinh.nguyen@gmail.com",
+    "phone": "0903888004",
+    "owned_campaigns": [
+      "CD0004"
+    ],
+    "password": "VAVA@Hero2024",
+    "date_of_birth": "01-01-1942",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001042004444",
+    "account_creation_date": "10-01-2020"
+  },
+  {
+    "id": "CC0005",
+    "full_name": "Trần Đăng Tuấn",
+    "email": "tuan.tran@gmail.com",
+    "phone": "0912999005",
+    "owned_campaigns": [
+      "CD0005",
+      "CD0041"
+    ],
+    "password": "ComCoThit@Tuan",
+    "date_of_birth": "04-09-1957",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001057003333",
+    "account_creation_date": "25-02-2020"
+  },
+  {
+    "id": "CC0006",
+    "full_name": "Hoàng Hoa Trung",
+    "email": "trung.hoang@gmail.com",
+    "phone": "0933635156",
+    "owned_campaigns": [
+      "CD0006"
+      "CD0034",
+    ],
+    "password": "NuoiEm@Trung2025",
+    "date_of_birth": "18-06-1990",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001090001111",
+    "account_creation_date": "04-06-2019"
+  },
+  {
+    "id": "CC0007",
+    "full_name": "Đinh Thị Nam Phương",
+    "email": "namphuong@gmail.com",
+    "phone": "0909111007",
+    "owned_campaigns": [
+      "CD0007"
+    ],
+    "password": "NPF@BridgeBuilder",
+    "date_of_birth": "25-12-1993",
+    "gender": "Nữ",
+    "address": "Hồ Chí Minh",
+    "cccd": "079193002222",
+    "account_creation_date": "19-09-2019"
+  },
+  {
+    "id": "CC0008",
+    "full_name": "Bạch Quốc Khánh",
+    "email": "khanhbq@nihbt.org.vn",
+    "phone": "0944000111",
+    "owned_campaigns": [
+      "CD0008"
+    ],
+    "password": "NIHBT@HienMau",
+    "date_of_birth": "20-02-1965",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001065003333",
+    "account_creation_date": "12-11-2018"
+  },
+  {
+    "id": "CC0009",
+    "full_name": "Damien Roberts",
+    "email": "damien@gmail.com",
+    "phone": "0901333009",
+    "owned_campaigns": [
+      "CD0009"
+    ],
+    "password": "SCC@DamienUK",
+    "date_of_birth": "30-04-1980",
+    "gender": "Nam",
+    "address": "Hồ Chí Minh",
+    "cccd": "079080007777",
+    "account_creation_date": "20-05-2019"
+  },
+  {
+    "id": "CC0010",
+    "full_name": "Nguyễn Minh Lộc",
+    "email": "namdong@tuthientinhthuong.org",
+    "phone": "0905222333",
+    "owned_campaigns": [
+      "CD0010"
+    ],
+    "password": "Q2K@NamDong",
+    "date_of_birth": "01-01-1950",
+    "gender": "Nam",
+    "address": "TP. Hồ Chí Minh",
+    "cccd": "079050006666",
+    "account_creation_date": "15-03-2021"
+  },
+  {
+    "id": "CC0011",
+    "full_name": "Hoàng Phan Anh",
+    "email": "phananh@gmail.com",
+    "phone": "0918777888",
+    "owned_campaigns": [
+      "CD0011"
+    ],
+    "password": "PA@CentralVietnam",
+    "date_of_birth": "30-07-1981",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001081001111",
+    "account_creation_date": "20-10-2020"
+  },
+  {
+    "id": "CC0012",
+    "full_name": "Trần Thị Thủy Tiên",
+    "email": "thuytien.singer@gmail.com",
+    "phone": "0919222444",
+    "owned_campaigns": [
+      "CD0012"
+    ],
+    "password": "TT@MienTay2020",
+    "date_of_birth": "25-11-1985",
+    "gender": "Nữ",
+    "address": "Quận 7, TP. Hồ Chí Minh",
+    "cccd": "079185007777",
+    "account_creation_date": "01-04-2020"
+  },
+ {
+    "id": "CC0013",
+    "full_name": "Michael Brosowski",
+    "email": "michael@bdcf.org",
+    "phone": "02437170544",
+    "owned_campaigns": [
+      "CD0013"
+    ],
+    "password": "BD@Michael2003",
+    "date_of_birth": "02-06-1975",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001075003333",
+    "account_creation_date": "02-06-2003"
+  },
+  {
+    "id": "CC0014",
+    "full_name": "Nguyễn Thị Kim Oanh",
+    "email": "kimoanh.so@thienan.org",
+    "phone": "02837292139",
+    "owned_campaigns": [
+      "CD0014"
+    ],
+    "password": "MATA@KimOanh94",
+    "date_of_birth": "15-07-1955",
+    "gender": "Nữ",
+    "address": "Thủ Đức, TP. Hồ Chí Minh",
+    "cccd": "079055009999",
+    "account_creation_date": "15-07-1994"
+  },
+  {
+    "id": "CC0015",
+    "full_name": "Nguyễn Xuân Tú",
+    "email": "xuantu@hopefoundation.org.vn",
+    "phone": "0903111222",
+    "owned_campaigns": [
+      "CD0015"
+    ],
+    "password": "XT@HopeFund2022",
+    "date_of_birth": "12-05-1978",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001184005678",
+    "account_creation_date": "05-01-2022"
+  },
+  {
+    "id": "CC0016",
+    "full_name": "Nguyễn Anh Tuấn",
+    "email": "anhtuan@thanhnien.vn",
+    "phone": "0913999888",
+    "owned_campaigns": [
+      "CD0016",
+      "CD0039",
+      "CD0048"
+    ],
+    "password": "TWDoan@MayTinh2021",
+    "date_of_birth": "20-10-1979",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001079001234",
+    "account_creation_date": "01-09-2021"
+  },
+  {
+    "id": "CC0017",
+    "full_name": "Trần Thành Long",
+    "email": "tranthanhlong@hbtbnn.org.vn",
+    "phone": "0945666777",
+    "owned_campaigns": [
+      "CD0017",
+      "CD0035"
+    ],
+    "password": "HBT@SangMat2020",
+    "date_of_birth": "15-02-1950",
+    "gender": "Nam",
+    "address": "TP. Hồ Chí Minh",
+    "cccd": "079050005678",
+    "account_creation_date": "15-08-2020"
+  },
+  {
+    "id": "CC0018",
+    "full_name": "Lê Thị Thanh Hương",
+    "email": "huong.le@savethechildren.org",
+    "phone": "0902444555",
+    "owned_campaigns": [
+      "CD0018"
+    ],
+    "password": "STC@HuongLe2022",
+    "date_of_birth": "05-09-1975",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001175009999",
+    "account_creation_date": "14-02-2022"
+  },
+  {
+    "id": "CC0019",
+    "full_name": "Trần Hữu Vỹ",
+    "email": "vy.tran@greenviet.org",
+    "phone": "0966333444",
+    "owned_campaigns": [
+      "CD0019",
+      "CD0036"
+    ],
+    "password": "GV@VoocChaVa21",
+    "date_of_birth": "10-12-1980",
+    "gender": "Nam",
+    "address": "Đà Nẵng",
+    "cccd": "048080001111",
+    "account_creation_date": "04-10-2021"
+  },
+  {
+    "id": "CC0020",
+    "full_name": "Rana Flowers",
+    "email": "rflowers@unicef.org",
+    "phone": "0912111222",
+    "owned_campaigns": [
+      "CD0020",
+      "CD0040"
+    ],
+    "password": "UNICEF@Rana2022",
+    "date_of_birth": "25-04-1972",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "NotAvailable (Diplomatic ID)",
+    "account_creation_date": "01-01-2022"
+  },
+  {
+    "id": "CC0021",
+    "full_name": "Trần Thị Như Trang",
+    "email": "trang.tran@vitamvocviet.vn",
+    "phone": "0988555222",
+    "owned_campaigns": [
+      "CD0021",
+      "CD0049"
+    ],
+    "password": "VSF@TamVocViet21",
+    "date_of_birth": "30-08-1982",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001182002222",
+    "account_creation_date": "10-05-2021"
+  },
+  {
+    "id": "CC0022",
+    "full_name": "Nguyễn Thu Hà",
+    "email": "hanth@thapsangniemtin.vn",
+    "phone": "0914222333",
+    "owned_campaigns": [
+      "CD0022",
+      "CD0043"
+    ],
+    "password": "TSNT@HocBong2019",
+    "date_of_birth": "14-06-1978",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001178003333",
+    "account_creation_date": "15-06-2019"
+  },
+  {
+    "id": "CC0023",
+    "full_name": "Hoàng Hoa Trung",
+    "email": "trung.hoang@sucmanh2000.com",
+    "phone": "0908111999",
+    "owned_campaigns": [
+      "CD0023"
+    ],
+    "password": "SM2000@NuoiEm20",
+    "date_of_birth": "18-11-1990",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001090004444",
+    "account_creation_date": "20-12-2020"
+  },
+  {
+    "id": "CC0024",
+    "full_name": "Hà Thị Nga",
+    "email": "hathinga@phunu.org.vn",
+    "phone": "0915666888",
+    "owned_campaigns": [
+      "CD0024",
+      "CD0046"
+    ],
+    "password": "VWU@PhuNuVN21",
+    "date_of_birth": "20-02-1969",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001069005555",
+    "account_creation_date": "08-08-2021"
+  },
+  {
+    "id": "CC0025",
+    "full_name": "Nguyễn Văn Hạnh",
+    "email": "hanh.nguyen@dariu.org",
+    "phone": "0912444777",
+    "owned_campaigns": [
+      "CD0025",
+      "CD0047"
+    ],
+    "password": "DARIU@TinHoc20",
+    "date_of_birth": "12-03-1970",
+    "gender": "Nam",
+    "address": "TP. Hồ Chí Minh",
+    "cccd": "079070006666",
+    "account_creation_date": "12-03-2020"
+  },
+ {
+    "id": "CC0026",
+    "full_name": "Nguyễn Ngọc Lương",
+    "email": "luongnn@doanthanhnien.vn",
+    "phone": "0903555222",
+    "owned_campaigns": [
+      "CD0026",
+      "CD0044"
+    ],
+    "password": "TWDoan@MuaDongAm",
+    "date_of_birth": "26-03-1978",
+    "gender": "Nam",
+    "address": "Thanh Hóa",
+    "cccd": "038078009999",
+    "account_creation_date": "05-05-2020"
+  },
+  {
+    "id": "CC0027",
+    "full_name": "Trịnh Hồng Sơn",
+    "email": "son.trinh@vnhot.vn",
+    "phone": "0913888555",
+    "owned_campaigns": [
+      "CD0027"
+    ],
+    "password": "VNHOT@HienTang21",
+    "date_of_birth": "10-10-1960",
+    "gender": "Nam",
+    "address": "Hà Nội",
+    "cccd": "001060001111",
+    "account_creation_date": "10-09-2021"
+  },
+  {
+    "id": "CC0028",
+    "full_name": "Dương Thị Ngọc Linh",
+    "email": "linh.duong@cwd.vn",
+    "phone": "0944111333",
+    "owned_campaigns": [
+      "CD0028",
+      "CD0050"
+    ],
+    "password": "CWD@NgoiNhaBinhYen",
+    "date_of_birth": "08-03-1975",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001175002222",
+    "account_creation_date": "30-10-2021"
+  },
+  {
+    "id": "CC0029",
+    "full_name": "Văn Ngọc Thịnh",
+    "email": "thinh.van@wwf.org.vn",
+    "phone": "0987444111",
+    "owned_campaigns": [
+      "CD0029"
+    ],
+    "password": "WWF@BaoTon2023",
+    "date_of_birth": "05-06-1974",
+    "gender": "Nam",
+    "address": "Quảng Nam",
+    "cccd": "049074003333",
+    "account_creation_date": "01-01-2023"
+  },
+  {
+    "id": "CC0030",
+    "full_name": "Phan Thu Hương",
+    "email": "huong.phan@quythientam.com",
+    "phone": "0919333222",
+    "owned_campaigns": [
+      "CD0030",
+      "CD0045"
+    ],
+    "password": "QTT@VinGroup2022",
+    "date_of_birth": "02-09-1970",
+    "gender": "Nữ",
+    "address": "Hà Nội",
+    "cccd": "001170005555",
+    "account_creation_date": "15-12-2022"
+  },
+]
