@@ -112,7 +112,8 @@
     "email": "khanhbq@nihbt.org.vn",
     "phone": "0944000111",
     "owned_campaigns": [
-      "CD0008"
+      "CD0008",
+      "CD0033"
     ],
     "password": "NIHBT@HienMau",
     "date_of_birth": "20-02-1965",
@@ -172,7 +173,8 @@
     "email": "thuytien.singer@gmail.com",
     "phone": "0919222444",
     "owned_campaigns": [
-      "CD0012"
+      "CD0012",
+      "CD0031"
     ],
     "password": "TT@MienTay2020",
     "date_of_birth": "25-11-1985",
@@ -217,7 +219,8 @@
     "email": "xuantu@hopefoundation.org.vn",
     "phone": "0903111222",
     "owned_campaigns": [
-      "CD0015"
+      "CD0015",
+      "CD0032"
     ],
     "password": "XT@HopeFund2022",
     "date_of_birth": "12-05-1978",
