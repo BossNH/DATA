@@ -497,26 +497,26 @@ class DonationPage(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    page2 = CampaignData(
-        title="Hỗ trợ nạn nhân Chất độc Da cam (VAVA)",
-        description="Chăm sóc, giúp đỡ và bảo vệ quyền lợi cho các nạn nhân chất độc da cam, giúp họ vượt qua mặc cảm và cải thiện đời sống.",
+    page1 = CampaignData(
+        title="Quỹ Nhịp Tim Việt Nam- Vết sẹo cuộc đời",
+        description="Chương trình y tế nhân đạo nhằm hỗ trợ chi phí phẫu thuật tim cho trẻ em nghèo mắc bệnh tim bẩm sinh, giúp các em có cơ hội sống khỏe mạnh và theo đuổi ước mơ",
         raised="1000000000",
-        target="8000000000",
-        percent="12.5%",
-        activities="Xây dựng nhà tình nghĩa cho gia đình nạn nhân\nHỗ trợ phục hồi chức năng và dạy nghề\nCung cấp trợ cấp khó khăn hàng tháng",
+        target="15000000000",
+        percent="6.67%",
+        activities="Tài trợ chi phí phẫu thuật tim cho trẻ em nghèo\nKhám sàng lọc tim bẩm sinh tại các tỉnh xa\nHỗ trợ hậu phẫu và dinh dưỡng cho bệnh nhi",
         scope="Toàn quốc",
-        founded_date="2004-01-10",
-        campaign_id="CC0004",
+        founded_date="2006-11-21",
+        campaign_id="CC0001",
         gender="Nam",
-        full_name="Nguyễn Văn Rinh ",
-        phone="0903888004",
-        cccd="001042004444",
-        address="Hà Nội",
-        email="rinh.nguyen@gmail.com",
+        full_name="Rad Kivette",
+        phone="0908555001",
+        cccd="079070001234",
+        address="Hồ Chí Minh",
+        email="rad.kivette@gmail.com",
         qr_path="qr.png",
-        avatar_path="avt2.png",
+        avatar_path="avt1.png",
     )
 
-    window = DonationPage(page2)
+    window = DonationPage(page1)
     window.show()
     sys.exit(app.exec())
