@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Donarity - Theo dõi chiến dịch</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+QWidget#centralwidget{
+    background:#FFF3F9;
+    font-family:&quot;Segoe UI&quot;;
+}
+
+/* top bar */
+QFrame#topBar{
+    background:#F7DEE8;
+    border:none;
+}
+QLabel#logoText{
+    color:#A05582;
+    font-size:28px;
+    font-weight:800;
+}
+QLabel#logoSub{
+    color:#A9919C;
+    font-size:10px;
+    font-weight:600;
+}
+QPushButton#navHome,
+QPushButton#navCreate,
+QPushButton#navPublic{
+    background:transparent;
+    border:none;
+    color:#2A2A2A;
+    font-size:14px;
+    font-weight:600;
+    padding:6px 10px;
+}
+QPushButton#navFollow{
+    background:#D8AFC4;
+    border:none;
+    border-radius:16px;
+    color:#2A2A2A;
+    font-size:14px;
+    font-weight:700;
+    padding:7px 16px;
+}
+QLabel#topIcon{
+    color:#1E1E1E;
+    font-size:20px;
+    font-weight:600;
+}
+
+/* back */
+QPushButton#backBtn{
+    background:transparent;
+    border:none;
+    color:#2A2A2A;
+    font-size:18px;
+    font-weight:700;
+    text-align:left;
+}
+
+/* main pink card */
+QFrame#mainPinkCard{
+    background:#F9E1EB;
+    border:none;
+    border-radius:24px;
+}
+QLabel#campaignImage{
+    background:#FFFFFF;
+    border:none;
+    border-radius:22px;
+    color:#A8A8A8;
+    font-size:18px;
+    font-weight:700;
+}
+QLabel#titleLabel{
+    color:#855373;
+    font-size:31px;
+    font-weight:900;
+}
+QLabel#descLabel{
+    color:#403A3F;
+    font-size:16px;
+    font-weight:500;
+}
+QLabel#tagCode,
+QLabel#tagCate{
+    background:#F2CDDE;
+    color:#B1829B;
+    border-radius:11px;
+    padding:4px 12px;
+    font-size:12px;
+    font-weight:700;
+}
+QLabel#tagStatus{
+    background:#D7F4D9;
+    color:#4FA666;
+    border-radius:11px;
+    padding:4px 12px;
+    font-size:12px;
+    font-weight:700;
+}
+QLabel#metaIconPink{
+    color:#F2A7C8;
+    font-size:17px;
+    font-weight:700;
+}
+QLabel#metaIconPurple{
+    color:#CFC6F7;
+    font-size:17px;
+    font-weight:700;
+}
+QLabel#metaText{
+    color:#6B5D67;
+    font-size:15px;
+    font-weight:500;
+}
+
+/* progress card */
+QFrame#progressCard{
+    background:#FFFFFF;
+    border:none;
+    border-radius:22px;
+}
+QLabel#amountMain{
+    color:#7B4B69;
+    font-size:20px;
+    font-weight:900;
+}
+QLabel#amountSub{
+    color:#A38B99;
+    font-size:20px;
+    font-weight:800;
+}
+QLabel#percentLabel{
+    color:#7B4B69;
+    font-size:20px;
+    font-weight:900;
+}
+QProgressBar#progressBar{
+    border:none;
+    border-radius:10px;
+    background:#F7D8E6;
+    min-height:22px;
+    max-height:22px;
+}
+QProgressBar#progressBar::chunk{
+    background:#EDA5CB;
+    border-radius:10px;
+}
+QLabel#statTitle{
+    color:#2C2C2C;
+    font-size:18px;
+    font-weight:800;
+}
+QLabel#statValueLeft{
+    color:#BE9AB0;
+    font-size:20px;
+    font-weight:900;
+}
+QLabel#statValueRight{
+    color:#A76E93;
+    font-size:20px;
+    font-weight:900;
+}
+QLabel#miniLogo{
+    color:#A05582;
+    font-size:18px;
+    font-weight:900;
+}
+QLabel#miniLogoSub{
+    color:#A9919C;
+    font-size:10px;
+    font-weight:600;
+}
+    </string>
+   </property>
+   <widget class="QFrame" name="topBar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="logoText">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>12</y>
+       <width>150</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Donarity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logoSub">
+     <property name="geometry">
+      <rect>
+       <x>82</x>
+       <y>38</y>
+       <width>80</width>
+       <height>14</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>by group 10</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutTrangChu">
+     <property name="geometry">
+      <rect>
+       <x>259</x>
+       <y>19</y>
+       <width>131</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>🏠  Trang chủ</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutTaoChienDich">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>19</y>
+       <width>145</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>➕  Tạo chiến dịch</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutTheoDoiChienDich">
+     <property name="geometry">
+      <rect>
+       <x>546</x>
+       <y>16</y>
+       <width>191</width>
+       <height>38</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>🗂  Theo dõi chiến dịch</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutCongKhai">
+     <property name="geometry">
+      <rect>
+       <x>724</x>
+       <y>19</y>
+       <width>131</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>👁  Công khai</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ThongBao">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>20</y>
+       <width>28</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#E53958;font-size:18px;font-weight:700;</string>
+     </property>
+     <property name="text">
+      <string>🔔</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="CaiDat">
+     <property name="geometry">
+      <rect>
+       <x>1084</x>
+       <y>20</y>
+       <width>28</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#1E1E1E;font-size:18px;font-weight:700;</string>
+     </property>
+     <property name="text">
+      <string>⚙</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TaiKhoan">
+     <property name="geometry">
+      <rect>
+       <x>1126</x>
+       <y>15</y>
+       <width>34</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#1E1E1E;font-size:24px;font-weight:700;</string>
+     </property>
+     <property name="text">
+      <string>👤</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="statTitleRight_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#2C2C2C;font-size:18px;font-weight:800;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#98015e;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="back">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>82</y>
+      <width>140</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>← Quay lại</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="mainPinkCard">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>126</y>
+      <width>1160</width>
+      <height>734</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="titleLabel">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>42</y>
+       <width>760</width>
+       <height>58</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Quỹ Nhịp Tim Việt Nam (Vết sẹo cuộc đời)</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="descLabel">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>108</y>
+       <width>730</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chương trình y tế nhân đạo nhằm hỗ trợ chi phí phẫu thuật tim cho trẻ em nghèo mắc bệnh tim bẩm sinh, giúp các em có cơ hội sống khỏe mạnh và theo đuổi ước mơ.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tagCode">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>168</y>
+       <width>82</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CC0001</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tagCate">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>168</y>
+       <width>135</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Y tế &amp; sức khỏe</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tagStatus">
+     <property name="geometry">
+      <rect>
+       <x>968</x>
+       <y>168</y>
+       <width>141</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>🟢 Đang diễn ra</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="scopeIcon">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>218</y>
+       <width>24</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#F2A7C8;font-size:17px;font-weight:700;</string>
+     </property>
+     <property name="text">
+      <string>📍</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="scopeText">
+     <property name="geometry">
+      <rect>
+       <x>392</x>
+       <y>216</y>
+       <width>240</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#6B5D67;font-size:15px;font-weight:500;</string>
+     </property>
+     <property name="text">
+      <string>Phạm vi : Toàn quốc</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dateIcon">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>264</y>
+       <width>24</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#F2A7C8;font-size:17px;font-weight:700;</string>
+     </property>
+     <property name="text">
+      <string>🗓</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dateText">
+     <property name="geometry">
+      <rect>
+       <x>392</x>
+       <y>262</y>
+       <width>310</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#6B5D67;font-size:15px;font-weight:500;</string>
+     </property>
+     <property name="text">
+      <string>Ngày thành lập : 2006-11-21</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="activityIcon">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>308</y>
+       <width>24</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#CFC6F7;font-size:17px;font-weight:700;</string>
+     </property>
+     <property name="text">
+      <string>👥</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="activityText">
+     <property name="geometry">
+      <rect>
+       <x>392</x>
+       <y>304</y>
+       <width>560</width>
+       <height>82</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#6B5D67;font-size:15px;font-weight:500;</string>
+     </property>
+     <property name="text">
+      <string>Hoạt động :  • Tài trợ chi phí phẫu thuật tim cho trẻ em nghèo
+             • Khám sàng lọc tim bẩm sinh tại các tỉnh xa
+             • Hỗ trợ hậu phẫu và dinh dưỡng cho bệnh nhi</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QFrame" name="progressCard">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>414</y>
+       <width>1120</width>
+       <height>214</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="top">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>18</y>
+        <width>170</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bottom">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>30</y>
+        <width>200</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>15000000000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PhanTram">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>18</y>
+        <width>78</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="Thanh">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>76</y>
+        <width>994</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>33</number>
+      </property>
+      <property name="textVisible">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statTitleLeft">
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>126</y>
+        <width>210</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#2C2C2C;font-size:18px;font-weight:800;</string>
+      </property>
+      <property name="text">
+       <string>💰 Số tiền đã nhận</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statValueLeft">
+      <property name="geometry">
+       <rect>
+        <x>92</x>
+        <y>156</y>
+        <width>190</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statTitleRight">
+      <property name="geometry">
+       <rect>
+        <x>414</x>
+        <y>126</y>
+        <width>130</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#2C2C2C;font-size:18px;font-weight:800;</string>
+      </property>
+      <property name="text">
+       <string>🎯 Mục tiêu</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statValueRight">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>156</y>
+        <width>260</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>15,000,000,000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="miniLogo">
+      <property name="geometry">
+       <rect>
+        <x>986</x>
+        <y>148</y>
+        <width>95</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Donarity</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="miniLogoSub">
+      <property name="geometry">
+       <rect>
+        <x>1016</x>
+        <y>172</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>by group 10</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statTitleRight_2">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>140</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#2C2C2C;font-size:18px;font-weight:800;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#98015e;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bottom_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>20</y>
+        <width>21</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>331</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../Downloads/7a81c8717c8df2d3ab9c.jpg</pixmap>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
