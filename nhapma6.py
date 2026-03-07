@@ -1,0 +1,655 @@
+import sys
+from dataclasses import dataclass
+
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QPixmap, QPainter, QColor, QFont
+from PyQt6.QtWidgets import (
+    QApplication,
+    QWidget,
+    QLabel,
+    QPushButton,
+    QFrame,
+    QVBoxLayout,
+    QHBoxLayout,
+    QGridLayout,
+    QLineEdit,
+    QMessageBox,
+)
+
+
+@dataclass
+class CampaignData:
+    title: str
+    description: str
+    raised: str
+    target: str
+    percent: str
+    activities: str
+    scope: str
+    founded_date: str
+    campaign_id: str
+    gender: str
+    full_name: str
+    phone: str
+    cccd: str
+    address: str
+    email: str
+    qr_path: str
+    avatar_path: str
+
+
+class ImageLabel(QLabel):
+    def __init__(self, width: int, height: int, radius: int = 0):
+        super().__init__()
+        self.setFixedSize(width, height)
+        self.radius = radius
+        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.setStyleSheet("background: transparent; border: none;")
+
+    def set_image(self, path: str):
+        pix = QPixmap(path)
+        if pix.isNull():
+            self.setText("Không tìm thấy ảnh")
+            self.setStyleSheet("""
+                QLabel {
+                    color: #8a5c78;
+                    border: 1px dashed #e7b3c9;
+                    background: #fff7fb;
+                    font-size: 14px;
+                }
+            """)
+            return
+
+        scaled = pix.scaled(
+            self.width(),
+            self.height(),
+            Qt.AspectRatioMode.KeepAspectRatioByExpanding,
+            Qt.TransformationMode.SmoothTransformation
+        )
+
+        if self.radius > 0:
+            rounded = QPixmap(self.size())
+            rounded.fill(Qt.GlobalColor.transparent)
+
+            painter = QPainter(rounded)
+            painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+            painter.setRenderHint(QPainter.RenderHint.SmoothPixmapTransform)
+
+            path_rect = self.rect()
+            painter.setBrush(QColor("transparent"))
+            painter.setPen(Qt.PenStyle.NoPen)
+            painter.drawRoundedRect(path_rect, self.radius, self.radius)
+
+            painter.setClipPath(self._rounded_path(path_rect, self.radius))
+            painter.drawPixmap(0, 0, scaled)
+            painter.end()
+
+            self.setPixmap(rounded)
+        else:
+            self.setPixmap(scaled)
+
+    def _rounded_path(self, rect, radius):
+        from PyQt6.QtGui import QPainterPath
+        path = QPainterPath()
+        path.addRoundedRect(float(rect.x()), float(rect.y()), float(rect.width()), float(rect.height()), radius, radius)
+        return path
+
+
+class DonationPage(QWidget):
+    def __init__(self, data: CampaignData):
+        super().__init__()
+        self.data = data
+        self.setWindowTitle("Donarity")
+        self.resize(889, 675)
+        self.setMinimumSize(889, 675)
+        self.setStyleSheet("""
+            QWidget {
+                background: #f8f1f4;
+                color: #241f22;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        """)
+        self.build_ui()
+        self.load_data(data)
+
+    def build_ui(self):
+        root = QVBoxLayout(self)
+        root.setContentsMargins(18, 10, 18, 14)
+        root.setSpacing(10)
+
+        # ================= HEADER =================
+        header = QFrame()
+        header.setFixedHeight(48)
+        header.setStyleSheet("""
+            QFrame {
+                background: #f2d6df;
+                border: none;
+            }
+        """)
+        header_layout = QHBoxLayout(header)
+        header_layout.setContentsMargins(14, 5, 14, 5)
+        header_layout.setSpacing(14)
+
+        brand_wrap = QHBoxLayout()
+        brand_wrap.setSpacing(6)
+
+        logo = QLabel("🕊")
+        logo.setFixedSize(30, 30)
+        logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        logo.setStyleSheet("""
+            QLabel {
+                background: #ffffff;
+                border-radius: 15px;
+                font-size: 17px;
+            }
+        """)
+
+        brand_text_wrap = QVBoxLayout()
+        brand_text_wrap.setSpacing(0)
+        brand_text_wrap.setContentsMargins(0, 0, 0, 0)
+
+        brand = QLabel("Donarity")
+        brand.setStyleSheet("""
+            color: #8b3f73;
+            font-size: 16px;
+            font-weight: 800;
+        """)
+
+        sub_brand = QLabel("by group 10")
+        sub_brand.setStyleSheet("""
+            color: #8e7b87;
+            font-size: 10px;
+        """)
+
+        brand_text_wrap.addWidget(brand)
+        brand_text_wrap.addWidget(sub_brand)
+
+        brand_wrap.addWidget(logo)
+        brand_wrap.addLayout(brand_text_wrap)
+
+        header_layout.addLayout(brand_wrap)
+        header_layout.addSpacing(18)
+
+        self.home_btn = self._menu_button("🏠 Trang chủ", active=True)
+        self.stats_btn = self._menu_button("⌛ Thống kê")
+        self.chat_btn = self._menu_button("🗨️Chatbot")
+        self.public_btn = self._menu_button("👁 Công khai")
+
+        header_layout.addWidget(self.home_btn)
+        header_layout.addWidget(self.stats_btn)
+        header_layout.addWidget(self.chat_btn)
+        header_layout.addWidget(self.public_btn)
+        header_layout.addStretch()
+
+        bell_wrap = QFrame()
+        bell_wrap.setFixedSize(24, 24)
+        bell_wrap.setStyleSheet("background: transparent; border: none;")
+        bell_layout = QVBoxLayout(bell_wrap)
+        bell_layout.setContentsMargins(0, 0, 0, 0)
+        bell_layout.setSpacing(0)
+
+        bell_row = QHBoxLayout()
+        bell_row.setContentsMargins(0, 0, 0, 0)
+        bell_row.setSpacing(0)
+
+        bell = QLabel("🔔")
+        bell.setStyleSheet("font-size: 17px;")
+        bell_row.addWidget(bell)
+
+        badge = QLabel("0")
+        badge.setFixedSize(12, 12)
+        badge.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        badge.setStyleSheet("""
+            QLabel {
+                background: #ef3d45;
+                color: white;
+                border-radius: 6px;
+                font-size: 8px;
+                font-weight: 700;
+            }
+        """)
+        bell_row.addWidget(badge, alignment=Qt.AlignmentFlag.AlignTop)
+        bell_layout.addLayout(bell_row)
+
+        settings = QLabel("⚙️")
+        settings.setStyleSheet("font-size: 16px;")
+        user = QLabel("👤")
+        user.setStyleSheet("font-size: 22px;")
+
+        header_layout.addWidget(bell_wrap)
+        header_layout.addWidget(settings)
+        header_layout.addWidget(user)
+        root.addWidget(header)
+
+        # ================= BACK =================
+        back_row = QHBoxLayout()
+        back_row.setContentsMargins(6, 2, 0, 0)
+
+        self.back_btn = QPushButton("← Quay lại")
+        self.back_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.back_btn.setStyleSheet("""
+            QPushButton {
+                background: transparent;
+                border: none;
+                font-size: 14px;
+                font-weight: 600;
+                color: #201d1f;
+                text-align: left;
+                padding: 2px 0;
+            }
+            QPushButton:hover {
+                color: #7d466e;
+            }
+        """)
+        back_row.addWidget(self.back_btn, alignment=Qt.AlignmentFlag.AlignLeft)
+        back_row.addStretch()
+        root.addLayout(back_row)
+
+        # ================= MAIN CARD =================
+        self.main_card = QFrame()
+        self.main_card.setObjectName("mainCard")
+        self.main_card.setStyleSheet("""
+            QFrame#mainCard {
+                background: #f8f0f4;
+                border: 2px solid #f1b7c9;
+                border-radius: 20px;
+            }
+        """)
+        main_layout = QVBoxLayout(self.main_card)
+        main_layout.setContentsMargins(14, 14, 14, 14)
+        main_layout.setSpacing(8)
+
+        self.title_label = QLabel()
+        self.title_label.setWordWrap(True)
+        self.title_label.setStyleSheet("""
+            font-size: 32px;
+            font-weight: 800;
+            color: #734465;
+            line-height: 1.1;
+        """)
+        main_layout.addWidget(self.title_label)
+
+        self.desc_label = QLabel()
+        self.desc_label.setWordWrap(True)
+        self.desc_label.setStyleSheet("""
+            font-size: 17px;
+            color: #2a2428;
+            padding-bottom: 8px;
+        """)
+        main_layout.addWidget(self.desc_label)
+
+        amount_row = QHBoxLayout()
+        amount_row.setContentsMargins(20, 8, 18, 0)
+
+        self.amount_label = QLabel()
+        self.amount_label.setStyleSheet("""
+            font-size: 25px;
+            font-weight: 800;
+            color: #724464;
+        """)
+
+        self.percent_label = QLabel()
+        self.percent_label.setStyleSheet("""
+            font-size: 25px;
+            font-weight: 800;
+            color: #724464;
+        """)
+
+        amount_row.addWidget(self.amount_label)
+        amount_row.addStretch()
+        amount_row.addWidget(self.percent_label)
+        main_layout.addLayout(amount_row)
+
+        self.progress_bg = QFrame()
+        self.progress_bg.setFixedHeight(27)
+        self.progress_bg.setStyleSheet("""
+            QFrame {
+                background: #efd7e2;
+                border: none;
+                border-radius: 13px;
+            }
+        """)
+        progress_layout = QHBoxLayout(self.progress_bg)
+        progress_layout.setContentsMargins(0, 0, 0, 0)
+        progress_layout.setSpacing(0)
+
+        self.progress_fill = QFrame()
+        self.progress_fill.setStyleSheet("""
+            QFrame {
+                background: #eda9d1;
+                border: none;
+                border-radius: 13px;
+            }
+        """)
+        self.progress_fill.setFixedWidth(240)
+
+        progress_layout.addWidget(self.progress_fill, alignment=Qt.AlignmentFlag.AlignLeft)
+        progress_layout.addStretch()
+
+        progress_wrap = QHBoxLayout()
+        progress_wrap.setContentsMargins(10, 0, 10, 0)
+        progress_wrap.addWidget(self.progress_bg)
+        main_layout.addLayout(progress_wrap)
+
+        divider = QFrame()
+        divider.setFrameShape(QFrame.Shape.HLine)
+        divider.setStyleSheet("""
+            color: #f1b7c9;
+            background: #f1b7c9;
+            min-height: 2px;
+            max-height: 2px;
+            border: none;
+        """)
+        main_layout.addWidget(divider)
+
+        lower_row = QHBoxLayout()
+        lower_row.setSpacing(18)
+
+        # LEFT
+        left_frame = QFrame()
+        left_frame.setStyleSheet("QFrame { border: none; }")
+        left_layout = QVBoxLayout(left_frame)
+        left_layout.setContentsMargins(0, 0, 0, 0)
+        left_layout.setSpacing(4)
+
+        left_layout.addWidget(self._section_title("Hoạt động:"))
+        self.activities_label = QLabel()
+        self.activities_label.setWordWrap(True)
+        self.activities_label.setStyleSheet("font-size: 15px; color: #2a2428;")
+        left_layout.addWidget(self.activities_label)
+
+        left_layout.addSpacing(6)
+        left_layout.addWidget(self._section_title("Phạm vi:"))
+        self.scope_label = QLabel()
+        self.scope_label.setStyleSheet("font-size: 15px; color: #2a2428;")
+        left_layout.addWidget(self.scope_label)
+
+        left_layout.addSpacing(6)
+        left_layout.addWidget(self._section_title("Ngày thành lập:"))
+        self.founded_label = QLabel()
+        self.founded_label.setStyleSheet("font-size: 15px; color: #2a2428;")
+        left_layout.addWidget(self.founded_label)
+
+        left_layout.addStretch()
+
+        separator = QFrame()
+        separator.setFixedWidth(2)
+        separator.setStyleSheet("""
+            background: #f1b7c9;
+            border: none;
+        """)
+
+        # RIGHT
+        right_frame = QFrame()
+        right_frame.setStyleSheet("QFrame { border: none; }")
+        right_layout = QVBoxLayout(right_frame)
+        right_layout.setContentsMargins(0, 0, 0, 0)
+        right_layout.setSpacing(4)
+
+        right_layout.addWidget(self._section_title("Chủ chiến dịch:"))
+
+        info_and_avatar = QHBoxLayout()
+        info_and_avatar.setSpacing(18)
+
+        grid = QGridLayout()
+        grid.setHorizontalSpacing(12)
+        grid.setVerticalSpacing(10)
+
+        self.id_value = QLabel()
+        self.gender_value = QLabel()
+        self.name_value = QLabel()
+        self.phone_value = QLabel()
+        self.cccd_value = QLabel()
+        self.address_value = QLabel()
+        self.email_value = QLabel()
+
+        for lb in [
+            self.id_value, self.gender_value, self.name_value, self.phone_value,
+            self.cccd_value, self.address_value, self.email_value
+        ]:
+            lb.setStyleSheet("font-size: 15px; color: #2a2428;")
+
+        labels = [
+            ("ID:", self.id_value, "Giới tính:", self.gender_value),
+            ("Họ và tên:", self.name_value, "", None),
+            ("Số điện thoại:", self.phone_value, "", None),
+            ("Số CCCD:", self.cccd_value, "", None),
+            ("Địa chỉ:", self.address_value, "", None),
+            ("Email:", self.email_value, "", None),
+        ]
+
+        row = 0
+        for left_text, left_value, right_text, right_value in labels:
+            left_label = QLabel(left_text)
+            left_label.setStyleSheet("font-size: 15px; color: #2a2428;")
+            grid.addWidget(left_label, row, 0)
+            grid.addWidget(left_value, row, 1)
+
+            if right_value is not None:
+                right_label = QLabel(right_text)
+                right_label.setStyleSheet("font-size: 15px; color: #2a2428;")
+                grid.addWidget(right_label, row, 2)
+                grid.addWidget(right_value, row, 3)
+            row += 1
+
+        info_and_avatar.addLayout(grid, 1)
+
+        self.avatar_label = ImageLabel(120, 148, radius=0)
+        self.avatar_label.setStyleSheet("""
+            QLabel {
+                background: #dbe7f2;
+                border: none;
+            }
+        """)
+        info_and_avatar.addWidget(self.avatar_label, alignment=Qt.AlignmentFlag.AlignTop)
+
+        right_layout.addLayout(info_and_avatar)
+        right_layout.addStretch()
+
+        lower_row.addWidget(left_frame, 4)
+        lower_row.addWidget(separator)
+        lower_row.addWidget(right_frame, 5)
+
+        main_layout.addLayout(lower_row)
+        root.addWidget(self.main_card)
+
+        # ================= DONATION CARD =================
+        self.donation_card = QFrame()
+        self.donation_card.setObjectName("donationCard")
+        self.donation_card.setFixedSize(360, 150)
+        self.donation_card.setStyleSheet("""
+            QFrame#donationCard {
+                background: #f8f0f4;
+                border: 2px solid #f1b7c9;
+                border-radius: 20px;
+            }
+        """)
+
+        donation_layout = QHBoxLayout(self.donation_card)
+        donation_layout.setContentsMargins(22, 14, 18, 14)
+        donation_layout.setSpacing(18)
+
+        left_donation = QVBoxLayout()
+        left_donation.setSpacing(6)
+
+        donation_title = QLabel("Quyên góp")
+        donation_title.setStyleSheet("""
+            font-size: 28px;
+            font-weight: 800;
+            color: #734465;
+        """)
+        left_donation.addWidget(donation_title, alignment=Qt.AlignmentFlag.AlignHCenter)
+
+        sub_title = QLabel("Mã giao dịch")
+        sub_title.setStyleSheet("""
+            font-size: 14px;
+            color: #2a2428;
+        """)
+        left_donation.addWidget(sub_title, alignment=Qt.AlignmentFlag.AlignHCenter)
+
+        self.transaction_input = QLineEdit()
+        self.transaction_input.setPlaceholderText("Nhập mã giao dịch")
+        self.transaction_input.setFixedSize(152, 40)
+        self.transaction_input.setStyleSheet("""
+            QLineEdit {
+                background: #fafafa;
+                border: 1.5px solid #9e7f95;
+                border-radius: 20px;
+                padding: 0 12px;
+                font-size: 14px;
+                color: #2a2428;
+            }
+            QLineEdit::placeholder {
+                color: #c8b0bf;
+            }
+        """)
+        left_donation.addWidget(self.transaction_input, alignment=Qt.AlignmentFlag.AlignHCenter)
+
+        self.send_btn = QPushButton("Gửi")
+        self.send_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.send_btn.setFixedSize(54, 30)
+        self.send_btn.setStyleSheet("""
+            QPushButton {
+                background: #e8a8cc;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            QPushButton:hover {
+                background: #dc98bf;
+            }
+        """)
+        self.send_btn.clicked.connect(self.handle_submit)
+        left_donation.addWidget(self.send_btn, alignment=Qt.AlignmentFlag.AlignHCenter)
+
+        donation_layout.addLayout(left_donation)
+
+        self.qr_label = ImageLabel(110, 110)
+        donation_layout.addWidget(self.qr_label, alignment=Qt.AlignmentFlag.AlignCenter)
+
+        root.addWidget(self.donation_card, alignment=Qt.AlignmentFlag.AlignLeft)
+        root.addStretch()
+
+    def _menu_button(self, text: str, active: bool = False) -> QPushButton:
+        btn = QPushButton(text)
+        btn.setCursor(Qt.CursorShape.PointingHandCursor)
+
+        if active:
+            btn.setStyleSheet("""
+                QPushButton {
+                    background: #deb0ca;
+                    border: none;
+                    border-radius: 16px;
+                    padding: 7px 14px;
+                    color: #241f22;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            """)
+        else:
+            btn.setStyleSheet("""
+                QPushButton {
+                    background: transparent;
+                    border: none;
+                    padding: 7px 8px;
+                    color: #241f22;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                QPushButton:hover {
+                    color: #7d496d;
+                }
+            """)
+
+        btn.clicked.connect(lambda: None)
+        return btn
+
+    def _section_title(self, text: str) -> QLabel:
+        label = QLabel(text)
+        label.setStyleSheet("""
+            font-size: 16px;
+            font-weight: 800;
+            color: #2d2428;
+        """)
+        return label
+
+    def handle_submit(self):
+        code = self.transaction_input.text().strip()
+        if not code:
+            QMessageBox.warning(self, "Thông báo", "Vui lòng nhập mã giao dịch.")
+            return
+        QMessageBox.information(self, "Thông báo", f"Đã gửi mã giao dịch: {code}")
+
+    def load_data(self, data: CampaignData):
+        self.title_label.setText(data.title)
+        self.desc_label.setText(data.description)
+
+        self.amount_label.setText(
+            f"<span style='color:#714565;font-weight:800;'>{data.raised}</span>"
+            f"<span style='color:#8c6a84;font-weight:700;'>/{data.target}</span>"
+        )
+        self.amount_label.setTextFormat(Qt.TextFormat.RichText)
+        self.percent_label.setText(data.percent)
+
+        self.activities_label.setText(data.activities)
+        self.scope_label.setText(data.scope)
+        self.founded_label.setText(data.founded_date)
+
+        self.id_value.setText(data.campaign_id)
+        self.gender_value.setText(data.gender)
+        self.name_value.setText(data.full_name)
+        self.phone_value.setText(data.phone)
+        self.cccd_value.setText(data.cccd)
+        self.address_value.setText(data.address)
+        self.email_value.setText(data.email)
+
+        self.avatar_label.set_image(data.avatar_path)
+        self.qr_label.set_image(data.qr_path)
+
+        self.update_progress()
+
+    def update_progress(self):
+        try:
+            raised_value = float(self.data.raised.replace(",", ""))
+            target_value = float(self.data.target.replace(",", ""))
+            percent = max(0.0, min(1.0, raised_value / target_value if target_value else 0.0))
+        except Exception:
+            percent = 0.0
+
+        total_width = max(300, self.progress_bg.width())
+        fill_width = max(80, int(total_width * percent))
+        self.progress_fill.setFixedWidth(fill_width)
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self.update_progress()
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+
+    page6 = CampaignData(
+        title="Saigon Children's Charity (Học bổng giáo dục)",
+        description="Giúp trẻ em có hoàn cảnh khó khăn tiếp cận giáo dục chất lượng để vượt qua nghèo đói và phát triển tương lai.",
+        raised="1000000000",
+        target="7000000000",
+        percent="6.67%",
+        activities="Trao học bổng dài hạn cho trẻ em nghèo\nXây dựng và cải tạo trường học\nĐào tạo nghề cho thanh thiếu niên khó khăn",
+        scope="Miền Nam Việt Nam",
+        founded_date="1992-05-20",
+        campaign_id="CC0009",
+        gender="Nam",
+        full_name="Damien Roberts",
+        phone="0901333009",
+        cccd="079080007777",
+        address="Hồ Chí Minh",
+        email="damien@gmail.com",
+        qr_path="qr6.png",
+        avatar_path="avt6.png",
+    )
+
+    window = DonationPage(page6)
+    window.show()
+    sys.exit(app.exec())
