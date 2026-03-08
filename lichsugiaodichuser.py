@@ -1,0 +1,528 @@
+import sys
+from PyQt6.QtCore import Qt, QSize
+from PyQt6.QtGui import QColor, QFont, QPixmap
+from PyQt6.QtWidgets import (
+    QApplication, QMainWindow, QWidget, QLabel, QPushButton, QFrame,
+    QHBoxLayout, QVBoxLayout, QGraphicsDropShadowEffect, QScrollArea,
+    QSizePolicy
+)
+
+
+# =========================
+# Helpers
+# =========================
+def add_shadow(widget, blur=18, x=0, y=4, color=QColor(120, 80, 110, 60)):
+    shadow = QGraphicsDropShadowEffect()
+    shadow.setBlurRadius(blur)
+    shadow.setOffset(x, y)
+    shadow.setColor(color)
+    widget.setGraphicsEffect(shadow)
+    return shadow
+
+
+def set_font(widget, size, weight=400, family="Segoe UI"):
+    font = QFont(family, size)
+    font.setWeight(weight)
+    widget.setFont(font)
+
+
+# =========================
+# Interactive Widgets
+# =========================
+class HoverCard(QFrame):
+    def __init__(self, radius=22, border="#efbfd2", bg="rgba(255,255,255,0.62)"):
+        super().__init__()
+        self.radius = radius
+        self.normal_border = border
+        self.hover_border = "#e8a9c5"
+        self.normal_bg = bg
+        self.hover_bg = "rgba(255,255,255,0.78)"
+        self.shadow = add_shadow(self, blur=18, y=4)
+        self.setMouseTracking(True)
+        self.apply_style(False)
+
+    def apply_style(self, hovered=False):
+        border = self.hover_border if hovered else self.normal_border
+        bg = self.hover_bg if hovered else self.normal_bg
+        self.setStyleSheet(f"""
+            QFrame {{
+                background: {bg};
+                border: 2px solid {border};
+                border-radius: {self.radius}px;
+            }}
+        """)
+
+    def enterEvent(self, event):
+        self.apply_style(True)
+        if self.shadow:
+            self.shadow.setBlurRadius(28)
+            self.shadow.setOffset(0, 6)
+        super().enterEvent(event)
+
+    def leaveEvent(self, event):
+        self.apply_style(False)
+        if self.shadow:
+            self.shadow.setBlurRadius(18)
+            self.shadow.setOffset(0, 4)
+        super().leaveEvent(event)
+
+
+class NavButton(QPushButton):
+    def __init__(self, text, active=False):
+        super().__init__(text)
+        self.active = active
+        self.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.setFixedHeight(36)
+        self.setCheckable(True)
+        self.setChecked(active)
+        set_font(self, 11, 700)
+        self.update_style()
+
+    def set_active(self, active):
+        self.active = active
+        self.setChecked(active)
+        self.update_style()
+
+    def update_style(self):
+        if self.active:
+            self.setStyleSheet("""
+                QPushButton {
+                    background: #e7b5cf;
+                    color: #5f3556;
+                    border: none;
+                    border-radius: 18px;
+                    padding: 0 14px;
+                }
+                QPushButton:hover {
+                    background: #e2aac7;
+                }
+                QPushButton:pressed {
+                    background: #d99ebb;
+                }
+            """)
+        else:
+            self.setStyleSheet("""
+                QPushButton {
+                    background: transparent;
+                    color: #2a2a2a;
+                    border: none;
+                    border-radius: 18px;
+                    padding: 0 12px;
+                }
+                QPushButton:hover {
+                    background: rgba(205, 156, 181, 0.18);
+                }
+                QPushButton:pressed {
+                    background: rgba(205, 156, 181, 0.28);
+                }
+            """)
+
+
+class IconCircleButton(QPushButton):
+    def __init__(self, text, size=32):
+        super().__init__(text)
+        self.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.setFixedSize(size, size)
+        set_font(self, 14, 700)
+        self.setStyleSheet(f"""
+            QPushButton {{
+                background: transparent;
+                color: #2d2d2d;
+                border: none;
+                border-radius: {size // 2}px;
+            }}
+            QPushButton:hover {{
+                background: rgba(205, 156, 181, 0.18);
+            }}
+            QPushButton:pressed {{
+                background: rgba(205, 156, 181, 0.28);
+            }}
+        """)
+
+
+class PillButton(QPushButton):
+    def __init__(self, text, width=200):
+        super().__init__(text)
+        self.setFixedSize(width, 36)
+        self.setCursor(Qt.CursorShape.PointingHandCursor)
+        set_font(self, 11, 700)
+        self.shadow = add_shadow(self, blur=10, y=3)
+        self.setStyleSheet("""
+            QPushButton {
+                background: #e8bfd0;
+                color: #6d4767;
+                border: 1.5px solid #6a4c64;
+                border-radius: 18px;
+                padding: 0 16px;
+            }
+            QPushButton:hover {
+                background: #e4b1c6;
+            }
+            QPushButton:pressed {
+                background: #dca7bf;
+                padding-top: 1px;
+            }
+        """)
+
+    def enterEvent(self, event):
+        if self.shadow:
+            self.shadow.setBlurRadius(16)
+            self.shadow.setOffset(0, 5)
+        super().enterEvent(event)
+
+    def leaveEvent(self, event):
+        if self.shadow:
+            self.shadow.setBlurRadius(10)
+            self.shadow.setOffset(0, 3)
+        super().leaveEvent(event)
+
+
+# =========================
+# Cards
+# =========================
+class StatCard(HoverCard):
+    def __init__(self, title, value):
+        super().__init__(radius=22, border="#efbfd2", bg="rgba(255,255,255,0.64)")
+        self.setFixedHeight(132)
+
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(18, 18, 18, 18)
+        layout.setSpacing(8)
+
+        title_lbl = QLabel(title)
+        set_font(title_lbl, 13, 700)
+        title_lbl.setStyleSheet("color: #6f4767; background: transparent; border: none;")
+
+        value_lbl = QLabel(value)
+        set_font(value_lbl, 22, 800)
+        value_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        value_lbl.setStyleSheet("color: #9a7695; background: transparent; border: none;")
+
+        layout.addWidget(title_lbl)
+        layout.addStretch()
+        layout.addWidget(value_lbl)
+        layout.addStretch()
+
+
+class TransactionCard(HoverCard):
+    def __init__(self, title, time_text, amount):
+        super().__init__(radius=20, border="#f0bfd2", bg="rgba(255,255,255,0.60)")
+        self.setFixedHeight(92)
+
+        layout = QHBoxLayout(self)
+        layout.setContentsMargins(18, 12, 24, 12)
+        layout.setSpacing(10)
+
+        left = QVBoxLayout()
+        left.setSpacing(4)
+
+        title_lbl = QLabel(title)
+        set_font(title_lbl, 17, 800)
+        title_lbl.setStyleSheet("color: #6b4364; background: transparent; border: none;")
+
+        time_lbl = QLabel("🗓 " + time_text)
+        set_font(time_lbl, 10, 700)
+        time_lbl.setStyleSheet("color: #9a7b94; background: transparent; border: none;")
+
+        left.addWidget(title_lbl)
+        left.addWidget(time_lbl)
+
+        amount_lbl = QLabel(amount)
+        set_font(amount_lbl, 20, 800)
+        amount_lbl.setStyleSheet("color: #9a7b94; background: transparent; border: none;")
+        amount_lbl.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+
+        layout.addLayout(left, 1)
+        layout.addWidget(amount_lbl)
+
+
+# =========================
+# Top Navigation
+# =========================
+class TopNav(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setFixedHeight(54)
+        self.setStyleSheet("""
+            QWidget {
+                background: #f4dfe7;
+                border: none;
+            }
+        """)
+
+        layout = QHBoxLayout(self)
+        layout.setContentsMargins(18, 0, 18, 0)
+        layout.setSpacing(12)
+
+        # Left logo block
+        logo_wrap = QHBoxLayout()
+        logo_wrap.setSpacing(6)
+
+        logo = QLabel("🕊")
+        set_font(logo, 20, 700)
+        logo.setStyleSheet("background: transparent;")
+
+        name_wrap = QVBoxLayout()
+        name_wrap.setSpacing(0)
+
+        brand = QLabel("Donarity")
+        set_font(brand, 16, 800)
+        brand.setStyleSheet("color: #7a3b71; background: transparent;")
+
+        sub = QLabel("by group 10")
+        set_font(sub, 7, 400)
+        sub.setStyleSheet("color: #7f6d79; background: transparent;")
+
+        name_wrap.addWidget(brand)
+        name_wrap.addWidget(sub)
+
+        logo_wrap.addWidget(logo)
+        logo_wrap.addLayout(name_wrap)
+
+        logo_widget = QWidget()
+        logo_widget.setLayout(logo_wrap)
+        logo_widget.setStyleSheet("background: transparent;")
+
+        # Menu center
+        menu = QHBoxLayout()
+        menu.setSpacing(10)
+
+        self.nav_buttons = [
+            NavButton("⌂ Trang chủ", active=False),
+            NavButton("⚗ Thống kê", active=True),
+            NavButton("◉ Chatbot", active=False),
+            NavButton("◉ Công khai", active=False),
+        ]
+
+        for btn in self.nav_buttons:
+            btn.clicked.connect(lambda checked=False, b=btn: self.set_active_button(b))
+            menu.addWidget(btn)
+
+        menu_widget = QWidget()
+        menu_widget.setLayout(menu)
+        menu_widget.setStyleSheet("background: transparent;")
+
+        # Right controls
+        right = QHBoxLayout()
+        right.setSpacing(8)
+
+        bell_btn = IconCircleButton("🔔")
+        bell_btn.setToolTip("Thông báo")
+
+        setting_btn = IconCircleButton("⚙")
+        setting_btn.setToolTip("Cài đặt")
+
+        avatar_btn = IconCircleButton("◉", 34)
+        avatar_btn.setToolTip("Tài khoản")
+        avatar_btn.setStyleSheet("""
+            QPushButton {
+                background: transparent;
+                color: #222;
+                border: none;
+                border-radius: 17px;
+                font-size: 18px;
+            }
+            QPushButton:hover {
+                background: rgba(205, 156, 181, 0.18);
+            }
+            QPushButton:pressed {
+                background: rgba(205, 156, 181, 0.28);
+            }
+        """)
+
+        right.addWidget(bell_btn)
+        right.addWidget(setting_btn)
+        right.addWidget(avatar_btn)
+
+        right_widget = QWidget()
+        right_widget.setLayout(right)
+        right_widget.setStyleSheet("background: transparent;")
+
+        layout.addWidget(logo_widget)
+        layout.addStretch()
+        layout.addWidget(menu_widget)
+        layout.addStretch()
+        layout.addWidget(right_widget)
+
+    def set_active_button(self, active_button):
+        for btn in self.nav_buttons:
+            btn.set_active(btn is active_button)
+
+
+# =========================
+# Hero Section
+# =========================
+class HeroSection(QFrame):
+    def __init__(self):
+        super().__init__()
+        self.setFixedHeight(370)
+        self.setStyleSheet("""
+            QFrame {
+                background: transparent;
+                border: none;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+        """)
+
+        # layout ngoài
+        outer = QVBoxLayout(self)
+        outer.setContentsMargins(0, 0, 0, 0)
+        outer.setSpacing(0)
+
+        # khung chứa ảnh nền
+        bg_frame = QFrame()
+        bg_frame.setFixedHeight(370)
+        bg_frame.setStyleSheet("""
+            QFrame {
+                border: none;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+        """)
+
+        outer.addWidget(bg_frame)
+
+        # label ảnh nền
+        self.bg_label = QLabel(bg_frame)
+        self.bg_label.setGeometry(0, 0, 1048, 370)
+        self.bg_label.setScaledContents(True)
+        self.bg_label.lower()  # đẩy ảnh xuống dưới
+
+        pixmap = QPixmap("hero_bg.png")
+        self.bg_label.setPixmap(pixmap)
+
+        # layout nội dung đè lên ảnh
+        layout = QVBoxLayout(bg_frame)
+        layout.setContentsMargins(34, 28, 34, 18)
+        layout.setSpacing(16)
+
+        back_lbl = QLabel("← Quay lại")
+        set_font(back_lbl, 10, 700)
+        back_lbl.setStyleSheet("color: #2e2e2e; background: transparent;")
+        layout.addWidget(back_lbl, 0, Qt.AlignmentFlag.AlignLeft)
+
+        title = QLabel("LỊCH SỬ GIAO DỊCH")
+        set_font(title, 32, 900)
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        title.setStyleSheet("""
+            color: #6c3d65;
+            background: transparent;
+            letter-spacing: 0.5px;
+        """)
+        layout.addWidget(title)
+
+        layout.addStretch()
+
+        row = QHBoxLayout()
+        row.setSpacing(14)
+
+        row.addWidget(StatCard("Tổng số tiền ủng hộ", "1,000,000"))
+        row.addWidget(StatCard("Chiến dịch ủng hộ", "4 Chiến dịch"))
+        row.addWidget(StatCard("Khoản ủng hộ trung bình", "250,000"))
+
+        layout.addLayout(row)
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        if hasattr(self, "bg_label"):
+            self.bg_label.setGeometry(0, 0, self.width(), self.height())
+
+# =========================
+# Main Window
+# =========================
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Donarity - Lịch sử giao dịch")
+        self.resize(1048, 760)
+        self.setMinimumSize(QSize(980, 680))
+
+        central = QWidget()
+        self.setCentralWidget(central)
+        central.setStyleSheet("background: #f4ecef;")
+
+        main = QVBoxLayout(central)
+        main.setContentsMargins(38, 8, 35, 22)
+        main.setSpacing(0)
+
+        main.addWidget(TopNav())
+        main.addWidget(HeroSection())
+
+        # Controls
+        control = QWidget()
+        control_layout = QHBoxLayout(control)
+        control_layout.setContentsMargins(32, 24, 32, 18)
+
+        left_btn = PillButton("Lịch sử quyên góp", 220)
+        right_btn = PillButton("Trong tháng này ⌄", 175)
+
+        control_layout.addWidget(left_btn)
+        control_layout.addStretch()
+        control_layout.addWidget(right_btn)
+        main.addWidget(control)
+
+        # Scroll area for transaction list
+        scroll = QScrollArea()
+        scroll.setWidgetResizable(True)
+        scroll.setFrameShape(QFrame.Shape.NoFrame)
+        scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        scroll.setStyleSheet("""
+            QScrollArea {
+                background: transparent;
+                border: none;
+            }
+            QScrollBar:vertical {
+                background: rgba(230, 202, 216, 0.45);
+                width: 10px;
+                border-radius: 5px;
+                margin: 4px 0 4px 0;
+            }
+            QScrollBar::handle:vertical {
+                background: #d9a9be;
+                border-radius: 5px;
+                min-height: 34px;
+            }
+            QScrollBar::handle:vertical:hover {
+                background: #cc93ad;
+            }
+            QScrollBar::add-line:vertical,
+            QScrollBar::sub-line:vertical {
+                height: 0px;
+                background: none;
+                border: none;
+            }
+            QScrollBar::add-page:vertical,
+            QScrollBar::sub-page:vertical {
+                background: transparent;
+            }
+        """)
+
+        content = QWidget()
+        list_layout = QVBoxLayout(content)
+        list_layout.setContentsMargins(32, 0, 24, 10)
+        list_layout.setSpacing(14)
+
+        transactions = [
+            ("Dự án xây trường cho em (vùng cao)", "09:45:18  20/10/2025", "250,000"),
+            ("Chương trình vì phụ nữ nghèo nông thôn", "09:06:18  10/12/2025", "250,000"),
+            ("Hỗ trợ viện phí cho bé Minh Anh", "14:20:04  03/01/2026", "150,000"),
+            ("Quỹ học bổng cho học sinh khó khăn", "08:15:30  15/01/2026", "350,000"),
+            ("Chung tay xây cầu cho bà con", "16:41:11  22/01/2026", "500,000"),
+        ]
+
+        for title, time_text, amount in transactions:
+            list_layout.addWidget(TransactionCard(title, time_text, amount))
+
+        list_layout.addStretch()
+        scroll.setWidget(content)
+
+        main.addWidget(scroll, 1)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    app.setStyle("Fusion")
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
