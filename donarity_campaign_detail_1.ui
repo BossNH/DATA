@@ -208,19 +208,6 @@ QLabel#miniLogoSub{
       <height>72</height>
      </rect>
     </property>
-    <widget class="QLabel" name="logoText">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>12</y>
-       <width>150</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Donarity</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="logoSub">
      <property name="geometry">
       <rect>
@@ -232,58 +219,6 @@ QLabel#miniLogoSub{
      </property>
      <property name="text">
       <string>by group 10</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="NutTrangChu">
-     <property name="geometry">
-      <rect>
-       <x>259</x>
-       <y>19</y>
-       <width>131</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>🏠  Trang chủ</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="NutTaoChienDich">
-     <property name="geometry">
-      <rect>
-       <x>395</x>
-       <y>19</y>
-       <width>145</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>➕  Tạo chiến dịch</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="NutTheoDoiChienDich">
-     <property name="geometry">
-      <rect>
-       <x>546</x>
-       <y>16</y>
-       <width>191</width>
-       <height>38</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>🗂  Theo dõi chiến dịch</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="NutCongKhai">
-     <property name="geometry">
-      <rect>
-       <x>724</x>
-       <y>19</y>
-       <width>131</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>👁  Công khai</string>
      </property>
     </widget>
     <widget class="QLabel" name="ThongBao">
@@ -334,35 +269,151 @@ QLabel#miniLogoSub{
       <string>👤</string>
      </property>
     </widget>
-    <widget class="QLabel" name="statTitleRight_3">
+    <widget class="QLabel" name="logo_icon">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>51</width>
-       <height>51</height>
+       <x>33</x>
+       <y>18</y>
+       <width>42</width>
+       <height>34</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color:#2C2C2C;font-size:18px;font-weight:800;</string>
+      <string notr="true">QLabel{
+    background: transparent;
+    color: #7D2B6E;
+    border: none;
+}</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#98015e;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>🕊</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="back">
-    <property name="geometry">
-     <rect>
-      <x>18</x>
-      <y>82</y>
-      <width>140</width>
-      <height>34</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>← Quay lại</string>
-    </property>
+    <widget class="QLabel" name="logo_title">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>10</y>
+       <width>170</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+    color: #7D2B6E;
+    background: transparent;
+    border: none;
+}</string>
+     </property>
+     <property name="text">
+      <string>Donarity</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutTrangChu">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>131</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 164, 196);</string>
+     </property>
+     <property name="text">
+      <string>🏠  Trang chủ</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutTaoChienDich">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>20</y>
+       <width>145</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 164, 196);</string>
+     </property>
+     <property name="text">
+      <string>➕  Tạo chiến dịch</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutTheoDoiChienDich">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>20</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 164, 196);</string>
+     </property>
+     <property name="text">
+      <string>🗂  Theo dõi chiến dịch</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NutCongKhai">
+     <property name="geometry">
+      <rect>
+       <x>730</x>
+       <y>20</y>
+       <width>131</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 164, 196);</string>
+     </property>
+     <property name="text">
+      <string>👁  Công khai</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="mainPinkCard">
     <property name="geometry">
@@ -554,32 +605,6 @@ QLabel#miniLogoSub{
        <height>214</height>
       </rect>
      </property>
-     <widget class="QLabel" name="top">
-      <property name="geometry">
-       <rect>
-        <x>18</x>
-        <y>18</y>
-        <width>170</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="bottom">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>30</y>
-        <width>200</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>15000000000</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="PhanTram">
       <property name="geometry">
        <rect>
@@ -628,19 +653,6 @@ QLabel#miniLogoSub{
        <string>💰 Số tiền đã nhận</string>
       </property>
      </widget>
-     <widget class="QLabel" name="statValueLeft">
-      <property name="geometry">
-       <rect>
-        <x>92</x>
-        <y>156</y>
-        <width>190</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>...</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="statTitleRight">
       <property name="geometry">
        <rect>
@@ -655,19 +667,6 @@ QLabel#miniLogoSub{
       </property>
       <property name="text">
        <string>🎯 Mục tiêu</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="statValueRight">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>156</y>
-        <width>260</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>15,000,000,000</string>
       </property>
      </widget>
      <widget class="QLabel" name="miniLogo">
@@ -712,22 +711,80 @@ QLabel#miniLogoSub{
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#98015e;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="bottom_2">
+     <widget class="QLabel" name="top">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>20</y>
-        <width>21</width>
+        <x>30</x>
+        <y>30</y>
+        <width>190</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#a06d8f;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bottom">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>30</y>
+        <width>220</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#a06d8f;&quot;&gt;/12000000000&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statValueRight">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>160</y>
+        <width>280</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>12,000,000,000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="SoTienDaNhan">
+      <property name="geometry">
+       <rect>
+        <x>82</x>
+        <y>162</y>
+        <width>220</width>
         <height>34</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Arial Black</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
-       <string>/</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#a06d8f;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -744,9 +801,45 @@ QLabel#miniLogoSub{
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../../Downloads/7a81c8717c8df2d3ab9c.jpg</pixmap>
+      <pixmap>../../../../Downloads/avt_camdetail2.jpg</pixmap>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="back">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background: transparent;
+border: none;
+color: #111111;
+text-align: left;
+padding-left: 0px;
+}
+QPushButton:hover{
+color: #7A2D6A;
+}</string>
+    </property>
+    <property name="text">
+     <string>← Quay lại</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
