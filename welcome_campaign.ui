@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>734</width>
+    <height>583</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>734</width>
+    <height>583</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>734</width>
+    <height>583</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Unhi - Donarity</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget#centralwidget {
+    background: #ECECEC;
+    font-family: &quot;Segoe UI&quot;;
+}
+QFrame#mainPanel {
+    background: #FDF3F9;
+    border: none;
+}
+QFrame#navBar {
+    background: #F8DCE7;
+    border: none;
+}
+QLabel#appTitle {
+    color: #BABABA;
+    font-size: 16px;
+    font-weight: 500;
+}
+QLabel#brandLabel {
+    color: #A14F7D;
+    font-size: 13px;
+    font-weight: 700;
+}
+QPushButton.navBtn {
+    border: none;
+    background: transparent;
+    color: #242424;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 14px;
+}
+QPushButton#campaignBtn {
+    background: #EFC2D4;
+    color: #2B2B2B;
+}
+QLabel#heroTitle {
+    color: #6E3F63;
+    font-size: 28px;
+    font-weight: 800;
+}
+QLabel.heroText {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 400;
+}
+QPushButton#createBtn {
+    background: #E9B8CB;
+    color: #6A3E63;
+    font-size: 22px;
+    font-weight: 800;
+    border: 1px solid #6D5061;
+    border-radius: 22px;
+    padding: 12px 24px;
+}
+QPushButton#createBtn:hover {
+    background: #E6B0C6;
+}
+QLabel#profileIcon {
+    color: #222222;
+    font-size: 18px;
+}
+QLabel#notifIcon, QLabel#gearIcon {
+    color: #232323;
+    font-size: 15px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="mainPanel">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>39</y>
+      <width>665</width>
+      <height>496</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QFrame" name="navBar">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>665</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <widget class="QLabel" name="brandIcon">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>4</y>
+        <width>22</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>🕊</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="brandLabel">
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>3</y>
+        <width>86</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Donarity</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="groupLabel">
+      <property name="geometry">
+       <rect>
+        <x>83</x>
+        <y>15</y>
+        <width>54</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#B08A9E;font-size:8px;font-weight:600;background:transparent;</string>
+      </property>
+      <property name="text">
+       <string>by group 10</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="homeBtn">
+      <property name="geometry">
+       <rect>
+        <x>143</x>
+        <y>2</y>
+        <width>73</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>⌂ Trang chủ</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>navBtn</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="campaignBtn">
+      <property name="geometry">
+       <rect>
+        <x>219</x>
+        <y>2</y>
+        <width>97</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>✚ Tạo chiến dịch</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>navBtn</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="followBtn">
+      <property name="geometry">
+       <rect>
+        <x>322</x>
+        <y>2</y>
+        <width>111</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>▣ Theo dõi chiến dịch</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>navBtn</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="publicBtn">
+      <property name="geometry">
+       <rect>
+        <x>438</x>
+        <y>2</y>
+        <width>77</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>◉ Công khai</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>navBtn</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="notifIcon">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>5</y>
+        <width>18</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>🔔</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="redDot">
+      <property name="geometry">
+       <rect>
+        <x>601</x>
+        <y>4</y>
+        <width>7</width>
+        <height>7</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:#FF4A63;border-radius:3px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gearIcon">
+      <property name="geometry">
+       <rect>
+        <x>616</x>
+        <y>5</y>
+        <width>18</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>⚙</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="profileIcon">
+      <property name="geometry">
+       <rect>
+        <x>639</x>
+        <y>4</y>
+        <width>19</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:#242424;color:#FFFFFF;border-radius:9px;font-size:11px;</string>
+      </property>
+      <property name="text">
+       <string>●</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="decorLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>221</y>
+       <width>665</width>
+       <height>275</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="heroTitle">
+     <property name="geometry">
+      <rect>
+       <x>92</x>
+       <y>84</y>
+       <width>183</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Xin chào!</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="heroText1">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>150</y>
+       <width>410</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chào mừng bạn đến với hành trình lan tỏa yêu thương.</string>
+     </property>
+     <property name="class" stdset="0">
+      <string>heroText</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="heroText2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>184</y>
+       <width>520</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mỗi chiến dịch bạn tạo hôm nay có thể trở thành hy vọng của một ai đó ngày mai.</string>
+     </property>
+     <property name="class" stdset="0">
+      <string>heroText</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="heroText3">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>218</y>
+       <width>500</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Hãy tạo chiến dịch từ thiện của bạn và bắt đầu hành trình ý nghĩa ngay hôm nay.</string>
+     </property>
+     <property name="class" stdset="0">
+      <string>heroText</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="createBtn">
+     <property name="geometry">
+      <rect>
+       <x>224</x>
+       <y>270</y>
+       <width>218</width>
+       <height>57</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Tạo chiến dịch mới</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
