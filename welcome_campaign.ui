@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>734</width>
-    <height>583</height>
+    <width>1200</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>734</width>
-    <height>583</height>
+    <width>1200</width>
+    <height>760</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>734</width>
-    <height>583</height>
+    <width>1200</width>
+    <height>760</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -30,76 +30,106 @@
     background: #ECECEC;
     font-family: &quot;Segoe UI&quot;;
 }
+
 QFrame#mainPanel {
     background: #FDF3F9;
     border: none;
 }
+
 QFrame#navBar {
-    background: #F8DCE7;
+    background: #F7D8E3;
     border: none;
 }
+
 QLabel#appTitle {
-    color: #BABABA;
-    font-size: 16px;
+    color: #B9B9B9;
+    font-size: 18px;
     font-weight: 500;
+    background: transparent;
 }
+
 QLabel#brandLabel {
     color: #A14F7D;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 800;
+    background: transparent;
 }
+
 QPushButton.navBtn {
     border: none;
     background: transparent;
     color: #242424;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 14px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    text-align: center;
 }
+
+QPushButton.navBtn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
 QPushButton#campaignBtn {
-    background: #EFC2D4;
+    background: #E9B8CB;
     color: #2B2B2B;
 }
+
 QLabel#heroTitle {
     color: #6E3F63;
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 58px;
+    font-weight: 900;
+    background: transparent;
 }
+
 QLabel.heroText {
     color: #222222;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 400;
+    background: transparent;
 }
+
 QPushButton#createBtn {
     background: #E9B8CB;
     color: #6A3E63;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 800;
     border: 1px solid #6D5061;
-    border-radius: 22px;
+    border-radius: 28px;
     padding: 12px 24px;
 }
+
 QPushButton#createBtn:hover {
-    background: #E6B0C6;
+    background: #E4AFC5;
 }
+
 QLabel#profileIcon {
     color: #222222;
     font-size: 18px;
+    background: transparent;
 }
+
 QLabel#notifIcon, QLabel#gearIcon {
     color: #232323;
-    font-size: 15px;
+    font-size: 17px;
+    background: transparent;
+}
+
+QLabel#groupLabel {
+    color: #B08A9E;
+    font-size: 9px;
+    font-weight: 600;
+    background: transparent;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="mainPanel">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>63</x>
       <y>39</y>
-      <width>665</width>
-      <height>496</height>
+      <width>1092</width>
+      <height>654</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -110,8 +140,8 @@ QLabel#notifIcon, QLabel#gearIcon {
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>665</width>
-       <height>31</height>
+       <width>1092</width>
+       <height>44</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -120,11 +150,14 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QLabel" name="brandIcon">
       <property name="geometry">
        <rect>
-        <x>14</x>
-        <y>4</y>
-        <width>22</width>
-        <height>22</height>
+        <x>16</x>
+        <y>8</y>
+        <width>24</width>
+        <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: transparent; font-size:20px; color:#A14F7D;</string>
       </property>
       <property name="text">
        <string>🕊</string>
@@ -133,10 +166,10 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QLabel" name="brandLabel">
       <property name="geometry">
        <rect>
-        <x>39</x>
-        <y>3</y>
-        <width>86</width>
-        <height>23</height>
+        <x>44</x>
+        <y>4</y>
+        <width>100</width>
+        <height>24</height>
        </rect>
       </property>
       <property name="text">
@@ -146,14 +179,11 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QLabel" name="groupLabel">
       <property name="geometry">
        <rect>
-        <x>83</x>
-        <y>15</y>
-        <width>54</width>
-        <height>10</height>
+        <x>64</x>
+        <y>24</y>
+        <width>66</width>
+        <height>12</height>
        </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:#B08A9E;font-size:8px;font-weight:600;background:transparent;</string>
       </property>
       <property name="text">
        <string>by group 10</string>
@@ -162,17 +192,14 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QPushButton" name="homeBtn">
       <property name="geometry">
        <rect>
-        <x>143</x>
-        <y>2</y>
-        <width>73</width>
-        <height>26</height>
+        <x>240</x>
+        <y>8</y>
+        <width>104</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="cursor">
        <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
       </property>
       <property name="text">
        <string>⌂ Trang chủ</string>
@@ -184,10 +211,10 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QPushButton" name="campaignBtn">
       <property name="geometry">
        <rect>
-        <x>219</x>
-        <y>2</y>
-        <width>97</width>
-        <height>26</height>
+        <x>356</x>
+        <y>8</y>
+        <width>134</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="cursor">
@@ -203,10 +230,10 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QPushButton" name="followBtn">
       <property name="geometry">
        <rect>
-        <x>322</x>
-        <y>2</y>
-        <width>111</width>
-        <height>26</height>
+        <x>503</x>
+        <y>8</y>
+        <width>170</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="cursor">
@@ -222,10 +249,10 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QPushButton" name="publicBtn">
       <property name="geometry">
        <rect>
-        <x>438</x>
-        <y>2</y>
-        <width>77</width>
-        <height>26</height>
+        <x>684</x>
+        <y>8</y>
+        <width>106</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="cursor">
@@ -241,10 +268,10 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QLabel" name="notifIcon">
       <property name="geometry">
        <rect>
-        <x>590</x>
-        <y>5</y>
-        <width>18</width>
-        <height>18</height>
+        <x>974</x>
+        <y>10</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="text">
@@ -254,14 +281,14 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QLabel" name="redDot">
       <property name="geometry">
        <rect>
-        <x>601</x>
-        <y>4</y>
-        <width>7</width>
-        <height>7</height>
+        <x>988</x>
+        <y>8</y>
+        <width>10</width>
+        <height>10</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background:#FF4A63;border-radius:3px;</string>
+       <string notr="true">background:#FF4A63;border-radius:5px;</string>
       </property>
       <property name="text">
        <string/>
@@ -270,10 +297,10 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QLabel" name="gearIcon">
       <property name="geometry">
        <rect>
-        <x>616</x>
-        <y>5</y>
-        <width>18</width>
-        <height>18</height>
+        <x>1013</x>
+        <y>10</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="text">
@@ -283,14 +310,14 @@ QLabel#notifIcon, QLabel#gearIcon {
      <widget class="QLabel" name="profileIcon">
       <property name="geometry">
        <rect>
-        <x>639</x>
-        <y>4</y>
-        <width>19</width>
-        <height>19</height>
+        <x>1052</x>
+        <y>8</y>
+        <width>28</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background:#242424;color:#FFFFFF;border-radius:9px;font-size:11px;</string>
+       <string notr="true">background:#242424;color:#FFFFFF;border-radius:14px;font-size:13px;</string>
       </property>
       <property name="text">
        <string>●</string>
@@ -301,9 +328,9 @@ QLabel#notifIcon, QLabel#gearIcon {
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>221</y>
-       <width>665</width>
-       <height>275</height>
+       <y>265</y>
+       <width>1092</width>
+       <height>389</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -319,10 +346,10 @@ QLabel#notifIcon, QLabel#gearIcon {
     <widget class="QLabel" name="heroTitle">
      <property name="geometry">
       <rect>
-       <x>92</x>
-       <y>84</y>
-       <width>183</width>
-       <height>45</height>
+       <x>150</x>
+       <y>110</y>
+       <width>300</width>
+       <height>78</height>
       </rect>
      </property>
      <property name="text">
@@ -332,10 +359,10 @@ QLabel#notifIcon, QLabel#gearIcon {
     <widget class="QLabel" name="heroText1">
      <property name="geometry">
       <rect>
-       <x>91</x>
-       <y>150</y>
-       <width>410</width>
-       <height>23</height>
+       <x>150</x>
+       <y>205</y>
+       <width>560</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="text">
@@ -348,10 +375,10 @@ QLabel#notifIcon, QLabel#gearIcon {
     <widget class="QLabel" name="heroText2">
      <property name="geometry">
       <rect>
-       <x>91</x>
-       <y>184</y>
-       <width>520</width>
-       <height>23</height>
+       <x>150</x>
+       <y>248</y>
+       <width>760</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="text">
@@ -364,10 +391,10 @@ QLabel#notifIcon, QLabel#gearIcon {
     <widget class="QLabel" name="heroText3">
      <property name="geometry">
       <rect>
-       <x>91</x>
-       <y>218</y>
-       <width>500</width>
-       <height>23</height>
+       <x>150</x>
+       <y>291</y>
+       <width>760</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="text">
@@ -380,10 +407,10 @@ QLabel#notifIcon, QLabel#gearIcon {
     <widget class="QPushButton" name="createBtn">
      <property name="geometry">
       <rect>
-       <x>224</x>
-       <y>270</y>
-       <width>218</width>
-       <height>57</height>
+       <x>366</x>
+       <y>393</y>
+       <width>380</width>
+       <height>70</height>
       </rect>
      </property>
      <property name="cursor">
