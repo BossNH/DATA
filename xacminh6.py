@@ -1,523 +1,489 @@
-
-import sys
-from dataclasses import dataclass
-
-from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import (
-    QApplication,
-    QWidget,
-    QLabel,
-    QPushButton,
-    QFrame,
-    QVBoxLayout,
-    QHBoxLayout,
-    QGridLayout,
-    QLineEdit,
-)
-
-
-@dataclass
-class CampaignData:
-    title: str
-    description: str
-    raised: str
-    target: str
-    percent: str
-
-    activities: str
-    scope: str
-    founded_date: str
-
-    campaign_id: str
-    gender: str
-    full_name: str
-    phone: str
-    cccd: str
-    address: str
-    email: str
-
-    qr_path: str
-    avatar_path: str
-
-
-class ImageLabel(QLabel):
-    def __init__(self, width: int, height: int):
-        super().__init__()
-        self.setFixedSize(width, height)
-        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.setStyleSheet("background: transparent; border: none;")
-
-    def set_image(self, path: str):
-        pix = QPixmap(path)
-        if pix.isNull():
-            self.setText("Không tìm thấy ảnh")
-            self.setStyleSheet("""
-                QLabel {
-                    color: #8a5c78;
-                    border: 1px dashed #e7b3c9;
-                    background: #fff7fb;
-                    font-size: 14px;
-                }
-            """)
-            return
-
-        scaled = pix.scaled(
-            self.width(),
-            self.height(),
-            Qt.AspectRatioMode.KeepAspectRatioByExpanding,
-            Qt.TransformationMode.SmoothTransformation
-        )
-        self.setPixmap(scaled)
-
-
-class DonationPage(QWidget):
-    def __init__(self, data: CampaignData):
-        super().__init__()
-        self.data = data
-        self.setWindowTitle("Donarity")
-        self.resize(1000, 740)
-        self.setMinimumSize(950, 700)
-        self.setStyleSheet("""
-            QWidget {
-                background: #f8f0f4;
-                color: #241f22;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-        """)
-        self.build_ui()
-        self.load_data(data)
-
-    def build_ui(self):
-        root = QVBoxLayout(self)
-        root.setContentsMargins(18, 12, 18, 14)
-        root.setSpacing(10)
-
-        # Header
-        header = QFrame()
-        header.setFixedHeight(48)
-        header.setStyleSheet("""
-            QFrame {
-                background: #f5d6e1;
-                border: none;
-            }
-        """)
-        header_layout = QHBoxLayout(header)
-        header_layout.setContentsMargins(14, 6, 14, 6)
-        header_layout.setSpacing(20)
-
-        brand = QLabel("🕊️ Donarity")
-        brand.setStyleSheet("""
-            color: #8a3b74;
-            font-size: 18px;
-            font-weight: 800;
-        """)
-        header_layout.addWidget(brand)
-
-        sub_brand = QLabel("by group 10")
-        sub_brand.setStyleSheet("color: #8e7b87; font-size: 11px;")
-        header_layout.addWidget(sub_brand)
-        header_layout.addSpacing(14)
-
-        self.home_btn = self._menu_button("🏠 Trang chủ", active=True)
-        self.stats_btn = self._menu_button("⌛ Thống kê")
-        self.chat_btn = self._menu_button("🗨️Chatbot")
-        self.public_btn = self._menu_button("👁 Công khai")
-
-        header_layout.addWidget(self.home_btn)
-        header_layout.addWidget(self.stats_btn)
-        header_layout.addWidget(self.chat_btn)
-        header_layout.addWidget(self.public_btn)
-        header_layout.addStretch()
-
-        bell = QLabel("🔔")
-        bell.setStyleSheet("font-size: 18px;")
-        settings = QLabel("⚙️")
-        settings.setStyleSheet("font-size: 17px;")
-        user = QLabel("👤")
-        user.setStyleSheet("font-size: 22px;")
-
-        header_layout.addWidget(bell)
-        header_layout.addWidget(settings)
-        header_layout.addWidget(user)
-
-        root.addWidget(header)
-
-        # Back button
-        back_row = QHBoxLayout()
-        back_row.setContentsMargins(8, 2, 0, 0)
-
-        self.back_btn = QPushButton("← Quay lại")
-        self.back_btn.setCursor(Qt.CursorShape.PointingHandCursor)
-        self.back_btn.setStyleSheet("""
-            QPushButton {
-                background: transparent;
-                border: none;
-                font-size: 15px;
-                font-weight: 600;
-                color: #201d1f;
-                text-align: left;
-                padding: 4px 0;
-            }
-            QPushButton:hover {
-                color: #7d466e;
-            }
-        """)
-        self.back_btn.clicked.connect(lambda: print("Quay lại"))
-        back_row.addWidget(self.back_btn, alignment=Qt.AlignmentFlag.AlignLeft)
-        back_row.addStretch()
-        root.addLayout(back_row)
-
-        # Main card
-        self.main_card = QFrame()
-        self.main_card.setObjectName("mainCard")
-        self.main_card.setStyleSheet("""
-            QFrame#mainCard {
-                background: #f8eef3;
-                border: 3px solid #f0b9ca;
-                border-radius: 22px;
-            }
-        """)
-        main_layout = QVBoxLayout(self.main_card)
-        main_layout.setContentsMargins(18, 16, 18, 16)
-        main_layout.setSpacing(10)
-
-        self.title_label = QLabel()
-        self.title_label.setWordWrap(True)
-        self.title_label.setStyleSheet("""
-            font-size: 31px;
-            font-weight: 800;
-            color: #734465;
-        """)
-        main_layout.addWidget(self.title_label)
-
-        self.desc_label = QLabel()
-        self.desc_label.setWordWrap(True)
-        self.desc_label.setStyleSheet("""
-            font-size: 16px;
-            color: #252025;
-        """)
-        main_layout.addWidget(self.desc_label)
-
-        amount_row = QHBoxLayout()
-        amount_row.setContentsMargins(24, 6, 10, 0)
-
-        self.amount_label = QLabel()
-        self.amount_label.setStyleSheet("""
-            font-size: 27px;
-            font-weight: 800;
-            color: #724464;
-        """)
-
-        self.percent_label = QLabel()
-        self.percent_label.setStyleSheet("""
-            font-size: 27px;
-            font-weight: 800;
-            color: #724464;
-        """)
-
-        amount_row.addWidget(self.amount_label)
-        amount_row.addStretch()
-        amount_row.addWidget(self.percent_label)
-        main_layout.addLayout(amount_row)
-
-        self.progress_bg = QFrame()
-        self.progress_bg.setFixedHeight(32)
-        self.progress_bg.setStyleSheet("""
-            QFrame {
-                background: #efd7e2;
-                border: none;
-                border-radius: 16px;
-            }
-        """)
-        progress_layout = QHBoxLayout(self.progress_bg)
-        progress_layout.setContentsMargins(0, 0, 0, 0)
-        progress_layout.setSpacing(0)
-
-        self.progress_fill = QFrame()
-        self.progress_fill.setStyleSheet("""
-            QFrame {
-                background: #eca5d1;
-                border: none;
-                border-radius: 16px;
-            }
-        """)
-        self.progress_fill.setFixedWidth(280)
-
-        progress_layout.addWidget(self.progress_fill, alignment=Qt.AlignmentFlag.AlignLeft)
-        progress_layout.addStretch()
-
-        progress_wrap = QHBoxLayout()
-        progress_wrap.setContentsMargins(10, 0, 10, 0)
-        progress_wrap.addWidget(self.progress_bg)
-        main_layout.addLayout(progress_wrap)
-
-        divider = QFrame()
-        divider.setFrameShape(QFrame.Shape.HLine)
-        divider.setStyleSheet("color: #f0b9ca; background: #f0b9ca; min-height: 2px;")
-        main_layout.addWidget(divider)
-
-        lower_row = QHBoxLayout()
-        lower_row.setSpacing(20)
-
-        # Left block
-        left_frame = QFrame()
-        left_frame.setStyleSheet("QFrame { border: none; }")
-        left_layout = QVBoxLayout(left_frame)
-        left_layout.setContentsMargins(0, 0, 0, 0)
-        left_layout.setSpacing(4)
-
-        left_layout.addWidget(self._section_title("Hoạt động:"))
-        self.activities_label = QLabel()
-        self.activities_label.setWordWrap(True)
-        self.activities_label.setStyleSheet("font-size: 15px;")
-        left_layout.addWidget(self.activities_label)
-
-        left_layout.addSpacing(4)
-        left_layout.addWidget(self._section_title("Phạm vi:"))
-        self.scope_label = QLabel()
-        self.scope_label.setStyleSheet("font-size: 15px;")
-        left_layout.addWidget(self.scope_label)
-
-        left_layout.addSpacing(4)
-        left_layout.addWidget(self._section_title("Ngày thành lập:"))
-        self.founded_label = QLabel()
-        self.founded_label.setStyleSheet("font-size: 15px;")
-        left_layout.addWidget(self.founded_label)
-        left_layout.addStretch()
-
-        separator = QFrame()
-        separator.setFixedWidth(2)
-        separator.setStyleSheet("background: #f0b9ca; border: none;")
-
-        # Right block
-        right_frame = QFrame()
-        right_frame.setStyleSheet("QFrame { border: none; }")
-        right_layout = QVBoxLayout(right_frame)
-        right_layout.setContentsMargins(0, 0, 0, 0)
-        right_layout.setSpacing(4)
-
-        right_layout.addWidget(self._section_title("Chủ chiến dịch:"))
-
-        info_and_avatar = QHBoxLayout()
-        info_and_avatar.setSpacing(16)
-
-        grid = QGridLayout()
-        grid.setHorizontalSpacing(12)
-        grid.setVerticalSpacing(10)
-
-        self.id_value = QLabel()
-        self.gender_value = QLabel()
-        self.name_value = QLabel()
-        self.phone_value = QLabel()
-        self.cccd_value = QLabel()
-        self.address_value = QLabel()
-        self.email_value = QLabel()
-
-        labels = [
-            ("ID:", self.id_value, "Giới tính:", self.gender_value),
-            ("Họ và tên:", self.name_value, "", None),
-            ("Số điện thoại:", self.phone_value, "", None),
-            ("Số CCCD:", self.cccd_value, "", None),
-            ("Địa chỉ:", self.address_value, "", None),
-            ("Email:", self.email_value, "", None),
-        ]
-
-        row = 0
-        for left_text, left_value, right_text, right_value in labels:
-            left_label = QLabel(left_text)
-            left_label.setStyleSheet("font-size: 15px;")
-            left_value.setStyleSheet("font-size: 15px;")
-            grid.addWidget(left_label, row, 0)
-            grid.addWidget(left_value, row, 1)
-
-            if right_value is not None:
-                right_label = QLabel(right_text)
-                right_label.setStyleSheet("font-size: 15px;")
-                right_value.setStyleSheet("font-size: 15px;")
-                grid.addWidget(right_label, row, 2)
-                grid.addWidget(right_value, row, 3)
-            row += 1
-
-        info_and_avatar.addLayout(grid, 1)
-
-        self.avatar_label = ImageLabel(132, 170)
-        info_and_avatar.addWidget(self.avatar_label, alignment=Qt.AlignmentFlag.AlignTop)
-
-        right_layout.addLayout(info_and_avatar)
-        right_layout.addStretch()
-
-        lower_row.addWidget(left_frame, 4)
-        lower_row.addWidget(separator)
-        lower_row.addWidget(right_frame, 5)
-
-        main_layout.addLayout(lower_row)
-        root.addWidget(self.main_card)
-
-        # Donation card
-        self.donation_card = QFrame()
-        self.donation_card.setObjectName("donationCard")
-        self.donation_card.setFixedWidth(390)
-        self.donation_card.setStyleSheet("""
-            QFrame#donationCard {
-                background: #f8eef3;
-                border: 3px solid #f0b9ca;
-                border-radius: 22px;
-            }
-        """)
-
-        donation_layout = QVBoxLayout(self.donation_card)
-        donation_layout.setContentsMargins(30, 18, 24, 18)
-        donation_layout.setSpacing(10)
-
-        donation_title = QLabel("Quyên góp")
-        donation_title.setStyleSheet("""
-            font-size: 28px;
-            font-weight: 800;
-            color: #734465;
-        """)
-        donation_layout.addWidget(donation_title, alignment=Qt.AlignmentFlag.AlignHCenter)
-
-        waiting_row = QHBoxLayout()
-        waiting_row.setContentsMargins(18, 6, 0, 6)
-        waiting_row.setSpacing(14)
-
-        waiting_icon = QLabel("⏳")
-
-        waiting_icon.setStyleSheet("font-size: 44px;")
-        waiting_row.addWidget(waiting_icon, alignment=Qt.AlignmentFlag.AlignVCenter)
-
-        waiting_text = QLabel("Đang xác minh...")
-        waiting_text.setStyleSheet("font-size: 15px; color: #2c2328;")
-        waiting_row.addWidget(waiting_text, alignment=Qt.AlignmentFlag.AlignVCenter)
-
-        waiting_row.addStretch()
-        donation_layout.addLayout(waiting_row)
-        donation_layout.addStretch()
-
-        root.addWidget(self.donation_card, alignment=Qt.AlignmentFlag.AlignLeft)
-        root.addStretch()
-
-    def _menu_button(self, text: str, active: bool = False) -> QPushButton:
-        btn = QPushButton(text)
-        btn.setCursor(Qt.CursorShape.PointingHandCursor)
-        if active:
-            btn.setStyleSheet("""
-                QPushButton {
-                    background: #e7b9d2;
-                    border: none;
-                    border-radius: 18px;
-                    padding: 8px 14px;
-                    color: #241f22;
-                    font-size: 15px;
-                    font-weight: 700;
-                }
-            """)
-        else:
-            btn.setStyleSheet("""
-                QPushButton {
-                    background: transparent;
-                    border: none;
-                    padding: 8px 10px;
-                    color: #241f22;
-                    font-size: 15px;
-                    font-weight: 700;
-                }
-                QPushButton:hover {
-                    color: #7d496d;
-                }
-            """)
-        btn.clicked.connect(lambda _, t=text: print(f"Đã bấm: {t}"))
-        return btn
-
-    def _section_title(self, text: str) -> QLabel:
-        label = QLabel(text)
-        label.setStyleSheet("""
-            font-size: 17px;
-            font-weight: 800;
-            color: #2d2428;
-        """)
-        return label
-
-    def load_data(self, data: CampaignData):
-        self.title_label.setText(data.title)
-        self.desc_label.setText(data.description)
-
-        self.amount_label.setText(
-            f"<span style='color:#714565;font-weight:800;'>{data.raised}</span>"
-            f"<span style='color:#8c6a84;font-weight:700;'>/{data.target}</span>"
-        )
-        self.amount_label.setTextFormat(Qt.TextFormat.RichText)
-        self.percent_label.setText(data.percent)
-
-        self.activities_label.setText(data.activities)
-        self.scope_label.setText(data.scope)
-        self.founded_label.setText(data.founded_date)
-
-        self.id_value.setText(data.campaign_id)
-        self.gender_value.setText(data.gender)
-        self.name_value.setText(data.full_name)
-        self.phone_value.setText(data.phone)
-        self.cccd_value.setText(data.cccd)
-        self.address_value.setText(data.address)
-        self.email_value.setText(data.email)
-
-        self.avatar_label.set_image(data.avatar_path)
-
-        # Tính chiều rộng progress từ raised/target
-        try:
-            raised_value = float(data.raised.replace(",", ""))
-            target_value = float(data.target.replace(",", ""))
-            percent = max(0.0, min(1.0, raised_value / target_value if target_value else 0.0))
-        except Exception:
-            percent = 0.0
-
-        total_width = self.progress_bg.width() if self.progress_bg.width() > 0 else 860
-        fill_width = max(120, int(total_width * percent))
-        self.progress_fill.setFixedWidth(fill_width)
-
-    def resizeEvent(self, event):
-        super().resizeEvent(event)
-        # cập nhật lại thanh progress khi resize
-        try:
-            raised_text = self.data.raised
-            target_text = self.data.target
-            raised_value = float(raised_text.replace(",", ""))
-            target_value = float(target_text.replace(",", ""))
-            percent = max(0.0, min(1.0, raised_value / target_value if target_value else 0.0))
-            total_width = max(300, self.progress_bg.width())
-            fill_width = max(120, int(total_width * percent))
-            self.progress_fill.setFixedWidth(fill_width)
-        except Exception:
-            pass
-
-    def handle_submit(self):
-        print("Đang xác minh...")
+# Form implementation generated from reading ui file 'Donate/xacminh6.ui'
+#
+# Created by: PyQt6 UI code generator 6.10.0
+#
+# WARNING: Any manual changes made to this file will be lost when pyuic6 is
+# run again.  Do not edit this file unless you know what you are doing.
+
+from PyQt6 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1200, 804)
+        MainWindow.setMinimumSize(QtCore.QSize(1200, 760))
+        MainWindow.setStyleSheet("QMainWindow, QWidget {\n"
+"    background: #FFF3F9;\n"
+"    font-family: \"Segoe UI\";\n"
+"    color: #2F2A2E;\n"
+"}\n"
+"\n"
+"QFrame#topBar {\n"
+"    background: #F4D8E3;\n"
+"    border: none;\n"
+"    border-radius: 0px;\n"
+"}\n"
+"\n"
+"QLabel#logoIcon {\n"
+"    color: #A64B80;\n"
+"    font-size: 24px;\n"
+"    font-weight: 700;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#logoText {\n"
+"    color: #9B4B78;\n"
+"    font-size: 23px;\n"
+"    font-weight: 800;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#logoSub {\n"
+"    color: #A78595;\n"
+"    font-size: 12px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QPushButton#navHome {\n"
+"    background: #E7BDD0;\n"
+"    border: none;\n"
+"    border-radius: 22px;\n"
+"    color: #1E1B20;\n"
+"    font-size: 18px;\n"
+"    font-weight: 700;\n"
+"    padding-left: 14px;\n"
+"    padding-right: 14px;\n"
+"}\n"
+"\n"
+"QPushButton#navHome:hover {\n"
+"    background: #E1B3C8;\n"
+"}\n"
+"\n"
+"QPushButton#navStats,\n"
+"QPushButton#navChat,\n"
+"QPushButton#navPublic {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    color: #1E1B20;\n"
+"    font-size: 18px;\n"
+"    font-weight: 700;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"QPushButton#navStats:hover,\n"
+"QPushButton#navChat:hover,\n"
+"QPushButton#navPublic:hover {\n"
+"    color: #9B4B78;\n"
+"}\n"
+"\n"
+"QLabel#topBell,\n"
+"QLabel#topSetting,\n"
+"QLabel#topUser {\n"
+"    background: transparent;\n"
+"    color: #4A3D49;\n"
+"    font-size: 24px;\n"
+"    font-weight: 700;\n"
+"}\n"
+"\n"
+"QPushButton#backBtn {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    color: #1E1B20;\n"
+"    font-size: 20px;\n"
+"    font-weight: 700;\n"
+"    text-align: left;\n"
+"}\n"
+"\n"
+"QFrame#mainCard {\n"
+"    background: #FFF3F9;\n"
+"    border: 4px solid #EDB4CB;\n"
+"    border-radius: 26px;\n"
+"}\n"
+"\n"
+"QLabel#campaignTitle {\n"
+"    color: #764872;\n"
+"    font-size: 28px;\n"
+"    font-weight: 900;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#campaignDesc {\n"
+"    color: #1E1B20;\n"
+"    font-size: 18px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#amountLabel {\n"
+"    color: #764872;\n"
+"    font-size: 26px;\n"
+"    font-weight: 900;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#percentLabel {\n"
+"    color: #764872;\n"
+"    font-size: 26px;\n"
+"    font-weight: 900;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QFrame#progressBg {\n"
+"    background: #F3D6E4;\n"
+"    border: none;\n"
+"    border-radius: 12px;\n"
+"}\n"
+"\n"
+"QFrame#progressFill {\n"
+"    background: #E7A0C4;\n"
+"    border: none;\n"
+"    border-radius: 12px;\n"
+"}\n"
+"\n"
+"QFrame#lineUnderProgress {\n"
+"    background: #EDB4CB;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QFrame#verticalLine {\n"
+"    background: #EDB4CB;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#activitiesTitle,\n"
+"QLabel#scopeTitle,\n"
+"QLabel#dateTitle,\n"
+"QLabel#ownerTitle {\n"
+"    color: #1E1B20;\n"
+"    font-size: 24px;\n"
+"    font-weight: 900;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#activitiesText,\n"
+"QLabel#scopeText,\n"
+"QLabel#dateText,\n"
+"QLabel#idLabel,\n"
+"QLabel#genderLabel,\n"
+"QLabel#nameLabel,\n"
+"QLabel#phoneLabel,\n"
+"QLabel#cccdLabel,\n"
+"QLabel#addressLabel,\n"
+"QLabel#emailLabel,\n"
+"QLabel#idValue,\n"
+"QLabel#genderValue,\n"
+"QLabel#nameValue,\n"
+"QLabel#phoneValue,\n"
+"QLabel#cccdValue,\n"
+"QLabel#addressValue,\n"
+"QLabel#emailValue {\n"
+"    color: #1E1B20;\n"
+"    font-size: 17px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#avatarLabel {\n"
+"    background: #F2F2F2;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QFrame#donateCard {\n"
+"    background: #FFF3F9;\n"
+"    border: 4px solid #EDB4CB;\n"
+"    border-radius: 26px;\n"
+"}\n"
+"\n"
+"QLabel#donateTitle {\n"
+"    color: #764872;\n"
+"    font-size: 28px;\n"
+"    font-weight: 900;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#verifyIcon {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#verifyText {\n"
+"    color: #1E1B20;\n"
+"    font-size: 18px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}")
+        self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+
+        self.topBar = QtWidgets.QFrame(parent=self.centralwidget)
+        self.topBar.setGeometry(QtCore.QRect(27, 16, 1146, 60))
+        self.topBar.setObjectName("topBar")
+
+        self.logoIcon = QtWidgets.QLabel(parent=self.topBar)
+        self.logoIcon.setGeometry(QtCore.QRect(18, 10, 34, 38))
+        self.logoIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.logoIcon.setObjectName("logoIcon")
+
+        self.logoText = QtWidgets.QLabel(parent=self.topBar)
+        self.logoText.setGeometry(QtCore.QRect(56, 11, 120, 34))
+        self.logoText.setObjectName("logoText")
+
+        self.logoSub = QtWidgets.QLabel(parent=self.topBar)
+        self.logoSub.setGeometry(QtCore.QRect(108, 33, 88, 18))
+        self.logoSub.setObjectName("logoSub")
+
+        self.navHome = QtWidgets.QPushButton(parent=self.topBar)
+        self.navHome.setGeometry(QtCore.QRect(245, 10, 120, 38))
+        self.navHome.setObjectName("navHome")
+
+        self.navStats = QtWidgets.QPushButton(parent=self.topBar)
+        self.navStats.setGeometry(QtCore.QRect(388, 10, 110, 38))
+        self.navStats.setObjectName("navStats")
+
+        self.navChat = QtWidgets.QPushButton(parent=self.topBar)
+        self.navChat.setGeometry(QtCore.QRect(510, 10, 110, 38))
+        self.navChat.setObjectName("navChat")
+
+        self.navPublic = QtWidgets.QPushButton(parent=self.topBar)
+        self.navPublic.setGeometry(QtCore.QRect(630, 10, 120, 38))
+        self.navPublic.setObjectName("navPublic")
+
+        self.topBell = QtWidgets.QLabel(parent=self.topBar)
+        self.topBell.setGeometry(QtCore.QRect(1020, 10, 34, 40))
+        self.topBell.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.topBell.setObjectName("topBell")
+
+        self.topSetting = QtWidgets.QLabel(parent=self.topBar)
+        self.topSetting.setGeometry(QtCore.QRect(1060, 10, 34, 40))
+        self.topSetting.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.topSetting.setObjectName("topSetting")
+
+        self.topUser = QtWidgets.QLabel(parent=self.topBar)
+        self.topUser.setGeometry(QtCore.QRect(1100, 8, 34, 42))
+        self.topUser.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.topUser.setObjectName("topUser")
+
+        self.backBtn = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.backBtn.setGeometry(QtCore.QRect(30, 88, 160, 36))
+        self.backBtn.setObjectName("backBtn")
+
+        self.mainCard = QtWidgets.QFrame(parent=self.centralwidget)
+        self.mainCard.setGeometry(QtCore.QRect(27, 130, 1146, 500))
+        self.mainCard.setObjectName("mainCard")
+
+        self.campaignTitle = QtWidgets.QLabel(parent=self.mainCard)
+        self.campaignTitle.setGeometry(QtCore.QRect(26, 18, 1000, 54))
+        self.campaignTitle.setObjectName("campaignTitle")
+
+        self.campaignDesc = QtWidgets.QLabel(parent=self.mainCard)
+        self.campaignDesc.setGeometry(QtCore.QRect(24, 72, 1090, 54))
+        self.campaignDesc.setWordWrap(True)
+        self.campaignDesc.setObjectName("campaignDesc")
+
+        self.amountLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.amountLabel.setGeometry(QtCore.QRect(52, 130, 430, 38))
+        self.amountLabel.setObjectName("amountLabel")
+
+        self.percentLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.percentLabel.setGeometry(QtCore.QRect(1024, 130, 90, 38))
+        self.percentLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight | QtCore.Qt.AlignmentFlag.AlignTrailing | QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.percentLabel.setObjectName("percentLabel")
+
+        self.progressBg = QtWidgets.QFrame(parent=self.mainCard)
+        self.progressBg.setGeometry(QtCore.QRect(38, 178, 1076, 24))
+        self.progressBg.setObjectName("progressBg")
+
+        self.progressFill = QtWidgets.QFrame(parent=self.mainCard)
+        self.progressFill.setGeometry(QtCore.QRect(38, 178, 72, 24))
+        self.progressFill.setObjectName("progressFill")
+
+        self.lineUnderProgress = QtWidgets.QFrame(parent=self.mainCard)
+        self.lineUnderProgress.setGeometry(QtCore.QRect(24, 230, 1096, 2))
+        self.lineUnderProgress.setObjectName("lineUnderProgress")
+
+        self.activitiesTitle = QtWidgets.QLabel(parent=self.mainCard)
+        self.activitiesTitle.setGeometry(QtCore.QRect(24, 242, 170, 34))
+        self.activitiesTitle.setObjectName("activitiesTitle")
+
+        self.activitiesText = QtWidgets.QLabel(parent=self.mainCard)
+        self.activitiesText.setGeometry(QtCore.QRect(24, 270, 420, 86))
+        self.activitiesText.setWordWrap(True)
+        self.activitiesText.setObjectName("activitiesText")
+
+        self.scopeTitle = QtWidgets.QLabel(parent=self.mainCard)
+        self.scopeTitle.setGeometry(QtCore.QRect(24, 350, 150, 34))
+        self.scopeTitle.setObjectName("scopeTitle")
+
+        self.scopeText = QtWidgets.QLabel(parent=self.mainCard)
+        self.scopeText.setGeometry(QtCore.QRect(30, 380, 260, 28))
+        self.scopeText.setObjectName("scopeText")
+
+        self.dateTitle = QtWidgets.QLabel(parent=self.mainCard)
+        self.dateTitle.setGeometry(QtCore.QRect(20, 410, 210, 34))
+        self.dateTitle.setObjectName("dateTitle")
+
+        self.dateText = QtWidgets.QLabel(parent=self.mainCard)
+        self.dateText.setGeometry(QtCore.QRect(30, 450, 180, 28))
+        self.dateText.setObjectName("dateText")
+
+        self.verticalLine = QtWidgets.QFrame(parent=self.mainCard)
+        self.verticalLine.setGeometry(QtCore.QRect(498, 250, 2, 230))
+        self.verticalLine.setObjectName("verticalLine")
+
+        self.ownerTitle = QtWidgets.QLabel(parent=self.mainCard)
+        self.ownerTitle.setGeometry(QtCore.QRect(526, 250, 220, 36))
+        self.ownerTitle.setObjectName("ownerTitle")
+
+        self.idLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.idLabel.setGeometry(QtCore.QRect(526, 290, 86, 28))
+        self.idLabel.setObjectName("idLabel")
+
+        self.idValue = QtWidgets.QLabel(parent=self.mainCard)
+        self.idValue.setGeometry(QtCore.QRect(640, 290, 120, 28))
+        self.idValue.setObjectName("idValue")
+
+        self.genderLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.genderLabel.setGeometry(QtCore.QRect(808, 290, 94, 28))
+        self.genderLabel.setObjectName("genderLabel")
+
+        self.genderValue = QtWidgets.QLabel(parent=self.mainCard)
+        self.genderValue.setGeometry(QtCore.QRect(906, 290, 60, 28))
+        self.genderValue.setObjectName("genderValue")
+
+        self.nameLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.nameLabel.setGeometry(QtCore.QRect(526, 328, 100, 28))
+        self.nameLabel.setObjectName("nameLabel")
+
+        self.nameValue = QtWidgets.QLabel(parent=self.mainCard)
+        self.nameValue.setGeometry(QtCore.QRect(640, 328, 210, 28))
+        self.nameValue.setObjectName("nameValue")
+
+        self.phoneLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.phoneLabel.setGeometry(QtCore.QRect(526, 366, 120, 28))
+        self.phoneLabel.setObjectName("phoneLabel")
+
+        self.phoneValue = QtWidgets.QLabel(parent=self.mainCard)
+        self.phoneValue.setGeometry(QtCore.QRect(640, 366, 150, 28))
+        self.phoneValue.setObjectName("phoneValue")
+
+        self.cccdLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.cccdLabel.setGeometry(QtCore.QRect(526, 404, 100, 28))
+        self.cccdLabel.setObjectName("cccdLabel")
+
+        self.cccdValue = QtWidgets.QLabel(parent=self.mainCard)
+        self.cccdValue.setGeometry(QtCore.QRect(640, 404, 170, 28))
+        self.cccdValue.setObjectName("cccdValue")
+
+        self.addressLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.addressLabel.setGeometry(QtCore.QRect(526, 442, 90, 28))
+        self.addressLabel.setObjectName("addressLabel")
+
+        self.addressValue = QtWidgets.QLabel(parent=self.mainCard)
+        self.addressValue.setGeometry(QtCore.QRect(640, 442, 170, 28))
+        self.addressValue.setObjectName("addressValue")
+
+        self.emailLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.emailLabel.setGeometry(QtCore.QRect(526, 480, 80, 28))
+        self.emailLabel.setObjectName("emailLabel")
+
+        self.emailValue = QtWidgets.QLabel(parent=self.mainCard)
+        self.emailValue.setGeometry(QtCore.QRect(640, 480, 250, 28))
+        self.emailValue.setObjectName("emailValue")
+
+        self.avatarLabel = QtWidgets.QLabel(parent=self.mainCard)
+        self.avatarLabel.setGeometry(QtCore.QRect(960, 270, 162, 214))
+        self.avatarLabel.setText("")
+        self.avatarLabel.setPixmap(QtGui.QPixmap("Donate/avt6.png"))
+        self.avatarLabel.setScaledContents(True)
+        self.avatarLabel.setObjectName("avatarLabel")
+
+        self.donateCard = QtWidgets.QFrame(parent=self.centralwidget)
+        self.donateCard.setGeometry(QtCore.QRect(27, 640, 430, 101))
+        self.donateCard.setObjectName("donateCard")
+
+        self.donateTitle = QtWidgets.QLabel(parent=self.donateCard)
+        self.donateTitle.setGeometry(QtCore.QRect(138, 0, 180, 34))
+        self.donateTitle.setObjectName("donateTitle")
+
+        self.verifyIcon = QtWidgets.QLabel(parent=self.donateCard)
+        self.verifyIcon.setGeometry(QtCore.QRect(58, 42, 42, 42))
+        self.verifyIcon.setText("")
+        self.verifyIcon.setPixmap(QtGui.QPixmap("Donate/xacminh.png"))
+        self.verifyIcon.setScaledContents(True)
+        self.verifyIcon.setObjectName("verifyIcon")
+
+        self.verifyText = QtWidgets.QLabel(parent=self.donateCard)
+        self.verifyText.setGeometry(QtCore.QRect(118, 44, 170, 28))
+        self.verifyText.setObjectName("verifyText")
+
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1200, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+
+        self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Donarity - Xác minh 6"))
+        self.logoIcon.setText(_translate("MainWindow", "💞"))
+        self.logoText.setText(_translate("MainWindow", "Donarity"))
+        self.logoSub.setText(_translate("MainWindow", "group 10"))
+        self.navHome.setText(_translate("MainWindow", "🏠 Trang chủ"))
+        self.navStats.setText(_translate("MainWindow", "⌗ Thống kê"))
+        self.navChat.setText(_translate("MainWindow", "💬 Chatbot"))
+        self.navPublic.setText(_translate("MainWindow", "◉ Công khai"))
+        self.topBell.setText(_translate("MainWindow", "🔔"))
+        self.topSetting.setText(_translate("MainWindow", "⚙"))
+        self.topUser.setText(_translate("MainWindow", "●"))
+        self.backBtn.setText(_translate("MainWindow", "← Quay lại"))
+
+        self.campaignTitle.setText(_translate("MainWindow", "Chống hạn mặn Miền Tây (Thủy Tiên)"))
+        self.campaignDesc.setText(_translate("MainWindow", "Lắp đặt các trạm lọc nước mặn thành nước ngọt công suất lớn để phục vụ sinh hoạt và tưới tiêu cho bà con vùng hạn mặn."))
+        self.amountLabel.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.percentLabel.setText(_translate("MainWindow", "6.67%"))
+
+        self.activitiesTitle.setText(_translate("MainWindow", "Hoạt động:"))
+        self.activitiesText.setText(_translate("MainWindow", "Lắp đặt máy lọc nước RO công nghiệp\nTặng bồn chứa nước sạch cho hộ nghèo\nVận chuyển nước ngọt cứu trợ khẩn cấp"))
+        self.scopeTitle.setText(_translate("MainWindow", "Phạm vi:"))
+        self.scopeText.setText(_translate("MainWindow", "Đồng bằng sông Cửu Long"))
+        self.dateTitle.setText(_translate("MainWindow", "Ngày thành lập:"))
+        self.dateText.setText(_translate("MainWindow", "2020-04-01"))
+
+        self.ownerTitle.setText(_translate("MainWindow", "Chủ chiến dịch:"))
+        self.idLabel.setText(_translate("MainWindow", "ID:"))
+        self.idValue.setText(_translate("MainWindow", "CC0012"))
+        self.genderLabel.setText(_translate("MainWindow", "Giới tính:"))
+        self.genderValue.setText(_translate("MainWindow", "Nữ"))
+        self.nameLabel.setText(_translate("MainWindow", "Họ và tên:"))
+        self.nameValue.setText(_translate("MainWindow", "Trần Thủy Tiên"))
+        self.phoneLabel.setText(_translate("MainWindow", "Số điện thoại:"))
+        self.phoneValue.setText(_translate("MainWindow", "0919222444"))
+        self.cccdLabel.setText(_translate("MainWindow", "Số CCCD:"))
+        self.cccdValue.setText(_translate("MainWindow", "079185007777"))
+        self.addressLabel.setText(_translate("MainWindow", "Địa chỉ:"))
+        self.addressValue.setText(_translate("MainWindow", "Hồ Chí Minh"))
+        self.emailLabel.setText(_translate("MainWindow", "Email:"))
+        self.emailValue.setText(_translate("MainWindow", "thuytien.singer@gmail.com"))
+
+        self.donateTitle.setText(_translate("MainWindow", "Quyên góp"))
+        self.verifyText.setText(_translate("MainWindow", "Đang xác minh..."))
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-
-    page6 = CampaignData(
-        title="Saigon Children's Charity (Học bổng giáo dục)",
-        description="Giúp trẻ em có hoàn cảnh khó khăn tiếp cận giáo dục chất lượng để vượt qua nghèo đói và phát triển tương lai.",
-        raised="1000000000",
-        target="7000000000",
-        percent="6.67%",
-        activities="Trao học bổng dài hạn cho trẻ em nghèo\nXây dựng và cải tạo trường học\nĐào tạo nghề cho thanh thiếu niên khó khăn",
-        scope="Miền Nam Việt Nam",
-        founded_date="1992-05-20",
-        campaign_id="CC0009",
-        gender="Nam",
-        full_name="Damien Roberts",
-        phone="0901333009",
-        cccd="079080007777",
-        address="Hồ Chí Minh",
-        email="damien@gmail.com",
-        qr_path="qr6.png",
-        avatar_path="avt6.png",
-    )
-
-    window = DonationPage(page6)
-    window.show()
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
     sys.exit(app.exec())
