@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Donarity - Tạo chiến dịch thành công</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget{
+background:#FFF3F9;
+font-family:"Segoe UI";
+}
+
+QFrame#topBar{
+background:#F4D8E3;
+border:none;
+}
+
+QLabel#logoText{
+font-size:18px;
+font-weight:700;
+color:#7A4E6A;
+}
+
+QLabel#menu1, QLabel#menu2, QLabel#menu3, QLabel#menu4{
+font-size:14px;
+font-weight:600;
+color:#2F2A2E;
+padding:6px 10px;
+}
+
+QLabel#menu2{
+background:#E8BFD0;
+border-radius:14px;
+padding:8px 14px;
+}
+
+QLabel#bellIcon, QLabel#userIcon{
+font-size:20px;
+color:#2F2A2E;
+}
+
+QLabel#titleLabel{
+font-size:32px;
+font-weight:700;
+color:#6C4A63;
+background:transparent;
+}
+
+QLabel#descLabel{
+font-size:16px;
+color:#444444;
+background:transparent;
+}
+
+QFrame#contentFrame{
+background:#FFFFFF;
+border:none;
+border-radius:20px;
+}
+
+QPushButton#backButton{
+background:transparent;
+border:none;
+font-size:14px;
+font-weight:600;
+color:#333333;
+text-align:left;
+padding-left:6px;
+}
+
+QPushButton#backButton:hover{
+color:#6C4A63;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>14</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+
+    <item>
+     <widget class="QFrame" name="topBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>54</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>54</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="topBarLayout">
+       <property name="spacing">
+        <number>18</number>
+       </property>
+       <property name="leftMargin">
+        <number>16</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>16</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+
+       <item>
+        <widget class="QLabel" name="logoText">
+         <property name="text">
+          <string>💗 Donarity</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <spacer name="spacer1">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="menu1">
+         <property name="text">
+          <string>🏠 Trang chủ</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="menu2">
+         <property name="text">
+          <string>➕ Tạo chiến dịch</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="menu3">
+         <property name="text">
+          <string>📁 Theo dõi chiến dịch</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="menu4">
+         <property name="text">
+          <string>🌐 Công khai</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <spacer name="spacer2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="bellIcon">
+         <property name="text">
+          <string>🔔</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="userIcon">
+         <property name="text">
+          <string>👤</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="backLayout">
+      <property name="leftMargin">
+       <number>12</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="backButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>← Quay lại</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="backSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="contentOuterLayout">
+      <property name="leftMargin">
+       <number>42</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>42</number>
+      </property>
+      <property name="bottomMargin">
+       <number>32</number>
+      </property>
+
+      <item>
+       <spacer name="leftSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+
+      <item>
+       <widget class="QFrame" name="contentFrame">
+        <property name="minimumSize">
+         <size>
+          <width>1040</width>
+          <height>580</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1040</width>
+          <height>580</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="contentLayout">
+         <property name="spacing">
+          <number>18</number>
+         </property>
+         <property name="leftMargin">
+          <number>40</number>
+         </property>
+         <property name="topMargin">
+          <number>34</number>
+         </property>
+         <property name="rightMargin">
+          <number>40</number>
+         </property>
+         <property name="bottomMargin">
+          <number>24</number>
+         </property>
+
+         <item>
+          <spacer name="topContentSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>8</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="checkIcon">
+           <property name="minimumSize">
+            <size>
+             <width>110</width>
+             <height>110</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>110</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>check_success.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="titleLabel">
+           <property name="text">
+            <string>Tạo chiến dịch thành công!</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="descLabel">
+           <property name="minimumSize">
+            <size>
+             <width>720</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>800</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Chiến dịch của bạn đã được xác nhận thành công và sẵn sàng hoạt động.
+
+Cảm ơn vì đã hành động tử tế để lan tỏa yêu thương!</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <spacer name="middleContentSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>6</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+
+         <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+          <widget class="QLabel" name="coinImage">
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>170</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>170</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>donation_box.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <spacer name="bottomContentSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+
+        </layout>
+       </widget>
+      </item>
+
+      <item>
+       <spacer name="rightSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
