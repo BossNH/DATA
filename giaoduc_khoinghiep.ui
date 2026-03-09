@@ -1,0 +1,1761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>781</width>
+    <height>1450</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>781</width>
+    <height>1450</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Giáo dục &amp; Khởi nghiệp</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget {
+    background: #FFF6FB;
+    font-family: &quot;Arial&quot;;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>1450</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1200</width>
+      <height>760</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QScrollArea {
+    border: none;
+    background: #FFF6FB;
+}
+QScrollBar:vertical {
+    background: #F8E8F0;
+    width: 12px;
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical {
+    background: #D9AFC7;
+    min-height: 40px;
+    border-radius: 6px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>781</width>
+       <height>1720</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: #FFF6FB;</string>
+     </property>
+     <widget class="QFrame" name="topBar">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>3</y>
+        <width>781</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#F9DDE7;
+    border:none;
+    border-radius:0px;
+}</string>
+      </property>
+      <widget class="QLabel" name="logoIcon">
+       <property name="geometry">
+        <rect>
+         <x>18</x>
+         <y>5</y>
+         <width>28</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    font-size:18px;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>🕊</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logoTitle">
+       <property name="geometry">
+        <rect>
+         <x>44</x>
+         <y>4</y>
+         <width>90</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7E3A79;
+    font-size:14px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Donarity</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logoSub">
+       <property name="geometry">
+        <rect>
+         <x>46</x>
+         <y>20</y>
+         <width>56</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7A6D75;
+    font-size:7px;
+    font-weight:600;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>by group 10</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="navHome">
+       <property name="geometry">
+        <rect>
+         <x>168</x>
+         <y>9</y>
+         <width>84</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:9px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>⌂ Trang chủ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="navStats">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>9</y>
+         <width>84</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:9px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>⌛ Thống kê</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="navChatbot">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>9</y>
+         <width>90</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:9px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>◕Chatbot</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="notifIcon">
+       <property name="geometry">
+        <rect>
+         <x>684</x>
+         <y>8</y>
+         <width>18</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    font-size:13px;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>🔔</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="notifBadge">
+       <property name="geometry">
+        <rect>
+         <x>696</x>
+         <y>7</y>
+         <width>12</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    background:#E53935;
+    color:white;
+    border-radius:6px;
+    font-size:7px;
+    font-weight:800;
+}</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="settingsIcon">
+       <property name="geometry">
+        <rect>
+         <x>714</x>
+         <y>8</y>
+         <width>16</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    font-size:13px;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>⚙</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="userIcon">
+       <property name="geometry">
+        <rect>
+         <x>738</x>
+         <y>6</y>
+         <width>22</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#2A2A2A;
+    font-size:18px;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>◉</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="backLabel">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>53</y>
+        <width>90</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color:#222;
+    font-size:10px;
+    font-weight:600;
+    background:transparent;
+    border:none;
+}</string>
+      </property>
+      <property name="text">
+       <string>← Quay lại</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="titleIcon">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>92</y>
+        <width>34</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    font-size:24px;
+    background:transparent;
+    border:none;
+}</string>
+      </property>
+      <property name="text">
+       <string>📚</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mainTitle">
+      <property name="geometry">
+       <rect>
+        <x>72</x>
+        <y>84</y>
+        <width>390</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color:#8A4E82;
+    font-size:28px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Giáo dục &amp; Khởi nghiệp</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="searchEdit">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>149</y>
+        <width>512</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background:white;
+    border:1px solid #CFCFCF;
+    padding-left:30px;
+    color:#222;
+    font-size:10px;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Search for...</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="searchIcon">
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>156</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color:#222;
+    font-size:13px;
+    background:transparent;
+    border:none;
+}</string>
+      </property>
+      <property name="text">
+       <string>⌕</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="categoryCombo">
+      <property name="geometry">
+       <rect>
+        <x>528</x>
+        <y>149</y>
+        <width>118</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+    background:white;
+    border:1px solid #CFCFCF;
+    padding-left:8px;
+    color:#222;
+    font-size:10px;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>All Categories</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="searchButton">
+      <property name="geometry">
+       <rect>
+        <x>661</x>
+        <y>149</y>
+        <width>70</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+    background:#FFF6FB;
+    border:1px solid #7F4D7D;
+    color:#222;
+    font-size:10px;
+    font-weight:700;
+}</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="card14">
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>231</y>
+        <width>318</width>
+        <height>265</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#FFF9FC;
+    border:1px solid #D0A8BD;
+    border-radius:20px;
+}</string>
+      </property>
+      <widget class="QLabel" name="card14Image">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>316</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    border:none;
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+    background:#E7E7E7;
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>campaign14.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card14Title">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>142</y>
+         <width>292</width>
+         <height>44</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#78496F;
+    font-size:11px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Saigon Children's Charity (Học bổng giáo dục)</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card14Date">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>184</y>
+         <width>145</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:      1992-05-20</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card14Owner">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>200</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Owner:   Damien Roberts</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card14Money">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>220</y>
+         <width>220</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7C4A73;
+    font-size:10px;
+    font-weight:900;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="card14Progress">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>238</y>
+         <width>260</width>
+         <height>8</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card14More">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>238</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#9A5C8B;
+    font-size:8px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Xem thêm</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="card15">
+      <property name="geometry">
+       <rect>
+        <x>406</x>
+        <y>231</y>
+        <width>318</width>
+        <height>265</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#FFF9FC;
+    border:1px solid #D0A8BD;
+    border-radius:20px;
+}</string>
+      </property>
+      <widget class="QLabel" name="card15Image">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>316</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    border:none;
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+    background:#E7E7E7;
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>campaign15.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card15Title">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>148</y>
+         <width>290</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#78496F;
+    font-size:11px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Quỹ Hy Vọng (Xây trường vùng cao)</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card15Date">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>184</y>
+         <width>145</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:      2022-01-05</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card15Owner">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>200</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Owner:   Nguyễn Xuân Tú</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card15Money">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>220</y>
+         <width>220</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7C4A73;
+    font-size:10px;
+    font-weight:900;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>1000000000/15000000000</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="card15Progress">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>242</y>
+         <width>260</width>
+         <height>8</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card15More">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>248</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#9A5C8B;
+    font-size:8px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Xem thêm</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="card16">
+      <property name="geometry">
+       <rect>
+        <x>33</x>
+        <y>537</y>
+        <width>318</width>
+        <height>268</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#FFF9FC;
+    border:1px solid #D0A8BD;
+    border-radius:20px;
+}</string>
+      </property>
+      <widget class="QLabel" name="card16Image">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>316</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    border:none;
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+    background:#E7E7E7;
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>campaign16.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card16Title">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>148</y>
+         <width>290</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#78496F;
+    font-size:11px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chương trình Máy tính cho em</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card16Date">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>186</y>
+         <width>145</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:      2021-09-01</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card16Owner">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>202</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Owner:   Nguyễn Anh Tuấn</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card16Money">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>222</y>
+         <width>220</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7C4A73;
+    font-size:10px;
+    font-weight:900;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>1000000000/15000000000</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="card16Progress">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>244</y>
+         <width>260</width>
+         <height>8</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card16More">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>250</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#9A5C8B;
+    font-size:8px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Xem thêm</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="card17">
+      <property name="geometry">
+       <rect>
+        <x>401</x>
+        <y>539</y>
+        <width>318</width>
+        <height>268</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#FFF9FC;
+    border:1px solid #D0A8BD;
+    border-radius:20px;
+}</string>
+      </property>
+      <widget class="QLabel" name="card17Image">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>316</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    border:none;
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+    background:#E7E7E7;
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>campaign17.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card17Title">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>148</y>
+         <width>290</width>
+         <height>36</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#78496F;
+    font-size:11px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Quỹ Học bổng Thắp sáng Niềm tin</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card17Date">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>186</y>
+         <width>145</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:      2019-06-15</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card17Owner">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>202</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Owner:   Nguyễn Thu Hà</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card17Money">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>222</y>
+         <width>220</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7C4A73;
+    font-size:10px;
+    font-weight:900;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="card17Progress">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>244</y>
+         <width>260</width>
+         <height>8</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card17More">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>250</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#9A5C8B;
+    font-size:8px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Xem thêm</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="card18">
+      <property name="geometry">
+       <rect>
+        <x>33</x>
+        <y>850</y>
+        <width>318</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#FFF9FC;
+    border:1px solid #D0A8BD;
+    border-radius:20px;
+}</string>
+      </property>
+      <widget class="QLabel" name="card18Image">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>316</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    border:none;
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+    background:#E7E7E7;
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>campaign18.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card18Title">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>150</y>
+         <width>290</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#78496F;
+    font-size:11px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Dự án Xây trường cho em (Vùng cao)</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card18Date">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>188</y>
+         <width>145</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:      2020-12-20</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card18Owner">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>204</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Owner:   Hoàng Hoa Trung</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card18Money">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>224</y>
+         <width>220</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7C4A73;
+    font-size:10px;
+    font-weight:900;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>1000000000/15000000000</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="card18Progress">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>246</y>
+         <width>260</width>
+         <height>8</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card18More">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>252</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#9A5C8B;
+    font-size:8px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Xem thêm</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="card19">
+      <property name="geometry">
+       <rect>
+        <x>401</x>
+        <y>850</y>
+        <width>318</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#FFF9FC;
+    border:1px solid #D0A8BD;
+    border-radius:20px;
+}</string>
+      </property>
+      <widget class="QLabel" name="card19Image">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>316</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    border:none;
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+    background:#E7E7E7;
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>campaign19.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card19Title">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>150</y>
+         <width>290</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#78496F;
+    font-size:11px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Phổ cập Tin học cho trẻ em xa xôi</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card19Date">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>188</y>
+         <width>145</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:      2020-03-12</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card19Owner">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>204</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Owner:   Nguyễn Văn Hạnh</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card19Money">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>224</y>
+         <width>220</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7C4A73;
+    font-size:10px;
+    font-weight:900;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>1000000000/15000000000</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="card19Progress">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>246</y>
+         <width>260</width>
+         <height>8</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card19More">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>252</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#9A5C8B;
+    font-size:8px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Xem thêm</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="card20">
+      <property name="geometry">
+       <rect>
+        <x>33</x>
+        <y>1168</y>
+        <width>318</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+    background:#FFF9FC;
+    border:1px solid #D0A8BD;
+    border-radius:20px;
+}</string>
+      </property>
+      <widget class="QLabel" name="card20Image">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>316</width>
+         <height>136</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    border:none;
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+    background:#E7E7E7;
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>campaign20.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card20Title">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>150</y>
+         <width>290</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#78496F;
+    font-size:11px;
+    font-weight:800;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Tủ sách cho em (Vùng cao phía Bắc)</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card20Date">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>188</y>
+         <width>145</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:      2023-05-20</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card20Owner">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>204</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Owner:   Nguyễn Xuân Tú</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card20Money">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>224</y>
+         <width>220</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#7C4A73;
+    font-size:10px;
+    font-weight:900;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>1000000000/15000000000</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="card20Progress">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>246</y>
+         <width>260</width>
+         <height>8</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card20More">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>252</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#9A5C8B;
+    font-size:8px;
+    font-weight:700;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Xem thêm</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
