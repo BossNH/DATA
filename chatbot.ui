@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Donarity - Chatbot</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget {
+    background: #F6EDF1;
+    font-family: &quot;Segoe UI&quot;;
+    color: #242424;
+}
+
+QWidget#centralwidget {
+    background: #F6EDF1;
+}
+
+QFrame#topBar {
+    background: #F1D7DF;
+    border: none;
+}
+
+QLabel#logoText {
+    color: #9A4D86;
+    font-size: 22px;
+    font-weight: 700;
+    background: transparent;
+}
+
+QLabel#logoSubText {
+    color: #8D6A7D;
+    font-size: 10px;
+    background: transparent;
+}
+
+QLabel#navHome,
+QLabel#navStats,
+QLabel#navBell,
+QLabel#navSetting,
+QLabel#navAvatar {
+    background: transparent;
+    color: #202020;
+}
+
+QFrame#chatbotTab {
+    background: #DCA2C4;
+    border: none;
+    border-radius: 23px;
+}
+
+QLabel#navChatbot {
+    background: transparent;
+    color: #1F1F1F;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+QLabel#notifBadge {
+    background: #E63333;
+    color: white;
+    border-radius: 9px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+QFrame#chatHeader {
+    background: #EBC7D3;
+    border: 1px solid #E2B6C4;
+    border-bottom: none;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
+
+QLabel#headerTitle {
+    background: transparent;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+QLabel#headerSubtitle {
+    background: transparent;
+    color: #343434;
+    font-size: 15px;
+}
+
+QFrame#chatPanel {
+    background: transparent;
+    border: 3px solid #F1B6C8;
+    border-top: none;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+QLabel#bubbleText {
+    background: #F3D7DF;
+    border: none;
+    border-radius: 21px;
+    color: #2C2C2C;
+    font-size: 14px;
+    padding-left: 18px;
+}
+
+QFrame#inputBox {
+    background: #F4D6DF;
+    border: none;
+    border-radius: 22px;
+}
+
+QLabel#inputPlaceholder {
+    background: transparent;
+    color: #B3A4AC;
+    font-size: 14px;
+}
+
+QPushButton#chip1,
+QPushButton#chip2,
+QPushButton#chip3 {
+    background: #FBF5F7;
+    border: 1px solid #2F2A2E;
+    border-radius: 17px;
+    color: #2D272B;
+    font-size: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+QPushButton#chip1:hover,
+QPushButton#chip2:hover,
+QPushButton#chip3:hover {
+    background: #F7E9EE;
+}
+
+QLabel#sendArrow {
+    background: transparent;
+    color: #F0BFD0;
+    font-size: 66px;
+    font-weight: 700;
+}
+
+QLabel#logoIcon,
+QLabel#headerIcon,
+QLabel#botIcon {
+    background: transparent;
+    border: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="topBar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>58</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QLabel" name="logoText">
+     <property name="geometry">
+      <rect>
+       <x>76</x>
+       <y>8</y>
+       <width>122</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Donarity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logoSubText">
+     <property name="geometry">
+      <rect>
+       <x>78</x>
+       <y>30</y>
+       <width>74</width>
+       <height>14</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>by group 10</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="navHome">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>16</y>
+       <width>118</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>🏠 Trang chủ</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="navStats">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>16</y>
+       <width>120</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>⌛ Thống kê</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="chatbotTab">
+     <property name="geometry">
+      <rect>
+       <x>525</x>
+       <y>8</y>
+       <width>121</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <widget class="QLabel" name="navChatbot">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>111</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>🗨 Chatbot</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="navBell">
+     <property name="geometry">
+      <rect>
+       <x>1066</x>
+       <y>14</y>
+       <width>24</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>🔔</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="notifBadge">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>10</y>
+       <width>18</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="navSetting">
+     <property name="geometry">
+      <rect>
+       <x>1109</x>
+       <y>14</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>17</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>⚙</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="navAvatar">
+     <property name="geometry">
+      <rect>
+       <x>1140</x>
+       <y>10</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 24px;</string>
+     </property>
+     <property name="text">
+      <string>👤</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="headerIcon_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 30px;</string>
+     </property>
+     <property name="text">
+      <string>🕊</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="chatHeader">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>122</y>
+      <width>1080</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QLabel" name="headerIcon">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>11</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 30px;</string>
+     </property>
+     <property name="text">
+      <string>🕊</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="headerTitle">
+     <property name="geometry">
+      <rect>
+       <x>82</x>
+       <y>12</y>
+       <width>280</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chatbot tư vấn</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="headerSubtitle">
+     <property name="geometry">
+      <rect>
+       <x>82</x>
+       <y>38</y>
+       <width>260</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Hỏi chúng tôi về chiến dịch</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="chatPanel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>194</y>
+      <width>1080</width>
+      <height>348</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QLabel" name="botIcon">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>22</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 30px;</string>
+     </property>
+     <property name="text">
+      <string>🕊</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bubbleText">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>411</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chào bạn! Bạn muốn tìm hiểu thông tin về chiến dịch nào?</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="inputBox">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>220</y>
+       <width>930</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <widget class="QLabel" name="inputPlaceholder">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>180</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Hãy nhập vào đây...</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="sendArrow">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>190</y>
+       <width>82</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>➤</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chip1">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>290</y>
+       <width>240</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tôi nên bắt đầu ủng hộ từ đâu?</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chip2">
+     <property name="geometry">
+      <rect>
+       <x>304</x>
+       <y>290</y>
+       <width>266</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chiến dịch nào đang cần hỗ trợ gấp?</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chip3">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>290</y>
+       <width>208</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chiến dịch nổi bật hôm nay</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
