@@ -7,14 +7,8 @@
     <x>0</x>
     <y>0</y>
     <width>1200</width>
-    <height>900</height>
+    <height>760</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>1200</width>
-    <height>900</height>
-   </size>
   </property>
   <property name="maximumSize">
    <size>
@@ -213,7 +207,7 @@ QLabel#miniLogoSub{
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>128</y>
+      <y>122</y>
       <width>1170</width>
       <height>770</height>
      </rect>
@@ -222,7 +216,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>360</x>
-       <y>40</y>
+       <y>-12</y>
        <width>741</width>
        <height>84</height>
       </rect>
@@ -238,7 +232,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>360</x>
-       <y>126</y>
+       <y>74</y>
        <width>700</width>
        <height>56</height>
       </rect>
@@ -254,7 +248,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>360</x>
-       <y>188</y>
+       <y>136</y>
        <width>82</width>
        <height>28</height>
       </rect>
@@ -267,7 +261,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>450</x>
-       <y>188</y>
+       <y>136</y>
        <width>135</width>
        <height>28</height>
       </rect>
@@ -280,7 +274,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>1002</x>
-       <y>188</y>
+       <y>136</y>
        <width>138</width>
        <height>28</height>
       </rect>
@@ -293,7 +287,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>364</x>
-       <y>240</y>
+       <y>188</y>
        <width>22</width>
        <height>22</height>
       </rect>
@@ -309,7 +303,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>396</x>
-       <y>238</y>
+       <y>186</y>
        <width>230</width>
        <height>25</height>
       </rect>
@@ -325,7 +319,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>364</x>
-       <y>286</y>
+       <y>234</y>
        <width>22</width>
        <height>22</height>
       </rect>
@@ -341,7 +335,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>396</x>
-       <y>284</y>
+       <y>232</y>
        <width>280</width>
        <height>25</height>
       </rect>
@@ -357,7 +351,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>364</x>
-       <y>332</y>
+       <y>280</y>
        <width>22</width>
        <height>22</height>
       </rect>
@@ -373,7 +367,7 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>396</x>
-       <y>328</y>
+       <y>260</y>
        <width>620</width>
        <height>92</height>
       </rect>
@@ -394,9 +388,9 @@ QLabel#miniLogoSub{
      <property name="geometry">
       <rect>
        <x>22</x>
-       <y>468</y>
+       <y>342</y>
        <width>1124</width>
-       <height>262</height>
+       <height>241</height>
       </rect>
      </property>
      <widget class="QLabel" name="top">
@@ -452,28 +446,6 @@ QLabel#miniLogoSub{
       </property>
       <property name="text">
        <string>...</string>
-      </property>
-     </widget>
-     <widget class="QProgressBar" name="Thanh">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>86</y>
-        <width>978</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="contextMenuPolicy">
-       <enum>Qt::DefaultContextMenu</enum>
-      </property>
-      <property name="maximum">
-       <number>100</number>
-      </property>
-      <property name="value">
-       <number>32</number>
-      </property>
-      <property name="textVisible">
-       <bool>false</bool>
       </property>
      </widget>
      <widget class="QLabel" name="statTitleLeft">
@@ -584,12 +556,39 @@ QLabel#miniLogoSub{
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#98015e;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
+     <widget class="QProgressBar" name="Thanh">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>1051</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar{
+    background:#F6DCE8;
+    border:none;
+    border-radius:4px;
+}
+QProgressBar::chunk{
+    background:#F2AED0;
+    border-radius:4px;
+}</string>
+      </property>
+      <property name="value">
+       <number>30</number>
+      </property>
+      <property name="textVisible">
+       <bool>false</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>70</y>
+       <y>18</y>
        <width>341</width>
        <height>321</height>
       </rect>

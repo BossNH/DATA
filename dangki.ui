@@ -10,12 +10,6 @@
     <height>900</height>
    </rect>
   </property>
-  <property name="minimumSize">
-   <size>
-    <width>1200</width>
-    <height>900</height>
-   </size>
-  </property>
   <property name="maximumSize">
    <size>
     <width>1200</width>
@@ -40,7 +34,7 @@
       <x>0</x>
       <y>0</y>
       <width>1200</width>
-      <height>900</height>
+      <height>760</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -88,8 +82,8 @@ QScrollBar::sub-page:vertical {
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-75</y>
-       <width>1188</width>
+       <y>-360</y>
+       <width>1183</width>
        <height>1120</height>
       </rect>
      </property>
@@ -1003,8 +997,8 @@ border-radius: 60px;
       <widget class="QPushButton" name="NutDangKi">
        <property name="geometry">
         <rect>
-         <x>425</x>
-         <y>75</y>
+         <x>420</x>
+         <y>10</y>
          <width>160</width>
          <height>46</height>
         </rect>

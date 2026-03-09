@@ -13,7 +13,6 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1200, 900)
-        MainWindow.setMinimumSize(QtCore.QSize(1200, 900))
         MainWindow.setMaximumSize(QtCore.QSize(1200, 900))
         MainWindow.setStyleSheet("QMainWindow, QWidget{\n"
 "    background: #FFF3F9;\n"
@@ -22,8 +21,9 @@ class Ui_MainWindow(object):
         self.centralwidget.setStyleSheet("background: #FFF3F9;")
         self.centralwidget.setObjectName("centralwidget")
         self.scrollArea = QtWidgets.QScrollArea(parent=self.centralwidget)
-        self.scrollArea.setGeometry(QtCore.QRect(0, 0, 1200, 900))
+        self.scrollArea.setGeometry(QtCore.QRect(0, 0, 1200, 760))
         self.scrollArea.setStyleSheet("QScrollArea{\n"
+"    selection-color: rgb(255, 0, 127);\n"
 "    background-color: rgb(255, 255, 255);\n"
 "    border: none;\n"
 "    background: #FFF3F9;\n"
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1188, 1120))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -360, 1183, 1120))
         self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(1180, 1120))
         self.scrollAreaWidgetContents.setStyleSheet("background: #FFF3F9;")
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
@@ -455,10 +455,12 @@ class Ui_MainWindow(object):
         self.txt_repassword.setObjectName("txt_repassword")
         self.bottom_pink = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.bottom_pink.setGeometry(QtCore.QRect(0, 845, 1185, 275))
+        self.bottom_pink.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.NoContextMenu)
         self.bottom_pink.setStyleSheet("QFrame{\n"
 "background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #FBE4EF, stop:1 #FFE5F2);\n"
 "border: none;\n"
-"}")
+"}\n"
+"    background-color: rgb(255, 0, 127);")
         self.bottom_pink.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.bottom_pink.setObjectName("bottom_pink")
         self.cloud1 = QtWidgets.QFrame(parent=self.bottom_pink)
@@ -497,7 +499,7 @@ class Ui_MainWindow(object):
 "}")
         self.cloud5.setObjectName("cloud5")
         self.NutDangKi = QtWidgets.QPushButton(parent=self.bottom_pink)
-        self.NutDangKi.setGeometry(QtCore.QRect(425, 75, 160, 46))
+        self.NutDangKi.setGeometry(QtCore.QRect(420, 10, 160, 46))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(13)
