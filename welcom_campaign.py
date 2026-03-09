@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\donarity_home.ui'
+# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\welcome_campaign.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -12,155 +12,175 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(734, 583)
-        MainWindow.setMinimumSize(QtCore.QSize(734, 583))
-        MainWindow.setMaximumSize(QtCore.QSize(734, 583))
+        MainWindow.resize(1200, 760)
+        MainWindow.setMinimumSize(QtCore.QSize(1200, 760))
+        MainWindow.setMaximumSize(QtCore.QSize(1200, 760))
         MainWindow.setStyleSheet("QMainWindow, QWidget#centralwidget {\n"
 "    background: #ECECEC;\n"
 "    font-family: \"Segoe UI\";\n"
 "}\n"
+"\n"
 "QFrame#mainPanel {\n"
 "    background: #FDF3F9;\n"
 "    border: none;\n"
 "}\n"
+"\n"
 "QFrame#navBar {\n"
-"    background: #F8DCE7;\n"
+"    background: #F7D8E3;\n"
 "    border: none;\n"
 "}\n"
+"\n"
 "QLabel#appTitle {\n"
-"    color: #BABABA;\n"
-"    font-size: 16px;\n"
+"    color: #B9B9B9;\n"
+"    font-size: 18px;\n"
 "    font-weight: 500;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#brandLabel {\n"
 "    color: #A14F7D;\n"
-"    font-size: 13px;\n"
-"    font-weight: 700;\n"
+"    font-size: 18px;\n"
+"    font-weight: 800;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QPushButton.navBtn {\n"
 "    border: none;\n"
 "    background: transparent;\n"
 "    color: #242424;\n"
-"    font-size: 11px;\n"
+"    font-size: 13px;\n"
 "    font-weight: 600;\n"
-"    padding: 6px 10px;\n"
-"    border-radius: 14px;\n"
+"    padding: 6px 12px;\n"
+"    border-radius: 16px;\n"
+"    text-align: center;\n"
 "}\n"
+"\n"
+"QPushButton.navBtn:hover {\n"
+"    background: rgba(255,255,255,0.35);\n"
+"}\n"
+"\n"
 "QPushButton#campaignBtn {\n"
-"    background: #EFC2D4;\n"
+"    background: #E9B8CB;\n"
 "    color: #2B2B2B;\n"
 "}\n"
+"\n"
 "QLabel#heroTitle {\n"
 "    color: #6E3F63;\n"
-"    font-size: 28px;\n"
-"    font-weight: 800;\n"
+"    font-size: 58px;\n"
+"    font-weight: 900;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel.heroText {\n"
 "    color: #222222;\n"
-"    font-size: 13px;\n"
+"    font-size: 18px;\n"
 "    font-weight: 400;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QPushButton#createBtn {\n"
 "    background: #E9B8CB;\n"
 "    color: #6A3E63;\n"
-"    font-size: 22px;\n"
+"    font-size: 26px;\n"
 "    font-weight: 800;\n"
 "    border: 1px solid #6D5061;\n"
-"    border-radius: 22px;\n"
+"    border-radius: 28px;\n"
 "    padding: 12px 24px;\n"
 "}\n"
+"\n"
 "QPushButton#createBtn:hover {\n"
-"    background: #E6B0C6;\n"
+"    background: #E4AFC5;\n"
 "}\n"
+"\n"
 "QLabel#profileIcon {\n"
 "    color: #222222;\n"
 "    font-size: 18px;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#notifIcon, QLabel#gearIcon {\n"
 "    color: #232323;\n"
-"    font-size: 15px;\n"
+"    font-size: 17px;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#groupLabel {\n"
+"    color: #B08A9E;\n"
+"    font-size: 9px;\n"
+"    font-weight: 600;\n"
+"    background: transparent;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.appTitle = QtWidgets.QLabel(parent=self.centralwidget)
-        self.appTitle.setGeometry(QtCore.QRect(31, 7, 60, 25))
-        self.appTitle.setObjectName("appTitle")
         self.mainPanel = QtWidgets.QFrame(parent=self.centralwidget)
-        self.mainPanel.setGeometry(QtCore.QRect(31, 39, 665, 496))
-        self.mainPanel.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.mainPanel.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.mainPanel.setGeometry(QtCore.QRect(63, 39, 1092, 654))
+        self.mainPanel.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.mainPanel.setObjectName("mainPanel")
         self.navBar = QtWidgets.QFrame(parent=self.mainPanel)
-        self.navBar.setGeometry(QtCore.QRect(0, 0, 665, 31))
-        self.navBar.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.navBar.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.navBar.setGeometry(QtCore.QRect(0, 0, 1092, 44))
+        self.navBar.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.navBar.setObjectName("navBar")
         self.brandIcon = QtWidgets.QLabel(parent=self.navBar)
-        self.brandIcon.setGeometry(QtCore.QRect(14, 4, 22, 22))
-        self.brandIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.brandIcon.setGeometry(QtCore.QRect(16, 8, 24, 24))
+        self.brandIcon.setStyleSheet("background: transparent; font-size:20px; color:#A14F7D;")
         self.brandIcon.setObjectName("brandIcon")
         self.brandLabel = QtWidgets.QLabel(parent=self.navBar)
-        self.brandLabel.setGeometry(QtCore.QRect(39, 3, 86, 23))
+        self.brandLabel.setGeometry(QtCore.QRect(44, 4, 100, 24))
         self.brandLabel.setObjectName("brandLabel")
         self.groupLabel = QtWidgets.QLabel(parent=self.navBar)
-        self.groupLabel.setGeometry(QtCore.QRect(83, 15, 54, 10))
-        self.groupLabel.setStyleSheet("color:#B08A9E;font-size:8px;font-weight:600;background:transparent;")
+        self.groupLabel.setGeometry(QtCore.QRect(64, 24, 66, 12))
         self.groupLabel.setObjectName("groupLabel")
         self.homeBtn = QtWidgets.QPushButton(parent=self.navBar)
-        self.homeBtn.setGeometry(QtCore.QRect(143, 2, 73, 26))
+        self.homeBtn.setGeometry(QtCore.QRect(240, 8, 104, 28))
         self.homeBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.homeBtn.setStyleSheet("")
         self.homeBtn.setObjectName("homeBtn")
         self.campaignBtn = QtWidgets.QPushButton(parent=self.navBar)
-        self.campaignBtn.setGeometry(QtCore.QRect(219, 2, 97, 26))
+        self.campaignBtn.setGeometry(QtCore.QRect(356, 8, 134, 28))
         self.campaignBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.campaignBtn.setObjectName("campaignBtn")
         self.followBtn = QtWidgets.QPushButton(parent=self.navBar)
-        self.followBtn.setGeometry(QtCore.QRect(322, 2, 111, 26))
+        self.followBtn.setGeometry(QtCore.QRect(503, 8, 170, 28))
         self.followBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.followBtn.setObjectName("followBtn")
         self.publicBtn = QtWidgets.QPushButton(parent=self.navBar)
-        self.publicBtn.setGeometry(QtCore.QRect(438, 2, 77, 26))
+        self.publicBtn.setGeometry(QtCore.QRect(684, 8, 106, 28))
         self.publicBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.publicBtn.setObjectName("publicBtn")
         self.notifIcon = QtWidgets.QLabel(parent=self.navBar)
-        self.notifIcon.setGeometry(QtCore.QRect(590, 5, 18, 18))
-        self.notifIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.notifIcon.setGeometry(QtCore.QRect(974, 10, 20, 20))
         self.notifIcon.setObjectName("notifIcon")
         self.redDot = QtWidgets.QLabel(parent=self.navBar)
-        self.redDot.setGeometry(QtCore.QRect(601, 4, 7, 7))
-        self.redDot.setStyleSheet("background:#FF4A63;border-radius:3px;")
+        self.redDot.setGeometry(QtCore.QRect(988, 8, 10, 10))
+        self.redDot.setStyleSheet("background:#FF4A63;border-radius:5px;")
         self.redDot.setText("")
         self.redDot.setObjectName("redDot")
         self.gearIcon = QtWidgets.QLabel(parent=self.navBar)
-        self.gearIcon.setGeometry(QtCore.QRect(616, 5, 18, 18))
-        self.gearIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.gearIcon.setGeometry(QtCore.QRect(1013, 10, 20, 20))
         self.gearIcon.setObjectName("gearIcon")
         self.profileIcon = QtWidgets.QLabel(parent=self.navBar)
-        self.profileIcon.setGeometry(QtCore.QRect(639, 4, 19, 19))
-        self.profileIcon.setStyleSheet("background:#242424;color:#FFFFFF;border-radius:9px;font-size:11px;")
-        self.profileIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.profileIcon.setGeometry(QtCore.QRect(1052, 8, 28, 28))
+        self.profileIcon.setStyleSheet("background:#242424;color:#FFFFFF;border-radius:14px;font-size:13px;")
         self.profileIcon.setObjectName("profileIcon")
         self.decorLabel = QtWidgets.QLabel(parent=self.mainPanel)
-        self.decorLabel.setGeometry(QtCore.QRect(0, 221, 665, 275))
+        self.decorLabel.setGeometry(QtCore.QRect(0, 265, 1092, 389))
         self.decorLabel.setStyleSheet("background: transparent;")
         self.decorLabel.setText("")
         self.decorLabel.setScaledContents(True)
         self.decorLabel.setObjectName("decorLabel")
         self.heroTitle = QtWidgets.QLabel(parent=self.mainPanel)
-        self.heroTitle.setGeometry(QtCore.QRect(92, 84, 183, 45))
+        self.heroTitle.setGeometry(QtCore.QRect(150, 110, 300, 78))
         self.heroTitle.setObjectName("heroTitle")
         self.heroText1 = QtWidgets.QLabel(parent=self.mainPanel)
-        self.heroText1.setGeometry(QtCore.QRect(91, 150, 410, 23))
+        self.heroText1.setGeometry(QtCore.QRect(150, 205, 560, 30))
         self.heroText1.setObjectName("heroText1")
         self.heroText2 = QtWidgets.QLabel(parent=self.mainPanel)
-        self.heroText2.setGeometry(QtCore.QRect(91, 184, 520, 23))
+        self.heroText2.setGeometry(QtCore.QRect(150, 248, 760, 30))
         self.heroText2.setObjectName("heroText2")
         self.heroText3 = QtWidgets.QLabel(parent=self.mainPanel)
-        self.heroText3.setGeometry(QtCore.QRect(91, 218, 500, 23))
+        self.heroText3.setGeometry(QtCore.QRect(150, 291, 760, 30))
         self.heroText3.setObjectName("heroText3")
         self.createBtn = QtWidgets.QPushButton(parent=self.mainPanel)
-        self.createBtn.setGeometry(QtCore.QRect(224, 270, 218, 57))
+        self.createBtn.setGeometry(QtCore.QRect(366, 393, 380, 70))
         self.createBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.createBtn.setObjectName("createBtn")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -171,26 +191,25 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Unhi - Donarity"))
-        self.appTitle.setText(_translate("MainWindow", "Unhi"))
         self.brandIcon.setText(_translate("MainWindow", "🕊"))
         self.brandLabel.setText(_translate("MainWindow", "Donarity"))
         self.groupLabel.setText(_translate("MainWindow", "by group 10"))
         self.homeBtn.setText(_translate("MainWindow", "⌂ Trang chủ"))
-        self.homeBtn.setClass(_translate("MainWindow", "navBtn"))
+        self.homeBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.campaignBtn.setText(_translate("MainWindow", "✚ Tạo chiến dịch"))
-        self.campaignBtn.setClass(_translate("MainWindow", "navBtn"))
+        self.campaignBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.followBtn.setText(_translate("MainWindow", "▣ Theo dõi chiến dịch"))
-        self.followBtn.setClass(_translate("MainWindow", "navBtn"))
+        self.followBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.publicBtn.setText(_translate("MainWindow", "◉ Công khai"))
-        self.publicBtn.setClass(_translate("MainWindow", "navBtn"))
+        self.publicBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.notifIcon.setText(_translate("MainWindow", "🔔"))
         self.gearIcon.setText(_translate("MainWindow", "⚙"))
         self.profileIcon.setText(_translate("MainWindow", "●"))
         self.heroTitle.setText(_translate("MainWindow", "Xin chào!"))
         self.heroText1.setText(_translate("MainWindow", "Chào mừng bạn đến với hành trình lan tỏa yêu thương."))
-        self.heroText1.setClass(_translate("MainWindow", "heroText"))
+        self.heroText1.setProperty("class", _translate("MainWindow", "heroText"))
         self.heroText2.setText(_translate("MainWindow", "Mỗi chiến dịch bạn tạo hôm nay có thể trở thành hy vọng của một ai đó ngày mai."))
-        self.heroText2.setClass(_translate("MainWindow", "heroText"))
+        self.heroText2.setProperty("class", _translate("MainWindow", "heroText"))
         self.heroText3.setText(_translate("MainWindow", "Hãy tạo chiến dịch từ thiện của bạn và bắt đầu hành trình ý nghĩa ngay hôm nay."))
-        self.heroText3.setClass(_translate("MainWindow", "heroText"))
+        self.heroText3.setProperty("class", _translate("MainWindow", "heroText"))
         self.createBtn.setText(_translate("MainWindow", "Tạo chiến dịch mới"))
