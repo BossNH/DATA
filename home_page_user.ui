@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Donarity - Chatbot</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget {
+    background: #F7EEF2;
+    font-family: &quot;Segoe UI&quot;;
+    color: #2F2A2E;
+}
+
+QFrame#topBar {
+    background: #F2D6DF;
+    border: none;
+}
+
+QLabel#brandLabel {
+    color: #8B3D73;
+    font-size: 16pt;
+    font-weight: 800;
+    background: transparent;
+}
+
+QLabel#subBrandLabel {
+    color: #8B3D73;
+    font-size: 7pt;
+    background: transparent;
+}
+
+QPushButton#navHome {
+    background: #E6B7CA;
+    border: none;
+    border-radius: 18px;
+    padding: 8px 16px;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #2F2A2E;
+}
+
+QPushButton#navStats,
+QPushButton#navChatbot,
+QPushButton#navPublic {
+    background: transparent;
+    border: none;
+    padding: 8px 10px;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #2F2A2E;
+}
+
+QPushButton#navHome:hover,
+QPushButton#navStats:hover,
+QPushButton#navChatbot:hover,
+QPushButton#navPublic:hover {
+    color: #7A2F62;
+}
+
+QPushButton#btnNotify,
+QPushButton#btnSetting,
+QPushButton#btnUser {
+    background: transparent;
+    border: none;
+    font-size: 16pt;
+    color: #2F2A2E;
+}
+
+QFrame#heroFrame {
+    background: #E9DADF;
+    border: none;
+}
+
+QLabel#heroImage {
+    border: none;
+    background: transparent;
+}
+
+QLabel#heroTitle {
+    background: transparent;
+    color: #111111;
+    font-size: 44pt;
+    font-weight: 900;
+}
+
+QLabel#heroSubtitle {
+    background: transparent;
+    color: #1C1C1C;
+    font-size: 18pt;
+    font-weight: 700;
+}
+
+QWidget#categoryArea {
+    background: #F7EEF2;
+}
+
+QFrame#cat1, QFrame#cat2, QFrame#cat3, QFrame#cat4, QFrame#cat5, QFrame#cat6 {
+    background: transparent;
+    border: none;
+}
+
+QLabel#icon1, QLabel#icon2, QLabel#icon3, QLabel#icon4, QLabel#icon5, QLabel#icon6 {
+    color: #8B3D73;
+    font-size: 27pt;
+    font-weight: 700;
+    qproperty-alignment: AlignCenter;
+}
+
+QLabel#text1, QLabel#text2, QLabel#text3, QLabel#text4, QLabel#text5, QLabel#text6 {
+    color: #8B3D73;
+    font-size: 10pt;
+    font-weight: 600;
+    qproperty-alignment: AlignCenter;
+    background: transparent;
+}
+
+QFrame#bottomBar {
+    background: #F2D6DF;
+    border: none;
+}
+
+QLabel#reportLabel {
+    background: transparent;
+    color: #2F2A2E;
+    font-size: 10pt;
+    font-weight: 500;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+
+    <item>
+     <widget class="QFrame" name="topBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>52</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>52</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_top">
+       <property name="spacing">
+        <number>8</number>
+       </property>
+       <property name="leftMargin">
+        <number>18</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>18</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+
+       <item>
+        <widget class="QLabel" name="logoIcon">
+         <property name="minimumSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>🤍</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 18px; background: transparent;</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_brand">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="brandLabel">
+           <property name="text">
+            <string>Donarity</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="subBrandLabel">
+           <property name="text">
+            <string>by group 10</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <spacer name="spacerAfterBrand">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>24</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="navHome">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>🏠 Trang chủ</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="navStats">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>⌛ Thống kê</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="navChatbot">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>🗨 Chatbot</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="navPublic">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>👁 Công khai</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <spacer name="spacerRightTop">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>400</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnNotify">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>🔔</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnSetting">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>⚙</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnUser">
+         <property name="minimumSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>👤</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QFrame" name="heroFrame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>420</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>420</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_hero">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="heroImage">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>chatbot_hero_crop.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+
+      <widget class="QLabel" name="heroTitle">
+       <property name="geometry">
+        <rect>
+         <x>62</x>
+         <y>78</y>
+         <width>470</width>
+         <height>86</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Donarity</string>
+       </property>
+      </widget>
+
+      <widget class="QLabel" name="heroSubtitle">
+       <property name="geometry">
+        <rect>
+         <x>68</x>
+         <y>165</y>
+         <width>560</width>
+         <height>42</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Lan tỏa giá trị - Kiến tạo hy vọng</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QWidget" name="categoryArea">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>250</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_categories">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>34</number>
+       </property>
+       <property name="topMargin">
+        <number>22</number>
+       </property>
+       <property name="rightMargin">
+        <number>34</number>
+       </property>
+       <property name="bottomMargin">
+        <number>12</number>
+       </property>
+
+       <item>
+        <widget class="QFrame" name="cat1">
+         <layout class="QVBoxLayout" name="verticalLayout_cat1">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <spacer name="spacerCat1Top">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="icon1">
+            <property name="text">
+             <string>⚕</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="text1">
+            <property name="text">
+             <string>Y tế &amp; Sức khỏe</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerCat1Bottom">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QFrame" name="cat2">
+         <layout class="QVBoxLayout" name="verticalLayout_cat2">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <spacer name="spacerCat2Top">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="icon2">
+            <property name="text">
+             <string>▣</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="text2">
+            <property name="text">
+             <string>Giáo dục và khởi nghiệp</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerCat2Bottom">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QFrame" name="cat3">
+         <layout class="QVBoxLayout" name="verticalLayout_cat3">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <spacer name="spacerCat3Top">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="icon3">
+            <property name="text">
+             <string>☺</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="text3">
+            <property name="text">
+             <string>Trẻ em &amp; Người yếu thế</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerCat3Bottom">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QFrame" name="cat4">
+         <layout class="QVBoxLayout" name="verticalLayout_cat4">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <spacer name="spacerCat4Top">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="icon4">
+            <property name="text">
+             <string>🧍</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="text4">
+            <property name="text">
+             <string>An sinh xã hội</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerCat4Bottom">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QFrame" name="cat5">
+         <layout class="QVBoxLayout" name="verticalLayout_cat5">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <spacer name="spacerCat5Top">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="icon5">
+            <property name="text">
+             <string>☁</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="text5">
+            <property name="text">
+             <string>Môi trường &amp; Động vật</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerCat5Bottom">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QFrame" name="cat6">
+         <layout class="QVBoxLayout" name="verticalLayout_cat6">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <spacer name="spacerCat6Top">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="icon6">
+            <property name="text">
+             <string>👥</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="text6">
+            <property name="text">
+             <string>Văn hóa &amp; Cộng đồng</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerCat6Bottom">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <spacer name="verticalSpacerBottom">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+
+    <item>
+     <widget class="QFrame" name="bottomBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>48</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>48</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_bottom">
+       <property name="leftMargin">
+        <number>20</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>20</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="spacerBottomLeft">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>1000</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="reportLabel">
+         <property name="text">
+          <string>Báo cáo ⚑</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
