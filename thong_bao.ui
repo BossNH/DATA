@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Donarity - Thông báo</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget {
+    background: #FDF2F7;
+    font-family: "Segoe UI";
+    color: #2F2A2E;
+}
+
+QWidget#centralwidget {
+    background: #FDF2F7;
+}
+
+QLabel#logoText {
+    color: #963F75;
+    font-size: 18pt;
+    font-weight: 800;
+    background: transparent;
+}
+
+QLabel#logoSubText {
+    color: #9A7D8F;
+    font-size: 7pt;
+    font-weight: 600;
+    background: transparent;
+}
+
+QPushButton#backButton {
+    background: transparent;
+    border: none;
+    color: #1F1B1D;
+    font-size: 10pt;
+    font-weight: 600;
+    text-align: left;
+    padding: 0px;
+}
+
+QPushButton#backButton:hover {
+    color: #7B4B66;
+}
+
+QLabel#pageTitle {
+    background: transparent;
+    color: #2E2A2C;
+    font-size: 24pt;
+    font-weight: 800;
+}
+
+QFrame#noticeFrame {
+    background: transparent;
+    border: 2px solid #F2B7C9;
+    border-radius: 16px;
+}
+
+QLabel#emptyLabel {
+    background: transparent;
+    color: #2D2A2B;
+    font-size: 14pt;
+    font-weight: 500;
+}
+
+QLabel#cloudDecor {
+    background: transparent;
+    color: #F6D3DF;
+    font-size: 80pt;
+    font-weight: 700;
+}
+
+QLabel#spark1, QLabel#spark2, QLabel#spark3 {
+    background: transparent;
+    color: #F3B3C7;
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+QLabel#logoIcon {
+    background: transparent;
+    color: #963F75;
+    font-size: 18pt;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="logoGroup">
+    <property name="geometry">
+     <rect>
+      <x>36</x>
+      <y>18</y>
+      <width>170</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="logoIcon">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>1</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>🕊</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logoText">
+     <property name="geometry">
+      <rect>
+       <x>26</x>
+       <y>0</y>
+       <width>120</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Donarity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logoSubText">
+     <property name="geometry">
+      <rect>
+       <x>29</x>
+       <y>22</y>
+       <width>70</width>
+       <height>14</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>by group 10</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>44</x>
+      <y>80</y>
+      <width>100</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>← Quay lại</string>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pageTitle">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>102</y>
+      <width>1200</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Thông báo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="noticeFrame">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>152</y>
+      <width>995</width>
+      <height>470</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="emptyLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>22</y>
+       <width>995</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bạn không có thông báo nào</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="cloudDecor">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>560</y>
+      <width>230</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>☁☁☁</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignBottom</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="spark1">
+    <property name="geometry">
+     <rect>
+      <x>975</x>
+      <y>560</y>
+      <width>22</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✦</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="spark2">
+    <property name="geometry">
+     <rect>
+      <x>1048</x>
+      <y>548</y>
+      <width>18</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✦</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="spark3">
+    <property name="geometry">
+     <rect>
+      <x>1088</x>
+      <y>586</y>
+      <width>18</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✦</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
