@@ -12,29 +12,34 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(885, 641)
-        MainWindow.setMinimumSize(QtCore.QSize(885, 641))
-        MainWindow.setMaximumSize(QtCore.QSize(885, 641))
+        MainWindow.resize(1200, 760)
+        MainWindow.setMinimumSize(QtCore.QSize(1200, 760))
+        MainWindow.setMaximumSize(QtCore.QSize(1200, 760))
         MainWindow.setStyleSheet("QMainWindow, QWidget {\n"
-"    background-color: #FFF3F9;\n"
+"    background-color: #FDF1F7;\n"
 "    color: #222222;\n"
 "    font-family: \"Segoe UI\";\n"
 "}\n"
+"\n"
 "QFrame#topBar {\n"
-"    background-color: #F2D7E1;\n"
+"    background-color: #F1D3DE;\n"
 "    border: none;\n"
+"    border-radius: 0px;\n"
 "}\n"
+"\n"
 "QLabel#brandTitle {\n"
 "    color: #7A3F73;\n"
-"    font-size: 18px;\n"
+"    font-size: 19px;\n"
 "    font-weight: 800;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#brandSub {\n"
 "    color: #8F7C88;\n"
 "    font-size: 10px;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QPushButton.navBtn {\n"
 "    background: transparent;\n"
 "    border: none;\n"
@@ -45,20 +50,26 @@ class Ui_MainWindow(object):
 "    border-radius: 18px;\n"
 "    text-align: center;\n"
 "}\n"
+"\n"
 "QPushButton.navBtn:hover {\n"
 "    background: rgba(255,255,255,0.35);\n"
 "}\n"
+"\n"
 "QPushButton#activeBtn {\n"
-"    background-color: #E7B9CF;\n"
+"    background-color: #E5AEC9;\n"
 "    color: #1F1F1F;\n"
 "    font-weight: 700;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
 "}\n"
+"\n"
 "QPushButton.iconBtn {\n"
 "    background: transparent;\n"
 "    border: none;\n"
 "    color: #262626;\n"
 "    font-size: 18px;\n"
 "}\n"
+"\n"
 "QLabel#notifDot {\n"
 "    background-color: #E53935;\n"
 "    color: white;\n"
@@ -66,121 +77,127 @@ class Ui_MainWindow(object):
 "    font-size: 10px;\n"
 "    font-weight: 700;\n"
 "}\n"
+"\n"
 "QLabel#backLabel {\n"
 "    color: #111111;\n"
-"    font-size: 13px;\n"
+"    font-size: 14px;\n"
 "    font-weight: 600;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QFrame#mainCard {\n"
-"    background-color: #FDFBFC;\n"
+"    background-color: #FCFAFC;\n"
 "    border: none;\n"
-"    border-radius: 20px;\n"
+"    border-radius: 24px;\n"
 "}\n"
+"\n"
 "QLabel#mainTitle {\n"
 "    color: #7B456F;\n"
 "    font-size: 35px;\n"
 "    font-weight: 800;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#subText1, QLabel#subText2, QLabel#bottomText {\n"
 "    color: #1F1F1F;\n"
 "    font-size: 16px;\n"
 "    font-weight: 400;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#hourglassLabel {\n"
 "    color: #F2C8D8;\n"
-"    font-size: 150px;\n"
+"    font-size: 165px;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel.dotLabel {\n"
-"    color: #D5CCD3;\n"
+"    color: #D7CFD5;\n"
 "    font-size: 30px;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#dotActive {\n"
 "    color: #BEB3BD;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.topBar = QtWidgets.QFrame(parent=self.centralwidget)
-        self.topBar.setGeometry(QtCore.QRect(18, 7, 847, 38))
+        self.topBar.setGeometry(QtCore.QRect(10, 8, 1180, 42))
         self.topBar.setObjectName("topBar")
         self.logoBox = QtWidgets.QLabel(parent=self.topBar)
-        self.logoBox.setGeometry(QtCore.QRect(18, 5, 36, 24))
-        self.logoBox.setStyleSheet("background: transparent; color:#7A3F73; font-size:18px;")
-        self.logoBox.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.logoBox.setGeometry(QtCore.QRect(18, 6, 38, 28))
+        self.logoBox.setStyleSheet("background: transparent; color:#7A3F73; font-size:20px;")
         self.logoBox.setObjectName("logoBox")
         self.brandTitle = QtWidgets.QLabel(parent=self.topBar)
-        self.brandTitle.setGeometry(QtCore.QRect(55, 2, 90, 22))
+        self.brandTitle.setGeometry(QtCore.QRect(58, 2, 100, 24))
         self.brandTitle.setObjectName("brandTitle")
         self.brandSub = QtWidgets.QLabel(parent=self.topBar)
-        self.brandSub.setGeometry(QtCore.QRect(72, 20, 58, 12))
+        self.brandSub.setGeometry(QtCore.QRect(78, 22, 65, 12))
         self.brandSub.setObjectName("brandSub")
         self.homeBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.homeBtn.setGeometry(QtCore.QRect(185, 4, 95, 28))
+        self.homeBtn.setGeometry(QtCore.QRect(255, 6, 100, 28))
         self.homeBtn.setObjectName("homeBtn")
         self.activeBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.activeBtn.setGeometry(QtCore.QRect(287, 4, 104, 28))
+        self.activeBtn.setGeometry(QtCore.QRect(365, 6, 132, 28))
         self.activeBtn.setObjectName("activeBtn")
         self.trackBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.trackBtn.setGeometry(QtCore.QRect(398, 4, 145, 28))
+        self.trackBtn.setGeometry(QtCore.QRect(510, 6, 160, 28))
         self.trackBtn.setObjectName("trackBtn")
         self.publicBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.publicBtn.setGeometry(QtCore.QRect(550, 4, 95, 28))
+        self.publicBtn.setGeometry(QtCore.QRect(682, 6, 105, 28))
         self.publicBtn.setObjectName("publicBtn")
         self.bellBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.bellBtn.setGeometry(QtCore.QRect(755, 6, 22, 22))
+        self.bellBtn.setGeometry(QtCore.QRect(1060, 8, 24, 24))
         self.bellBtn.setObjectName("bellBtn")
         self.notifDot = QtWidgets.QLabel(parent=self.topBar)
-        self.notifDot.setGeometry(QtCore.QRect(769, 3, 16, 16))
+        self.notifDot.setGeometry(QtCore.QRect(1075, 4, 16, 16))
         self.notifDot.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.notifDot.setObjectName("notifDot")
         self.settingBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.settingBtn.setGeometry(QtCore.QRect(789, 6, 22, 22))
+        self.settingBtn.setGeometry(QtCore.QRect(1102, 8, 24, 24))
         self.settingBtn.setObjectName("settingBtn")
         self.userBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.userBtn.setGeometry(QtCore.QRect(827, 5, 26, 26))
-        self.userBtn.setStyleSheet("background: #26262B; color: white; border-radius: 13px; border:none; font-size:17px;")
+        self.userBtn.setGeometry(QtCore.QRect(1140, 6, 28, 28))
+        self.userBtn.setStyleSheet("background: #26262B; color: white; border-radius: 14px; border:none; font-size:17px;")
         self.userBtn.setObjectName("userBtn")
         self.backLabel = QtWidgets.QLabel(parent=self.centralwidget)
-        self.backLabel.setGeometry(QtCore.QRect(31, 53, 88, 20))
+        self.backLabel.setGeometry(QtCore.QRect(28, 60, 100, 24))
         self.backLabel.setObjectName("backLabel")
         self.mainCard = QtWidgets.QFrame(parent=self.centralwidget)
-        self.mainCard.setGeometry(QtCore.QRect(83, 103, 756, 495))
+        self.mainCard.setGeometry(QtCore.QRect(90, 105, 1040, 590))
         self.mainCard.setObjectName("mainCard")
         self.mainTitle = QtWidgets.QLabel(parent=self.mainCard)
-        self.mainTitle.setGeometry(QtCore.QRect(165, 38, 430, 52))
+        self.mainTitle.setGeometry(QtCore.QRect(250, 40, 550, 58))
         self.mainTitle.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.mainTitle.setObjectName("mainTitle")
         self.subText1 = QtWidgets.QLabel(parent=self.mainCard)
-        self.subText1.setGeometry(QtCore.QRect(105, 112, 548, 28))
+        self.subText1.setGeometry(QtCore.QRect(165, 125, 710, 28))
         self.subText1.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.subText1.setObjectName("subText1")
         self.subText2 = QtWidgets.QLabel(parent=self.mainCard)
-        self.subText2.setGeometry(QtCore.QRect(210, 154, 340, 30))
+        self.subText2.setGeometry(QtCore.QRect(255, 170, 530, 30))
         self.subText2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.subText2.setObjectName("subText2")
         self.hourglassLabel = QtWidgets.QLabel(parent=self.mainCard)
-        self.hourglassLabel.setGeometry(QtCore.QRect(263, 215, 235, 170))
+        self.hourglassLabel.setGeometry(QtCore.QRect(385, 225, 270, 190))
         self.hourglassLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.hourglassLabel.setObjectName("hourglassLabel")
         self.dot1 = QtWidgets.QLabel(parent=self.mainCard)
-        self.dot1.setGeometry(QtCore.QRect(305, 376, 24, 24))
+        self.dot1.setGeometry(QtCore.QRect(486, 430, 20, 28))
         self.dot1.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.dot1.setObjectName("dot1")
         self.dot2 = QtWidgets.QLabel(parent=self.mainCard)
-        self.dot2.setGeometry(QtCore.QRect(323, 376, 24, 24))
+        self.dot2.setGeometry(QtCore.QRect(510, 430, 20, 28))
         self.dot2.setStyleSheet("color:#BEB3BD; background: transparent; font-size:30px;")
         self.dot2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.dot2.setObjectName("dot2")
         self.dot3 = QtWidgets.QLabel(parent=self.mainCard)
-        self.dot3.setGeometry(QtCore.QRect(341, 376, 24, 24))
+        self.dot3.setGeometry(QtCore.QRect(534, 430, 20, 28))
         self.dot3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.dot3.setObjectName("dot3")
         self.bottomText = QtWidgets.QLabel(parent=self.mainCard)
-        self.bottomText.setGeometry(QtCore.QRect(125, 422, 510, 32))
+        self.bottomText.setGeometry(QtCore.QRect(180, 505, 680, 32))
         self.bottomText.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.bottomText.setObjectName("bottomText")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -197,29 +214,29 @@ class Ui_MainWindow(object):
         self.logoBox.setText(_translate("MainWindow", "🕊"))
         self.brandTitle.setText(_translate("MainWindow", "Donarity"))
         self.brandSub.setText(_translate("MainWindow", "by group 10"))
-        self.homeBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.homeBtn.setText(_translate("MainWindow", "⌂ Trang chủ"))
+        self.homeBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.activeBtn.setText(_translate("MainWindow", "✚ Tạo chiến dịch"))
-        self.trackBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.trackBtn.setText(_translate("MainWindow", "▉ Theo dõi chiến dịch"))
-        self.publicBtn.setProperty("class", _translate("MainWindow", "navBtn"))
+        self.trackBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.publicBtn.setText(_translate("MainWindow", "◉ Công khai"))
-        self.bellBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
+        self.publicBtn.setProperty("class", _translate("MainWindow", "navBtn"))
         self.bellBtn.setText(_translate("MainWindow", "🔔"))
+        self.bellBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
         self.notifDot.setText(_translate("MainWindow", "0"))
-        self.settingBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
         self.settingBtn.setText(_translate("MainWindow", "⚙"))
-        self.userBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
+        self.settingBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
         self.userBtn.setText(_translate("MainWindow", "●"))
+        self.userBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
         self.backLabel.setText(_translate("MainWindow", "← Quay lại"))
         self.mainTitle.setText(_translate("MainWindow", "Chờ xác nhận chiến dịch"))
         self.subText1.setText(_translate("MainWindow", "Chiến dịch của bạn đang được xem xét và sẽ sớm được xác nhận."))
         self.subText2.setText(_translate("MainWindow", "Cảm ơn bạn đã kiên nhẫn chờ đợi!"))
         self.hourglassLabel.setText(_translate("MainWindow", "⌛"))
-        self.dot1.setProperty("class", _translate("MainWindow", "dotLabel"))
         self.dot1.setText(_translate("MainWindow", "•"))
-        self.dot2.setProperty("class", _translate("MainWindow", "dotLabel"))
+        self.dot1.setProperty("class", _translate("MainWindow", "dotLabel"))
         self.dot2.setText(_translate("MainWindow", "•"))
-        self.dot3.setProperty("class", _translate("MainWindow", "dotLabel"))
+        self.dot2.setProperty("class", _translate("MainWindow", "dotLabel"))
         self.dot3.setText(_translate("MainWindow", "•"))
+        self.dot3.setProperty("class", _translate("MainWindow", "dotLabel"))
         self.bottomText.setText(_translate("MainWindow", "Chúng tôi sẽ thông báo đến bạn ngay khi có cập nhật mới."))
