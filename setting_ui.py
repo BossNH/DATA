@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\setting.ui'
+# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\giaodien\setting.ui'
 #
 # Created by: PyQt6 UI code generator 6.9.1
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1200, 787)
+        MainWindow.resize(1200, 760)
         MainWindow.setStyleSheet("QMainWindow, QWidget {\n"
 "    background: #FFF3F9;\n"
 "    font-family: \"Segoe UI\";\n"
@@ -74,65 +74,105 @@ class Ui_MainWindow(object):
 "    color: #1E1E1E;\n"
 "    font-size: 18px;\n"
 "    font-weight: 700;\n"
+"}\n"
+"\n"
+"/* ===== NAVBAR MỚI ===== */\n"
+"QFrame#navFrame {\n"
+"    background: #F5DCE6;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"}\n"
+"\n"
+"QLabel#logoImage {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#brandTitle {\n"
+"    color: #9C4F74;\n"
+"    font-size: 18pt;\n"
+"    font-weight: 800;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#brandSubtitle {\n"
+"    color: #9D8A93;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome,\n"
+"QPushButton#btnCreate,\n"
+"QPushButton#btnFollow,\n"
+"QPushButton#btnPublic {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    padding: 10px 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 11pt;\n"
+"    font-weight: 600;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:hover,\n"
+"QPushButton#btnCreate:hover,\n"
+"QPushButton#btnFollow:hover,\n"
+"QPushButton#btnPublic:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:pressed,\n"
+"QPushButton#btnCreate:pressed,\n"
+"QPushButton#btnFollow:pressed,\n"
+"QPushButton#btnPublic:pressed {\n"
+"    background: #E2B5C7;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome {\n"
+"    background: #C98AA5;\n"
+"    color: white;\n"
+"    font-weight: 700;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify,\n"
+"QToolButton#btnSetting,\n"
+"QToolButton#btnProfile {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 16pt;\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify:hover,\n"
+"QToolButton#btnSetting:hover,\n"
+"QToolButton#btnProfile:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QLabel#notifyBadge {\n"
+"    background: #E74C3C;\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 700;\n"
+"    padding: 0px;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.logo_title = QtWidgets.QLabel(parent=self.centralwidget)
-        self.logo_title.setGeometry(QtCore.QRect(52, 10, 170, 42))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.logo_title.setFont(font)
-        self.logo_title.setStyleSheet("QLabel{\n"
-"    color: #7D2B6E;\n"
-"    background: transparent;\n"
-"    border: none;\n"
-"}")
-        self.logo_title.setObjectName("logo_title")
-        self.back = QtWidgets.QLabel(parent=self.centralwidget)
-        self.back.setGeometry(QtCore.QRect(12, 70, 120, 24))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
-        self.back.setFont(font)
-        self.back.setObjectName("back")
-        self.logo_icon = QtWidgets.QLabel(parent=self.centralwidget)
-        self.logo_icon.setGeometry(QtCore.QRect(15, 18, 42, 34))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(20)
-        self.logo_icon.setFont(font)
-        self.logo_icon.setStyleSheet("QLabel{\n"
-"    background: transparent;\n"
-"    color: #7D2B6E;\n"
-"    border: none;\n"
-"}")
-        self.logo_icon.setObjectName("logo_icon")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
         self.label.setGeometry(QtCore.QRect(135, 168, 47, 13))
         self.label.setText("")
         self.label.setObjectName("label")
-        self.logo_subtitle = QtWidgets.QLabel(parent=self.centralwidget)
-        self.logo_subtitle.setGeometry(QtCore.QRect(133, 50, 80, 16))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        self.logo_subtitle.setFont(font)
-        self.logo_subtitle.setStyleSheet("QLabel{\n"
-"    color: #8F7B87;\n"
-"    background: transparent;\n"
-"    border: none;\n"
-"}")
-        self.logo_subtitle.setObjectName("logo_subtitle")
         self.avatarBox = QtWidgets.QFrame(parent=self.centralwidget)
-        self.avatarBox.setGeometry(QtCore.QRect(775, 58, 350, 190))
+        self.avatarBox.setGeometry(QtCore.QRect(775, 89, 350, 171))
         self.avatarBox.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.avatarBox.setObjectName("avatarBox")
         self.avatarIcon = QtWidgets.QLabel(parent=self.avatarBox)
-        self.avatarIcon.setGeometry(QtCore.QRect(120, 30, 120, 130))
+        self.avatarIcon.setGeometry(QtCore.QRect(120, 20, 120, 130))
         self.avatarIcon.setObjectName("avatarIcon")
         self.Gender = QtWidgets.QLabel(parent=self.centralwidget)
         self.Gender.setGeometry(QtCore.QRect(765, 368, 90, 30))
@@ -222,6 +262,10 @@ class Ui_MainWindow(object):
         self.labelUser_23.setGeometry(QtCore.QRect(690, 40, 31, 31))
         self.labelUser_23.setStyleSheet("font-size:19px; font-weight:500; color:#262626;")
         self.labelUser_23.setObjectName("labelUser_23")
+        self.labelUser_24 = QtWidgets.QLabel(parent=self.profileCard)
+        self.labelUser_24.setGeometry(QtCore.QRect(690, 130, 31, 31))
+        self.labelUser_24.setStyleSheet("font-size:19px; font-weight:500; color:#262626;")
+        self.labelUser_24.setObjectName("labelUser_24")
         self.labelGender = QtWidgets.QLabel(parent=self.centralwidget)
         self.labelGender.setGeometry(QtCore.QRect(765, 328, 130, 28))
         self.labelGender.setStyleSheet("font-size:19px; font-weight:500; color:#262626;")
@@ -234,12 +278,26 @@ class Ui_MainWindow(object):
         self.labelUser_2.setGeometry(QtCore.QRect(460, 230, 241, 51))
         self.labelUser_2.setStyleSheet("font-size:19px; font-weight:500; color:#262626;")
         self.labelUser_2.setObjectName("labelUser_2")
+        self.brandSubtitle = QtWidgets.QLabel(parent=self.centralwidget)
+        self.brandSubtitle.setGeometry(QtCore.QRect(50, 42, 182, 13))
+        self.brandSubtitle.setObjectName("brandSubtitle")
+        self.logoImage = QtWidgets.QLabel(parent=self.centralwidget)
+        self.logoImage.setGeometry(QtCore.QRect(10, 13, 40, 40))
+        self.logoImage.setMinimumSize(QtCore.QSize(40, 40))
+        self.logoImage.setMaximumSize(QtCore.QSize(40, 40))
+        self.logoImage.setObjectName("logoImage")
+        self.brandTitle = QtWidgets.QLabel(parent=self.centralwidget)
+        self.brandTitle.setGeometry(QtCore.QRect(50, 10, 182, 32))
+        self.brandTitle.setObjectName("brandTitle")
+        self.back = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.back.setGeometry(QtCore.QRect(20, 70, 131, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(15)
+        self.back.setFont(font)
+        self.back.setObjectName("back")
         self.profileCard.raise_()
-        self.logo_title.raise_()
-        self.back.raise_()
-        self.logo_icon.raise_()
         self.label.raise_()
-        self.logo_subtitle.raise_()
         self.avatarBox.raise_()
         self.Gender.raise_()
         self.labelUser.raise_()
@@ -256,6 +314,10 @@ class Ui_MainWindow(object):
         self.labelGender.raise_()
         self.Email.raise_()
         self.labelUser_2.raise_()
+        self.brandSubtitle.raise_()
+        self.logoImage.raise_()
+        self.brandTitle.raise_()
+        self.back.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -264,10 +326,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Donarity - Cai dat"))
-        self.logo_title.setText(_translate("MainWindow", "Donarity"))
-        self.back.setText(_translate("MainWindow", "← Quay lại"))
-        self.logo_icon.setText(_translate("MainWindow", "🕊"))
-        self.logo_subtitle.setText(_translate("MainWindow", "by group 10"))
         self.avatarIcon.setText(_translate("MainWindow", "👤"))
         self.Gender.setText(_translate("MainWindow", "..."))
         self.labelUser.setText(_translate("MainWindow", "Tên người dùng"))
@@ -289,6 +347,11 @@ class Ui_MainWindow(object):
         self.labelUser_21.setText(_translate("MainWindow", "<html><head/><body><p>💌</p></body></html>"))
         self.labelUser_22.setText(_translate("MainWindow", "<html><head/><body><p>🎞</p></body></html>"))
         self.labelUser_23.setText(_translate("MainWindow", "<html><head/><body><p>🚺</p></body></html>"))
+        self.labelUser_24.setText(_translate("MainWindow", "<html><head/><body><p>🏠</p></body></html>"))
         self.labelGender.setText(_translate("MainWindow", "Giới tính"))
         self.Email.setText(_translate("MainWindow", "..."))
         self.labelUser_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:22pt;\">Thông tin cá nhân</span></p></body></html>"))
+        self.brandSubtitle.setText(_translate("MainWindow", "by group 10"))
+        self.logoImage.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt; color:#9c4f74;\">🕊</span></p></body></html>"))
+        self.brandTitle.setText(_translate("MainWindow", "Donarity"))
+        self.back.setText(_translate("MainWindow", "Quay lại"))

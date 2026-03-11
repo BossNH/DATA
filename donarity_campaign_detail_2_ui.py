@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\donarity_campaign_detail_2.ui'
+# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\giaodien\donarity_campaign_detail_2.ui'
 #
 # Created by: PyQt6 UI code generator 6.9.1
 #
@@ -313,7 +313,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(parent=self.mainPinkCard)
         self.label.setGeometry(QtCore.QRect(50, 18, 341, 321))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\../../../../Downloads/avt_camdetail1.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\giaodien\\../../../../Downloads/avt_camdetail1.jpg"))
         self.label.setObjectName("label")
         self.back = QtWidgets.QPushButton(parent=self.centralwidget)
         self.back.setGeometry(QtCore.QRect(10, 80, 121, 24))

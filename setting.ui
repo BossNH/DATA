@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1200</width>
-    <height>787</height>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -75,84 +75,95 @@ QFrame {
     color: #1E1E1E;
     font-size: 18px;
     font-weight: 700;
+}
+
+/* ===== NAVBAR MỚI ===== */
+QFrame#navFrame {
+    background: #F5DCE6;
+    border: none;
+    border-radius: 18px;
+}
+
+QLabel#logoImage {
+    background: transparent;
+    border: none;
+}
+
+QLabel#brandTitle {
+    color: #9C4F74;
+    font-size: 18pt;
+    font-weight: 800;
+    background: transparent;
+}
+
+QLabel#brandSubtitle {
+    color: #9D8A93;
+    font-size: 8pt;
+    font-weight: 500;
+    background: transparent;
+}
+
+QPushButton#btnHome,
+QPushButton#btnCreate,
+QPushButton#btnFollow,
+QPushButton#btnPublic {
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 18px;
+    color: #2C2328;
+    font-size: 11pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+QPushButton#btnHome:hover,
+QPushButton#btnCreate:hover,
+QPushButton#btnFollow:hover,
+QPushButton#btnPublic:hover {
+    background: #EEC9D8;
+}
+
+QPushButton#btnHome:pressed,
+QPushButton#btnCreate:pressed,
+QPushButton#btnFollow:pressed,
+QPushButton#btnPublic:pressed {
+    background: #E2B5C7;
+}
+
+QPushButton#btnHome {
+    background: #C98AA5;
+    color: white;
+    font-weight: 700;
+}
+
+QToolButton#btnNotify,
+QToolButton#btnSetting,
+QToolButton#btnProfile {
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    color: #2C2328;
+    font-size: 16pt;
+    padding: 6px;
+}
+
+QToolButton#btnNotify:hover,
+QToolButton#btnSetting:hover,
+QToolButton#btnProfile:hover {
+    background: #EEC9D8;
+}
+
+QLabel#notifyBadge {
+    background: #E74C3C;
+    color: white;
+    border-radius: 8px;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 0px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="logo_title">
-    <property name="geometry">
-     <rect>
-      <x>52</x>
-      <y>10</y>
-      <width>170</width>
-      <height>42</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>20</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel{
-    color: #7D2B6E;
-    background: transparent;
-    border: none;
-}</string>
-    </property>
-    <property name="text">
-     <string>Donarity</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="back">
-    <property name="geometry">
-     <rect>
-      <x>12</x>
-      <y>70</y>
-      <width>120</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>← Quay lại</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="logo_icon">
-    <property name="geometry">
-     <rect>
-      <x>15</x>
-      <y>18</y>
-      <width>42</width>
-      <height>34</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel{
-    background: transparent;
-    color: #7D2B6E;
-    border: none;
-}</string>
-    </property>
-    <property name="text">
-     <string>🕊</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -166,38 +177,13 @@ QFrame {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="logo_subtitle">
-    <property name="geometry">
-     <rect>
-      <x>133</x>
-      <y>50</y>
-      <width>80</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel{
-    color: #8F7B87;
-    background: transparent;
-    border: none;
-}</string>
-    </property>
-    <property name="text">
-     <string>by group 10</string>
-    </property>
-   </widget>
    <widget class="QFrame" name="avatarBox">
     <property name="geometry">
      <rect>
       <x>775</x>
-      <y>58</y>
+      <y>89</y>
       <width>350</width>
-      <height>190</height>
+      <height>171</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -207,7 +193,7 @@ QFrame {
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>30</y>
+       <y>20</y>
        <width>120</width>
        <height>130</height>
       </rect>
@@ -562,6 +548,22 @@ QFrame {
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;🚺&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
+    <widget class="QLabel" name="labelUser_24">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>130</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:19px; font-weight:500; color:#262626;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;🏠&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="labelGender">
     <property name="geometry">
@@ -611,12 +613,78 @@ QFrame {
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;Thông tin cá nhân&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QLabel" name="brandSubtitle">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>42</y>
+      <width>182</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>by group 10</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logoImage">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>13</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; color:#9c4f74;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="brandTitle">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>182</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Donarity</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Quay lại</string>
+    </property>
+   </widget>
    <zorder>profileCard</zorder>
-   <zorder>logo_title</zorder>
-   <zorder>back</zorder>
-   <zorder>logo_icon</zorder>
    <zorder>label</zorder>
-   <zorder>logo_subtitle</zorder>
    <zorder>avatarBox</zorder>
    <zorder>Gender</zorder>
    <zorder>labelUser</zorder>
@@ -633,6 +701,10 @@ QFrame {
    <zorder>labelGender</zorder>
    <zorder>Email</zorder>
    <zorder>labelUser_2</zorder>
+   <zorder>brandSubtitle</zorder>
+   <zorder>logoImage</zorder>
+   <zorder>brandTitle</zorder>
+   <zorder>back</zorder>
   </widget>
  </widget>
  <resources/>

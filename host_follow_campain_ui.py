@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\host_follow_campain.ui'
+# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\giaodien\host_follow_campain.ui'
 #
 # Created by: PyQt6 UI code generator 6.9.1
 #
@@ -56,12 +56,12 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(False)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -65, 1200, 1500))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1200, 1500))
         self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(1200, 1500))
         self.scrollAreaWidgetContents.setStyleSheet("background: #FFF6FB;")
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.titleIcon = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
-        self.titleIcon.setGeometry(QtCore.QRect(290, 200, 28, 28))
+        self.titleIcon.setGeometry(QtCore.QRect(290, 89, 28, 28))
         self.titleIcon.setStyleSheet("QLabel{\n"
 "    font-size:24px;\n"
 "    background:transparent;\n"
@@ -70,7 +70,7 @@ class Ui_MainWindow(object):
         self.titleIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.titleIcon.setObjectName("titleIcon")
         self.mainTitle = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
-        self.mainTitle.setGeometry(QtCore.QRect(324, 194, 291, 40))
+        self.mainTitle.setGeometry(QtCore.QRect(324, 83, 291, 40))
         self.mainTitle.setStyleSheet("QLabel{\n"
 "    color:#7F4D7D;\n"
 "    font-size:28px;\n"
@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
 "}")
         self.mainTitle.setObjectName("mainTitle")
         self.searchEdit = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.searchEdit.setGeometry(QtCore.QRect(291, 240, 474, 30))
+        self.searchEdit.setGeometry(QtCore.QRect(291, 129, 474, 30))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(-1)
@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
 "}")
         self.searchEdit.setObjectName("searchEdit")
         self.searchIcon = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
-        self.searchIcon.setGeometry(QtCore.QRect(300, 250, 14, 14))
+        self.searchIcon.setGeometry(QtCore.QRect(300, 139, 14, 14))
         self.searchIcon.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:13px;\n"
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
         self.searchIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.searchIcon.setObjectName("searchIcon")
         self.categoryCombo = QtWidgets.QComboBox(parent=self.scrollAreaWidgetContents)
-        self.categoryCombo.setGeometry(QtCore.QRect(764, 240, 110, 30))
+        self.categoryCombo.setGeometry(QtCore.QRect(764, 129, 110, 30))
         self.categoryCombo.setStyleSheet("QComboBox{\n"
 "    background:white;\n"
 "    border:1px solid #CFCFCF;\n"
@@ -115,7 +115,7 @@ class Ui_MainWindow(object):
         self.categoryCombo.setObjectName("categoryCombo")
         self.categoryCombo.addItem("")
         self.searchButton = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
-        self.searchButton.setGeometry(QtCore.QRect(888, 240, 64, 30))
+        self.searchButton.setGeometry(QtCore.QRect(888, 129, 64, 30))
         self.searchButton.setStyleSheet("QPushButton{\n"
 "    background:#FFF6FB;\n"
 "    border:1px solid #7F4D7D;\n"
@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
 "}")
         self.searchButton.setObjectName("searchButton")
         self.card1 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card1.setGeometry(QtCore.QRect(315, 296, 295, 261))
+        self.card1.setGeometry(QtCore.QRect(315, 185, 295, 261))
         self.card1.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
@@ -144,7 +144,7 @@ class Ui_MainWindow(object):
 "    font-weight:600;\n"
 "}")
         self.card1Image.setText("")
-        self.card1Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\../../../../Downloads/da61663b16c2989cc1d3.jpg"))
+        self.card1Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\giaodien\\../../../../Downloads/da61663b16c2989cc1d3.jpg"))
         self.card1Image.setScaledContents(True)
         self.card1Image.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.card1Image.setObjectName("card1Image")
@@ -226,7 +226,7 @@ class Ui_MainWindow(object):
 "}")
         self.card1More.setObjectName("card1More")
         self.card2 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card2.setGeometry(QtCore.QRect(644, 296, 295, 261))
+        self.card2.setGeometry(QtCore.QRect(644, 185, 295, 261))
         self.card2.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
@@ -245,7 +245,7 @@ class Ui_MainWindow(object):
 "    font-weight:600;\n"
 "}")
         self.card2Image.setText("")
-        self.card2Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\../../../../Downloads/card2.jpg"))
+        self.card2Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\giaodien\\../../../../Downloads/card2.jpg"))
         self.card2Image.setScaledContents(True)
         self.card2Image.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.card2Image.setObjectName("card2Image")
@@ -327,7 +327,7 @@ class Ui_MainWindow(object):
 "}")
         self.card2More.setObjectName("card2More")
         self.card3 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card3.setGeometry(QtCore.QRect(315, 583, 295, 261))
+        self.card3.setGeometry(QtCore.QRect(315, 472, 295, 261))
         self.card3.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
@@ -346,7 +346,7 @@ class Ui_MainWindow(object):
 "    font-weight:600;\n"
 "}")
         self.card3Image.setText("")
-        self.card3Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\../../../../Downloads/card3.jpg"))
+        self.card3Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\giaodien\\../../../../Downloads/card3.jpg"))
         self.card3Image.setScaledContents(True)
         self.card3Image.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.card3Image.setObjectName("card3Image")
@@ -428,7 +428,7 @@ class Ui_MainWindow(object):
 "}")
         self.card3More.setObjectName("card3More")
         self.card4 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card4.setGeometry(QtCore.QRect(644, 583, 295, 261))
+        self.card4.setGeometry(QtCore.QRect(644, 472, 295, 261))
         self.card4.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
@@ -447,7 +447,7 @@ class Ui_MainWindow(object):
 "    font-weight:600;\n"
 "}")
         self.card4Image.setText("")
-        self.card4Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\../../../../Downloads/card4.jpg"))
+        self.card4Image.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\giaodien\\../../../../Downloads/card4.jpg"))
         self.card4Image.setScaledContents(True)
         self.card4Image.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.card4Image.setObjectName("card4Image")
@@ -529,11 +529,8 @@ class Ui_MainWindow(object):
 "}")
         self.card4More.setObjectName("card4More")
         self.topBar = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.topBar.setGeometry(QtCore.QRect(0, 70, 1200, 72))
+        self.topBar.setGeometry(QtCore.QRect(0, 0, 1200, 72))
         self.topBar.setObjectName("topBar")
-        self.logoSub = QtWidgets.QLabel(parent=self.topBar)
-        self.logoSub.setGeometry(QtCore.QRect(82, 38, 80, 14))
-        self.logoSub.setObjectName("logoSub")
         self.ThongBao = QtWidgets.QLabel(parent=self.topBar)
         self.ThongBao.setGeometry(QtCore.QRect(1040, 20, 28, 28))
         self.ThongBao.setStyleSheet("color:#E53958;font-size:18px;font-weight:700;")
@@ -599,6 +596,9 @@ class Ui_MainWindow(object):
         self.NutCongKhai.setFont(font)
         self.NutCongKhai.setStyleSheet("background-color: rgb(255, 164, 196);")
         self.NutCongKhai.setObjectName("NutCongKhai")
+        self.logoSub = QtWidgets.QLabel(parent=self.topBar)
+        self.logoSub.setGeometry(QtCore.QRect(70, 40, 80, 14))
+        self.logoSub.setObjectName("logoSub")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -634,7 +634,6 @@ class Ui_MainWindow(object):
         self.card4Owner.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:8pt;\">Owner:   Nguyễn Văn Rinh</span></p></body></html>"))
         self.card4Money.setText(_translate("MainWindow", "1000000000/15000000000"))
         self.card4More.setText(_translate("MainWindow", "Xem thêm"))
-        self.logoSub.setText(_translate("MainWindow", "by group 10"))
         self.ThongBao.setText(_translate("MainWindow", "🔔"))
         self.CaiDat.setText(_translate("MainWindow", "⚙"))
         self.TaiKhoan.setText(_translate("MainWindow", "👤"))
@@ -644,3 +643,4 @@ class Ui_MainWindow(object):
         self.NutTaoChienDich.setText(_translate("MainWindow", "➕  Tạo chiến dịch"))
         self.NutTheoDoiChienDich.setText(_translate("MainWindow", "🗂  Theo dõi chiến dịch"))
         self.NutCongKhai.setText(_translate("MainWindow", "👁  Công khai"))
+        self.logoSub.setText(_translate("MainWindow", "by group 10"))

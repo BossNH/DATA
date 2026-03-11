@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\dangnhap.ui'
+# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\giaodien\dangnhap.ui'
 #
 # Created by: PyQt6 UI code generator 6.9.1
 #
@@ -234,7 +234,7 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(parent=self.main_bg)
         self.label_2.setGeometry(QtCore.QRect(226, 91, 431, 521))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\../../../../Downloads/dangnhap.png.jpg"))
+        self.label_2.setPixmap(QtGui.QPixmap("c:\\Users\\ADMIN\\OneDrive\\Documents\\UEL.ktlt\\BaiDuAn\\giaodien\\../../../../Downloads/dangnhap.png.jpg"))
         self.label_2.setObjectName("label_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)

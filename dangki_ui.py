@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\dangki.ui'
+# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\giaodien\dangki.ui'
 #
 # Created by: PyQt6 UI code generator 6.9.1
 #
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -360, 1183, 1120))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1183, 1120))
         self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(1180, 1120))
         self.scrollAreaWidgetContents.setStyleSheet("background: #FFF3F9;")
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
@@ -115,6 +115,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "color: #7A2D6A;\n"
 "}")
+        self.back.setText("")
         self.back.setObjectName("back")
         self.title_label = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
         self.title_label.setGeometry(QtCore.QRect(286, 68, 440, 56))
@@ -520,6 +521,12 @@ class Ui_MainWindow(object):
 "background: #F8DCEA;\n"
 "}")
         self.NutDangKi.setObjectName("NutDangKi")
+        self.pushButton = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
+        self.pushButton.setGeometry(QtCore.QRect(20, 80, 151, 41))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
@@ -539,7 +546,6 @@ class Ui_MainWindow(object):
         self.logo_icon.setText(_translate("MainWindow", "🕊"))
         self.logo_title.setText(_translate("MainWindow", "Donarity"))
         self.logo_subtitle.setText(_translate("MainWindow", "by group 10"))
-        self.back.setText(_translate("MainWindow", "← Quay lại"))
         self.title_label.setText(_translate("MainWindow", "Đăng kí tài khoản"))
         self.label_name.setText(_translate("MainWindow", "Họ và tên"))
         self.NhapHoVaTen.setPlaceholderText(_translate("MainWindow", "Nhập họ và tên"))
@@ -563,3 +569,4 @@ class Ui_MainWindow(object):
         self.label_password_2.setText(_translate("MainWindow", "Mật khẩu"))
         self.txt_repassword.setPlaceholderText(_translate("MainWindow", "Nhập lại mật khẩu"))
         self.NutDangKi.setText(_translate("MainWindow", "Đăng kí ngay"))
+        self.pushButton.setText(_translate("MainWindow", "← Quay lại"))

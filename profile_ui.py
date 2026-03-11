@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\profile.ui'
+# Form implementation generated from reading ui file 'c:\Users\ADMIN\OneDrive\Documents\UEL.ktlt\BaiDuAn\giaodien\profile.ui'
 #
 # Created by: PyQt6 UI code generator 6.9.1
 #
@@ -82,7 +82,7 @@ class Ui_MainWindow(object):
         self.sectionTitle.setGeometry(QtCore.QRect(430, 240, 340, 50))
         self.sectionTitle.setObjectName("sectionTitle")
         self.profileCard = QtWidgets.QFrame(parent=self.centralwidget)
-        self.profileCard.setGeometry(QtCore.QRect(50, 300, 1085, 411))
+        self.profileCard.setGeometry(QtCore.QRect(50, 300, 1085, 391))
         self.profileCard.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.profileCard.setObjectName("profileCard")
         self.labelUser_3 = QtWidgets.QLabel(parent=self.profileCard)
@@ -102,7 +102,7 @@ class Ui_MainWindow(object):
         self.labelUser_9.setStyleSheet("font-size:19px; font-weight:500; color:#262626;")
         self.labelUser_9.setObjectName("labelUser_9")
         self.NutXacThuc = QtWidgets.QPushButton(parent=self.profileCard_2)
-        self.NutXacThuc.setGeometry(QtCore.QRect(450, 180, 141, 41))
+        self.NutXacThuc.setGeometry(QtCore.QRect(440, 160, 141, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(16)
@@ -217,15 +217,6 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "}")
         self.logo_title.setObjectName("logo_title")
-        self.back = QtWidgets.QLabel(parent=self.centralwidget)
-        self.back.setGeometry(QtCore.QRect(17, 62, 120, 24))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
-        self.back.setFont(font)
-        self.back.setObjectName("back")
         self.logo_icon = QtWidgets.QLabel(parent=self.centralwidget)
         self.logo_icon.setGeometry(QtCore.QRect(20, 10, 42, 34))
         font = QtGui.QFont()
@@ -264,6 +255,13 @@ class Ui_MainWindow(object):
         self.avt.setFont(font)
         self.avt.setStyleSheet("font-size:19px; font-weight:500; color:#262626;")
         self.avt.setObjectName("avt")
+        self.back = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.back.setGeometry(QtCore.QRect(20, 70, 131, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(15)
+        self.back.setFont(font)
+        self.back.setObjectName("back")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -299,8 +297,8 @@ class Ui_MainWindow(object):
         self.star2.setText(_translate("MainWindow", "✦"))
         self.logo_subtitle.setText(_translate("MainWindow", "by group 10"))
         self.logo_title.setText(_translate("MainWindow", "Donarity"))
-        self.back.setText(_translate("MainWindow", "← Quay lại"))
         self.logo_icon.setText(_translate("MainWindow", "🕊"))
         self.sectionTitle_3.setText(_translate("MainWindow", "CÀI ĐẶT"))
         self.avatarIcon.setText(_translate("MainWindow", "👤"))
         self.avt.setText(_translate("MainWindow", "<html><head/><body><p>📷</p></body></html>"))
+        self.back.setText(_translate("MainWindow", "Quay lại"))
