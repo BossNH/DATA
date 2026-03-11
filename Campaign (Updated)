@@ -15,7 +15,37 @@
       "Hỗ trợ hậu phẫu và dinh dưỡng cho bệnh nhi"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 980000,
+    "donation_history": [
+      {
+        "donor_id": "DN0103",
+        "amount": 150000,
+        "date": "05-01-2024",
+        "time": "11:45:22",
+        "transaction_id": "DN010315000001"
+      },
+      {
+        "donor_id": "DN0101",
+        "amount": 50000,
+        "date": "17-05-2024",
+        "time": "03:31:20",
+        "transaction_id": "DN01015000001"
+      },
+      {
+        "donor_id": "DN0145",
+        "amount": 325000,
+        "date": "01-06-2024",
+        "time": "11:10:48",
+        "transaction_id": "DN014532500001"
+      },
+      {
+        "donor_id": "DN0124",
+        "amount": 455000,
+        "date": "16-07-2024",
+        "time": "14:10:52",
+        "transaction_id": "DN012445500001"
+      }
+    ]
   },
   {
     "id": "CD0002",
@@ -33,7 +63,30 @@
       "Đào tạo chuyên môn y khoa cho bác sĩ địa phương"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 1705000,
+    "donation_history": [
+      {
+        "donor_id": "DN0125",
+        "amount": 540000,
+        "date": "04-04-2024",
+        "time": "16:20:15",
+        "transaction_id": "DN012554000001"
+      },
+      {
+        "donor_id": "DN0146",
+        "amount": 665000,
+        "date": "13-04-2024",
+        "time": "15:55:28",
+        "transaction_id": "DN014666500001"
+      },
+      {
+        "donor_id": "DN0101",
+        "amount": 500000,
+        "date": "21-07-2024",
+        "time": "17:23:47",
+        "transaction_id": "DN010150000001"
+      }
+    ]
   },
   {
     "id": "CD0003",
@@ -51,7 +104,30 @@
       "Tặng quà động viên bệnh nhi vào các dịp lễ"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 920000,
+    "donation_history": [
+      {
+        "donor_id": "DN0102",
+        "amount": 200000,
+        "date": "12-02-2024",
+        "time": "09:15:30",
+        "transaction_id": "DN010220000001"
+      },
+      {
+        "donor_id": "DN0145",
+        "amount": 435000,
+        "date": "19-10-2024",
+        "time": "14:35:12",
+        "transaction_id": "DN014543500001"
+      },
+      {
+        "donor_id": "DN0124",
+        "amount": 285000,
+        "date": "23-11-2024",
+        "time": "10:55:38",
+        "transaction_id": "DN012428500001"
+      }
+    ]
   },
   {
     "id": "CD0004",
@@ -69,7 +145,30 @@
       "Cung cấp trợ cấp khó khăn hàng tháng"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 1085000,
+    "donation_history": [
+      {
+        "donor_id": "DN0104",
+        "amount": 600000,
+        "date": "14-03-2024",
+        "time": "13:20:18",
+        "transaction_id": "DN010460000001"
+      },
+      {
+        "donor_id": "DN0125",
+        "amount": 190000,
+        "date": "21-08-2024",
+        "time": "12:45:28",
+        "transaction_id": "DN012519000001"
+      },
+      {
+        "donor_id": "DN0147",
+        "amount": 295000,
+        "date": "21-05-2024",
+        "time": "09:40:15",
+        "transaction_id": "DN014729500001"
+      }
+    ]
   },
   {
     "id": "CD0005",
@@ -87,7 +186,30 @@
       "Xây dựng phòng học và ký túc xá"
     ],
     "scale": "Miền núi phía Bắc",
-    "donated": 0
+    "donated": 1145000,
+    "donation_history": [
+      {
+        "donor_id": "DN0111",
+        "amount": 460000,
+        "date": "11-04-2024",
+        "time": "16:55:42",
+        "transaction_id": "DN011146000001"
+      },
+      {
+        "donor_id": "DN0101",
+        "amount": 500000,
+        "date": "16-11-2024",
+        "time": "03:04:07",
+        "transaction_id": "DN010150000002"
+      },
+      {
+        "donor_id": "DN0146",
+        "amount": 185000,
+        "date": "30-08-2024",
+        "time": "12:20:42",
+        "transaction_id": "DN014618500001"
+      }
+    ]
   },
   {
     "id": "CD0006",
@@ -105,7 +227,30 @@
       "Lắp đặt hệ thống lọc nước và điện mặt trời"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 880000,
+    "donation_history": [
+      {
+        "donor_id": "DN0105",
+        "amount": 100000,
+        "date": "23-04-2024",
+        "time": "15:40:12",
+        "transaction_id": "DN010510000001"
+      },
+      {
+        "donor_id": "DN0126",
+        "amount": 265000,
+        "date": "14-05-2024",
+        "time": "11:05:42",
+        "transaction_id": "DN012626500001"
+      },
+      {
+        "donor_id": "DN0147",
+        "amount": 515000,
+        "date": "08-09-2024",
+        "time": "16:05:38",
+        "transaction_id": "DN014751500001"
+      }
+    ]
   },
   {
     "id": "CD0007",
@@ -123,7 +268,30 @@
       "Tổ chức các buổi truyền thông an toàn giao thông"
     ],
     "scale": "Đồng bằng sông Cửu Long",
-    "donated": 0
+    "donated": 1135000,
+    "donation_history": [
+      {
+        "donor_id": "DN0102",
+        "amount": 300000,
+        "date": "28-06-2024",
+        "time": "14:22:15",
+        "transaction_id": "DN010230000001"
+      },
+      {
+        "donor_id": "DN0127",
+        "amount": 420000,
+        "date": "07-06-2024",
+        "time": "13:30:25",
+        "transaction_id": "DN012742000001"
+      },
+      {
+        "donor_id": "DN0148",
+        "amount": 415000,
+        "date": "10-06-2024",
+        "time": "13:50:22",
+        "transaction_id": "DN014841500001"
+      }
+    ]
   },
   {
     "id": "CD0008",
@@ -141,7 +309,30 @@
       "Quản lý và hỗ trợ người hiến máu tình nguyện"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 1390000,
+    "donation_history": [
+      {
+        "donor_id": "DN0106",
+        "amount": 550000,
+        "date": "08-05-2024",
+        "time": "14:55:20",
+        "transaction_id": "DN010655000001"
+      },
+      {
+        "donor_id": "DN0126",
+        "amount": 615000,
+        "date": "26-09-2024",
+        "time": "15:40:18",
+        "transaction_id": "DN012661500001"
+      },
+      {
+        "donor_id": "DN0147",
+        "amount": 225000,
+        "date": "16-12-2024",
+        "time": "11:30:52",
+        "transaction_id": "DN014722500001"
+      }
+    ]
   },
   {
     "id": "CD0009",
@@ -159,7 +350,30 @@
       "Đào tạo nghề cho thanh thiếu niên khó khăn"
     ],
     "scale": "Miền Nam Việt Nam",
-    "donated": 0
+    "donated": 700000,
+    "donation_history": [
+      {
+        "donor_id": "DN0107",
+        "amount": 220000,
+        "date": "16-06-2024",
+        "time": "11:30:45",
+        "transaction_id": "DN010722000001"
+      },
+      {
+        "donor_id": "DN0127",
+        "amount": 235000,
+        "date": "18-10-2024",
+        "time": "10:15:50",
+        "transaction_id": "DN012723500001"
+      },
+      {
+        "donor_id": "DN0148",
+        "amount": 245000,
+        "date": "25-10-2024",
+        "time": "10:25:45",
+        "transaction_id": "DN014824500001"
+      }
+    ]
   },
   {
     "id": "CD0010",
@@ -177,7 +391,23 @@
       "Hỗ trợ y tế khẩn cấp cho người vô gia cư"
     ],
     "scale": "TP. Hồ Chí Minh",
-    "donated": 0
+    "donated": 675000,
+    "donation_history": [
+      {
+        "donor_id": "DN0112",
+        "amount": 330000,
+        "date": "26-05-2024",
+        "time": "13:45:25",
+        "transaction_id": "DN011233000001"
+      },
+      {
+        "donor_id": "DN0126",
+        "amount": 345000,
+        "date": "12-12-2024",
+        "time": "09:25:55",
+        "transaction_id": "DN012634500001"
+      }
+    ]
   },
   {
     "id": "CD0011",
@@ -195,7 +425,30 @@
       "Tặng sinh kế (con giống, cây giống) để tái sản xuất"
     ],
     "scale": "Miền Trung",
-    "donated": 0
+    "donated": 1650000,
+    "donation_history": [
+      {
+        "donor_id": "DN0108",
+        "amount": 700000,
+        "date": "22-07-2024",
+        "time": "10:20:15",
+        "transaction_id": "DN010870000001"
+      },
+      {
+        "donor_id": "DN0128",
+        "amount": 595000,
+        "date": "31-07-2024",
+        "time": "14:55:38",
+        "transaction_id": "DN012859500001"
+      },
+      {
+        "donor_id": "DN0149",
+        "amount": 355000,
+        "date": "03-07-2024",
+        "time": "15:15:35",
+        "transaction_id": "DN014935500001"
+      }
+    ]
   },
   {
     "id": "CD0012",
@@ -213,7 +466,30 @@
       "Vận chuyển nước ngọt cứu trợ khẩn cấp"
     ],
     "scale": "Đồng bằng sông Cửu Long",
-    "donated": 0
+    "donated": 1275000,
+    "donation_history": [
+      {
+        "donor_id": "DN0103",
+        "amount": 400000,
+        "date": "19-08-2024",
+        "time": "16:30:55",
+        "transaction_id": "DN010340000001"
+      },
+      {
+        "donor_id": "DN0129",
+        "amount": 305000,
+        "date": "19-04-2024",
+        "time": "15:45:22",
+        "transaction_id": "DN012930500001"
+      },
+      {
+        "donor_id": "DN0150",
+        "amount": 570000,
+        "date": "26-08-2024",
+        "time": "14:05:48",
+        "transaction_id": "DN015057000001"
+      }
+    ]
   },
   {
     "id": "CD0013",
@@ -231,7 +507,30 @@
       "Hỗ trợ pháp lý và tái hòa nhập gia đình"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 975000,
+    "donation_history": [
+      {
+        "donor_id": "DN0109",
+        "amount": 180000,
+        "date": "09-08-2024",
+        "time": "15:10:38",
+        "transaction_id": "DN010918000001"
+      },
+      {
+        "donor_id": "DN0128",
+        "amount": 170000,
+        "date": "09-11-2024",
+        "time": "11:20:12",
+        "transaction_id": "DN012817000001"
+      },
+      {
+        "donor_id": "DN0149",
+        "amount": 625000,
+        "date": "17-11-2024",
+        "time": "12:40:18",
+        "transaction_id": "DN014962500001"
+      }
+    ]
   },
   {
     "id": "CD0014",
@@ -249,7 +548,30 @@
       "Tổ chức các hoạt động văn nghệ, thể thao chuyên biệt"
     ],
     "scale": "TP. Hồ Chí Minh",
-    "donated": 0
+    "donated": 1205000,
+    "donation_history": [
+      {
+        "donor_id": "DN0110",
+        "amount": 290000,
+        "date": "02-09-2024",
+        "time": "12:25:15",
+        "transaction_id": "DN011029000001"
+      },
+      {
+        "donor_id": "DN0129",
+        "amount": 475000,
+        "date": "03-09-2024",
+        "time": "12:10:45",
+        "transaction_id": "DN012947500001"
+      },
+      {
+        "donor_id": "DN0150",
+        "amount": 440000,
+        "date": "28-12-2024",
+        "time": "16:55:12",
+        "transaction_id": "DN015044000001"
+      }
+    ]
   },
   {
     "id": "CD0015",
@@ -267,7 +589,30 @@
       "Dự án ánh sáng học đường (lắp đèn chống cận)"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 1345000,
+    "donation_history": [
+      {
+        "donor_id": "DN0104",
+        "amount": 800000,
+        "date": "07-09-2024",
+        "time": "10:55:33",
+        "transaction_id": "DN010480000001"
+      },
+      {
+        "donor_id": "DN0130",
+        "amount": 385000,
+        "date": "27-05-2024",
+        "time": "09:50:35",
+        "transaction_id": "DN013038500001"
+      },
+      {
+        "donor_id": "DN0150",
+        "amount": 160000,
+        "date": "12-12-2024",
+        "time": "10:30:25",
+        "transaction_id": "DN015016000001"
+      }
+    ]
   },
   {
     "id": "CD0016",
@@ -285,7 +630,23 @@
       "Xây dựng phòng máy tính cộng đồng tại các bản"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 665000,
+    "donation_history": [
+      {
+        "donor_id": "DN0113",
+        "amount": 410000,
+        "date": "13-06-2024",
+        "time": "10:35:52",
+        "transaction_id": "DN011341000001"
+      },
+      {
+        "donor_id": "DN0129",
+        "amount": 255000,
+        "date": "20-12-2024",
+        "time": "10:35:30",
+        "transaction_id": "DN012925500001"
+      }
+    ]
   },
   {
     "id": "CD0017",
@@ -303,7 +664,23 @@
       "Tặng kính thuốc cho học sinh vùng sâu"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 925000,
+    "donation_history": [
+      {
+        "donor_id": "DN0111",
+        "amount": 270000,
+        "date": "20-10-2024",
+        "time": "11:20:18",
+        "transaction_id": "DN011127000001"
+      },
+      {
+        "donor_id": "DN0130",
+        "amount": 655000,
+        "date": "13-10-2024",
+        "time": "16:15:48",
+        "transaction_id": "DN013065500001"
+      }
+    ]
   },
   {
     "id": "CD0018",
@@ -321,7 +698,23 @@
       "Cải thiện dinh dưỡng học đường cho trẻ mầm non"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 565000,
+    "donation_history": [
+      {
+        "donor_id": "DN0105",
+        "amount": 350000,
+        "date": "11-10-2024",
+        "time": "09:25:48",
+        "transaction_id": "DN010535000001"
+      },
+      {
+        "donor_id": "DN0131",
+        "amount": 215000,
+        "date": "08-08-2024",
+        "time": "11:25:20",
+        "transaction_id": "DN013121500001"
+      }
+    ]
   },
   {
     "id": "CD0019",
@@ -339,7 +732,23 @@
       "Xây dựng trung tâm giáo dục thiên nhiên"
     ],
     "scale": "Miền Trung",
-    "donated": 0
+    "donated": 865000,
+    "donation_history": [
+      {
+        "donor_id": "DN0109",
+        "amount": 420000,
+        "date": "30-10-2024",
+        "time": "09:50:22",
+        "transaction_id": "DN010942000001"
+      },
+      {
+        "donor_id": "DN0132",
+        "amount": 445000,
+        "date": "02-03-2024",
+        "time": "14:40:15",
+        "transaction_id": "DN013244500001"
+      }
+    ]
   },
   {
     "id": "CD0020",
@@ -357,7 +766,23 @@
       "Tuyên truyền giữ gìn vệ sinh nguồn nước"
     ],
     "scale": "Tây Nguyên",
-    "donated": 0
+    "donated": 755000,
+    "donation_history": [
+      {
+        "donor_id": "DN0103",
+        "amount": 250000,
+        "date": "03-12-2024",
+        "time": "08:12:40",
+        "transaction_id": "DN010325000001"
+      },
+      {
+        "donor_id": "DN0131",
+        "amount": 505000,
+        "date": "24-11-2024",
+        "time": "13:50:42",
+        "transaction_id": "DN013150500001"
+      }
+    ]
   },
   {
     "id": "CD0021",
@@ -375,7 +800,23 @@
       "Tập huấn kiến thức chăm sóc trẻ cho phụ huynh và giáo viên"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 965000,
+    "donation_history": [
+      {
+        "donor_id": "DN0110",
+        "amount": 640000,
+        "date": "18-11-2024",
+        "time": "14:40:55",
+        "transaction_id": "DN011064000001"
+      },
+      {
+        "donor_id": "DN0132",
+        "amount": 325000,
+        "date": "17-07-2024",
+        "time": "10:05:38",
+        "transaction_id": "DN013232500001"
+      }
+    ]
   },
   {
     "id": "CD0022",
@@ -393,7 +834,23 @@
       "Hỗ trợ tìm kiếm việc làm và thực tập cho sinh viên năm cuối"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 655000,
+    "donation_history": [
+      {
+        "donor_id": "DN0107",
+        "amount": 380000,
+        "date": "25-11-2024",
+        "time": "16:45:28",
+        "transaction_id": "DN010738000001"
+      },
+      {
+        "donor_id": "DN0133",
+        "amount": 275000,
+        "date": "22-06-2024",
+        "time": "12:15:28",
+        "transaction_id": "DN013327500001"
+      }
+    ]
   },
   {
     "id": "CD0023",
@@ -411,7 +868,23 @@
       "Tổ chức lễ khánh thành và bàn giao cho địa phương"
     ],
     "scale": "Vùng núi phía Bắc",
-    "donated": 0
+    "donated": 1170000,
+    "donation_history": [
+      {
+        "donor_id": "DN0112",
+        "amount": 590000,
+        "date": "08-12-2024",
+        "time": "15:30:40",
+        "transaction_id": "DN011259000001"
+      },
+      {
+        "donor_id": "DN0132",
+        "amount": 580000,
+        "date": "05-12-2024",
+        "time": "15:30:52",
+        "transaction_id": "DN013258000001"
+      }
+    ]
   },
   {
     "id": "CD0024",
@@ -429,7 +902,23 @@
       "Kết nối chuỗi cung ứng tiêu thụ nông sản sạch"
     ],
     "scale": "Nông thôn Việt Nam",
-    "donated": 0
+    "donated": 955000,
+    "donation_history": [
+      {
+        "donor_id": "DN0108",
+        "amount": 520000,
+        "date": "14-12-2024",
+        "time": "13:35:50",
+        "transaction_id": "DN010852000001"
+      },
+      {
+        "donor_id": "DN0133",
+        "amount": 435000,
+        "date": "06-10-2024",
+        "time": "09:40:15",
+        "transaction_id": "DN013343500001"
+      }
+    ]
   },
   {
     "id": "CD0025",
@@ -447,7 +936,23 @@
       "Tặng tài khoản học tiếng Anh trực tuyến cho học sinh"
     ],
     "scale": "Vùng xa và hải đảo",
-    "donated": 0
+    "donated": 810000,
+    "donation_history": [
+      {
+        "donor_id": "DN0134",
+        "amount": 360000,
+        "date": "11-05-2024",
+        "time": "16:50:42",
+        "transaction_id": "DN013436000001"
+      },
+      {
+        "donor_id": "DN0105",
+        "amount": 450000,
+        "date": "29-12-2024",
+        "time": "12:18:35",
+        "transaction_id": "DN010545000001"
+      }
+    ]
   },
   {
     "id": "CD0026",
@@ -465,7 +970,23 @@
       "Hỗ trợ sửa chữa cửa sổ, mái nhà chống gió lùa cho lớp học"
     ],
     "scale": "Miền Bắc Việt Nam",
-    "donated": 0
+    "donated": 435000,
+    "donation_history": [
+      {
+        "donor_id": "DN0135",
+        "amount": 125000,
+        "date": "26-04-2024",
+        "time": "10:30:55",
+        "transaction_id": "DN013512500001"
+      },
+      {
+        "donor_id": "DN0110",
+        "amount": 310000,
+        "date": "27-12-2024",
+        "time": "10:15:30",
+        "transaction_id": "DN011031000001"
+      }
+    ]
   },
   {
     "id": "CD0027",
@@ -483,7 +1004,23 @@
       "Tôn vinh các gia đình có người hiến tạng cứu người"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 1205000,
+    "donation_history": [
+      {
+        "donor_id": "DN0114",
+        "amount": 510000,
+        "date": "01-07-2024",
+        "time": "14:50:33",
+        "transaction_id": "DN011451000001"
+      },
+      {
+        "donor_id": "DN0134",
+        "amount": 695000,
+        "date": "29-09-2024",
+        "time": "13:25:18",
+        "transaction_id": "DN013469500001"
+      }
+    ]
   },
   {
     "id": "CD0028",
@@ -501,7 +1038,23 @@
       "Hỗ trợ dạy nghề và tạo việc làm cho nạn nhân"
     ],
     "scale": "Các thành phố lớn",
-    "donated": 0
+    "donated": 695000,
+    "donation_history": [
+      {
+        "donor_id": "DN0115",
+        "amount": 175000,
+        "date": "15-08-2024",
+        "time": "11:40:28",
+        "transaction_id": "DN011517500001"
+      },
+      {
+        "donor_id": "DN0135",
+        "amount": 520000,
+        "date": "14-08-2024",
+        "time": "14:55:32",
+        "transaction_id": "DN013552000001"
+      }
+    ]
   },
   {
     "id": "CD0029",
@@ -519,7 +1072,23 @@
       "Cứu hộ và chăm sóc động vật trước khi tái thả"
     ],
     "scale": "Các vườn quốc gia",
-    "donated": 0
+    "donated": 860000,
+    "donation_history": [
+      {
+        "donor_id": "DN0116",
+        "amount": 395000,
+        "date": "28-03-2024",
+        "time": "15:20:50",
+        "transaction_id": "DN011639500001"
+      },
+      {
+        "donor_id": "DN0136",
+        "amount": 465000,
+        "date": "09-07-2024",
+        "time": "15:10:25",
+        "transaction_id": "DN013646500001"
+      }
+    ]
   },
   {
     "id": "CD0030",
@@ -537,7 +1106,23 @@
       "Tặng vé xe cho công nhân nghèo về quê ăn Tết"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 485000,
+    "donation_history": [
+      {
+        "donor_id": "DN0114",
+        "amount": 245000,
+        "date": "22-09-2024",
+        "time": "09:15:47",
+        "transaction_id": "DN011424500001"
+      },
+      {
+        "donor_id": "DN0135",
+        "amount": 240000,
+        "date": "01-12-2024",
+        "time": "11:20:18",
+        "transaction_id": "DN013524000001"
+      }
+    ]
   },
   {
     "id": "CD0031",
@@ -555,7 +1140,23 @@
       "Vận chuyển xe bồn chở nước ngọt cứu trợ khẩn cấp"
     ],
     "scale": "Miền Tây Nam Bộ",
-    "donated": 0
+    "donated": 455000,
+    "donation_history": [
+      {
+        "donor_id": "DN0117",
+        "amount": 260000,
+        "date": "06-04-2024",
+        "time": "12:30:45",
+        "transaction_id": "DN011726000001"
+      },
+      {
+        "donor_id": "DN0136",
+        "amount": 195000,
+        "date": "22-11-2024",
+        "time": "12:35:48",
+        "transaction_id": "DN013619500001"
+      }
+    ]
   },
   {
     "id": "CD0032",
@@ -573,7 +1174,23 @@
       "Tổ chức hội thi kể chuyện theo sách cho học sinh"
     ],
     "scale": "Sơn La, Điện Biên",
-    "donated": 0
+    "donated": 820000,
+    "donation_history": [
+      {
+        "donor_id": "DN0137",
+        "amount": 335000,
+        "date": "23-05-2024",
+        "time": "09:45:15",
+        "transaction_id": "DN013733500001"
+      },
+      {
+        "donor_id": "DN0115",
+        "amount": 485000,
+        "date": "04-10-2024",
+        "time": "13:55:15",
+        "transaction_id": "DN011548500001"
+      }
+    ]
   },
   {
     "id": "CD0033",
@@ -591,7 +1208,23 @@
       "Tổ chức các hoạt động dã ngoại hòa nhập cộng đồng"
     ],
     "scale": "TP. Hồ Chí Minh",
-    "donated": 0
+    "donated": 810000,
+    "donation_history": [
+      {
+        "donor_id": "DN0117",
+        "amount": 530000,
+        "date": "24-08-2024",
+        "time": "14:15:22",
+        "transaction_id": "DN011753000001"
+      },
+      {
+        "donor_id": "DN0138",
+        "amount": 280000,
+        "date": "05-08-2024",
+        "time": "11:55:28",
+        "transaction_id": "DN013828000001"
+      }
+    ]
   },
   {
     "id": "CD0034",
@@ -609,7 +1242,23 @@
       "Tặng đèn pin sạc năng lượng mặt trời cho học sinh"
     ],
     "scale": "Các tỉnh biên giới",
-    "donated": 0
+    "donated": 1060000,
+    "donation_history": [
+      {
+        "donor_id": "DN0118",
+        "amount": 425000,
+        "date": "12-05-2024",
+        "time": "16:40:38",
+        "transaction_id": "DN011842500001"
+      },
+      {
+        "donor_id": "DN0137",
+        "amount": 635000,
+        "date": "10-10-2024",
+        "time": "16:20:38",
+        "transaction_id": "DN013763500001"
+      }
+    ]
   },
   {
     "id": "CD0035",
@@ -627,7 +1276,23 @@
       "Tập huấn phục hồi chức năng cho người nhà"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 860000,
+    "donation_history": [
+      {
+        "donor_id": "DN0114",
+        "amount": 365000,
+        "date": "10-11-2024",
+        "time": "16:25:12",
+        "transaction_id": "DN011436500001"
+      },
+      {
+        "donor_id": "DN0138",
+        "amount": 495000,
+        "date": "27-11-2024",
+        "time": "13:10:42",
+        "transaction_id": "DN013849500001"
+      }
+    ]
   },
   {
     "id": "CD0036",
@@ -645,7 +1310,23 @@
       "Tuyên truyền bảo vệ rừng cho học sinh địa phương"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 1125000,
+    "donation_history": [
+      {
+        "donor_id": "DN0139",
+        "amount": 405000,
+        "date": "16-04-2024",
+        "time": "14:30:18",
+        "transaction_id": "DN013940500001"
+      },
+      {
+        "donor_id": "DN0116",
+        "amount": 720000,
+        "date": "17-11-2024",
+        "time": "10:45:35",
+        "transaction_id": "DN011672000001"
+      }
+    ]
   },
   {
     "id": "CD0037",
@@ -663,7 +1344,23 @@
       "Tổ chức sinh nhật tập thể cho các cụ tại mái ấm"
     ],
     "scale": "Bình Dương, Đồng Nai",
-    "donated": 0
+    "donated": 650000,
+    "donation_history": [
+      {
+        "donor_id": "DN0118",
+        "amount": 295000,
+        "date": "30-09-2024",
+        "time": "11:25:55",
+        "transaction_id": "DN011829500001"
+      },
+      {
+        "donor_id": "DN0138",
+        "amount": 355000,
+        "date": "18-12-2024",
+        "time": "10:25:55",
+        "transaction_id": "DN013835500001"
+      }
+    ]
   },
   {
     "id": "CD0038",
@@ -681,7 +1378,23 @@
       "Tặng bộ dụng cụ nghề cho học viên tốt nghiệp"
     ],
     "scale": "Hà Nội",
-    "donated": 0
+    "donated": 560000,
+    "donation_history": [
+      {
+        "donor_id": "DN0117",
+        "amount": 340000,
+        "date": "19-12-2024",
+        "time": "09:50:18",
+        "transaction_id": "DN011734000001"
+      },
+      {
+        "donor_id": "DN0139",
+        "amount": 220000,
+        "date": "02-09-2024",
+        "time": "11:45:52",
+        "transaction_id": "DN013922000001"
+      }
+    ]
   },
   {
     "id": "CD0039",
@@ -699,7 +1412,23 @@
       "Tổ chức lớp dạy kỹ năng an toàn giao thông"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 720000,
+    "donation_history": [
+      {
+        "donor_id": "DN0119",
+        "amount": 155000,
+        "date": "20-06-2024",
+        "time": "10:10:28",
+        "transaction_id": "DN011915500001"
+      },
+      {
+        "donor_id": "DN0140",
+        "amount": 565000,
+        "date": "30-06-2024",
+        "time": "15:50:35",
+        "transaction_id": "DN014056500001"
+      }
+    ]
   },
   {
     "id": "CD0040",
@@ -717,7 +1446,23 @@
       "Hướng dẫn người dân bảo trì hệ thống dẫn nước"
     ],
     "scale": "Tây Nguyên",
-    "donated": 0
+    "donated": 720000,
+    "donation_history": [
+      {
+        "donor_id": "DN0141",
+        "amount": 145000,
+        "date": "12-07-2024",
+        "time": "12:20:45",
+        "transaction_id": "DN014114500001"
+      },
+      {
+        "donor_id": "DN0119",
+        "amount": 575000,
+        "date": "05-11-2024",
+        "time": "15:35:42",
+        "transaction_id": "DN011957500001"
+      }
+    ]
   },
   {
     "id": "CD0041",
@@ -735,7 +1480,23 @@
       "Kiểm định chất lượng nước định kỳ theo tiêu chuẩn Bộ Y tế"
     ],
     "scale": "Tây Bắc",
-    "donated": 0
+    "donated": 845000,
+    "donation_history": [
+      {
+        "donor_id": "DN0120",
+        "amount": 680000,
+        "date": "03-07-2024",
+        "time": "13:50:15",
+        "transaction_id": "DN012068000001"
+      },
+      {
+        "donor_id": "DN0140",
+        "amount": 165000,
+        "date": "15-11-2024",
+        "time": "09:15:20",
+        "transaction_id": "DN014016500001"
+      }
+    ]
   },
   {
     "id": "CD0042",
@@ -753,7 +1514,23 @@
       "Trao học bổng tiền mặt cho học sinh mất người thân do bão"
     ],
     "scale": "Quảng Bình, Quảng Trị",
-    "donated": 0
+    "donated": 765000,
+    "donation_history": [
+      {
+        "donor_id": "DN0120",
+        "amount": 230000,
+        "date": "28-10-2024",
+        "time": "09:20:50",
+        "transaction_id": "DN012023000001"
+      },
+      {
+        "donor_id": "DN0141",
+        "amount": 535000,
+        "date": "28-10-2024",
+        "time": "14:45:28",
+        "transaction_id": "DN014153500001"
+      }
+    ]
   },
   {
     "id": "CD0043",
@@ -771,7 +1548,23 @@
       "Tổ chức các buổi diễn thuyết truyền cảm hứng sáng tạo"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 690000,
+    "donation_history": [
+      {
+        "donor_id": "DN0121",
+        "amount": 315000,
+        "date": "18-04-2024",
+        "time": "11:15:40",
+        "transaction_id": "DN012131500001"
+      },
+      {
+        "donor_id": "DN0142",
+        "amount": 375000,
+        "date": "24-05-2024",
+        "time": "16:35:52",
+        "transaction_id": "DN014237500001"
+      }
+    ]
   },
   {
     "id": "CD0044",
@@ -789,7 +1582,23 @@
       "Hỗ trợ chi phí mai táng và ổn định tâm lý hậu sang chấn"
     ],
     "scale": "Hà Nội và TP. Hồ Chí Minh",
-    "donated": 0
+    "donated": 765000,
+    "donation_history": [
+      {
+        "donor_id": "DN0141",
+        "amount": 320000,
+        "date": "09-12-2024",
+        "time": "10:10:15",
+        "transaction_id": "DN014132000001"
+      },
+      {
+        "donor_id": "DN0120",
+        "amount": 445000,
+        "date": "15-12-2024",
+        "time": "14:45:32",
+        "transaction_id": "DN012044500001"
+      }
+    ]
   },
   {
     "id": "CD0045",
@@ -807,7 +1616,23 @@
       "Hỗ trợ chi phí đi lại và ăn ở cho bệnh nhân tại bệnh viện"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 1165000,
+    "donation_history": [
+      {
+        "donor_id": "DN0121",
+        "amount": 560000,
+        "date": "12-09-2024",
+        "time": "16:30:25",
+        "transaction_id": "DN012156000001"
+      },
+      {
+        "donor_id": "DN0142",
+        "amount": 605000,
+        "date": "11-09-2024",
+        "time": "13:00:18",
+        "transaction_id": "DN014260500001"
+      }
+    ]
   },
   {
     "id": "CD0046",
@@ -825,7 +1650,23 @@
       "Tặng đồ gia dụng thiết yếu khi bàn giao nhà"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 745000,
+    "donation_history": [
+      {
+        "donor_id": "DN0122",
+        "amount": 490000,
+        "date": "25-05-2024",
+        "time": "12:40:55",
+        "transaction_id": "DN012249000001"
+      },
+      {
+        "donor_id": "DN0143",
+        "amount": 255000,
+        "date": "06-08-2024",
+        "time": "10:50:25",
+        "transaction_id": "DN014325500001"
+      }
+    ]
   },
   {
     "id": "CD0047",
@@ -843,7 +1684,23 @@
       "Hướng dẫn sử dụng internet an toàn cho trẻ em"
     ],
     "scale": "Các tỉnh miền núi",
-    "donated": 0
+    "donated": 690000,
+    "donation_history": [
+      {
+        "donor_id": "DN0122",
+        "amount": 205000,
+        "date": "07-10-2024",
+        "time": "10:05:18",
+        "transaction_id": "DN012220500001"
+      },
+      {
+        "donor_id": "DN0144",
+        "amount": 485000,
+        "date": "18-03-2024",
+        "time": "13:25:15",
+        "transaction_id": "DN014448500001"
+      }
+    ]
   },
   {
     "id": "CD0048",
@@ -861,7 +1718,23 @@
       "Đào tạo kỹ năng tra cứu trực tuyến cho học sinh"
     ],
     "scale": "Các tỉnh biên giới",
-    "donated": 0
+    "donated": 845000,
+    "donation_history": [
+      {
+        "donor_id": "DN0123",
+        "amount": 370000,
+        "date": "10-08-2024",
+        "time": "15:25:33",
+        "transaction_id": "DN012337000001"
+      },
+      {
+        "donor_id": "DN0143",
+        "amount": 475000,
+        "date": "20-11-2024",
+        "time": "15:15:40",
+        "transaction_id": "DN014347500001"
+      }
+    ]
   },
   {
     "id": "CD0049",
@@ -879,7 +1752,23 @@
       "Giáo dục dinh dưỡng cho cộng đồng học đường"
     ],
     "scale": "Nông thôn và miền núi",
-    "donated": 0
+    "donated": 835000,
+    "donation_history": [
+      {
+        "donor_id": "DN0144",
+        "amount": 210000,
+        "date": "04-07-2024",
+        "time": "09:50:38",
+        "transaction_id": "DN014421000001"
+      },
+      {
+        "donor_id": "DN0123",
+        "amount": 625000,
+        "date": "02-12-2024",
+        "time": "11:50:45",
+        "transaction_id": "DN012362500001"
+      }
+    ]
   },
   {
     "id": "CD0050",
@@ -897,6 +1786,22 @@
       "Tổ chức các trò chơi dân gian và biểu diễn nghệ thuật"
     ],
     "scale": "Toàn quốc",
-    "donated": 0
+    "donated": 680000,
+    "donation_history": [
+      {
+        "donor_id": "DN0124",
+        "amount": 135000,
+        "date": "29-03-2024",
+        "time": "09:35:20",
+        "transaction_id": "DN012413500001"
+      },
+      {
+        "donor_id": "DN0144",
+        "amount": 545000,
+        "date": "25-12-2024",
+        "time": "16:40:22",
+        "transaction_id": "DN014454500001"
+      }
+    ]
   }
 ]
