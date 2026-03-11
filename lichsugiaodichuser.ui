@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1048</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Donarity - Lịch sử giao dịch</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget {
+    background: #F3E8ED;
+    font-family: &quot;Segoe UI&quot;;
+}
+QFrame#topBar {
+    background: #F5DDE6;
+    border: none;
+}
+QPushButton#navHome, QPushButton#navChatbot, QPushButton#navPublic {
+    background: transparent;
+    border: none;
+    color: #222222;
+    font-size: 12pt;
+    font-weight: 700;
+    border-radius: 18px;
+    padding: 8px 16px;
+}
+QPushButton#navHome:hover, QPushButton#navChatbot:hover, QPushButton#navPublic:hover {
+    background: rgba(205,156,181,0.18);
+}
+QPushButton#navStat {
+    background: #E7B5CF;
+    border: none;
+    color: #5F3556;
+    font-size: 12pt;
+    font-weight: 700;
+    border-radius: 18px;
+    padding: 8px 16px;
+}
+QLabel#brandTitle {
+    color: #7A3B71;
+    font-size: 18pt;
+    font-weight: 800;
+}
+QLabel#brandSub {
+    color: #7F6D79;
+    font-size: 8pt;
+}
+QFrame#heroFrame {
+    border: none;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-image: url(hero_pg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+QLabel#heroTitle {
+    color: #6C3D65;
+    font-size: 34pt;
+    font-weight: 900;
+    background: transparent;
+}
+QFrame#statCard1, QFrame#statCard2, QFrame#statCard3 {
+    background: rgba(255,255,255,0.68);
+    border: 2px solid #EFBFD2;
+    border-radius: 22px;
+}
+QLabel.statTitle {
+    color: #6F4767;
+    font-size: 16pt;
+    font-weight: 700;
+    background: transparent;
+}
+QLabel.statValue {
+    color: #9A7695;
+    font-size: 24pt;
+    font-weight: 800;
+    background: transparent;
+}
+QPushButton#historyBtn, QPushButton#monthBtn {
+    background: #E8BFD0;
+    color: #6D4767;
+    border: 1.5px solid #6A4C64;
+    border-radius: 18px;
+    font-size: 12pt;
+    font-weight: 700;
+    padding: 6px 18px;
+}
+QFrame.txCard {
+    background: rgba(255,255,255,0.62);
+    border: 2px solid #F0BFD2;
+    border-radius: 20px;
+}
+QLabel.txTitle {
+    color: #6B4364;
+    font-size: 20pt;
+    font-weight: 800;
+    background: transparent;
+}
+QLabel.txTime {
+    color: #9A7B94;
+    font-size: 11pt;
+    font-weight: 700;
+    background: transparent;
+}
+QLabel.txAmount {
+    color: #9A7B94;
+    font-size: 24pt;
+    font-weight: 800;
+    background: transparent;
+}
+QScrollArea {
+    border: none;
+    background: transparent;
+}
+QScrollBar:vertical {
+    background: rgba(230, 202, 216, 0.45);
+    width: 10px;
+    border-radius: 5px;
+    margin: 4px 0 4px 0;
+}
+QScrollBar::handle:vertical {
+    background: #D9A9BE;
+    border-radius: 5px;
+    min-height: 34px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_9">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>6</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>8</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="topBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>18</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>18</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="logoIcon">
+         <property name="text">
+          <string>🕊</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_brand">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="brandTitle">
+           <property name="text">
+            <string>Donarity</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="brandSub">
+           <property name="text">
+            <string>by group 10</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>80</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navHome">
+         <property name="text">
+          <string>⌂ Trang chủ</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navStat">
+         <property name="text">
+          <string>⚗ Thống kê</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navChatbot">
+         <property name="text">
+          <string>◉ Chatbot</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="navPublic">
+         <property name="text">
+          <string>◉ Công khai</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>80</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QToolButton" name="bellBtn">
+         <property name="text">
+          <string>🔔</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="settingBtn">
+         <property name="text">
+          <string>⚙</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="avatarBtn">
+         <property name="text">
+          <string>◉</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="heroFrame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>390</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>390</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_hero">
+       <property name="leftMargin">
+        <number>34</number>
+       </property>
+       <property name="topMargin">
+        <number>28</number>
+       </property>
+       <property name="rightMargin">
+        <number>34</number>
+       </property>
+       <property name="bottomMargin">
+        <number>18</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="backLabel">
+         <property name="text">
+          <string>← Quay lại</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="heroTitle">
+         <property name="text">
+          <string>LỊCH SỬ GIAO DỊCH</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>100</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_stats">
+         <property name="spacing">
+          <number>14</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="statCard1">
+           <layout class="QVBoxLayout" name="verticalLayout_card1">
+            <property name="leftMargin">
+             <number>18</number>
+            </property>
+            <property name="topMargin">
+             <number>18</number>
+            </property>
+            <property name="rightMargin">
+             <number>18</number>
+            </property>
+            <property name="bottomMargin">
+             <number>18</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="labelStatTitle1">
+              <property name="text">
+               <string>Tổng số tiền ủng hộ</string>
+              </property>
+              <property name="class" stdset="0">
+               <string>statTitle</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>6</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelStatValue1">
+              <property name="text">
+               <string>1,000,000</string>
+              </property>
+              <property name="class" stdset="0">
+               <string>statValue</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="statCard2">
+           <layout class="QVBoxLayout" name="verticalLayout_card2">
+            <property name="leftMargin">
+             <number>18</number>
+            </property>
+            <property name="topMargin">
+             <number>18</number>
+            </property>
+            <property name="rightMargin">
+             <number>18</number>
+            </property>
+            <property name="bottomMargin">
+             <number>18</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="labelStatTitle2">
+              <property name="text">
+               <string>Chiến dịch ủng hộ</string>
+              </property>
+              <property name="class" stdset="0">
+               <string>statTitle</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>6</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelStatValue2">
+              <property name="text">
+               <string>4 Chiến dịch</string>
+              </property>
+              <property name="class" stdset="0">
+               <string>statValue</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="statCard3">
+           <layout class="QVBoxLayout" name="verticalLayout_card3">
+            <property name="leftMargin">
+             <number>18</number>
+            </property>
+            <property name="topMargin">
+             <number>18</number>
+            </property>
+            <property name="rightMargin">
+             <number>18</number>
+            </property>
+            <property name="bottomMargin">
+             <number>18</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="labelStatTitle3">
+              <property name="text">
+               <string>Khoản ủng hộ trung bình</string>
+              </property>
+              <property name="class" stdset="0">
+               <string>statTitle</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>6</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelStatValue3">
+              <property name="text">
+               <string>250,000</string>
+              </property>
+              <property name="class" stdset="0">
+               <string>statValue</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_control">
+      <property name="leftMargin">
+       <number>32</number>
+      </property>
+      <property name="topMargin">
+       <number>24</number>
+      </property>
+      <property name="rightMargin">
+       <number>32</number>
+      </property>
+      <property name="bottomMargin">
+       <number>18</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="historyBtn">
+        <property name="minimumSize">
+         <size>
+          <width>220</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>220</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Lịch sử quyên góp</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="monthBtn">
+        <property name="minimumSize">
+         <size>
+          <width>175</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>175</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Trong tháng này ⌄</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1038</width>
+         <height>262</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_scroll">
+        <property name="spacing">
+         <number>14</number>
+        </property>
+        <property name="leftMargin">
+         <number>32</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>24</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="txCard1">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>92</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>92</height>
+           </size>
+          </property>
+          <property name="class" stdset="0">
+           <string>txCard</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_tx1">
+           <property name="leftMargin">
+            <number>18</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>24</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_tx1_text">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="txTitle1">
+               <property name="text">
+                <string>Dự án xây trường cho em (vùng cao)</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>txTitle</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="txTime1">
+               <property name="text">
+                <string>🗓 09:45:18  20/10/2025</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>txTime</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="txAmount1">
+             <property name="text">
+              <string>250,000</string>
+             </property>
+             <property name="class" stdset="0">
+              <string>txAmount</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="txCard2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>92</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>92</height>
+           </size>
+          </property>
+          <property name="class" stdset="0">
+           <string>txCard</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_tx2">
+           <property name="leftMargin">
+            <number>18</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>24</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_tx2_text">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="txTitle2">
+               <property name="text">
+                <string>Chương trình vì phụ nữ nghèo nông thôn</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>txTitle</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="txTime2">
+               <property name="text">
+                <string>🗓 09:06:18  10/12/2025</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>txTime</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="txAmount2">
+             <property name="text">
+              <string>250,000</string>
+             </property>
+             <property name="class" stdset="0">
+              <string>txAmount</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
