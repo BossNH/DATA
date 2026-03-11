@@ -14,7 +14,8 @@
       "Khám sàng lọc tim bẩm sinh tại các tỉnh xa",
       "Hỗ trợ hậu phẫu và dinh dưỡng cho bệnh nhi"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0002",
@@ -31,7 +32,8 @@
       "Điều trị nha khoa và trị liệu ngôn ngữ",
       "Đào tạo chuyên môn y khoa cho bác sĩ địa phương"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0003",
@@ -48,7 +50,8 @@
       "Tổ chức các chuyến xe miễn phí cho bệnh nhân",
       "Tặng quà động viên bệnh nhi vào các dịp lễ"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0004",
@@ -65,7 +68,8 @@
       "Hỗ trợ phục hồi chức năng và dạy nghề",
       "Cung cấp trợ cấp khó khăn hàng tháng"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0005",
@@ -82,7 +86,8 @@
       "Cung cấp quần áo ấm, chăn màn cho học sinh",
       "Xây dựng phòng học và ký túc xá"
     ],
-    "scale": "Miền núi phía Bắc"
+    "scale": "Miền núi phía Bắc",
+    "donated": 0
   },
   {
     "id": "CD0006",
@@ -99,7 +104,8 @@
       "Xây dựng trường học (Sức mạnh 2000)",
       "Lắp đặt hệ thống lọc nước và điện mặt trời"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0007",
@@ -116,7 +122,8 @@
       "Trao tặng học bổng cho học sinh nghèo tại địa phương",
       "Tổ chức các buổi truyền thông an toàn giao thông"
     ],
-    "scale": "Đồng bằng sông Cửu Long"
+    "scale": "Đồng bằng sông Cửu Long",
+    "donated": 0
   },
   {
     "id": "CD0008",
@@ -133,7 +140,8 @@
       "Tuyên truyền và vận động hiến máu",
       "Quản lý và hỗ trợ người hiến máu tình nguyện"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0009",
@@ -150,7 +158,8 @@
       "Xây dựng và cải tạo trường học",
       "Đào tạo nghề cho thanh thiếu niên khó khăn"
     ],
-    "scale": "Miền Nam Việt Nam"
+    "scale": "Miền Nam Việt Nam",
+    "donated": 0
   },
   {
     "id": "CD0010",
@@ -167,7 +176,8 @@
       "Phát quà nhu yếu phẩm cho người già neo đơn",
       "Hỗ trợ y tế khẩn cấp cho người vô gia cư"
     ],
-    "scale": "TP. Hồ Chí Minh"
+    "scale": "TP. Hồ Chí Minh",
+    "donated": 0
   },
   {
     "id": "CD0011",
@@ -184,7 +194,8 @@
       "Hỗ trợ sửa chữa nhà cửa sau lũ",
       "Tặng sinh kế (con giống, cây giống) để tái sản xuất"
     ],
-    "scale": "Miền Trung"
+    "scale": "Miền Trung",
+    "donated": 0
   },
   {
     "id": "CD0012",
@@ -201,7 +212,8 @@
       "Tặng bồn chứa nước sạch cho hộ nghèo",
       "Vận chuyển nước ngọt cứu trợ khẩn cấp"
     ],
-    "scale": "Đồng bằng sông Cửu Long"
+    "scale": "Đồng bằng sông Cửu Long",
+    "donated": 0
   },
   {
     "id": "CD0013",
@@ -218,7 +230,8 @@
       "Cung cấp nhà nội trú an toàn và ăn uống",
       "Hỗ trợ pháp lý và tái hòa nhập gia đình"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0014",
@@ -235,7 +248,8 @@
       "Đào tạo nghề (massage, tin học) cho người mù",
       "Tổ chức các hoạt động văn nghệ, thể thao chuyên biệt"
     ],
-    "scale": "TP. Hồ Chí Minh"
+    "scale": "TP. Hồ Chí Minh",
+    "donated": 0
   },
   {
     "id": "CD0015",
@@ -252,7 +266,8 @@
       "Tài trợ trang thiết bị dạy học hiện đại",
       "Dự án ánh sáng học đường (lắp đèn chống cận)"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0016",
@@ -269,7 +284,8 @@
       "Tài trợ gói cước internet học tập miễn phí",
       "Xây dựng phòng máy tính cộng đồng tại các bản"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0017",
@@ -286,7 +302,8 @@
       "Khám mắt và phát thuốc miễn phí lưu động",
       "Tặng kính thuốc cho học sinh vùng sâu"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0018",
@@ -303,7 +320,8 @@
       "Tuyên truyền chống bạo lực và xâm hại trẻ em",
       "Cải thiện dinh dưỡng học đường cho trẻ mầm non"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0019",
@@ -320,7 +338,8 @@
       "Giám sát và bảo vệ các loài động vật quý hiếm",
       "Xây dựng trung tâm giáo dục thiên nhiên"
     ],
-    "scale": "Miền Trung"
+    "scale": "Miền Trung",
+    "donated": 0
   },
   {
     "id": "CD0020",
@@ -337,7 +356,8 @@
       "Lắp đặt thiết bị vệ sinh tại các điểm trường",
       "Tuyên truyền giữ gìn vệ sinh nguồn nước"
     ],
-    "scale": "Tây Nguyên"
+    "scale": "Tây Nguyên",
+    "donated": 0
   },
   {
     "id": "CD0021",
@@ -354,7 +374,8 @@
       "Khám tư vấn dinh dưỡng định kỳ cho trẻ mầm non",
       "Tập huấn kiến thức chăm sóc trẻ cho phụ huynh và giáo viên"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0022",
@@ -371,7 +392,8 @@
       "Tổ chức các khóa đào tạo kỹ năng mềm và ngoại ngữ",
       "Hỗ trợ tìm kiếm việc làm và thực tập cho sinh viên năm cuối"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0023",
@@ -388,7 +410,8 @@
       "Tặng bàn ghế, bảng viết và thiết bị giáo dục",
       "Tổ chức lễ khánh thành và bàn giao cho địa phương"
     ],
-    "scale": "Vùng núi phía Bắc"
+    "scale": "Vùng núi phía Bắc",
+    "donated": 0
   },
   {
     "id": "CD0024",
@@ -405,7 +428,8 @@
       "Đào tạo kỹ thuật canh tác và chăn nuôi bền vững",
       "Kết nối chuỗi cung ứng tiêu thụ nông sản sạch"
     ],
-    "scale": "Nông thôn Việt Nam"
+    "scale": "Nông thôn Việt Nam",
+    "donated": 0
   },
   {
     "id": "CD0025",
@@ -422,7 +446,8 @@
       "Tổ chức lớp dạy kỹ năng tin học văn phòng cơ bản",
       "Tặng tài khoản học tiếng Anh trực tuyến cho học sinh"
     ],
-    "scale": "Vùng xa và hải đảo"
+    "scale": "Vùng xa và hải đảo",
+    "donated": 0
   },
   {
     "id": "CD0026",
@@ -439,7 +464,8 @@
       "Tổ chức các chuyến đi trao quà trực tiếp tại bản",
       "Hỗ trợ sửa chữa cửa sổ, mái nhà chống gió lùa cho lớp học"
     ],
-    "scale": "Miền Bắc Việt Nam"
+    "scale": "Miền Bắc Việt Nam",
+    "donated": 0
   },
   {
     "id": "CD0027",
@@ -456,7 +482,8 @@
       "Tổ chức hội thảo tư vấn pháp lý và y khoa",
       "Tôn vinh các gia đình có người hiến tạng cứu người"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0028",
@@ -473,7 +500,8 @@
       "Tư vấn tâm lý và hỗ trợ pháp lý miễn phí",
       "Hỗ trợ dạy nghề và tạo việc làm cho nạn nhân"
     ],
-    "scale": "Các thành phố lớn"
+    "scale": "Các thành phố lớn",
+    "donated": 0
   },
   {
     "id": "CD0029",
@@ -490,7 +518,8 @@
       "Chiến dịch truyền thông giảm nhu cầu tiêu thụ thịt rừng",
       "Cứu hộ và chăm sóc động vật trước khi tái thả"
     ],
-    "scale": "Các vườn quốc gia"
+    "scale": "Các vườn quốc gia",
+    "donated": 0
   },
   {
     "id": "CD0030",
@@ -507,7 +536,8 @@
       "Tặng giỏ quà Tết (gạo, dầu ăn, bánh chưng...)",
       "Tặng vé xe cho công nhân nghèo về quê ăn Tết"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0031",
@@ -524,7 +554,8 @@
       "Lắp đặt trạm lọc nước ngọt cộng đồng tại xã",
       "Vận chuyển xe bồn chở nước ngọt cứu trợ khẩn cấp"
     ],
-    "scale": "Miền Tây Nam Bộ"
+    "scale": "Miền Tây Nam Bộ",
+    "donated": 0
   },
   {
     "id": "CD0032",
@@ -541,7 +572,8 @@
       "Đóng tủ gỗ và trang trí góc đọc thân thiện",
       "Tổ chức hội thi kể chuyện theo sách cho học sinh"
     ],
-    "scale": "Sơn La, Điện Biên"
+    "scale": "Sơn La, Điện Biên",
+    "donated": 0
   },
   {
     "id": "CD0033",
@@ -558,7 +590,8 @@
       "Đào tạo kỹ năng can thiệp cho cha mẹ tại nhà",
       "Tổ chức các hoạt động dã ngoại hòa nhập cộng đồng"
     ],
-    "scale": "TP. Hồ Chí Minh"
+    "scale": "TP. Hồ Chí Minh",
+    "donated": 0
   },
   {
     "id": "CD0034",
@@ -575,7 +608,8 @@
       "Lắp đèn LED chiếu sáng lớp học và sân trường",
       "Tặng đèn pin sạc năng lượng mặt trời cho học sinh"
     ],
-    "scale": "Các tỉnh biên giới"
+    "scale": "Các tỉnh biên giới",
+    "donated": 0
   },
   {
     "id": "CD0035",
@@ -592,7 +626,8 @@
       "Tặng xe lăn chuyên dụng cho bệnh nhi",
       "Tập huấn phục hồi chức năng cho người nhà"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0036",
@@ -609,7 +644,8 @@
       "Chăm sóc và giám sát cây trồng trong 3 năm đầu",
       "Tuyên truyền bảo vệ rừng cho học sinh địa phương"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0037",
@@ -626,7 +662,8 @@
       "Thăm khám sức khỏe và tặng thuốc bổ định kỳ",
       "Tổ chức sinh nhật tập thể cho các cụ tại mái ấm"
     ],
-    "scale": "Bình Dương, Đồng Nai"
+    "scale": "Bình Dương, Đồng Nai",
+    "donated": 0
   },
   {
     "id": "CD0038",
@@ -643,7 +680,8 @@
       "Hợp tác doanh nghiệp bao tiêu sản phẩm",
       "Tặng bộ dụng cụ nghề cho học viên tốt nghiệp"
     ],
-    "scale": "Hà Nội"
+    "scale": "Hà Nội",
+    "donated": 0
   },
   {
     "id": "CD0039",
@@ -660,7 +698,8 @@
       "Trao tặng xe đạp mới và mũ bảo hiểm",
       "Tổ chức lớp dạy kỹ năng an toàn giao thông"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0040",
@@ -677,7 +716,8 @@
       "Xây dựng các bể lọc và bể chứa nước cộng đồng",
       "Hướng dẫn người dân bảo trì hệ thống dẫn nước"
     ],
-    "scale": "Tây Nguyên"
+    "scale": "Tây Nguyên",
+    "donated": 0
   },
   {
     "id": "CD0041",
@@ -694,7 +734,8 @@
       "Xây dựng bể chứa nước mưa an toàn",
       "Kiểm định chất lượng nước định kỳ theo tiêu chuẩn Bộ Y tế"
     ],
-    "scale": "Tây Bắc"
+    "scale": "Tây Bắc",
+    "donated": 0
   },
   {
     "id": "CD0042",
@@ -711,7 +752,8 @@
       "Tặng 'Cặp phao' cứu sinh cho học sinh vùng ngập lụt",
       "Trao học bổng tiền mặt cho học sinh mất người thân do bão"
     ],
-    "scale": "Quảng Bình, Quảng Trị"
+    "scale": "Quảng Bình, Quảng Trị",
+    "donated": 0
   },
   {
     "id": "CD0043",
@@ -728,7 +770,8 @@
       "Tổ chức hành trình xuyên Việt tặng sách cho thanh niên",
       "Tổ chức các buổi diễn thuyết truyền cảm hứng sáng tạo"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0044",
@@ -745,7 +788,8 @@
       "Tặng nhu yếu phẩm và đồ dùng gia đình cơ bản",
       "Hỗ trợ chi phí mai táng và ổn định tâm lý hậu sang chấn"
     ],
-    "scale": "Hà Nội và TP. Hồ Chí Minh"
+    "scale": "Hà Nội và TP. Hồ Chí Minh",
+    "donated": 0
   },
   {
     "id": "CD0045",
@@ -762,7 +806,8 @@
       "Tài trợ vật tư y tế và thuốc đặc trị",
       "Hỗ trợ chi phí đi lại và ăn ở cho bệnh nhân tại bệnh viện"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0046",
@@ -779,7 +824,8 @@
       "Vận động nhân dân hỗ trợ ngày công xây dựng",
       "Tặng đồ gia dụng thiết yếu khi bàn giao nhà"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   },
   {
     "id": "CD0047",
@@ -796,7 +842,8 @@
       "Trao tặng máy tính bảng cho học sinh nghèo",
       "Hướng dẫn sử dụng internet an toàn cho trẻ em"
     ],
-    "scale": "Các tỉnh miền núi"
+    "scale": "Các tỉnh miền núi",
+    "donated": 0
   },
   {
     "id": "CD0048",
@@ -813,7 +860,8 @@
       "Cài đặt phần mềm quản lý thư viện số",
       "Đào tạo kỹ năng tra cứu trực tuyến cho học sinh"
     ],
-    "scale": "Các tỉnh biên giới"
+    "scale": "Các tỉnh biên giới",
+    "donated": 0
   },
   {
     "id": "CD0049",
@@ -830,7 +878,8 @@
       "Đo chỉ số phát triển chiều cao, cân nặng định kỳ",
       "Giáo dục dinh dưỡng cho cộng đồng học đường"
     ],
-    "scale": "Nông thôn và miền núi"
+    "scale": "Nông thôn và miền núi",
+    "donated": 0
   },
   {
     "id": "CD0050",
@@ -847,6 +896,7 @@
       "Trao tặng quần áo mới và lì xì đầu xuân",
       "Tổ chức các trò chơi dân gian và biểu diễn nghệ thuật"
     ],
-    "scale": "Toàn quốc"
+    "scale": "Toàn quốc",
+    "donated": 0
   }
 ]
