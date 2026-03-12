@@ -28,7 +28,7 @@
   <property name="styleSheet">
    <string notr="true">QMainWindow, QWidget {
     background: #FCF1F6;
-    font-family: "Segoe UI";
+    font-family: &quot;Segoe UI&quot;;
     color: #2F2A2E;
     border: none;
 }
@@ -40,21 +40,21 @@ QWidget#centralwidget {
 QLabel#logoIcon {
     background: transparent;
     color: #94406F;
-    font-size: 16pt;
+    font-size: 26pt;
     font-weight: 700;
 }
 
 QLabel#logoText {
     background: transparent;
     color: #94406F;
-    font-size: 17pt;
+    font-size: 18pt;
     font-weight: 800;
 }
 
 QLabel#logoSubText {
     background: transparent;
     color: #A58A98;
-    font-size: 7pt;
+    font-size: 8pt;
     font-weight: 600;
 }
 
@@ -118,19 +118,19 @@ QLabel#dot1, QLabel#dot2, QLabel#dot3 {
    <widget class="QWidget" name="logoGroup">
     <property name="geometry">
      <rect>
-      <x>28</x>
-      <y>10</y>
-      <width>165</width>
-      <height>40</height>
+      <x>24</x>
+      <y>8</y>
+      <width>210</width>
+      <height>58</height>
      </rect>
     </property>
     <widget class="QLabel" name="logoIcon">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>1</y>
-       <width>24</width>
-       <height>22</height>
+       <y>2</y>
+       <width>54</width>
+       <height>50</height>
       </rect>
      </property>
      <property name="text">
@@ -143,10 +143,10 @@ QLabel#dot1, QLabel#dot2, QLabel#dot3 {
     <widget class="QLabel" name="logoText">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>0</y>
-       <width>95</width>
-       <height>22</height>
+       <x>52</x>
+       <y>5</y>
+       <width>125</width>
+       <height>28</height>
       </rect>
      </property>
      <property name="text">
@@ -156,10 +156,10 @@ QLabel#dot1, QLabel#dot2, QLabel#dot3 {
     <widget class="QLabel" name="logoSubText">
      <property name="geometry">
       <rect>
-       <x>23</x>
-       <y>16</y>
-       <width>50</width>
-       <height>12</height>
+       <x>55</x>
+       <y>30</y>
+       <width>72</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="text">
@@ -167,6 +167,7 @@ QLabel#dot1, QLabel#dot2, QLabel#dot3 {
      </property>
     </widget>
    </widget>
+
    <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
@@ -183,6 +184,7 @@ QLabel#dot1, QLabel#dot2, QLabel#dot3 {
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
    </widget>
+
    <widget class="QLabel" name="titleLabel">
     <property name="geometry">
      <rect>
@@ -363,4 +365,3 @@ QLabel#dot1, QLabel#dot2, QLabel#dot3 {
  <resources/>
  <connections/>
 </ui>
-
