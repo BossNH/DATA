@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\thong_bao.ui'
+# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\done\thong_bao.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -25,6 +25,13 @@ class Ui_MainWindow(object):
 "    background: #FDF2F7;\n"
 "}\n"
 "\n"
+"QLabel#logoIcon {\n"
+"    background: transparent;\n"
+"    color: #963F75;\n"
+"    font-size: 26pt;\n"
+"    font-weight: 700;\n"
+"}\n"
+"\n"
 "QLabel#logoText {\n"
 "    color: #963F75;\n"
 "    font-size: 18pt;\n"
@@ -34,7 +41,7 @@ class Ui_MainWindow(object):
 "\n"
 "QLabel#logoSubText {\n"
 "    color: #9A7D8F;\n"
-"    font-size: 7pt;\n"
+"    font-size: 8pt;\n"
 "    font-weight: 600;\n"
 "    background: transparent;\n"
 "}\n"
@@ -85,27 +92,21 @@ class Ui_MainWindow(object):
 "    color: #F3B3C7;\n"
 "    font-size: 12pt;\n"
 "    font-weight: 700;\n"
-"}\n"
-"\n"
-"QLabel#logoIcon {\n"
-"    background: transparent;\n"
-"    color: #963F75;\n"
-"    font-size: 18pt;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.logoGroup = QtWidgets.QWidget(parent=self.centralwidget)
-        self.logoGroup.setGeometry(QtCore.QRect(36, 18, 170, 44))
+        self.logoGroup.setGeometry(QtCore.QRect(24, 8, 210, 58))
         self.logoGroup.setObjectName("logoGroup")
         self.logoIcon = QtWidgets.QLabel(parent=self.logoGroup)
-        self.logoIcon.setGeometry(QtCore.QRect(0, 1, 30, 30))
+        self.logoIcon.setGeometry(QtCore.QRect(0, 2, 54, 50))
         self.logoIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.logoIcon.setObjectName("logoIcon")
         self.logoText = QtWidgets.QLabel(parent=self.logoGroup)
-        self.logoText.setGeometry(QtCore.QRect(26, 0, 120, 28))
+        self.logoText.setGeometry(QtCore.QRect(52, 5, 125, 28))
         self.logoText.setObjectName("logoText")
         self.logoSubText = QtWidgets.QLabel(parent=self.logoGroup)
-        self.logoSubText.setGeometry(QtCore.QRect(29, 22, 70, 14))
+        self.logoSubText.setGeometry(QtCore.QRect(55, 30, 72, 16))
         self.logoSubText.setObjectName("logoSubText")
         self.backButton = QtWidgets.QPushButton(parent=self.centralwidget)
         self.backButton.setGeometry(QtCore.QRect(44, 80, 100, 24))
@@ -113,36 +114,31 @@ class Ui_MainWindow(object):
         self.backButton.setObjectName("backButton")
         self.pageTitle = QtWidgets.QLabel(parent=self.centralwidget)
         self.pageTitle.setGeometry(QtCore.QRect(0, 102, 1200, 44))
-        self.pageTitle.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.pageTitle.setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.pageTitle.setObjectName("pageTitle")
         self.noticeFrame = QtWidgets.QFrame(parent=self.centralwidget)
         self.noticeFrame.setGeometry(QtCore.QRect(87, 152, 995, 470))
-        self.noticeFrame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.noticeFrame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.noticeFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.noticeFrame.setObjectName("noticeFrame")
         self.emptyLabel = QtWidgets.QLabel(parent=self.noticeFrame)
         self.emptyLabel.setGeometry(QtCore.QRect(0, 22, 995, 28))
-        self.emptyLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.emptyLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.emptyLabel.setObjectName("emptyLabel")
         self.cloudDecor = QtWidgets.QLabel(parent=self.centralwidget)
         self.cloudDecor.setGeometry(QtCore.QRect(930, 560, 230, 150))
-        self.cloudDecor.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignBottom)
         self.cloudDecor.setObjectName("cloudDecor")
         self.spark1 = QtWidgets.QLabel(parent=self.centralwidget)
         self.spark1.setGeometry(QtCore.QRect(975, 560, 22, 22))
-        self.spark1.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.spark1.setObjectName("spark1")
         self.spark2 = QtWidgets.QLabel(parent=self.centralwidget)
         self.spark2.setGeometry(QtCore.QRect(1048, 548, 18, 18))
-        self.spark2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.spark2.setObjectName("spark2")
         self.spark3 = QtWidgets.QLabel(parent=self.centralwidget)
         self.spark3.setGeometry(QtCore.QRect(1088, 586, 18, 18))
-        self.spark3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.spark3.setObjectName("spark3")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1200, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1200, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
