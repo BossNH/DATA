@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\bao_cao.ui'
+# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\done\bao_cao.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -29,21 +29,21 @@ class Ui_MainWindow(object):
 "QLabel#logoIcon {\n"
 "    background: transparent;\n"
 "    color: #94406F;\n"
-"    font-size: 16pt;\n"
+"    font-size: 26pt;\n"
 "    font-weight: 700;\n"
 "}\n"
 "\n"
 "QLabel#logoText {\n"
 "    background: transparent;\n"
 "    color: #94406F;\n"
-"    font-size: 17pt;\n"
+"    font-size: 18pt;\n"
 "    font-weight: 800;\n"
 "}\n"
 "\n"
 "QLabel#logoSubText {\n"
 "    background: transparent;\n"
 "    color: #A58A98;\n"
-"    font-size: 7pt;\n"
+"    font-size: 8pt;\n"
 "    font-weight: 600;\n"
 "}\n"
 "\n"
@@ -105,17 +105,17 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.logoGroup = QtWidgets.QWidget(parent=self.centralwidget)
-        self.logoGroup.setGeometry(QtCore.QRect(28, 10, 165, 40))
+        self.logoGroup.setGeometry(QtCore.QRect(24, 8, 210, 58))
         self.logoGroup.setObjectName("logoGroup")
         self.logoIcon = QtWidgets.QLabel(parent=self.logoGroup)
-        self.logoIcon.setGeometry(QtCore.QRect(0, 1, 24, 22))
+        self.logoIcon.setGeometry(QtCore.QRect(0, 2, 54, 50))
         self.logoIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.logoIcon.setObjectName("logoIcon")
         self.logoText = QtWidgets.QLabel(parent=self.logoGroup)
-        self.logoText.setGeometry(QtCore.QRect(20, 0, 95, 22))
+        self.logoText.setGeometry(QtCore.QRect(52, 5, 125, 28))
         self.logoText.setObjectName("logoText")
         self.logoSubText = QtWidgets.QLabel(parent=self.logoGroup)
-        self.logoSubText.setGeometry(QtCore.QRect(23, 16, 50, 12))
+        self.logoSubText.setGeometry(QtCore.QRect(55, 30, 72, 16))
         self.logoSubText.setObjectName("logoSubText")
         self.backButton = QtWidgets.QPushButton(parent=self.centralwidget)
         self.backButton.setGeometry(QtCore.QRect(25, 58, 80, 20))
