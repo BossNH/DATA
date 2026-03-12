@@ -28,12 +28,19 @@
   <property name="styleSheet">
    <string notr="true">QMainWindow, QWidget {
     background: #FDF2F7;
-    font-family: "Segoe UI";
+    font-family: &quot;Segoe UI&quot;;
     color: #2F2A2E;
 }
 
 QWidget#centralwidget {
     background: #FDF2F7;
+}
+
+QLabel#logoIcon {
+    background: transparent;
+    color: #963F75;
+    font-size: 26pt;
+    font-weight: 700;
 }
 
 QLabel#logoText {
@@ -45,7 +52,7 @@ QLabel#logoText {
 
 QLabel#logoSubText {
     color: #9A7D8F;
-    font-size: 7pt;
+    font-size: 8pt;
     font-weight: 600;
     background: transparent;
 }
@@ -96,46 +103,40 @@ QLabel#spark1, QLabel#spark2, QLabel#spark3 {
     color: #F3B3C7;
     font-size: 12pt;
     font-weight: 700;
-}
-
-QLabel#logoIcon {
-    background: transparent;
-    color: #963F75;
-    font-size: 18pt;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="logoGroup">
+   <widget class="QWidget" name="logoGroup" native="true">
     <property name="geometry">
      <rect>
-      <x>36</x>
-      <y>18</y>
-      <width>170</width>
-      <height>44</height>
+      <x>24</x>
+      <y>8</y>
+      <width>210</width>
+      <height>58</height>
      </rect>
     </property>
     <widget class="QLabel" name="logoIcon">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>1</y>
-       <width>30</width>
-       <height>30</height>
+       <y>2</y>
+       <width>54</width>
+       <height>50</height>
       </rect>
      </property>
      <property name="text">
       <string>🕊</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="logoText">
      <property name="geometry">
       <rect>
-       <x>26</x>
-       <y>0</y>
-       <width>120</width>
+       <x>52</x>
+       <y>5</y>
+       <width>125</width>
        <height>28</height>
       </rect>
      </property>
@@ -146,10 +147,10 @@ QLabel#logoIcon {
     <widget class="QLabel" name="logoSubText">
      <property name="geometry">
       <rect>
-       <x>29</x>
-       <y>22</y>
-       <width>70</width>
-       <height>14</height>
+       <x>55</x>
+       <y>30</y>
+       <width>72</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="text">
@@ -157,6 +158,7 @@ QLabel#logoIcon {
      </property>
     </widget>
    </widget>
+
    <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
@@ -166,13 +168,14 @@ QLabel#logoIcon {
       <height>24</height>
      </rect>
     </property>
-    <property name="text">
-     <string>← Quay lại</string>
-    </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="text">
+     <string>← Quay lại</string>
+    </property>
    </widget>
+
    <widget class="QLabel" name="pageTitle">
     <property name="geometry">
      <rect>
@@ -186,9 +189,10 @@ QLabel#logoIcon {
      <string>Thông báo</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
     </property>
    </widget>
+
    <widget class="QFrame" name="noticeFrame">
     <property name="geometry">
      <rect>
@@ -199,10 +203,7 @@ QLabel#logoIcon {
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <widget class="QLabel" name="emptyLabel">
      <property name="geometry">
@@ -217,10 +218,11 @@ QLabel#logoIcon {
       <string>Bạn không có thông báo nào</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
+      <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
      </property>
     </widget>
    </widget>
+
    <widget class="QLabel" name="cloudDecor">
     <property name="geometry">
      <rect>
@@ -233,10 +235,8 @@ QLabel#logoIcon {
     <property name="text">
      <string>☁☁☁</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignBottom</set>
-    </property>
    </widget>
+
    <widget class="QLabel" name="spark1">
     <property name="geometry">
      <rect>
@@ -248,9 +248,6 @@ QLabel#logoIcon {
     </property>
     <property name="text">
      <string>✦</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="spark2">
@@ -265,9 +262,6 @@ QLabel#logoIcon {
     <property name="text">
      <string>✦</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="spark3">
     <property name="geometry">
@@ -281,9 +275,6 @@ QLabel#logoIcon {
     <property name="text">
      <string>✦</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -292,7 +283,7 @@ QLabel#logoIcon {
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
