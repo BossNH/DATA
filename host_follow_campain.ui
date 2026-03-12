@@ -98,6 +98,397 @@ QScrollBar::sub-page:vertical {
      <property name="styleSheet">
       <string notr="true">background: #FFF6FB;</string>
      </property>
+
+     <widget class="QFrame" name="topBar">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#topBar {
+    background: #FFF3F9;
+    border: none;
+    font-family: &quot;Segoe UI&quot;;
+}
+
+QFrame#navFrame {
+    background: #F5DCE6;
+    border: none;
+    border-radius: 18px;
+}
+
+QLabel#logoImage {
+    background: transparent;
+    border: none;
+}
+
+QLabel#brandTitle {
+    color: #9C4F74;
+    font-size: 18pt;
+    font-weight: 800;
+    background: transparent;
+    border: none;
+}
+
+QLabel#brandSubtitle {
+    color: #9D8A93;
+    font-size: 8pt;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+QPushButton#btnHome,
+QPushButton#btnCreate,
+QPushButton#btnFollow,
+QPushButton#btnPublic {
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 18px;
+    color: #2C2328;
+    font-size: 11pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+QPushButton#btnHome:hover,
+QPushButton#btnCreate:hover,
+QPushButton#btnFollow:hover,
+QPushButton#btnPublic:hover {
+    background: #EEC9D8;
+}
+
+QPushButton#btnHome:pressed,
+QPushButton#btnCreate:pressed,
+QPushButton#btnFollow:pressed,
+QPushButton#btnPublic:pressed {
+    background: #E2B5C7;
+}
+
+QPushButton#btnHome {
+    background: #C98AA5;
+    color: white;
+    font-weight: 700;
+}
+
+QToolButton#btnNotify,
+QToolButton#btnSetting,
+QToolButton#btnProfile {
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    color: #2C2328;
+    font-size: 16pt;
+    padding: 6px;
+}
+
+QToolButton#btnNotify:hover,
+QToolButton#btnSetting:hover,
+QToolButton#btnProfile:hover {
+    background: #EEC9D8;
+}
+
+QLabel#notifyBadge {
+    background: #E74C3C;
+    color: white;
+    border-radius: 8px;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 0px;
+    border: none;
+}</string>
+      </property>
+
+      <layout class="QVBoxLayout" name="topBarLayout">
+       <property name="leftMargin">
+        <number>12</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="navFrame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>18</number>
+          </property>
+          <property name="leftMargin">
+           <number>18</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>18</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+
+          <item>
+           <layout class="QHBoxLayout" name="logoLayout">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="logoImage">
+              <property name="minimumSize">
+               <size>
+                <width>54</width>
+                <height>54</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>54</width>
+                <height>54</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; color:#9c4f74;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="brandLayout">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="brandTitle">
+                <property name="text">
+                 <string>Donarity</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="brandSubtitle">
+                <property name="text">
+                 <string>by group 10</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+
+          <item>
+           <layout class="QHBoxLayout" name="menuLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="btnHome">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>🏛 Trang chủ</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnCreate">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>+  Tạo chiến dịch</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnFollow">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>🎞  Theo dõi chiến dịch</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnPublic">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>👁 Công khai</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+
+          <item>
+           <widget class="QWidget" name="rightActionsWidget" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>50</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="rightActionsLayout">
+             <property name="spacing">
+              <number>8</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+
+             <item>
+              <widget class="QWidget" name="notifyWrapper" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <widget class="QToolButton" name="btnNotify">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>-7</y>
+                  <width>41</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>🔔</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="notifyBadge">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>0</y>
+                  <width>16</width>
+                  <height>16</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string> 0</string>
+                </property>
+               </widget>
+              </widget>
+             </item>
+
+             <item>
+              <widget class="QToolButton" name="btnSetting">
+               <property name="minimumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>⚙</string>
+               </property>
+              </widget>
+             </item>
+
+             <item>
+              <widget class="QToolButton" name="btnProfile">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>👤</string>
+               </property>
+              </widget>
+             </item>
+
+            </layout>
+           </widget>
+          </item>
+
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+
      <widget class="QLabel" name="titleIcon">
       <property name="geometry">
        <rect>
@@ -121,6 +512,7 @@ QScrollBar::sub-page:vertical {
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+
      <widget class="QLabel" name="mainTitle">
       <property name="geometry">
        <rect>
@@ -143,6 +535,7 @@ QScrollBar::sub-page:vertical {
        <string>Chiến dịch của tôi</string>
       </property>
      </widget>
+
      <widget class="QLineEdit" name="searchEdit">
       <property name="geometry">
        <rect>
@@ -171,6 +564,7 @@ QScrollBar::sub-page:vertical {
        <string>Search for...</string>
       </property>
      </widget>
+
      <widget class="QLabel" name="searchIcon">
       <property name="geometry">
        <rect>
@@ -195,6 +589,7 @@ QScrollBar::sub-page:vertical {
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+
      <widget class="QComboBox" name="categoryCombo">
       <property name="geometry">
        <rect>
@@ -219,6 +614,7 @@ QScrollBar::sub-page:vertical {
        </property>
       </item>
      </widget>
+
      <widget class="QPushButton" name="searchButton">
       <property name="geometry">
        <rect>
@@ -241,6 +637,7 @@ QScrollBar::sub-page:vertical {
        <string>Search</string>
       </property>
      </widget>
+
      <widget class="QFrame" name="card1">
       <property name="geometry">
        <rect>
@@ -447,6 +844,7 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
+
      <widget class="QFrame" name="card2">
       <property name="geometry">
        <rect>
@@ -653,6 +1051,7 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
+
      <widget class="QFrame" name="card3">
       <property name="geometry">
        <rect>
@@ -859,6 +1258,7 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
+
      <widget class="QFrame" name="card4">
       <property name="geometry">
        <rect>
@@ -1065,214 +1465,7 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="topBar">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1200</width>
-        <height>72</height>
-       </rect>
-      </property>
-      <widget class="QLabel" name="ThongBao">
-       <property name="geometry">
-        <rect>
-         <x>1040</x>
-         <y>20</y>
-         <width>28</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:#E53958;font-size:18px;font-weight:700;</string>
-       </property>
-       <property name="text">
-        <string>🔔</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="CaiDat">
-       <property name="geometry">
-        <rect>
-         <x>1084</x>
-         <y>20</y>
-         <width>28</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:#1E1E1E;font-size:18px;font-weight:700;</string>
-       </property>
-       <property name="text">
-        <string>⚙</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TaiKhoan">
-       <property name="geometry">
-        <rect>
-         <x>1126</x>
-         <y>15</y>
-         <width>34</width>
-         <height>34</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:#1E1E1E;font-size:24px;font-weight:700;</string>
-       </property>
-       <property name="text">
-        <string>👤</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logo_icon">
-       <property name="geometry">
-        <rect>
-         <x>33</x>
-         <y>18</y>
-         <width>42</width>
-         <height>34</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    background: transparent;
-    color: #7D2B6E;
-    border: none;
-}</string>
-       </property>
-       <property name="text">
-        <string>🕊</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logo_title">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>10</y>
-         <width>170</width>
-         <height>42</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-         <pointsize>20</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color: #7D2B6E;
-    background: transparent;
-    border: none;
-}</string>
-       </property>
-       <property name="text">
-        <string>Donarity</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="NutTrangChu">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>20</y>
-         <width>131</width>
-         <height>32</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 164, 196);</string>
-       </property>
-       <property name="text">
-        <string>🏠  Trang chủ</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="NutTaoChienDich">
-       <property name="geometry">
-        <rect>
-         <x>390</x>
-         <y>20</y>
-         <width>145</width>
-         <height>32</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 164, 196);</string>
-       </property>
-       <property name="text">
-        <string>➕  Tạo chiến dịch</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="NutTheoDoiChienDich">
-       <property name="geometry">
-        <rect>
-         <x>550</x>
-         <y>20</y>
-         <width>171</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 164, 196);</string>
-       </property>
-       <property name="text">
-        <string>🗂  Theo dõi chiến dịch</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="NutCongKhai">
-       <property name="geometry">
-        <rect>
-         <x>730</x>
-         <y>20</y>
-         <width>131</width>
-         <height>32</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 164, 196);</string>
-       </property>
-       <property name="text">
-        <string>👁  Công khai</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logoSub">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>40</y>
-         <width>80</width>
-         <height>14</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>by group 10</string>
-       </property>
-      </widget>
-     </widget>
+
     </widget>
    </widget>
   </widget>
