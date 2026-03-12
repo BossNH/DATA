@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\chatbot.ui'
+# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\done\chatbot.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -16,61 +16,103 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(1200, 760))
         MainWindow.setMaximumSize(QtCore.QSize(1200, 760))
         MainWindow.setStyleSheet("QMainWindow, QWidget {\n"
-"    background: #F6EDF1;\n"
+"    background: #FFF3F9;\n"
 "    font-family: \"Segoe UI\";\n"
 "    color: #242424;\n"
 "}\n"
 "\n"
 "QWidget#centralwidget {\n"
-"    background: #F6EDF1;\n"
+"    background: #FFF3F9;\n"
 "}\n"
 "\n"
 "QFrame#topBar {\n"
-"    background: #F1D7DF;\n"
+"    background: transparent;\n"
 "    border: none;\n"
 "}\n"
 "\n"
-"QLabel#logoText {\n"
-"    color: #9A4D86;\n"
-"    font-size: 22px;\n"
-"    font-weight: 700;\n"
-"    background: transparent;\n"
-"}\n"
-"\n"
-"QLabel#logoSubText {\n"
-"    color: #8D6A7D;\n"
-"    font-size: 10px;\n"
-"    background: transparent;\n"
-"}\n"
-"\n"
-"QLabel#navHome,\n"
-"QLabel#navStats,\n"
-"QLabel#navBell,\n"
-"QLabel#navSetting,\n"
-"QLabel#navAvatar {\n"
-"    background: transparent;\n"
-"    color: #202020;\n"
-"}\n"
-"\n"
-"QFrame#chatbotTab {\n"
-"    background: #DCA2C4;\n"
+"QFrame#navFrame {\n"
+"    background: #F5DCE6;\n"
 "    border: none;\n"
-"    border-radius: 23px;\n"
+"    border-radius: 18px;\n"
 "}\n"
 "\n"
-"QLabel#navChatbot {\n"
+"QLabel#logoImage,\n"
+"QLabel#headerIcon_2,\n"
+"QLabel#headerIcon,\n"
+"QLabel#botIcon {\n"
 "    background: transparent;\n"
-"    color: #1F1F1F;\n"
-"    font-size: 18px;\n"
-"    font-weight: 700;\n"
+"    border: none;\n"
 "}\n"
 "\n"
-"QLabel#notifBadge {\n"
-"    background: #E63333;\n"
+"QLabel#brandTitle {\n"
+"    color: #9C4F74;\n"
+"    font-size: 18pt;\n"
+"    font-weight: 800;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#brandSubtitle {\n"
+"    color: #9D8A93;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome,\n"
+"QPushButton#btnStats,\n"
+"QPushButton#btnChatbot {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    padding: 10px 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 11pt;\n"
+"    font-weight: 600;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:hover,\n"
+"QPushButton#btnStats:hover,\n"
+"QPushButton#btnChatbot:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:pressed,\n"
+"QPushButton#btnStats:pressed,\n"
+"QPushButton#btnChatbot:pressed {\n"
+"    background: #E2B5C7;\n"
+"}\n"
+"\n"
+"QPushButton#btnChatbot {\n"
+"    background: #C98AA5;\n"
 "    color: white;\n"
-"    border-radius: 9px;\n"
-"    font-size: 10px;\n"
 "    font-weight: 700;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify,\n"
+"QToolButton#btnSetting,\n"
+"QToolButton#btnProfile {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 16pt;\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify:hover,\n"
+"QToolButton#btnSetting:hover,\n"
+"QToolButton#btnProfile:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QLabel#notifyBadge {\n"
+"    background: #E74C3C;\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 700;\n"
+"    padding: 0px;\n"
 "}\n"
 "\n"
 "QFrame#chatHeader {\n"
@@ -146,74 +188,106 @@ class Ui_MainWindow(object):
 "    color: #F0BFD0;\n"
 "    font-size: 66px;\n"
 "    font-weight: 700;\n"
-"}\n"
-"\n"
-"QLabel#logoIcon,\n"
-"QLabel#headerIcon,\n"
-"QLabel#botIcon {\n"
-"    background: transparent;\n"
-"    border: none;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.topBar = QtWidgets.QFrame(parent=self.centralwidget)
-        self.topBar.setGeometry(QtCore.QRect(0, 0, 1200, 58))
+        self.topBar.setGeometry(QtCore.QRect(0, 0, 1200, 90))
         self.topBar.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.topBar.setObjectName("topBar")
-        self.logoText = QtWidgets.QLabel(parent=self.topBar)
-        self.logoText.setGeometry(QtCore.QRect(76, 8, 122, 24))
-        self.logoText.setObjectName("logoText")
-        self.logoSubText = QtWidgets.QLabel(parent=self.topBar)
-        self.logoSubText.setGeometry(QtCore.QRect(78, 30, 74, 14))
-        self.logoSubText.setObjectName("logoSubText")
-        self.navHome = QtWidgets.QLabel(parent=self.topBar)
-        self.navHome.setGeometry(QtCore.QRect(270, 16, 118, 24))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        self.navHome.setFont(font)
-        self.navHome.setObjectName("navHome")
-        self.navStats = QtWidgets.QLabel(parent=self.topBar)
-        self.navStats.setGeometry(QtCore.QRect(410, 16, 120, 24))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        self.navStats.setFont(font)
-        self.navStats.setObjectName("navStats")
-        self.chatbotTab = QtWidgets.QFrame(parent=self.topBar)
-        self.chatbotTab.setGeometry(QtCore.QRect(525, 8, 121, 34))
-        self.chatbotTab.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
-        self.chatbotTab.setObjectName("chatbotTab")
-        self.navChatbot = QtWidgets.QLabel(parent=self.chatbotTab)
-        self.navChatbot.setGeometry(QtCore.QRect(10, 0, 111, 26))
-        self.navChatbot.setObjectName("navChatbot")
-        self.navBell = QtWidgets.QLabel(parent=self.topBar)
-        self.navBell.setGeometry(QtCore.QRect(1066, 14, 24, 24))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(18)
-        self.navBell.setFont(font)
-        self.navBell.setObjectName("navBell")
-        self.notifBadge = QtWidgets.QLabel(parent=self.topBar)
-        self.notifBadge.setGeometry(QtCore.QRect(1080, 10, 18, 18))
-        self.notifBadge.setObjectName("notifBadge")
-        self.navSetting = QtWidgets.QLabel(parent=self.topBar)
-        self.navSetting.setGeometry(QtCore.QRect(1109, 14, 31, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(17)
-        self.navSetting.setFont(font)
-        self.navSetting.setObjectName("navSetting")
-        self.navAvatar = QtWidgets.QLabel(parent=self.topBar)
-        self.navAvatar.setGeometry(QtCore.QRect(1140, 10, 30, 30))
-        self.navAvatar.setStyleSheet("font-size: 24px;")
-        self.navAvatar.setObjectName("navAvatar")
-        self.headerIcon_2 = QtWidgets.QLabel(parent=self.topBar)
-        self.headerIcon_2.setGeometry(QtCore.QRect(20, 0, 48, 48))
-        self.headerIcon_2.setStyleSheet("font-size: 30px;")
-        self.headerIcon_2.setObjectName("headerIcon_2")
+        self.topBarOuterLayout = QtWidgets.QVBoxLayout(self.topBar)
+        self.topBarOuterLayout.setContentsMargins(12, 10, 12, 10)
+        self.topBarOuterLayout.setObjectName("topBarOuterLayout")
+        self.navFrame = QtWidgets.QFrame(parent=self.topBar)
+        self.navFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
+        self.navFrame.setObjectName("navFrame")
+        self.navMainLayout = QtWidgets.QHBoxLayout(self.navFrame)
+        self.navMainLayout.setContentsMargins(18, 10, 18, 10)
+        self.navMainLayout.setSpacing(18)
+        self.navMainLayout.setObjectName("navMainLayout")
+        self.logoLayout = QtWidgets.QHBoxLayout()
+        self.logoLayout.setSpacing(8)
+        self.logoLayout.setObjectName("logoLayout")
+        self.logoImage = QtWidgets.QLabel(parent=self.navFrame)
+        self.logoImage.setMinimumSize(QtCore.QSize(54, 54))
+        self.logoImage.setMaximumSize(QtCore.QSize(54, 54))
+        self.logoImage.setObjectName("logoImage")
+        self.logoLayout.addWidget(self.logoImage)
+        self.brandLayout = QtWidgets.QVBoxLayout()
+        self.brandLayout.setSpacing(0)
+        self.brandLayout.setObjectName("brandLayout")
+        self.brandTitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandTitle.setObjectName("brandTitle")
+        self.brandLayout.addWidget(self.brandTitle)
+        self.brandSubtitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandSubtitle.setObjectName("brandSubtitle")
+        self.brandLayout.addWidget(self.brandSubtitle)
+        self.logoLayout.addLayout(self.brandLayout)
+        self.navMainLayout.addLayout(self.logoLayout)
+        self.menuLayout = QtWidgets.QHBoxLayout()
+        self.menuLayout.setSpacing(10)
+        self.menuLayout.setObjectName("menuLayout")
+        self.btnHome = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnHome.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnHome.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnHome.setObjectName("btnHome")
+        self.menuLayout.addWidget(self.btnHome)
+        self.btnStats = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnStats.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnStats.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnStats.setObjectName("btnStats")
+        self.menuLayout.addWidget(self.btnStats)
+        self.btnChatbot = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnChatbot.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnChatbot.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnChatbot.setObjectName("btnChatbot")
+        self.menuLayout.addWidget(self.btnChatbot)
+        self.navMainLayout.addLayout(self.menuLayout)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.navMainLayout.addItem(spacerItem)
+        self.rightActionsWidget = QtWidgets.QWidget(parent=self.navFrame)
+        self.rightActionsWidget.setMinimumSize(QtCore.QSize(150, 50))
+        self.rightActionsWidget.setStyleSheet("background-color: #F5DCE6;\n"
+"border: none;")
+        self.rightActionsWidget.setObjectName("rightActionsWidget")
+        self.rightActionsLayout = QtWidgets.QHBoxLayout(self.rightActionsWidget)
+        self.rightActionsLayout.setContentsMargins(0, 0, 0, 0)
+        self.rightActionsLayout.setSpacing(8)
+        self.rightActionsLayout.setObjectName("rightActionsLayout")
+        self.notifyWrapper = QtWidgets.QWidget(parent=self.rightActionsWidget)
+        self.notifyWrapper.setMinimumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setMaximumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setObjectName("notifyWrapper")
+        self.btnNotify = QtWidgets.QToolButton(parent=self.notifyWrapper)
+        self.btnNotify.setGeometry(QtCore.QRect(0, -7, 41, 41))
+        self.btnNotify.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnNotify.setObjectName("btnNotify")
+        self.notifyBadge = QtWidgets.QLabel(parent=self.notifyWrapper)
+        self.notifyBadge.setGeometry(QtCore.QRect(20, 0, 16, 16))
+        self.notifyBadge.setStyleSheet("background-color: #E74C3C;\n"
+"color: white;\n"
+"border-radius: 8px;\n"
+"font-weight: 700;\n"
+"border: none;")
+        self.notifyBadge.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.notifyBadge.setObjectName("notifyBadge")
+        self.rightActionsLayout.addWidget(self.notifyWrapper)
+        self.btnSetting = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnSetting.setMinimumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setMaximumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnSetting.setObjectName("btnSetting")
+        self.rightActionsLayout.addWidget(self.btnSetting)
+        self.btnProfile = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnProfile.setMinimumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setMaximumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnProfile.setObjectName("btnProfile")
+        self.rightActionsLayout.addWidget(self.btnProfile)
+        self.navMainLayout.addWidget(self.rightActionsWidget)
+        self.topBarOuterLayout.addWidget(self.navFrame)
         self.chatHeader = QtWidgets.QFrame(parent=self.centralwidget)
-        self.chatHeader.setGeometry(QtCore.QRect(60, 122, 1080, 72))
+        self.chatHeader.setGeometry(QtCore.QRect(60, 118, 1080, 72))
         self.chatHeader.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.chatHeader.setObjectName("chatHeader")
         self.headerIcon = QtWidgets.QLabel(parent=self.chatHeader)
@@ -227,7 +301,7 @@ class Ui_MainWindow(object):
         self.headerSubtitle.setGeometry(QtCore.QRect(82, 38, 260, 24))
         self.headerSubtitle.setObjectName("headerSubtitle")
         self.chatPanel = QtWidgets.QFrame(parent=self.centralwidget)
-        self.chatPanel.setGeometry(QtCore.QRect(60, 194, 1080, 348))
+        self.chatPanel.setGeometry(QtCore.QRect(60, 190, 1080, 348))
         self.chatPanel.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.chatPanel.setObjectName("chatPanel")
         self.botIcon = QtWidgets.QLabel(parent=self.chatPanel)
@@ -267,16 +341,16 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Donarity - Chatbot"))
-        self.logoText.setText(_translate("MainWindow", "Donarity"))
-        self.logoSubText.setText(_translate("MainWindow", "by group 10"))
-        self.navHome.setText(_translate("MainWindow", "🏠 Trang chủ"))
-        self.navStats.setText(_translate("MainWindow", "⌛ Thống kê"))
-        self.navChatbot.setText(_translate("MainWindow", "🗨 Chatbot"))
-        self.navBell.setText(_translate("MainWindow", "🔔"))
-        self.notifBadge.setText(_translate("MainWindow", "0"))
-        self.navSetting.setText(_translate("MainWindow", "⚙"))
-        self.navAvatar.setText(_translate("MainWindow", "👤"))
-        self.headerIcon_2.setText(_translate("MainWindow", "🕊"))
+        self.logoImage.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; color:#9c4f74;\">🕊</span></p></body></html>"))
+        self.brandTitle.setText(_translate("MainWindow", "Donarity"))
+        self.brandSubtitle.setText(_translate("MainWindow", "by group 10"))
+        self.btnHome.setText(_translate("MainWindow", "🏛 Trang chủ"))
+        self.btnStats.setText(_translate("MainWindow", "🎞 Thống kê"))
+        self.btnChatbot.setText(_translate("MainWindow", "📠 Chatbot"))
+        self.btnNotify.setText(_translate("MainWindow", "🔔"))
+        self.notifyBadge.setText(_translate("MainWindow", "0"))
+        self.btnSetting.setText(_translate("MainWindow", "⚙"))
+        self.btnProfile.setText(_translate("MainWindow", "👤"))
         self.headerIcon.setText(_translate("MainWindow", "🕊"))
         self.headerTitle.setText(_translate("MainWindow", "Chatbot tư vấn"))
         self.headerSubtitle.setText(_translate("MainWindow", "Hỏi chúng tôi về chiến dịch"))
