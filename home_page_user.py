@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\home_page_user.ui'
+# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\done\home_page_user.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -134,6 +134,16 @@ class Ui_MainWindow(object):
 "    color: #2F2A2E;\n"
 "    font-size: 10pt;\n"
 "    font-weight: 500;\n"
+"}\n"
+"\n"
+"/* scroll */\n"
+"QScrollArea {\n"
+"    border: none;\n"
+"    background: #F7EEF2;\n"
+"}\n"
+"\n"
+"QScrollArea > QWidget > QWidget {\n"
+"    background: #F7EEF2;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -149,12 +159,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_top.setContentsMargins(18, 6, 18, 6)
         self.horizontalLayout_top.setSpacing(8)
         self.horizontalLayout_top.setObjectName("horizontalLayout_top")
-        self.logoIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.logoIcon.setGeometry(QtCore.QRect(16, 6, 34, 34))
-        self.logoIcon.setStyleSheet("background: transparent; color: #8A3E72; font: 700 18pt \"Segoe UI Symbol\";")
-        self.logoIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.logoIcon.setObjectName("logoIcon")
-        self.horizontalLayout_top.addWidget(self.logoIcon)
+        self.logoImage = QtWidgets.QLabel(parent=self.topBar)
+        self.logoImage.setMinimumSize(QtCore.QSize(54, 54))
+        self.logoImage.setMaximumSize(QtCore.QSize(54, 54))
+        self.logoImage.setStyleSheet("background: transparent;\n"
+"border: none;\n"
+"")
+        self.logoImage.setScaledContents(False)
+        self.logoImage.setObjectName("logoImage")
+        self.horizontalLayout_top.addWidget(self.logoImage)
         self.verticalLayout_brand = QtWidgets.QVBoxLayout()
         self.verticalLayout_brand.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_brand.setSpacing(0)
@@ -170,6 +183,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_top.addItem(spacerItem)
         self.navHome = QtWidgets.QPushButton(parent=self.topBar)
         self.navHome.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.navHome.setStyleSheet("QFrame {\n"
+"    background-color: #D9A9BB;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"}\n"
+"QLabel {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}")
         self.navHome.setObjectName("navHome")
         self.horizontalLayout_top.addWidget(self.navHome)
         self.navStats = QtWidgets.QPushButton(parent=self.topBar)
@@ -205,37 +227,56 @@ class Ui_MainWindow(object):
         self.btnUser.setObjectName("btnUser")
         self.horizontalLayout_top.addWidget(self.btnUser)
         self.verticalLayout_main.addWidget(self.topBar)
-        self.heroFrame = QtWidgets.QFrame(parent=self.centralwidget)
+        self.scrollArea = QtWidgets.QScrollArea(parent=self.centralwidget)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
+        self.scrollArea.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1183, 900))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.verticalLayout_scrollContent = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_scrollContent.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_scrollContent.setSpacing(0)
+        self.verticalLayout_scrollContent.setObjectName("verticalLayout_scrollContent")
+        self.heroFrame = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.heroFrame.setMinimumSize(QtCore.QSize(0, 420))
         self.heroFrame.setMaximumSize(QtCore.QSize(16777215, 420))
         self.heroFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
-        self.heroFrame.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.heroFrame.setObjectName("heroFrame")
         self.heroImage = QtWidgets.QLabel(parent=self.heroFrame)
         self.heroImage.setGeometry(QtCore.QRect(0, 0, 1200, 420))
         self.heroImage.setText("")
-        self.heroImage.setPixmap(QtGui.QPixmap("C:\\Users\\ADMIN\\PycharmProjects\\DoAnKTLT\\anh.png"))
+        self.heroImage.setPixmap(QtGui.QPixmap("C:\\Users\\ADMIN\\PycharmProjects\\DoAnKTLT\\done\\anh.png"))
         self.heroImage.setScaledContents(True)
         self.heroImage.setObjectName("heroImage")
-        self.heroTitle = QtWidgets.QLabel(parent=self.heroFrame)
-        self.heroTitle.setGeometry(QtCore.QRect(62, 78, 470, 86))
-        self.heroTitle.setObjectName("heroTitle")
         self.overlayFrame = QtWidgets.QFrame(parent=self.heroFrame)
         self.overlayFrame.setGeometry(QtCore.QRect(0, 0, 1200, 420))
-        self.overlayFrame.setStyleSheet("background-color: rgba(255, 245, 248, 120); border: none;")
+        self.overlayFrame.setStyleSheet("background-color: rgba(255, 245, 248, 120); border: none;\n"
+"QPushButton {\n"
+"    background-color: #D9A9BB;\n"
+"    border: none;\n"
+"    border-radius: 20px;\n"
+"    padding: 8px 16px;\n"
+"}")
         self.overlayFrame.setObjectName("overlayFrame")
-        self.heroSubtitle = QtWidgets.QLabel(parent=self.heroFrame)
-        self.heroSubtitle.setGeometry(QtCore.QRect(68, 165, 560, 42))
+        self.heroSubtitle = QtWidgets.QLabel(parent=self.overlayFrame)
+        self.heroSubtitle.setGeometry(QtCore.QRect(70, 170, 471, 42))
+        self.heroSubtitle.setStyleSheet("background: transparent;\n"
+"border: none;")
         self.heroSubtitle.setObjectName("heroSubtitle")
-        self.verticalLayout_main.addWidget(self.heroFrame)
-        self.categoryArea = QtWidgets.QWidget(parent=self.centralwidget)
-        self.categoryArea.setMinimumSize(QtCore.QSize(0, 250))
-        self.categoryArea.setObjectName("categoryArea")
-        self.horizontalLayout_categories = QtWidgets.QHBoxLayout(self.categoryArea)
+        self.heroTitle = QtWidgets.QLabel(parent=self.overlayFrame)
+        self.heroTitle.setGeometry(QtCore.QRect(70, 80, 470, 86))
+        self.heroTitle.setStyleSheet("background: transparent;\n"
+"border: none;")
+        self.heroTitle.setObjectName("heroTitle")
+        self.verticalLayout_scrollContent.addWidget(self.heroFrame)
+        self.horizontalLayout_categories = QtWidgets.QHBoxLayout()
         self.horizontalLayout_categories.setContentsMargins(34, 22, 34, 12)
         self.horizontalLayout_categories.setSpacing(6)
         self.horizontalLayout_categories.setObjectName("horizontalLayout_categories")
-        self.cat1 = QtWidgets.QFrame(parent=self.categoryArea)
+        self.cat1 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.cat1.setObjectName("cat1")
         self.verticalLayout_cat1 = QtWidgets.QVBoxLayout(self.cat1)
         self.verticalLayout_cat1.setSpacing(8)
@@ -251,7 +292,7 @@ class Ui_MainWindow(object):
         spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_cat1.addItem(spacerItem3)
         self.horizontalLayout_categories.addWidget(self.cat1)
-        self.cat2 = QtWidgets.QFrame(parent=self.categoryArea)
+        self.cat2 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.cat2.setObjectName("cat2")
         self.verticalLayout_cat2 = QtWidgets.QVBoxLayout(self.cat2)
         self.verticalLayout_cat2.setSpacing(8)
@@ -267,7 +308,7 @@ class Ui_MainWindow(object):
         spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_cat2.addItem(spacerItem5)
         self.horizontalLayout_categories.addWidget(self.cat2)
-        self.cat3 = QtWidgets.QFrame(parent=self.categoryArea)
+        self.cat3 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.cat3.setObjectName("cat3")
         self.verticalLayout_cat3 = QtWidgets.QVBoxLayout(self.cat3)
         self.verticalLayout_cat3.setSpacing(8)
@@ -283,7 +324,7 @@ class Ui_MainWindow(object):
         spacerItem7 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_cat3.addItem(spacerItem7)
         self.horizontalLayout_categories.addWidget(self.cat3)
-        self.cat4 = QtWidgets.QFrame(parent=self.categoryArea)
+        self.cat4 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.cat4.setObjectName("cat4")
         self.verticalLayout_cat4 = QtWidgets.QVBoxLayout(self.cat4)
         self.verticalLayout_cat4.setSpacing(8)
@@ -299,7 +340,7 @@ class Ui_MainWindow(object):
         spacerItem9 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_cat4.addItem(spacerItem9)
         self.horizontalLayout_categories.addWidget(self.cat4)
-        self.cat5 = QtWidgets.QFrame(parent=self.categoryArea)
+        self.cat5 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.cat5.setObjectName("cat5")
         self.verticalLayout_cat5 = QtWidgets.QVBoxLayout(self.cat5)
         self.verticalLayout_cat5.setSpacing(8)
@@ -315,7 +356,7 @@ class Ui_MainWindow(object):
         spacerItem11 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_cat5.addItem(spacerItem11)
         self.horizontalLayout_categories.addWidget(self.cat5)
-        self.cat6 = QtWidgets.QFrame(parent=self.categoryArea)
+        self.cat6 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
         self.cat6.setObjectName("cat6")
         self.verticalLayout_cat6 = QtWidgets.QVBoxLayout(self.cat6)
         self.verticalLayout_cat6.setSpacing(8)
@@ -331,9 +372,11 @@ class Ui_MainWindow(object):
         spacerItem13 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_cat6.addItem(spacerItem13)
         self.horizontalLayout_categories.addWidget(self.cat6)
-        self.verticalLayout_main.addWidget(self.categoryArea)
-        spacerItem14 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.verticalLayout_main.addItem(spacerItem14)
+        self.verticalLayout_scrollContent.addLayout(self.horizontalLayout_categories)
+        spacerItem14 = QtWidgets.QSpacerItem(20, 300, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_scrollContent.addItem(spacerItem14)
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.verticalLayout_main.addWidget(self.scrollArea)
         self.bottomBar = QtWidgets.QFrame(parent=self.centralwidget)
         self.bottomBar.setMinimumSize(QtCore.QSize(0, 48))
         self.bottomBar.setMaximumSize(QtCore.QSize(16777215, 48))
@@ -349,7 +392,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_main.addWidget(self.bottomBar)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1200, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1200, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -362,27 +405,27 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Donarity - Chatbot"))
-        self.logoIcon.setText(_translate("MainWindow", "🕊"))
+        self.logoImage.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; color:#9c4f74;\">🕊</span></p></body></html>"))
         self.brandLabel.setText(_translate("MainWindow", "Donarity"))
         self.subBrandLabel.setText(_translate("MainWindow", "by group 10"))
-        self.navHome.setText(_translate("MainWindow", "🏠 Trang chủ"))
-        self.navStats.setText(_translate("MainWindow", "⌛ Thống kê"))
-        self.navChatbot.setText(_translate("MainWindow", "🗨 Chatbot"))
+        self.navHome.setText(_translate("MainWindow", "🏛 Trang chủ"))
+        self.navStats.setText(_translate("MainWindow", "🎞 Thống kê"))
+        self.navChatbot.setText(_translate("MainWindow", "📠 Chatbot"))
         self.navPublic.setText(_translate("MainWindow", "👁 Công khai"))
         self.btnNotify.setText(_translate("MainWindow", "🔔"))
         self.btnSetting.setText(_translate("MainWindow", "⚙"))
         self.btnUser.setText(_translate("MainWindow", "👤"))
-        self.heroTitle.setText(_translate("MainWindow", "Donarity"))
         self.heroSubtitle.setText(_translate("MainWindow", "Lan tỏa giá trị - Kiến tạo hy vọng"))
-        self.icon1.setText(_translate("MainWindow", "⚕"))
+        self.heroTitle.setText(_translate("MainWindow", "Donarity"))
+        self.icon1.setText(_translate("MainWindow", "🏥"))
         self.text1.setText(_translate("MainWindow", "Y tế & Sức khỏe"))
-        self.icon2.setText(_translate("MainWindow", "▣"))
+        self.icon2.setText(_translate("MainWindow", "📚"))
         self.text2.setText(_translate("MainWindow", "Giáo dục và khởi nghiệp"))
-        self.icon3.setText(_translate("MainWindow", "☺"))
+        self.icon3.setText(_translate("MainWindow", "🫂"))
         self.text3.setText(_translate("MainWindow", "Trẻ em & Người yếu thế"))
-        self.icon4.setText(_translate("MainWindow", "🧍"))
+        self.icon4.setText(_translate("MainWindow", "🏠"))
         self.text4.setText(_translate("MainWindow", "An sinh xã hội"))
-        self.icon5.setText(_translate("MainWindow", "☁"))
+        self.icon5.setText(_translate("MainWindow", "🌍"))
         self.text5.setText(_translate("MainWindow", "Môi trường & Động vật"))
         self.icon6.setText(_translate("MainWindow", "👥"))
         self.text6.setText(_translate("MainWindow", "Văn hóa & Cộng đồng"))
