@@ -28,7 +28,7 @@
   <property name="styleSheet">
    <string notr="true">QMainWindow, QWidget {
     background: #F8EFF3;
-    font-family: "Segoe UI";
+    font-family: &quot;Segoe UI&quot;;
     color: #202020;
 }
 
@@ -106,73 +106,84 @@ QLabel#reportLabel {
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="topBar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>52</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="logoImage">
      <property name="geometry">
-  <rect>
-   <x>0</x>
-   <y>0</y>
-   <width>1200</width>
-   <height>52</height>
-  </rect>
- </property>
-
-<widget class="QLabel" name="logoIcon">
- <property name="geometry">
-  <rect>
-   <x>16</x>
-   <y>6</y>
-   <width>34</width>
-   <height>34</height>
-  </rect>
- </property>
- <property name="styleSheet">
-  <string notr="true">background: transparent; color: #8A3E72; font: 700 18pt "Segoe UI Symbol";</string>
- </property>
- <property name="text">
-  <string>🕊</string>
- </property>
- <property name="alignment">
-  <set>Qt::AlignCenter</set>
- </property>
-</widget>
- <widget class="QLabel" name="brandLabel">
- <property name="geometry">
-  <rect>
-   <x>50</x>
-   <y>2</y>
-   <width>145</width>
-   <height>28</height>
-  </rect>
- </property>
- <property name="styleSheet">
-  <string notr="true">background: transparent; color: #8A3E72; font: 900 18pt "Segoe UI";</string>
- </property>
- <property name="text">
-  <string>Donarity</string>
- </property>
-</widget>
-
-<widget class="QLabel" name="subBrandLabel">
- <property name="geometry">
-  <rect>
-   <x>52</x>
-   <y>27</y>
-   <width>85</width>
-   <height>14</height>
-  </rect>
- </property>
- <property name="styleSheet">
-  <string notr="true">background: transparent; color: #8A3E72; font: 7pt "Segoe UI";</string>
- </property>
- <property name="text">
-  <string>by group 10</string>
- </property>
-</widget>
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>54</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>54</width>
+       <height>54</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>54</width>
+       <height>54</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border: none;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; color:#9c4f74;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="brandLabel">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>2</y>
+       <width>145</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent; color: #8A3E72; font: 900 18pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Donarity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="subBrandLabel">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>27</y>
+       <width>85</width>
+       <height>14</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent; color: #8A3E72; font: 7pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>by group 10</string>
+     </property>
+    </widget>
     <widget class="QPushButton" name="navHome">
      <property name="geometry">
       <rect>
-       <x>235</x>
-       <y>9</y>
-       <width>110</width>
+       <x>210</x>
+       <y>10</y>
+       <width>121</width>
        <height>34</height>
       </rect>
      </property>
@@ -180,14 +191,14 @@ QLabel#reportLabel {
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="text">
-      <string>🏠 Trang chủ</string>
+      <string>🏛  Trang chủ</string>
      </property>
     </widget>
     <widget class="QPushButton" name="navCreate">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>9</y>
+       <x>340</x>
+       <y>10</y>
        <width>135</width>
        <height>34</height>
       </rect>
@@ -196,15 +207,15 @@ QLabel#reportLabel {
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="text">
-      <string>➕ Tạo chiến dịch</string>
+      <string>+ Tạo chiến dịch</string>
      </property>
     </widget>
     <widget class="QPushButton" name="navTracking">
      <property name="geometry">
       <rect>
-       <x>510</x>
+       <x>489</x>
        <y>9</y>
-       <width>150</width>
+       <width>171</width>
        <height>34</height>
       </rect>
      </property>
@@ -212,15 +223,15 @@ QLabel#reportLabel {
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="text">
-      <string>📁 Theo dõi chiến dịch</string>
+      <string>🎞 Theo dõi chiến dịch</string>
      </property>
     </widget>
     <widget class="QPushButton" name="navPublic">
      <property name="geometry">
       <rect>
-       <x>675</x>
-       <y>9</y>
-       <width>95</width>
+       <x>640</x>
+       <y>10</y>
+       <width>141</width>
        <height>34</height>
       </rect>
      </property>
@@ -296,7 +307,6 @@ QLabel#reportLabel {
      </property>
     </widget>
    </widget>
-
    <widget class="QFrame" name="heroFrame">
     <property name="geometry">
      <rect>
@@ -307,12 +317,8 @@ QLabel#reportLabel {
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::NoFrame</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Shadow::Plain</enum>
-    </property>
-
     <widget class="QLabel" name="backgroundLabel">
      <property name="geometry">
       <rect>
@@ -332,19 +338,19 @@ QLabel#reportLabel {
       <bool>true</bool>
      </property>
     </widget>
-       <widget class="QFrame" name="overlayFrame">
- <property name="geometry">
-  <rect>
-   <x>0</x>
-   <y>0</y>
-   <width>1146</width>
-   <height>615</height>
-  </rect>
- </property>
- <property name="styleSheet">
-  <string notr="true">background-color: rgba(255, 245, 248, 120); border: none;</string>
- </property>
-</widget>
+    <widget class="QFrame" name="overlayFrame">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1146</width>
+       <height>615</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 245, 248, 120); border: none;</string>
+     </property>
+    </widget>
     <widget class="QLabel" name="titleLabel">
      <property name="geometry">
       <rect>
@@ -358,7 +364,6 @@ QLabel#reportLabel {
       <string>Donarity</string>
      </property>
     </widget>
-
     <widget class="QLabel" name="subtitleLabel">
      <property name="geometry">
       <rect>
@@ -373,7 +378,6 @@ QLabel#reportLabel {
      </property>
     </widget>
    </widget>
-
    <widget class="QFrame" name="bottomBar">
     <property name="geometry">
      <rect>
@@ -384,10 +388,7 @@ QLabel#reportLabel {
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <widget class="QLabel" name="reportLabel">
      <property name="geometry">
@@ -410,7 +411,7 @@ QLabel#reportLabel {
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>0</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
