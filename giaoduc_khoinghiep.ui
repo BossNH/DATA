@@ -6,25 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>781</width>
-    <height>1450</height>
+    <width>1200</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>781</width>
-    <height>1450</height>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>Giáo dục &amp; Khởi nghiệp</string>
+   <string>Chiến dịch của tôi</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow, QWidget {
     background: #FFF6FB;
-    font-family: &quot;Arial&quot;;
+    font-family: "Arial";
 }</string>
   </property>
+
   <widget class="QWidget" name="centralwidget">
    <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
@@ -32,14 +39,8 @@
       <x>0</x>
       <y>0</y>
       <width>1200</width>
-      <height>1450</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>1200</width>
       <height>760</height>
-     </size>
+     </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QScrollArea {
@@ -47,20 +48,25 @@
     background: #FFF6FB;
 }
 QScrollBar:vertical {
-    background: #F8E8F0;
+    background: #FBE5F0;
     width: 12px;
+    margin: 0px;
     border-radius: 6px;
 }
 QScrollBar::handle:vertical {
-    background: #D9AFC7;
-    min-height: 40px;
+    background: #E8B8D0;
+    min-height: 30px;
     border-radius: 6px;
 }
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
     height: 0px;
+    border: none;
+    background: none;
 }
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-    background: transparent;
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
 }</string>
     </property>
     <property name="frameShape">
@@ -69,292 +75,420 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     <property name="widgetResizable">
      <bool>false</bool>
     </property>
+
     <widget class="QWidget" name="scrollAreaWidgetContents">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>781</width>
-       <height>1720</height>
+       <width>1200</width>
+       <height>1800</height>
       </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1200</width>
+       <height>1800</height>
+      </size>
      </property>
      <property name="styleSheet">
       <string notr="true">background: #FFF6FB;</string>
      </property>
+
      <widget class="QFrame" name="topBar">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>3</y>
-        <width>781</width>
-        <height>40</height>
+        <y>0</y>
+        <width>1200</width>
+        <height>90</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QFrame{
-    background:#F9DDE7;
-    border:none;
-    border-radius:0px;
+       <string notr="true">QFrame#topBar {
+    background: #FFF3F9;
+    font-family: "Segoe UI";
+    border: none;
+}
+
+QFrame#navFrame {
+    background: #F5DCE6;
+    border: none;
+    border-radius: 18px;
+}
+
+QLabel#logoImage {
+    background: transparent;
+    border: none;
+}
+
+QLabel#brandTitle {
+    color: #9C4F74;
+    font-size: 18pt;
+    font-weight: 800;
+    background: transparent;
+}
+
+QLabel#brandSubtitle {
+    color: #9D8A93;
+    font-size: 8pt;
+    font-weight: 500;
+    background: transparent;
+}
+
+QPushButton#btnHome,
+QPushButton#btnCreate,
+QPushButton#btnFollow,
+QPushButton#btnPublic {
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 18px;
+    color: #2C2328;
+    font-size: 11pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+QPushButton#btnHome:hover,
+QPushButton#btnCreate:hover,
+QPushButton#btnFollow:hover,
+QPushButton#btnPublic:hover {
+    background: #EEC9D8;
+}
+
+QPushButton#btnHome:pressed,
+QPushButton#btnCreate:pressed,
+QPushButton#btnFollow:pressed,
+QPushButton#btnPublic:pressed {
+    background: #E2B5C7;
+}
+
+QPushButton#btnHome {
+    background: #C98AA5;
+    color: white;
+    font-weight: 700;
+}
+
+QToolButton#btnNotify,
+QToolButton#btnSetting,
+QToolButton#btnProfile {
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    color: #2C2328;
+    font-size: 16pt;
+    padding: 6px;
+}
+
+QToolButton#btnNotify:hover,
+QToolButton#btnSetting:hover,
+QToolButton#btnProfile:hover {
+    background: #EEC9D8;
+}
+
+QLabel#notifyBadge {
+    background: #E74C3C;
+    color: white;
+    border-radius: 8px;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 0px;
 }</string>
       </property>
-      <widget class="QLabel" name="logoIcon">
-       <property name="geometry">
-        <rect>
-         <x>18</x>
-         <y>5</y>
-         <width>28</width>
-         <height>28</height>
-        </rect>
+
+      <layout class="QVBoxLayout" name="topBarLayout">
+       <property name="leftMargin">
+        <number>12</number>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    font-size:18px;
-    background:transparent;
-    border:none;
-}</string>
+       <property name="topMargin">
+        <number>10</number>
        </property>
-       <property name="text">
-        <string>🕊</string>
+       <property name="rightMargin">
+        <number>12</number>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="bottomMargin">
+        <number>10</number>
        </property>
-      </widget>
-      <widget class="QLabel" name="logoTitle">
-       <property name="geometry">
-        <rect>
-         <x>44</x>
-         <y>4</y>
-         <width>90</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#7E3A79;
-    font-size:14px;
-    font-weight:800;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>Donarity</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logoSub">
-       <property name="geometry">
-        <rect>
-         <x>46</x>
-         <y>20</y>
-         <width>56</width>
-         <height>12</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#7A6D75;
-    font-size:7px;
-    font-weight:600;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>by group 10</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="navHome">
-       <property name="geometry">
-        <rect>
-         <x>168</x>
-         <y>9</y>
-         <width>84</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#222;
-    font-size:9px;
-    font-weight:700;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>⌂ Trang chủ</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="navStats">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>9</y>
-         <width>84</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#222;
-    font-size:9px;
-    font-weight:700;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>⌛ Thống kê</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="navChatbot">
-       <property name="geometry">
-        <rect>
-         <x>350</x>
-         <y>9</y>
-         <width>90</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#222;
-    font-size:9px;
-    font-weight:700;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>◕Chatbot</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="notifIcon">
-       <property name="geometry">
-        <rect>
-         <x>684</x>
-         <y>8</y>
-         <width>18</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    font-size:13px;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>🔔</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="notifBadge">
-       <property name="geometry">
-        <rect>
-         <x>696</x>
-         <y>7</y>
-         <width>12</width>
-         <height>12</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    background:#E53935;
-    color:white;
-    border-radius:6px;
-    font-size:7px;
-    font-weight:800;
-}</string>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="settingsIcon">
-       <property name="geometry">
-        <rect>
-         <x>714</x>
-         <y>8</y>
-         <width>16</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    font-size:13px;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>⚙</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="userIcon">
-       <property name="geometry">
-        <rect>
-         <x>738</x>
-         <y>6</y>
-         <width>22</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#2A2A2A;
-    font-size:18px;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>◉</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
+       <item>
+        <widget class="QFrame" name="navFrame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>18</number>
+          </property>
+          <property name="leftMargin">
+           <number>18</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>18</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+
+          <item>
+           <layout class="QHBoxLayout" name="logoLayout">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="logoImage">
+              <property name="minimumSize">
+               <size>
+                <width>54</width>
+                <height>54</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>54</width>
+                <height>54</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; color:#9c4f74;&quot;&gt;🕊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="brandLayout">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="brandTitle">
+                <property name="text">
+                 <string>Donarity</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="brandSubtitle">
+                <property name="text">
+                 <string>by group 10</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+
+          <item>
+           <layout class="QHBoxLayout" name="menuLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="btnHome">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>🏛 Trang chủ</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnCreate">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>🎞 Thống kê</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnFollow">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>📠 Chatbot</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnPublic">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>42</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>👁 Công khai</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+
+          <item>
+           <widget class="QWidget" name="rightActionsWidget" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>50</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="rightActionsLayout">
+             <property name="spacing">
+              <number>8</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+
+             <item>
+              <widget class="QWidget" name="notifyWrapper" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <widget class="QToolButton" name="btnNotify">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>-7</y>
+                  <width>41</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>🔔</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="notifyBadge">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>0</y>
+                  <width>16</width>
+                  <height>16</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string> 0</string>
+                </property>
+               </widget>
+              </widget>
+             </item>
+
+             <item>
+              <widget class="QToolButton" name="btnSetting">
+               <property name="minimumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>36</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>⚙</string>
+               </property>
+              </widget>
+             </item>
+
+             <item>
+              <widget class="QToolButton" name="btnProfile">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>👤</string>
+               </property>
+              </widget>
+             </item>
+
+            </layout>
+           </widget>
+          </item>
+
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="backLabel">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>53</y>
-        <width>90</width>
-        <height>18</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color:#222;
-    font-size:10px;
-    font-weight:600;
-    background:transparent;
-    border:none;
-}</string>
-      </property>
-      <property name="text">
-       <string>← Quay lại</string>
-      </property>
-     </widget>
+
      <widget class="QLabel" name="titleIcon">
       <property name="geometry">
        <rect>
-        <x>22</x>
-        <y>92</y>
-        <width>34</width>
-        <height>34</height>
+        <x>290</x>
+        <y>89</y>
+        <width>28</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -365,24 +499,25 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
 }</string>
       </property>
       <property name="text">
-       <string>📚</string>
+       <string>🎀</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+
      <widget class="QLabel" name="mainTitle">
       <property name="geometry">
        <rect>
-        <x>72</x>
-        <y>84</y>
-        <width>390</width>
-        <height>50</height>
+        <x>324</x>
+        <y>83</y>
+        <width>500</width>
+        <height>40</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">QLabel{
-    color:#8A4E82;
+    color:#7F4D7D;
     font-size:28px;
     font-weight:800;
     background:transparent;
@@ -393,20 +528,21 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string>Giáo dục &amp; Khởi nghiệp</string>
       </property>
      </widget>
+
      <widget class="QLineEdit" name="searchEdit">
       <property name="geometry">
        <rect>
-        <x>17</x>
-        <y>149</y>
-        <width>512</width>
-        <height>32</height>
+        <x>291</x>
+        <y>129</y>
+        <width>474</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">QLineEdit{
     background:white;
     border:1px solid #CFCFCF;
-    padding-left:30px;
+    padding-left:28px;
     color:#222;
     font-size:10px;
 }</string>
@@ -415,13 +551,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string>Search for...</string>
       </property>
      </widget>
+
      <widget class="QLabel" name="searchIcon">
       <property name="geometry">
        <rect>
-        <x>28</x>
-        <y>156</y>
-        <width>16</width>
-        <height>16</height>
+        <x>300</x>
+        <y>139</y>
+        <width>14</width>
+        <height>14</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -439,13 +576,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+
      <widget class="QComboBox" name="categoryCombo">
       <property name="geometry">
        <rect>
-        <x>528</x>
-        <y>149</y>
-        <width>118</width>
-        <height>32</height>
+        <x>764</x>
+        <y>129</y>
+        <width>110</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -463,13 +601,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        </property>
       </item>
      </widget>
+
      <widget class="QPushButton" name="searchButton">
       <property name="geometry">
        <rect>
-        <x>661</x>
-        <y>149</y>
-        <width>70</width>
-        <height>32</height>
+        <x>888</x>
+        <y>129</y>
+        <width>64</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -485,13 +624,15 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string>Search</string>
       </property>
      </widget>
-     <widget class="QFrame" name="card14">
+
+     <!-- CARD 1 -->
+     <widget class="QFrame" name="card1">
       <property name="geometry">
        <rect>
-        <x>39</x>
-        <y>231</y>
-        <width>318</width>
-        <height>265</height>
+        <x>315</x>
+        <y>185</y>
+        <width>295</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -501,37 +642,43 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     border-radius:20px;
 }</string>
       </property>
-      <widget class="QLabel" name="card14Image">
+      <widget class="QLabel" name="card1Image">
        <property name="geometry">
         <rect>
          <x>1</x>
          <y>1</y>
-         <width>316</width>
-         <height>136</height>
+         <width>293</width>
+         <height>126</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel{
+    background:#DADADA;
+    color:#666;
     border:none;
     border-top-left-radius:19px;
     border-top-right-radius:19px;
-    background:#E7E7E7;
+    font-size:14px;
+    font-weight:600;
 }</string>
        </property>
+       <property name="text">
+        <string/>
+       </property>
        <property name="pixmap">
-        <pixmap>campaign14.png</pixmap>
+        <pixmap>campaign14</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card14Title">
+      <widget class="QLabel" name="card1Title">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>142</y>
-         <width>292</width>
-         <height>44</height>
+         <x>7</x>
+         <y>137</y>
+         <width>279</width>
+         <height>42</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -550,12 +697,12 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card14Date">
+      <widget class="QLabel" name="card1Date">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>184</y>
-         <width>145</width>
+         <x>11</x>
+         <y>173</y>
+         <width>170</width>
          <height>16</height>
         </rect>
        </property>
@@ -563,21 +710,20 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Date:      1992-05-20</string>
+        <string>Date:     1992-05-20</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card14Owner">
+      <widget class="QLabel" name="card1Owner">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>200</y>
-         <width>160</width>
+         <x>11</x>
+         <y>188</y>
+         <width>180</width>
          <height>16</height>
         </rect>
        </property>
@@ -585,20 +731,19 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Owner:   Damien Roberts</string>
+        <string>Owner: Damien Roberts</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card14Money">
+      <widget class="QLabel" name="card1Money">
        <property name="geometry">
         <rect>
-         <x>14</x>
-         <y>220</y>
+         <x>12</x>
+         <y>210</y>
          <width>220</width>
          <height>20</height>
         </rect>
@@ -613,15 +758,15 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
 }</string>
        </property>
        <property name="text">
-        <string/>
+        <string>1000000000/15000000000</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="card14Progress">
+      <widget class="QProgressBar" name="card1Progress">
        <property name="geometry">
         <rect>
-         <x>16</x>
-         <y>238</y>
-         <width>260</width>
+         <x>14</x>
+         <y>228</y>
+         <width>242</width>
          <height>8</height>
         </rect>
        </property>
@@ -637,19 +782,19 @@ QProgressBar::chunk{
 }</string>
        </property>
        <property name="value">
-        <number>0</number>
+        <number>30</number>
        </property>
        <property name="textVisible">
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card14More">
+      <widget class="QLabel" name="card1More">
        <property name="geometry">
         <rect>
-         <x>24</x>
-         <y>238</y>
-         <width>80</width>
-         <height>18</height>
+         <x>18</x>
+         <y>236</y>
+         <width>70</width>
+         <height>16</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -666,13 +811,15 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="card15">
+
+     <!-- CARD 2 -->
+     <widget class="QFrame" name="card2">
       <property name="geometry">
        <rect>
-        <x>406</x>
-        <y>231</y>
-        <width>318</width>
-        <height>265</height>
+        <x>644</x>
+        <y>185</y>
+        <width>295</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -682,37 +829,38 @@ QProgressBar::chunk{
     border-radius:20px;
 }</string>
       </property>
-      <widget class="QLabel" name="card15Image">
+      <widget class="QLabel" name="card2Image">
        <property name="geometry">
         <rect>
          <x>1</x>
          <y>1</y>
-         <width>316</width>
-         <height>136</height>
+         <width>293</width>
+         <height>126</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel{
+    background:#DADADA;
+    color:#666;
     border:none;
     border-top-left-radius:19px;
     border-top-right-radius:19px;
-    background:#E7E7E7;
 }</string>
        </property>
        <property name="pixmap">
-        <pixmap>campaign15.png</pixmap>
+        <pixmap>campaign15</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card15Title">
+      <widget class="QLabel" name="card2Title">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>148</y>
-         <width>290</width>
-         <height>34</height>
+         <x>7</x>
+         <y>136</y>
+         <width>279</width>
+         <height>46</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -731,12 +879,12 @@ QProgressBar::chunk{
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card15Date">
+      <widget class="QLabel" name="card2Date">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>184</y>
-         <width>145</width>
+         <x>11</x>
+         <y>176</y>
+         <width>170</width>
          <height>16</height>
         </rect>
        </property>
@@ -744,21 +892,20 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Date:      2022-01-05</string>
+        <string>Date:     2022-01-05</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card15Owner">
+      <widget class="QLabel" name="card2Owner">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>200</y>
-         <width>160</width>
+         <x>11</x>
+         <y>191</y>
+         <width>180</width>
          <height>16</height>
         </rect>
        </property>
@@ -766,20 +913,19 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Owner:   Nguyễn Xuân Tú</string>
+        <string>Owner: Nguyễn Xuân Tú</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card15Money">
+      <widget class="QLabel" name="card2Money">
        <property name="geometry">
         <rect>
-         <x>14</x>
-         <y>220</y>
+         <x>12</x>
+         <y>210</y>
          <width>220</width>
          <height>20</height>
         </rect>
@@ -797,12 +943,12 @@ QProgressBar::chunk{
         <string>1000000000/15000000000</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="card15Progress">
+      <widget class="QProgressBar" name="card2Progress">
        <property name="geometry">
         <rect>
-         <x>16</x>
-         <y>242</y>
-         <width>260</width>
+         <x>14</x>
+         <y>228</y>
+         <width>242</width>
          <height>8</height>
         </rect>
        </property>
@@ -824,12 +970,12 @@ QProgressBar::chunk{
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card15More">
+      <widget class="QLabel" name="card2More">
        <property name="geometry">
         <rect>
-         <x>24</x>
-         <y>248</y>
-         <width>80</width>
+         <x>18</x>
+         <y>236</y>
+         <width>70</width>
          <height>16</height>
         </rect>
        </property>
@@ -847,13 +993,15 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="card16">
+
+     <!-- CARD 3 -->
+     <widget class="QFrame" name="card3">
       <property name="geometry">
        <rect>
-        <x>33</x>
-        <y>537</y>
-        <width>318</width>
-        <height>268</height>
+        <x>315</x>
+        <y>472</y>
+        <width>295</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -863,37 +1011,37 @@ QProgressBar::chunk{
     border-radius:20px;
 }</string>
       </property>
-      <widget class="QLabel" name="card16Image">
+      <widget class="QLabel" name="card3Image">
        <property name="geometry">
         <rect>
          <x>1</x>
          <y>1</y>
-         <width>316</width>
-         <height>136</height>
+         <width>293</width>
+         <height>126</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel{
+    background:#DADADA;
     border:none;
     border-top-left-radius:19px;
     border-top-right-radius:19px;
-    background:#E7E7E7;
 }</string>
        </property>
        <property name="pixmap">
-        <pixmap>campaign16.png</pixmap>
+        <pixmap>campaign16</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card16Title">
+      <widget class="QLabel" name="card3Title">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>148</y>
-         <width>290</width>
-         <height>34</height>
+         <x>7</x>
+         <y>136</y>
+         <width>279</width>
+         <height>42</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -912,12 +1060,12 @@ QProgressBar::chunk{
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card16Date">
+      <widget class="QLabel" name="card3Date">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>186</y>
-         <width>145</width>
+         <x>11</x>
+         <y>173</y>
+         <width>170</width>
          <height>16</height>
         </rect>
        </property>
@@ -925,21 +1073,20 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Date:      2021-09-01</string>
+        <string>Date:     2021-09-01</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card16Owner">
+      <widget class="QLabel" name="card3Owner">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>202</y>
-         <width>160</width>
+         <x>11</x>
+         <y>188</y>
+         <width>180</width>
          <height>16</height>
         </rect>
        </property>
@@ -947,20 +1094,19 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Owner:   Nguyễn Anh Tuấn</string>
+        <string>Owner: Nguyễn Anh Tuấn</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card16Money">
+      <widget class="QLabel" name="card3Money">
        <property name="geometry">
         <rect>
-         <x>14</x>
-         <y>222</y>
+         <x>12</x>
+         <y>210</y>
          <width>220</width>
          <height>20</height>
         </rect>
@@ -978,12 +1124,12 @@ QProgressBar::chunk{
         <string>1000000000/15000000000</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="card16Progress">
+      <widget class="QProgressBar" name="card3Progress">
        <property name="geometry">
         <rect>
-         <x>16</x>
-         <y>244</y>
-         <width>260</width>
+         <x>14</x>
+         <y>228</y>
+         <width>242</width>
          <height>8</height>
         </rect>
        </property>
@@ -1005,12 +1151,12 @@ QProgressBar::chunk{
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card16More">
+      <widget class="QLabel" name="card3More">
        <property name="geometry">
         <rect>
-         <x>24</x>
-         <y>250</y>
-         <width>80</width>
+         <x>18</x>
+         <y>236</y>
+         <width>70</width>
          <height>16</height>
         </rect>
        </property>
@@ -1028,13 +1174,15 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="card17">
+
+     <!-- CARD 4 -->
+     <widget class="QFrame" name="card4">
       <property name="geometry">
        <rect>
-        <x>401</x>
-        <y>539</y>
-        <width>318</width>
-        <height>268</height>
+        <x>644</x>
+        <y>472</y>
+        <width>295</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1044,37 +1192,37 @@ QProgressBar::chunk{
     border-radius:20px;
 }</string>
       </property>
-      <widget class="QLabel" name="card17Image">
+      <widget class="QLabel" name="card4Image">
        <property name="geometry">
         <rect>
          <x>1</x>
          <y>1</y>
-         <width>316</width>
-         <height>136</height>
+         <width>293</width>
+         <height>126</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel{
+    background:#DADADA;
     border:none;
     border-top-left-radius:19px;
     border-top-right-radius:19px;
-    background:#E7E7E7;
 }</string>
        </property>
        <property name="pixmap">
-        <pixmap>campaign17.png</pixmap>
+        <pixmap>campaign17</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card17Title">
+      <widget class="QLabel" name="card4Title">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>148</y>
-         <width>290</width>
-         <height>36</height>
+         <x>7</x>
+         <y>136</y>
+         <width>279</width>
+         <height>42</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1093,12 +1241,12 @@ QProgressBar::chunk{
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card17Date">
+      <widget class="QLabel" name="card4Date">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>186</y>
-         <width>145</width>
+         <x>11</x>
+         <y>173</y>
+         <width>170</width>
          <height>16</height>
         </rect>
        </property>
@@ -1106,21 +1254,20 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Date:      2019-06-15</string>
+        <string>Date:     2019-06-15</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card17Owner">
+      <widget class="QLabel" name="card4Owner">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>202</y>
-         <width>160</width>
+         <x>11</x>
+         <y>188</y>
+         <width>180</width>
          <height>16</height>
         </rect>
        </property>
@@ -1128,20 +1275,19 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Owner:   Nguyễn Thu Hà</string>
+        <string>Owner: Nguyễn Thu Hà</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card17Money">
+      <widget class="QLabel" name="card4Money">
        <property name="geometry">
         <rect>
-         <x>14</x>
-         <y>222</y>
+         <x>12</x>
+         <y>210</y>
          <width>220</width>
          <height>20</height>
         </rect>
@@ -1156,15 +1302,15 @@ QProgressBar::chunk{
 }</string>
        </property>
        <property name="text">
-        <string/>
+        <string>1000000000/15000000000</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="card17Progress">
+      <widget class="QProgressBar" name="card4Progress">
        <property name="geometry">
         <rect>
-         <x>16</x>
-         <y>244</y>
-         <width>260</width>
+         <x>14</x>
+         <y>228</y>
+         <width>242</width>
          <height>8</height>
         </rect>
        </property>
@@ -1180,18 +1326,18 @@ QProgressBar::chunk{
 }</string>
        </property>
        <property name="value">
-        <number>0</number>
+        <number>30</number>
        </property>
        <property name="textVisible">
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card17More">
+      <widget class="QLabel" name="card4More">
        <property name="geometry">
         <rect>
-         <x>24</x>
-         <y>250</y>
-         <width>80</width>
+         <x>18</x>
+         <y>236</y>
+         <width>70</width>
          <height>16</height>
         </rect>
        </property>
@@ -1209,13 +1355,15 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="card18">
+
+     <!-- CARD 5 -->
+     <widget class="QFrame" name="card5">
       <property name="geometry">
        <rect>
-        <x>33</x>
-        <y>850</y>
-        <width>318</width>
-        <height>271</height>
+        <x>315</x>
+        <y>759</y>
+        <width>295</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1225,37 +1373,37 @@ QProgressBar::chunk{
     border-radius:20px;
 }</string>
       </property>
-      <widget class="QLabel" name="card18Image">
+      <widget class="QLabel" name="card5Image">
        <property name="geometry">
         <rect>
          <x>1</x>
          <y>1</y>
-         <width>316</width>
-         <height>136</height>
+         <width>293</width>
+         <height>126</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel{
+    background:#DADADA;
     border:none;
     border-top-left-radius:19px;
     border-top-right-radius:19px;
-    background:#E7E7E7;
 }</string>
        </property>
        <property name="pixmap">
-        <pixmap>campaign18.png</pixmap>
+        <pixmap>campaign18</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card18Title">
+      <widget class="QLabel" name="card5Title">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>150</y>
-         <width>290</width>
-         <height>40</height>
+         <x>7</x>
+         <y>136</y>
+         <width>279</width>
+         <height>42</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1274,12 +1422,33 @@ QProgressBar::chunk{
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card18Date">
+      <widget class="QLabel" name="card5Date">
        <property name="geometry">
         <rect>
-         <x>12</x>
+         <x>11</x>
+         <y>173</y>
+         <width>170</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:     2020-12-20</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card5Owner">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
          <y>188</y>
-         <width>145</width>
+         <width>180</width>
          <height>16</height>
         </rect>
        </property>
@@ -1287,42 +1456,19 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Date:      2020-12-20</string>
+        <string>Owner: Hoàng Hoa Trung</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card18Owner">
+      <widget class="QLabel" name="card5Money">
        <property name="geometry">
         <rect>
          <x>12</x>
-         <y>204</y>
-         <width>160</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#222;
-    font-size:8px;
-    font-weight:500;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>Owner:   Hoàng Hoa Trung</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="card18Money">
-       <property name="geometry">
-        <rect>
-         <x>14</x>
-         <y>224</y>
+         <y>210</y>
          <width>220</width>
          <height>20</height>
         </rect>
@@ -1340,12 +1486,12 @@ QProgressBar::chunk{
         <string>1000000000/15000000000</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="card18Progress">
+      <widget class="QProgressBar" name="card5Progress">
        <property name="geometry">
         <rect>
-         <x>16</x>
-         <y>246</y>
-         <width>260</width>
+         <x>14</x>
+         <y>228</y>
+         <width>242</width>
          <height>8</height>
         </rect>
        </property>
@@ -1367,12 +1513,12 @@ QProgressBar::chunk{
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card18More">
+      <widget class="QLabel" name="card5More">
        <property name="geometry">
         <rect>
-         <x>24</x>
-         <y>252</y>
-         <width>80</width>
+         <x>18</x>
+         <y>236</y>
+         <width>70</width>
          <height>16</height>
         </rect>
        </property>
@@ -1390,13 +1536,15 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="card19">
+
+     <!-- CARD 6 -->
+     <widget class="QFrame" name="card6">
       <property name="geometry">
        <rect>
-        <x>401</x>
-        <y>850</y>
-        <width>318</width>
-        <height>271</height>
+        <x>644</x>
+        <y>759</y>
+        <width>295</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1406,37 +1554,37 @@ QProgressBar::chunk{
     border-radius:20px;
 }</string>
       </property>
-      <widget class="QLabel" name="card19Image">
+      <widget class="QLabel" name="card6Image">
        <property name="geometry">
         <rect>
          <x>1</x>
          <y>1</y>
-         <width>316</width>
-         <height>136</height>
+         <width>293</width>
+         <height>126</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel{
+    background:#DADADA;
     border:none;
     border-top-left-radius:19px;
     border-top-right-radius:19px;
-    background:#E7E7E7;
 }</string>
        </property>
        <property name="pixmap">
-        <pixmap>campaign19.png</pixmap>
+        <pixmap>campaign19</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card19Title">
+      <widget class="QLabel" name="card6Title">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>150</y>
-         <width>290</width>
-         <height>40</height>
+         <x>7</x>
+         <y>136</y>
+         <width>279</width>
+         <height>42</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1455,12 +1603,33 @@ QProgressBar::chunk{
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card19Date">
+      <widget class="QLabel" name="card6Date">
        <property name="geometry">
         <rect>
-         <x>12</x>
+         <x>11</x>
+         <y>173</y>
+         <width>170</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:     2020-03-12</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card6Owner">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
          <y>188</y>
-         <width>145</width>
+         <width>180</width>
          <height>16</height>
         </rect>
        </property>
@@ -1468,42 +1637,19 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Date:      2020-03-12</string>
+        <string>Owner: Nguyễn Văn Hạnh</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card19Owner">
+      <widget class="QLabel" name="card6Money">
        <property name="geometry">
         <rect>
          <x>12</x>
-         <y>204</y>
-         <width>160</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#222;
-    font-size:8px;
-    font-weight:500;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>Owner:   Nguyễn Văn Hạnh</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="card19Money">
-       <property name="geometry">
-        <rect>
-         <x>14</x>
-         <y>224</y>
+         <y>210</y>
          <width>220</width>
          <height>20</height>
         </rect>
@@ -1521,12 +1667,12 @@ QProgressBar::chunk{
         <string>1000000000/15000000000</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="card19Progress">
+      <widget class="QProgressBar" name="card6Progress">
        <property name="geometry">
         <rect>
-         <x>16</x>
-         <y>246</y>
-         <width>260</width>
+         <x>14</x>
+         <y>228</y>
+         <width>242</width>
          <height>8</height>
         </rect>
        </property>
@@ -1548,12 +1694,12 @@ QProgressBar::chunk{
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card19More">
+      <widget class="QLabel" name="card6More">
        <property name="geometry">
         <rect>
-         <x>24</x>
-         <y>252</y>
-         <width>80</width>
+         <x>18</x>
+         <y>236</y>
+         <width>70</width>
          <height>16</height>
         </rect>
        </property>
@@ -1571,13 +1717,15 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="card20">
+
+     <!-- CARD 7 -->
+     <widget class="QFrame" name="card7">
       <property name="geometry">
        <rect>
-        <x>33</x>
-        <y>1168</y>
-        <width>318</width>
-        <height>271</height>
+        <x>315</x>
+        <y>1046</y>
+        <width>295</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1587,37 +1735,37 @@ QProgressBar::chunk{
     border-radius:20px;
 }</string>
       </property>
-      <widget class="QLabel" name="card20Image">
+      <widget class="QLabel" name="card7Image">
        <property name="geometry">
         <rect>
          <x>1</x>
          <y>1</y>
-         <width>316</width>
-         <height>136</height>
+         <width>293</width>
+         <height>126</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">QLabel{
+    background:#DADADA;
     border:none;
     border-top-left-radius:19px;
     border-top-right-radius:19px;
-    background:#E7E7E7;
 }</string>
        </property>
        <property name="pixmap">
-        <pixmap>campaign20.png</pixmap>
+        <pixmap>campaign20</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card20Title">
+      <widget class="QLabel" name="card7Title">
        <property name="geometry">
         <rect>
-         <x>12</x>
-         <y>150</y>
-         <width>290</width>
-         <height>40</height>
+         <x>7</x>
+         <y>136</y>
+         <width>279</width>
+         <height>42</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1636,12 +1784,33 @@ QProgressBar::chunk{
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card20Date">
+      <widget class="QLabel" name="card7Date">
        <property name="geometry">
         <rect>
-         <x>12</x>
+         <x>11</x>
+         <y>173</y>
+         <width>170</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    color:#222;
+    font-size:8px;
+    background:transparent;
+    border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Date:     2023-05-20</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="card7Owner">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
          <y>188</y>
-         <width>145</width>
+         <width>180</width>
          <height>16</height>
         </rect>
        </property>
@@ -1649,42 +1818,19 @@ QProgressBar::chunk{
         <string notr="true">QLabel{
     color:#222;
     font-size:8px;
-    font-weight:500;
     background:transparent;
     border:none;
 }</string>
        </property>
        <property name="text">
-        <string>Date:      2023-05-20</string>
+        <string>Owner: Nguyễn Xuân Tú</string>
        </property>
       </widget>
-      <widget class="QLabel" name="card20Owner">
+      <widget class="QLabel" name="card7Money">
        <property name="geometry">
         <rect>
          <x>12</x>
-         <y>204</y>
-         <width>160</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-    color:#222;
-    font-size:8px;
-    font-weight:500;
-    background:transparent;
-    border:none;
-}</string>
-       </property>
-       <property name="text">
-        <string>Owner:   Nguyễn Xuân Tú</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="card20Money">
-       <property name="geometry">
-        <rect>
-         <x>14</x>
-         <y>224</y>
+         <y>210</y>
          <width>220</width>
          <height>20</height>
         </rect>
@@ -1702,12 +1848,12 @@ QProgressBar::chunk{
         <string>1000000000/15000000000</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="card20Progress">
+      <widget class="QProgressBar" name="card7Progress">
        <property name="geometry">
         <rect>
-         <x>16</x>
-         <y>246</y>
-         <width>260</width>
+         <x>14</x>
+         <y>228</y>
+         <width>242</width>
          <height>8</height>
         </rect>
        </property>
@@ -1729,12 +1875,12 @@ QProgressBar::chunk{
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="card20More">
+      <widget class="QLabel" name="card7More">
        <property name="geometry">
         <rect>
-         <x>24</x>
-         <y>252</y>
-         <width>80</width>
+         <x>18</x>
+         <y>236</y>
+         <width>70</width>
          <height>16</height>
         </rect>
        </property>
@@ -1752,6 +1898,7 @@ QProgressBar::chunk{
        </property>
       </widget>
      </widget>
+
     </widget>
    </widget>
   </widget>
