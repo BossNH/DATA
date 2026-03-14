@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\create_new_campaign.ui'
+# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\done\create_new_campaign.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -20,71 +20,145 @@ class Ui_MainWindow(object):
 "    color: #2B2B2B;\n"
 "    font-family: \"Segoe UI\";\n"
 "}\n"
-"QFrame#topBar {\n"
-"    background-color: #EDD5DE;\n"
+"\n"
+"QScrollArea {\n"
+"    border: none;\n"
+"    background: #FFF3F9;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"    background: #F3DDE7;\n"
+"    width: 12px;\n"
+"    border-radius: 6px;\n"
+"    margin: 6px 2px 6px 2px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"    background: #D8A8BE;\n"
+"    min-height: 40px;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical,\n"
+"QScrollBar::sub-line:vertical {\n"
+"    height: 0px;\n"
+"    background: none;\n"
 "    border: none;\n"
 "}\n"
-"QLabel#brandTitle {\n"
-"    color: #7B3F73;\n"
-"    font-size: 21px;\n"
-"    font-weight: 700;\n"
+"\n"
+"QScrollBar::add-page:vertical,\n"
+"QScrollBar::sub-page:vertical {\n"
+"    background: transparent;\n"
 "}\n"
-"QLabel#brandSub {\n"
-"    color: #7B7B7B;\n"
-"    font-size: 11px;\n"
-"}\n"
-"QPushButton.navBtn {\n"
+"\n"
+"QFrame#topBar {\n"
 "    background: transparent;\n"
 "    border: none;\n"
-"    color: #222222;\n"
-"    font-size: 14px;\n"
-"    font-weight: 600;\n"
-"    padding: 8px 12px;\n"
+"}\n"
+"\n"
+"QFrame#navFrame {\n"
+"    background: #F5DCE6;\n"
+"    border: none;\n"
 "    border-radius: 18px;\n"
+"}\n"
+"\n"
+"QLabel#logoImage {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#brandTitle {\n"
+"    color: #9C4F74;\n"
+"    font-size: 18pt;\n"
+"    font-weight: 800;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#brandSubtitle {\n"
+"    color: #9D8A93;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome,\n"
+"QPushButton#btnCreate,\n"
+"QPushButton#btnFollow,\n"
+"QPushButton#btnPublic {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    padding: 8px 14px;\n"
+"    color: #2C2328;\n"
+"    font-size: 10.5pt;\n"
+"    font-weight: 600;\n"
 "    text-align: center;\n"
 "}\n"
-"QPushButton.navBtn:hover {\n"
-"    background: rgba(255,255,255,0.35);\n"
+"\n"
+"QPushButton#btnHome:hover,\n"
+"QPushButton#btnCreate:hover,\n"
+"QPushButton#btnFollow:hover,\n"
+"QPushButton#btnPublic:hover {\n"
+"    background: #EEC9D8;\n"
 "}\n"
-"QPushButton#activeBtn {\n"
-"    background-color: #E5B6CE;\n"
-"    color: #1F1F1F;\n"
-"    font-weight: 700;\n"
-"}\n"
-"QLabel#notifDot {\n"
-"    background-color: #E53935;\n"
+"\n"
+"QPushButton#btnCreate {\n"
+"    background: #C98AA5;\n"
 "    color: white;\n"
-"    border-radius: 8px;\n"
-"    font-size: 10px;\n"
 "    font-weight: 700;\n"
 "}\n"
-"QPushButton.iconBtn {\n"
+"\n"
+"QToolButton#btnNotify,\n"
+"QToolButton#btnSetting,\n"
+"QToolButton#btnProfile {\n"
 "    background: transparent;\n"
 "    border: none;\n"
-"    font-size: 20px;\n"
-"    color: #222222;\n"
+"    border-radius: 15px;\n"
+"    color: #2C2328;\n"
+"    font-size: 15pt;\n"
 "}\n"
+"\n"
+"QToolButton#btnNotify:hover,\n"
+"QToolButton#btnSetting:hover,\n"
+"QToolButton#btnProfile:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QLabel#notifyBadge {\n"
+"    background: #E74C3C;\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 700;\n"
+"}\n"
+"\n"
 "QLabel#backLabel {\n"
 "    color: #1E1E1E;\n"
 "    font-size: 14px;\n"
 "    font-weight: 600;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#titleLabel {\n"
 "    color: #76406E;\n"
 "    font-size: 52px;\n"
 "    font-weight: 800;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QFrame#formCard {\n"
 "    background-color: #F4DCE6;\n"
 "    border: none;\n"
 "    border-radius: 20px;\n"
 "}\n"
+"\n"
 "QLabel.formLabel {\n"
 "    color: #1D1D1D;\n"
 "    font-size: 17px;\n"
 "    font-weight: 500;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QLineEdit.inputBox, QComboBox.inputBox, QTextEdit.inputBox {\n"
 "    background-color: #FFFFFF;\n"
 "    border: 1px solid #EDD8E3;\n"
@@ -93,13 +167,16 @@ class Ui_MainWindow(object):
 "    color: #333333;\n"
 "    font-size: 14px;\n"
 "}\n"
+"\n"
 "QLineEdit.inputBox {\n"
 "    min-height: 30px;\n"
 "}\n"
+"\n"
 "QComboBox.inputBox {\n"
 "    min-height: 30px;\n"
 "    padding-right: 30px;\n"
 "}\n"
+"\n"
 "QComboBox::drop-down {\n"
 "    subcontrol-origin: padding;\n"
 "    subcontrol-position: top right;\n"
@@ -107,29 +184,37 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    background: transparent;\n"
 "}\n"
+"\n"
 "QComboBox::down-arrow {\n"
 "    image: none;\n"
 "    width: 0px;\n"
 "    height: 0px;\n"
 "}\n"
+"\n"
 "QTextEdit.inputBox {\n"
 "    padding-top: 8px;\n"
 "}\n"
+"\n"
 "QFrame#uploadBox {\n"
 "    background-color: #FFFFFF;\n"
 "    border: 1px solid #EDD8E3;\n"
 "    border-radius: 7px;\n"
 "}\n"
+"\n"
 "QLabel#uploadIcon {\n"
 "    color: #EDBBD0;\n"
-"    font-size: 62px;\n"
+"    font-size: 50px;\n"
 "    font-weight: 300;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QLabel#uploadText {\n"
 "    color: #7A3E72;\n"
 "    font-size: 18px;\n"
 "    font-weight: 700;\n"
+"    background: transparent;\n"
 "}\n"
+"\n"
 "QPushButton#doneButton {\n"
 "    background-color: #EDBDD0;\n"
 "    border: 1px solid #6E4A60;\n"
@@ -139,64 +224,84 @@ class Ui_MainWindow(object):
 "    font-weight: 800;\n"
 "    padding: 8px 18px;\n"
 "}\n"
+"\n"
 "QPushButton#doneButton:hover {\n"
 "    background-color: #E8B1C6;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.topBar = QtWidgets.QFrame(parent=self.centralwidget)
-        self.topBar.setGeometry(QtCore.QRect(5, 5, 980, 47))
+        self.scrollArea = QtWidgets.QScrollArea(parent=self.centralwidget)
+        self.scrollArea.setGeometry(QtCore.QRect(0, 0, 1000, 720))
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1000, 860))
+        self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(1000, 860))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.topBar = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.topBar.setGeometry(QtCore.QRect(8, 8, 984, 62))
+        self.topBar.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.topBar.setObjectName("topBar")
-        self.logoBox = QtWidgets.QLabel(parent=self.topBar)
-        self.logoBox.setGeometry(QtCore.QRect(18, 4, 42, 34))
-        self.logoBox.setStyleSheet("background: white; border: 2px solid #2E7CC1; border-radius: 2px; color:#7B3F73; font-size:20px;")
-        self.logoBox.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.logoBox.setObjectName("logoBox")
-        self.brandTitle = QtWidgets.QLabel(parent=self.topBar)
-        self.brandTitle.setGeometry(QtCore.QRect(62, 4, 90, 24))
+        self.navFrame = QtWidgets.QFrame(parent=self.topBar)
+        self.navFrame.setGeometry(QtCore.QRect(0, 0, 984, 62))
+        self.navFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
+        self.navFrame.setObjectName("navFrame")
+        self.logoImage = QtWidgets.QLabel(parent=self.navFrame)
+        self.logoImage.setGeometry(QtCore.QRect(18, 7, 48, 48))
+        self.logoImage.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.logoImage.setObjectName("logoImage")
+        self.brandTitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandTitle.setGeometry(QtCore.QRect(78, 10, 130, 24))
         self.brandTitle.setObjectName("brandTitle")
-        self.brandSub = QtWidgets.QLabel(parent=self.topBar)
-        self.brandSub.setGeometry(QtCore.QRect(79, 24, 60, 14))
-        self.brandSub.setObjectName("brandSub")
-        self.homeBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.homeBtn.setGeometry(QtCore.QRect(208, 7, 108, 31))
-        self.homeBtn.setObjectName("homeBtn")
-        self.activeBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.activeBtn.setGeometry(QtCore.QRect(316, 6, 120, 32))
-        self.activeBtn.setObjectName("activeBtn")
-        self.trackBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.trackBtn.setGeometry(QtCore.QRect(444, 7, 145, 31))
-        self.trackBtn.setObjectName("trackBtn")
-        self.publicBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.publicBtn.setGeometry(QtCore.QRect(600, 7, 105, 31))
-        self.publicBtn.setObjectName("publicBtn")
-        self.bellBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.bellBtn.setGeometry(QtCore.QRect(842, 8, 24, 24))
-        self.bellBtn.setObjectName("bellBtn")
-        self.notifDot = QtWidgets.QLabel(parent=self.topBar)
-        self.notifDot.setGeometry(QtCore.QRect(857, 7, 16, 16))
-        self.notifDot.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.notifDot.setObjectName("notifDot")
-        self.settingBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.settingBtn.setGeometry(QtCore.QRect(883, 8, 24, 24))
-        self.settingBtn.setObjectName("settingBtn")
-        self.userBtn = QtWidgets.QPushButton(parent=self.topBar)
-        self.userBtn.setGeometry(QtCore.QRect(922, 7, 28, 28))
-        self.userBtn.setStyleSheet("background: #25252A; color: white; border-radius: 14px; border:none; font-size:18px;")
-        self.userBtn.setObjectName("userBtn")
-        self.backLabel = QtWidgets.QLabel(parent=self.centralwidget)
-        self.backLabel.setGeometry(QtCore.QRect(20, 60, 100, 22))
+        self.brandSubtitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandSubtitle.setGeometry(QtCore.QRect(80, 34, 80, 16))
+        self.brandSubtitle.setObjectName("brandSubtitle")
+        self.btnHome = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnHome.setGeometry(QtCore.QRect(235, 10, 130, 42))
+        self.btnHome.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnHome.setObjectName("btnHome")
+        self.btnCreate = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnCreate.setGeometry(QtCore.QRect(372, 10, 165, 42))
+        self.btnCreate.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnCreate.setObjectName("btnCreate")
+        self.btnFollow = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnFollow.setGeometry(QtCore.QRect(545, 10, 210, 42))
+        self.btnFollow.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnFollow.setObjectName("btnFollow")
+        self.btnPublic = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnPublic.setGeometry(QtCore.QRect(760, 10, 125, 42))
+        self.btnPublic.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnPublic.setObjectName("btnPublic")
+        self.btnNotify = QtWidgets.QToolButton(parent=self.navFrame)
+        self.btnNotify.setGeometry(QtCore.QRect(890, 13, 30, 30))
+        self.btnNotify.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnNotify.setObjectName("btnNotify")
+        self.notifyBadge = QtWidgets.QLabel(parent=self.navFrame)
+        self.notifyBadge.setGeometry(QtCore.QRect(907, 8, 16, 16))
+        self.notifyBadge.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.notifyBadge.setObjectName("notifyBadge")
+        self.btnSetting = QtWidgets.QToolButton(parent=self.navFrame)
+        self.btnSetting.setGeometry(QtCore.QRect(926, 13, 30, 30))
+        self.btnSetting.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnSetting.setObjectName("btnSetting")
+        self.btnProfile = QtWidgets.QToolButton(parent=self.navFrame)
+        self.btnProfile.setGeometry(QtCore.QRect(950, 13, 30, 30))
+        self.btnProfile.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnProfile.setObjectName("btnProfile")
+        self.backLabel = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
+        self.backLabel.setGeometry(QtCore.QRect(20, 82, 100, 22))
         self.backLabel.setObjectName("backLabel")
-        self.titleLabel = QtWidgets.QLabel(parent=self.centralwidget)
-        self.titleLabel.setGeometry(QtCore.QRect(42, 95, 470, 68))
+        self.titleLabel = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
+        self.titleLabel.setGeometry(QtCore.QRect(42, 108, 470, 68))
         self.titleLabel.setObjectName("titleLabel")
-        self.heroIllustration = QtWidgets.QLabel(parent=self.centralwidget)
-        self.heroIllustration.setGeometry(QtCore.QRect(706, 72, 210, 103))
+        self.heroIllustration = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
+        self.heroIllustration.setGeometry(QtCore.QRect(706, 84, 210, 103))
         self.heroIllustration.setStyleSheet("color:#F2CADB; background: transparent; font-size:72px;")
         self.heroIllustration.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.heroIllustration.setObjectName("heroIllustration")
-        self.formCard = QtWidgets.QFrame(parent=self.centralwidget)
-        self.formCard.setGeometry(QtCore.QRect(66, 180, 833, 510))
+        self.formCard = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.formCard.setGeometry(QtCore.QRect(66, 185, 833, 505))
         self.formCard.setObjectName("formCard")
         self.labelTen = QtWidgets.QLabel(parent=self.formCard)
         self.labelTen.setGeometry(QtCore.QRect(52, 34, 140, 26))
@@ -258,19 +363,20 @@ class Ui_MainWindow(object):
         self.labelHinhAnh.setGeometry(QtCore.QRect(490, 351, 90, 28))
         self.labelHinhAnh.setObjectName("labelHinhAnh")
         self.uploadBox = QtWidgets.QFrame(parent=self.formCard)
-        self.uploadBox.setGeometry(QtCore.QRect(489, 387, 204, 107))
+        self.uploadBox.setGeometry(QtCore.QRect(489, 387, 204, 90))
         self.uploadBox.setObjectName("uploadBox")
         self.uploadIcon = QtWidgets.QLabel(parent=self.uploadBox)
-        self.uploadIcon.setGeometry(QtCore.QRect(55, 8, 92, 56))
+        self.uploadIcon.setGeometry(QtCore.QRect(56, 4, 92, 44))
         self.uploadIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.uploadIcon.setObjectName("uploadIcon")
         self.uploadText = QtWidgets.QLabel(parent=self.uploadBox)
-        self.uploadText.setGeometry(QtCore.QRect(48, 69, 110, 28))
+        self.uploadText.setGeometry(QtCore.QRect(47, 50, 110, 28))
         self.uploadText.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.uploadText.setObjectName("uploadText")
-        self.doneButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.doneButton.setGeometry(QtCore.QRect(790, 654, 145, 46))
+        self.doneButton = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
+        self.doneButton.setGeometry(QtCore.QRect(790, 708, 145, 46))
         self.doneButton.setObjectName("doneButton")
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -282,24 +388,17 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Donarity - Tạo chiến dịch mới"))
-        self.logoBox.setText(_translate("MainWindow", "❤"))
+        self.logoImage.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; color:#9c4f74;\">🕊</span></p></body></html>"))
         self.brandTitle.setText(_translate("MainWindow", "Donarity"))
-        self.brandSub.setText(_translate("MainWindow", "by group 10"))
-        self.homeBtn.setProperty("class", _translate("MainWindow", "navBtn"))
-        self.homeBtn.setText(_translate("MainWindow", "⌂ Trang chủ"))
-        self.activeBtn.setProperty("class", _translate("MainWindow", "navBtn"))
-        self.activeBtn.setText(_translate("MainWindow", "✚ Tạo chiến dịch"))
-        self.trackBtn.setProperty("class", _translate("MainWindow", "navBtn"))
-        self.trackBtn.setText(_translate("MainWindow", "▉ Theo dõi chiến dịch"))
-        self.publicBtn.setProperty("class", _translate("MainWindow", "navBtn"))
-        self.publicBtn.setText(_translate("MainWindow", "◉ Công khai"))
-        self.bellBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
-        self.bellBtn.setText(_translate("MainWindow", "🔔"))
-        self.notifDot.setText(_translate("MainWindow", "0"))
-        self.settingBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
-        self.settingBtn.setText(_translate("MainWindow", "⚙"))
-        self.userBtn.setProperty("class", _translate("MainWindow", "iconBtn"))
-        self.userBtn.setText(_translate("MainWindow", "●"))
+        self.brandSubtitle.setText(_translate("MainWindow", "by group 10"))
+        self.btnHome.setText(_translate("MainWindow", "🏛 Trang chủ"))
+        self.btnCreate.setText(_translate("MainWindow", "+  Tạo chiến dịch"))
+        self.btnFollow.setText(_translate("MainWindow", "🎞  Theo dõi chiến dịch"))
+        self.btnPublic.setText(_translate("MainWindow", "👁 Công khai"))
+        self.btnNotify.setText(_translate("MainWindow", "🔔"))
+        self.notifyBadge.setText(_translate("MainWindow", "0"))
+        self.btnSetting.setText(_translate("MainWindow", "⚙"))
+        self.btnProfile.setText(_translate("MainWindow", "⋯"))
         self.backLabel.setText(_translate("MainWindow", "← Quay lại"))
         self.titleLabel.setText(_translate("MainWindow", "Tạo chiến dịch mới"))
         self.heroIllustration.setText(_translate("MainWindow", "📝"))
