@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'Donate/xacminh4.ui'
+# Form implementation generated from reading ui file 'Donate\xacminh4.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.0
 #
@@ -21,70 +21,93 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QFrame#topBar {\n"
-"    background: #F4D8E3;\n"
+"    background: transparent;\n"
 "    border: none;\n"
 "}\n"
 "\n"
-"QLabel#logoIcon {\n"
-"    color: #A64B80;\n"
-"    font-size: 22px;\n"
-"    font-weight: 700;\n"
-"    background: transparent;\n"
+"QFrame#navFrame {\n"
+"    background: #F5DCE6;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
 "}\n"
 "\n"
-"QLabel#logoText {\n"
-"    color: #9B4B78;\n"
-"    font-size: 21px;\n"
+"QLabel#logoImage {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#brandTitle {\n"
+"    color: #9C4F74;\n"
+"    font-size: 18pt;\n"
 "    font-weight: 800;\n"
 "    background: transparent;\n"
 "}\n"
 "\n"
-"QLabel#logoSub {\n"
-"    color: #A78595;\n"
-"    font-size: 11px;\n"
+"QLabel#brandSubtitle {\n"
+"    color: #9D8A93;\n"
+"    font-size: 8pt;\n"
 "    font-weight: 500;\n"
 "    background: transparent;\n"
 "}\n"
 "\n"
-"QPushButton#navHome {\n"
-"    background: #E7BDD0;\n"
-"    border: none;\n"
-"    border-radius: 20px;\n"
-"    color: #1E1B20;\n"
-"    font-size: 16px;\n"
-"    font-weight: 700;\n"
-"    padding-left: 14px;\n"
-"    padding-right: 14px;\n"
-"}\n"
-"\n"
-"QPushButton#navHome:hover {\n"
-"    background: #E1B3C8;\n"
-"}\n"
-"\n"
-"QPushButton#navStats,\n"
-"QPushButton#navChat,\n"
-"QPushButton#navPublic {\n"
+"QPushButton#btnHome,\n"
+"QPushButton#btnCreate,\n"
+"QPushButton#btnFollow,\n"
+"QPushButton#btnPublic {\n"
 "    background: transparent;\n"
 "    border: none;\n"
-"    color: #1E1B20;\n"
-"    font-size: 16px;\n"
-"    font-weight: 700;\n"
+"    border-radius: 18px;\n"
+"    padding: 10px 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 11pt;\n"
+"    font-weight: 600;\n"
 "    text-align: center;\n"
 "}\n"
 "\n"
-"QPushButton#navStats:hover,\n"
-"QPushButton#navChat:hover,\n"
-"QPushButton#navPublic:hover {\n"
-"    color: #9B4B78;\n"
+"QPushButton#btnHome:hover,\n"
+"QPushButton#btnCreate:hover,\n"
+"QPushButton#btnFollow:hover,\n"
+"QPushButton#btnPublic:hover {\n"
+"    background: #EEC9D8;\n"
 "}\n"
 "\n"
-"QLabel#topBell,\n"
-"QLabel#topSetting,\n"
-"QLabel#topUser {\n"
-"    background: transparent;\n"
-"    color: #4A3D49;\n"
-"    font-size: 22px;\n"
+"QPushButton#btnHome:pressed,\n"
+"QPushButton#btnCreate:pressed,\n"
+"QPushButton#btnFollow:pressed,\n"
+"QPushButton#btnPublic:pressed {\n"
+"    background: #E2B5C7;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome {\n"
+"    background: #C98AA5;\n"
+"    color: white;\n"
 "    font-weight: 700;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify,\n"
+"QToolButton#btnSetting,\n"
+"QToolButton#btnProfile {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 16pt;\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify:hover,\n"
+"QToolButton#btnSetting:hover,\n"
+"QToolButton#btnProfile:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QLabel#notifyBadge {\n"
+"    background: #E74C3C;\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 700;\n"
+"    padding: 0px;\n"
 "}\n"
 "\n"
 "QPushButton#backBtn {\n"
@@ -224,105 +247,96 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.topBar = QtWidgets.QFrame(parent=self.centralwidget)
-        self.topBar.setGeometry(QtCore.QRect(25, 10, 1150, 56))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        self.topBar.setFont(font)
+        self.topBar.setGeometry(QtCore.QRect(0, 0, 1200, 90))
+        self.topBar.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.topBar.setObjectName("topBar")
-        self.logoIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.logoIcon.setGeometry(QtCore.QRect(18, 9, 30, 34))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.logoIcon.setFont(font)
-        self.logoIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.logoIcon.setObjectName("logoIcon")
-        self.logoText = QtWidgets.QLabel(parent=self.topBar)
-        self.logoText.setGeometry(QtCore.QRect(55, 10, 112, 30))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(99)
-        self.logoText.setFont(font)
-        self.logoText.setObjectName("logoText")
-        self.logoSub = QtWidgets.QLabel(parent=self.topBar)
-        self.logoSub.setGeometry(QtCore.QRect(166, 18, 78, 18))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(62)
-        self.logoSub.setFont(font)
-        self.logoSub.setObjectName("logoSub")
-        self.navHome = QtWidgets.QPushButton(parent=self.topBar)
-        self.navHome.setGeometry(QtCore.QRect(288, 8, 150, 40))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.navHome.setFont(font)
-        self.navHome.setObjectName("navHome")
-        self.navStats = QtWidgets.QPushButton(parent=self.topBar)
-        self.navStats.setGeometry(QtCore.QRect(492, 9, 126, 38))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.navStats.setFont(font)
-        self.navStats.setObjectName("navStats")
-        self.navChat = QtWidgets.QPushButton(parent=self.topBar)
-        self.navChat.setGeometry(QtCore.QRect(642, 9, 132, 38))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.navChat.setFont(font)
-        self.navChat.setObjectName("navChat")
-        self.navPublic = QtWidgets.QPushButton(parent=self.topBar)
-        self.navPublic.setGeometry(QtCore.QRect(788, 9, 145, 38))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.navPublic.setFont(font)
-        self.navPublic.setObjectName("navPublic")
-        self.topBell = QtWidgets.QLabel(parent=self.topBar)
-        self.topBell.setGeometry(QtCore.QRect(997, 8, 34, 40))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.topBell.setFont(font)
-        self.topBell.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.topBell.setObjectName("topBell")
-        self.topSetting = QtWidgets.QLabel(parent=self.topBar)
-        self.topSetting.setGeometry(QtCore.QRect(1046, 8, 34, 40))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.topSetting.setFont(font)
-        self.topSetting.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.topSetting.setObjectName("topSetting")
-        self.topUser = QtWidgets.QLabel(parent=self.topBar)
-        self.topUser.setGeometry(QtCore.QRect(1098, 7, 36, 40))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(87)
-        self.topUser.setFont(font)
-        self.topUser.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.topUser.setObjectName("topUser")
+        self.verticalLayout_topbar = QtWidgets.QVBoxLayout(self.topBar)
+        self.verticalLayout_topbar.setContentsMargins(12, 10, 12, 10)
+        self.verticalLayout_topbar.setObjectName("verticalLayout_topbar")
+        self.navFrame = QtWidgets.QFrame(parent=self.topBar)
+        self.navFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
+        self.navFrame.setObjectName("navFrame")
+        self.horizontalLayout_topbar = QtWidgets.QHBoxLayout(self.navFrame)
+        self.horizontalLayout_topbar.setContentsMargins(18, 10, 18, 10)
+        self.horizontalLayout_topbar.setSpacing(18)
+        self.horizontalLayout_topbar.setObjectName("horizontalLayout_topbar")
+        self.logoLayout = QtWidgets.QHBoxLayout()
+        self.logoLayout.setSpacing(8)
+        self.logoLayout.setObjectName("logoLayout")
+        self.logoImage = QtWidgets.QLabel(parent=self.navFrame)
+        self.logoImage.setMinimumSize(QtCore.QSize(54, 54))
+        self.logoImage.setMaximumSize(QtCore.QSize(54, 54))
+        self.logoImage.setScaledContents(False)
+        self.logoImage.setObjectName("logoImage")
+        self.logoLayout.addWidget(self.logoImage)
+        self.brandLayout = QtWidgets.QVBoxLayout()
+        self.brandLayout.setSpacing(0)
+        self.brandLayout.setObjectName("brandLayout")
+        self.brandTitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandTitle.setObjectName("brandTitle")
+        self.brandLayout.addWidget(self.brandTitle)
+        self.brandSubtitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandSubtitle.setObjectName("brandSubtitle")
+        self.brandLayout.addWidget(self.brandSubtitle)
+        self.logoLayout.addLayout(self.brandLayout)
+        self.horizontalLayout_topbar.addLayout(self.logoLayout)
+        self.menuLayout = QtWidgets.QHBoxLayout()
+        self.menuLayout.setSpacing(10)
+        self.menuLayout.setObjectName("menuLayout")
+        self.btnHome = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnHome.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnHome.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnHome.setObjectName("btnHome")
+        self.menuLayout.addWidget(self.btnHome)
+        self.btnCreate = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnCreate.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnCreate.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnCreate.setObjectName("btnCreate")
+        self.menuLayout.addWidget(self.btnCreate)
+        self.btnFollow = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnFollow.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnFollow.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnFollow.setObjectName("btnFollow")
+        self.menuLayout.addWidget(self.btnFollow)
+        self.btnPublic = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnPublic.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnPublic.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnPublic.setObjectName("btnPublic")
+        self.menuLayout.addWidget(self.btnPublic)
+        self.horizontalLayout_topbar.addLayout(self.menuLayout)
+        self.rightActionsWidget = QtWidgets.QWidget(parent=self.navFrame)
+        self.rightActionsWidget.setMinimumSize(QtCore.QSize(150, 50))
+        self.rightActionsWidget.setObjectName("rightActionsWidget")
+        self.rightActionsLayout = QtWidgets.QHBoxLayout(self.rightActionsWidget)
+        self.rightActionsLayout.setContentsMargins(0, 0, 0, 0)
+        self.rightActionsLayout.setSpacing(8)
+        self.rightActionsLayout.setObjectName("rightActionsLayout")
+        self.notifyWrapper = QtWidgets.QWidget(parent=self.rightActionsWidget)
+        self.notifyWrapper.setMinimumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setMaximumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setObjectName("notifyWrapper")
+        self.btnNotify = QtWidgets.QToolButton(parent=self.notifyWrapper)
+        self.btnNotify.setGeometry(QtCore.QRect(0, -7, 41, 41))
+        self.btnNotify.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnNotify.setObjectName("btnNotify")
+        self.notifyBadge = QtWidgets.QLabel(parent=self.notifyWrapper)
+        self.notifyBadge.setGeometry(QtCore.QRect(20, 0, 16, 16))
+        self.notifyBadge.setObjectName("notifyBadge")
+        self.rightActionsLayout.addWidget(self.notifyWrapper)
+        self.btnSetting = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnSetting.setMinimumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setMaximumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnSetting.setObjectName("btnSetting")
+        self.rightActionsLayout.addWidget(self.btnSetting)
+        self.btnProfile = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnProfile.setMinimumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setMaximumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnProfile.setObjectName("btnProfile")
+        self.rightActionsLayout.addWidget(self.btnProfile)
+        self.horizontalLayout_topbar.addWidget(self.rightActionsWidget)
+        self.verticalLayout_topbar.addWidget(self.navFrame)
         self.backBtn = QtWidgets.QPushButton(parent=self.centralwidget)
         self.backBtn.setGeometry(QtCore.QRect(30, 70, 140, 30))
         font = QtGui.QFont()
@@ -657,16 +671,17 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Donarity - Theo dõi chiến dịch"))
-        self.logoIcon.setText(_translate("MainWindow", "🕊"))
-        self.logoText.setText(_translate("MainWindow", "Donarity"))
-        self.logoSub.setText(_translate("MainWindow", "by group 10"))
-        self.navHome.setText(_translate("MainWindow", "🏠  Trang chủ"))
-        self.navStats.setText(_translate("MainWindow", "⏳  Thống kê"))
-        self.navChat.setText(_translate("MainWindow", "🗨  Chatbot"))
-        self.navPublic.setText(_translate("MainWindow", "👁  Công khai"))
-        self.topBell.setText(_translate("MainWindow", "🔔"))
-        self.topSetting.setText(_translate("MainWindow", "⚙"))
-        self.topUser.setText(_translate("MainWindow", "👤"))
+        self.logoImage.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; color:#9c4f74;\">🕊</span></p></body></html>"))
+        self.brandTitle.setText(_translate("MainWindow", "Donarity"))
+        self.brandSubtitle.setText(_translate("MainWindow", "by group 10"))
+        self.btnHome.setText(_translate("MainWindow", "🏛 Trang chủ"))
+        self.btnCreate.setText(_translate("MainWindow", "🎞 Thống kê"))
+        self.btnFollow.setText(_translate("MainWindow", "📠 Chatbot"))
+        self.btnPublic.setText(_translate("MainWindow", "👁 Công khai"))
+        self.btnNotify.setText(_translate("MainWindow", "🔔"))
+        self.notifyBadge.setText(_translate("MainWindow", " 0"))
+        self.btnSetting.setText(_translate("MainWindow", "⚙"))
+        self.btnProfile.setText(_translate("MainWindow", "👤"))
         self.backBtn.setText(_translate("MainWindow", "← Quay lại"))
         self.campaignTitle.setText(_translate("MainWindow", "Chiến dịch Hiến máu nhân đạo Quốc gia"))
         self.campaignDesc.setText(_translate("MainWindow", "Vận động cộng đồng tham gia hiến máu tình nguyện để cứu người, đảm bảo nguồn máu dự trữ cho các bệnh viện."))
