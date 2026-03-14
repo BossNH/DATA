@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'GiaoDuc/giaoduc_khoinghiep.ui'
+# Form implementation generated from reading ui file 'Giaoduc\gd_fix.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.0
 #
@@ -12,8 +12,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(781, 1450)
-        MainWindow.setMinimumSize(QtCore.QSize(781, 1450))
+        MainWindow.resize(1200, 760)
+        MainWindow.setMinimumSize(QtCore.QSize(1200, 760))
+        MainWindow.setMaximumSize(QtCore.QSize(1200, 760))
         MainWindow.setStyleSheet("QMainWindow, QWidget {\n"
 "    background: #FFF6FB;\n"
 "    font-family: \"Arial\";\n"
@@ -21,153 +22,222 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.scrollArea = QtWidgets.QScrollArea(parent=self.centralwidget)
-        self.scrollArea.setGeometry(QtCore.QRect(0, 0, 1200, 1450))
-        self.scrollArea.setMinimumSize(QtCore.QSize(1200, 760))
+        self.scrollArea.setGeometry(QtCore.QRect(0, 0, 1200, 760))
         self.scrollArea.setStyleSheet("QScrollArea {\n"
 "    border: none;\n"
 "    background: #FFF6FB;\n"
 "}\n"
 "QScrollBar:vertical {\n"
-"    background: #F8E8F0;\n"
+"    background: #FBE5F0;\n"
 "    width: 12px;\n"
+"    margin: 0px;\n"
 "    border-radius: 6px;\n"
 "}\n"
 "QScrollBar::handle:vertical {\n"
-"    background: #D9AFC7;\n"
-"    min-height: 40px;\n"
+"    background: #E8B8D0;\n"
+"    min-height: 30px;\n"
 "    border-radius: 6px;\n"
 "}\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"QScrollBar::add-line:vertical,\n"
+"QScrollBar::sub-line:vertical {\n"
 "    height: 0px;\n"
+"    border: none;\n"
+"    background: none;\n"
 "}\n"
-"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
-"    background: transparent;\n"
+"QScrollBar::add-page:vertical,\n"
+"QScrollBar::sub-page:vertical {\n"
+"    background: none;\n"
 "}")
         self.scrollArea.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.scrollArea.setWidgetResizable(False)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 781, 1720))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1200, 1800))
+        self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(1200, 1800))
         self.scrollAreaWidgetContents.setStyleSheet("background: #FFF6FB;")
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.topBar = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.topBar.setGeometry(QtCore.QRect(0, 3, 781, 40))
-        self.topBar.setStyleSheet("QFrame{\n"
-"    background:#F9DDE7;\n"
-"    border:none;\n"
-"    border-radius:0px;\n"
+        self.topBar.setGeometry(QtCore.QRect(0, 0, 1200, 90))
+        self.topBar.setStyleSheet("QFrame#topBar {\n"
+"    background: #FFF3F9;\n"
+"    font-family: \"Segoe UI\";\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QFrame#navFrame {\n"
+"    background: #F5DCE6;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"}\n"
+"\n"
+"QLabel#logoImage {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#brandTitle {\n"
+"    color: #9C4F74;\n"
+"    font-size: 18pt;\n"
+"    font-weight: 800;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QLabel#brandSubtitle {\n"
+"    color: #9D8A93;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome,\n"
+"QPushButton#btnCreate,\n"
+"QPushButton#btnFollow,\n"
+"QPushButton#btnPublic {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    padding: 10px 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 11pt;\n"
+"    font-weight: 600;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:hover,\n"
+"QPushButton#btnCreate:hover,\n"
+"QPushButton#btnFollow:hover,\n"
+"QPushButton#btnPublic:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:pressed,\n"
+"QPushButton#btnCreate:pressed,\n"
+"QPushButton#btnFollow:pressed,\n"
+"QPushButton#btnPublic:pressed {\n"
+"    background: #E2B5C7;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome {\n"
+"    background: #C98AA5;\n"
+"    color: white;\n"
+"    font-weight: 700;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify,\n"
+"QToolButton#btnSetting,\n"
+"QToolButton#btnProfile {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 16pt;\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify:hover,\n"
+"QToolButton#btnSetting:hover,\n"
+"QToolButton#btnProfile:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QLabel#notifyBadge {\n"
+"    background: #E74C3C;\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 700;\n"
+"    padding: 0px;\n"
 "}")
         self.topBar.setObjectName("topBar")
-        self.logoIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.logoIcon.setGeometry(QtCore.QRect(18, 5, 28, 28))
-        self.logoIcon.setStyleSheet("QLabel{\n"
-"    font-size:18px;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.logoIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.logoIcon.setObjectName("logoIcon")
-        self.logoTitle = QtWidgets.QLabel(parent=self.topBar)
-        self.logoTitle.setGeometry(QtCore.QRect(44, 4, 90, 20))
-        self.logoTitle.setStyleSheet("QLabel{\n"
-"    color:#7E3A79;\n"
-"    font-size:14px;\n"
-"    font-weight:800;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.logoTitle.setObjectName("logoTitle")
-        self.logoSub = QtWidgets.QLabel(parent=self.topBar)
-        self.logoSub.setGeometry(QtCore.QRect(46, 20, 56, 12))
-        self.logoSub.setStyleSheet("QLabel{\n"
-"    color:#7A6D75;\n"
-"    font-size:7px;\n"
-"    font-weight:600;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.logoSub.setObjectName("logoSub")
-        self.navHome = QtWidgets.QLabel(parent=self.topBar)
-        self.navHome.setGeometry(QtCore.QRect(168, 9, 84, 18))
-        self.navHome.setStyleSheet("QLabel{\n"
-"    color:#222;\n"
-"    font-size:9px;\n"
-"    font-weight:700;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.navHome.setObjectName("navHome")
-        self.navStats = QtWidgets.QLabel(parent=self.topBar)
-        self.navStats.setGeometry(QtCore.QRect(280, 9, 84, 18))
-        self.navStats.setStyleSheet("QLabel{\n"
-"    color:#222;\n"
-"    font-size:9px;\n"
-"    font-weight:700;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.navStats.setObjectName("navStats")
-        self.navChatbot = QtWidgets.QLabel(parent=self.topBar)
-        self.navChatbot.setGeometry(QtCore.QRect(350, 9, 90, 18))
-        self.navChatbot.setStyleSheet("QLabel{\n"
-"    color:#222;\n"
-"    font-size:9px;\n"
-"    font-weight:700;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.navChatbot.setObjectName("navChatbot")
-        self.notifIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.notifIcon.setGeometry(QtCore.QRect(684, 8, 18, 18))
-        self.notifIcon.setStyleSheet("QLabel{\n"
-"    font-size:13px;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.notifIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.notifIcon.setObjectName("notifIcon")
-        self.notifBadge = QtWidgets.QLabel(parent=self.topBar)
-        self.notifBadge.setGeometry(QtCore.QRect(696, 7, 12, 12))
-        self.notifBadge.setStyleSheet("QLabel{\n"
-"    background:#E53935;\n"
-"    color:white;\n"
-"    border-radius:6px;\n"
-"    font-size:7px;\n"
-"    font-weight:800;\n"
-"}")
-        self.notifBadge.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.notifBadge.setObjectName("notifBadge")
-        self.settingsIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.settingsIcon.setGeometry(QtCore.QRect(714, 8, 16, 18))
-        self.settingsIcon.setStyleSheet("QLabel{\n"
-"    font-size:13px;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.settingsIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.settingsIcon.setObjectName("settingsIcon")
-        self.userIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.userIcon.setGeometry(QtCore.QRect(738, 6, 22, 22))
-        self.userIcon.setStyleSheet("QLabel{\n"
-"    color:#2A2A2A;\n"
-"    font-size:18px;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.userIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.userIcon.setObjectName("userIcon")
-        self.backLabel = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
-        self.backLabel.setGeometry(QtCore.QRect(0, 53, 90, 18))
-        self.backLabel.setStyleSheet("QLabel{\n"
-"    color:#222;\n"
-"    font-size:10px;\n"
-"    font-weight:600;\n"
-"    background:transparent;\n"
-"    border:none;\n"
-"}")
-        self.backLabel.setObjectName("backLabel")
+        self.topBarLayout = QtWidgets.QVBoxLayout(self.topBar)
+        self.topBarLayout.setContentsMargins(12, 10, 12, 10)
+        self.topBarLayout.setObjectName("topBarLayout")
+        self.navFrame = QtWidgets.QFrame(parent=self.topBar)
+        self.navFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
+        self.navFrame.setObjectName("navFrame")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.navFrame)
+        self.horizontalLayout.setContentsMargins(18, 10, 18, 10)
+        self.horizontalLayout.setSpacing(18)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.logoLayout = QtWidgets.QHBoxLayout()
+        self.logoLayout.setSpacing(8)
+        self.logoLayout.setObjectName("logoLayout")
+        self.logoImage = QtWidgets.QLabel(parent=self.navFrame)
+        self.logoImage.setMinimumSize(QtCore.QSize(54, 54))
+        self.logoImage.setMaximumSize(QtCore.QSize(54, 54))
+        self.logoImage.setScaledContents(False)
+        self.logoImage.setObjectName("logoImage")
+        self.logoLayout.addWidget(self.logoImage)
+        self.brandLayout = QtWidgets.QVBoxLayout()
+        self.brandLayout.setSpacing(0)
+        self.brandLayout.setObjectName("brandLayout")
+        self.brandTitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandTitle.setObjectName("brandTitle")
+        self.brandLayout.addWidget(self.brandTitle)
+        self.brandSubtitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandSubtitle.setObjectName("brandSubtitle")
+        self.brandLayout.addWidget(self.brandSubtitle)
+        self.logoLayout.addLayout(self.brandLayout)
+        self.horizontalLayout.addLayout(self.logoLayout)
+        self.menuLayout = QtWidgets.QHBoxLayout()
+        self.menuLayout.setSpacing(10)
+        self.menuLayout.setObjectName("menuLayout")
+        self.btnHome = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnHome.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnHome.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnHome.setObjectName("btnHome")
+        self.menuLayout.addWidget(self.btnHome)
+        self.btnCreate = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnCreate.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnCreate.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnCreate.setObjectName("btnCreate")
+        self.menuLayout.addWidget(self.btnCreate)
+        self.btnFollow = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnFollow.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnFollow.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnFollow.setObjectName("btnFollow")
+        self.menuLayout.addWidget(self.btnFollow)
+        self.btnPublic = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnPublic.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnPublic.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnPublic.setObjectName("btnPublic")
+        self.menuLayout.addWidget(self.btnPublic)
+        self.horizontalLayout.addLayout(self.menuLayout)
+        self.rightActionsWidget = QtWidgets.QWidget(parent=self.navFrame)
+        self.rightActionsWidget.setMinimumSize(QtCore.QSize(150, 50))
+        self.rightActionsWidget.setObjectName("rightActionsWidget")
+        self.rightActionsLayout = QtWidgets.QHBoxLayout(self.rightActionsWidget)
+        self.rightActionsLayout.setContentsMargins(0, 0, 0, 0)
+        self.rightActionsLayout.setSpacing(8)
+        self.rightActionsLayout.setObjectName("rightActionsLayout")
+        self.notifyWrapper = QtWidgets.QWidget(parent=self.rightActionsWidget)
+        self.notifyWrapper.setMinimumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setMaximumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setObjectName("notifyWrapper")
+        self.btnNotify = QtWidgets.QToolButton(parent=self.notifyWrapper)
+        self.btnNotify.setGeometry(QtCore.QRect(0, -7, 41, 41))
+        self.btnNotify.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnNotify.setObjectName("btnNotify")
+        self.notifyBadge = QtWidgets.QLabel(parent=self.notifyWrapper)
+        self.notifyBadge.setGeometry(QtCore.QRect(20, 0, 16, 16))
+        self.notifyBadge.setObjectName("notifyBadge")
+        self.rightActionsLayout.addWidget(self.notifyWrapper)
+        self.btnSetting = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnSetting.setMinimumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setMaximumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnSetting.setObjectName("btnSetting")
+        self.rightActionsLayout.addWidget(self.btnSetting)
+        self.btnProfile = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnProfile.setMinimumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setMaximumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnProfile.setObjectName("btnProfile")
+        self.rightActionsLayout.addWidget(self.btnProfile)
+        self.horizontalLayout.addWidget(self.rightActionsWidget)
+        self.topBarLayout.addWidget(self.navFrame)
         self.titleIcon = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
-        self.titleIcon.setGeometry(QtCore.QRect(22, 92, 34, 34))
+        self.titleIcon.setGeometry(QtCore.QRect(290, 89, 28, 28))
         self.titleIcon.setStyleSheet("QLabel{\n"
 "    font-size:24px;\n"
 "    background:transparent;\n"
@@ -176,9 +246,9 @@ class Ui_MainWindow(object):
         self.titleIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.titleIcon.setObjectName("titleIcon")
         self.mainTitle = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
-        self.mainTitle.setGeometry(QtCore.QRect(72, 84, 390, 50))
+        self.mainTitle.setGeometry(QtCore.QRect(324, 83, 500, 40))
         self.mainTitle.setStyleSheet("QLabel{\n"
-"    color:#8A4E82;\n"
+"    color:#7F4D7D;\n"
 "    font-size:28px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
@@ -186,17 +256,17 @@ class Ui_MainWindow(object):
 "}")
         self.mainTitle.setObjectName("mainTitle")
         self.searchEdit = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.searchEdit.setGeometry(QtCore.QRect(17, 149, 512, 32))
+        self.searchEdit.setGeometry(QtCore.QRect(291, 129, 474, 30))
         self.searchEdit.setStyleSheet("QLineEdit{\n"
 "    background:white;\n"
 "    border:1px solid #CFCFCF;\n"
-"    padding-left:30px;\n"
+"    padding-left:28px;\n"
 "    color:#222;\n"
 "    font-size:10px;\n"
 "}")
         self.searchEdit.setObjectName("searchEdit")
         self.searchIcon = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
-        self.searchIcon.setGeometry(QtCore.QRect(28, 156, 16, 16))
+        self.searchIcon.setGeometry(QtCore.QRect(300, 139, 14, 14))
         self.searchIcon.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:13px;\n"
@@ -206,7 +276,7 @@ class Ui_MainWindow(object):
         self.searchIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.searchIcon.setObjectName("searchIcon")
         self.categoryCombo = QtWidgets.QComboBox(parent=self.scrollAreaWidgetContents)
-        self.categoryCombo.setGeometry(QtCore.QRect(528, 149, 118, 32))
+        self.categoryCombo.setGeometry(QtCore.QRect(764, 129, 110, 30))
         self.categoryCombo.setStyleSheet("QComboBox{\n"
 "    background:white;\n"
 "    border:1px solid #CFCFCF;\n"
@@ -217,7 +287,7 @@ class Ui_MainWindow(object):
         self.categoryCombo.setObjectName("categoryCombo")
         self.categoryCombo.addItem("")
         self.searchButton = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
-        self.searchButton.setGeometry(QtCore.QRect(661, 149, 70, 32))
+        self.searchButton.setGeometry(QtCore.QRect(888, 129, 64, 30))
         self.searchButton.setStyleSheet("QPushButton{\n"
 "    background:#FFF6FB;\n"
 "    border:1px solid #7F4D7D;\n"
@@ -226,70 +296,71 @@ class Ui_MainWindow(object):
 "    font-weight:700;\n"
 "}")
         self.searchButton.setObjectName("searchButton")
-        self.card14 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card14.setGeometry(QtCore.QRect(39, 231, 318, 265))
-        self.card14.setStyleSheet("QFrame{\n"
+        self.card1 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.card1.setGeometry(QtCore.QRect(315, 185, 295, 261))
+        self.card1.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
 "    border-radius:20px;\n"
 "}")
-        self.card14.setObjectName("card14")
-        self.card14Image = QtWidgets.QLabel(parent=self.card14)
-        self.card14Image.setGeometry(QtCore.QRect(1, 1, 316, 136))
-        self.card14Image.setStyleSheet("QLabel{\n"
+        self.card1.setObjectName("card1")
+        self.card1Image = QtWidgets.QLabel(parent=self.card1)
+        self.card1Image.setGeometry(QtCore.QRect(1, 1, 293, 126))
+        self.card1Image.setStyleSheet("QLabel{\n"
+"    background:#DADADA;\n"
+"    color:#666;\n"
 "    border:none;\n"
 "    border-top-left-radius:19px;\n"
 "    border-top-right-radius:19px;\n"
-"    background:#E7E7E7;\n"
+"    font-size:14px;\n"
+"    font-weight:600;\n"
 "}")
-        self.card14Image.setPixmap(QtGui.QPixmap("GiaoDuc\\campaign14.png"))
-        self.card14Image.setScaledContents(True)
-        self.card14Image.setObjectName("card14Image")
-        self.card14Title = QtWidgets.QLabel(parent=self.card14)
-        self.card14Title.setGeometry(QtCore.QRect(10, 142, 292, 44))
-        self.card14Title.setStyleSheet("QLabel{\n"
+        self.card1Image.setText("")
+        self.card1Image.setPixmap(QtGui.QPixmap("Giaoduc\\campaign14"))
+        self.card1Image.setScaledContents(True)
+        self.card1Image.setObjectName("card1Image")
+        self.card1Title = QtWidgets.QLabel(parent=self.card1)
+        self.card1Title.setGeometry(QtCore.QRect(7, 137, 279, 42))
+        self.card1Title.setStyleSheet("QLabel{\n"
 "    color:#78496F;\n"
 "    font-size:11px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card14Title.setWordWrap(True)
-        self.card14Title.setObjectName("card14Title")
-        self.card14Date = QtWidgets.QLabel(parent=self.card14)
-        self.card14Date.setGeometry(QtCore.QRect(12, 184, 145, 16))
-        self.card14Date.setStyleSheet("QLabel{\n"
+        self.card1Title.setWordWrap(True)
+        self.card1Title.setObjectName("card1Title")
+        self.card1Date = QtWidgets.QLabel(parent=self.card1)
+        self.card1Date.setGeometry(QtCore.QRect(11, 173, 170, 16))
+        self.card1Date.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card14Date.setObjectName("card14Date")
-        self.card14Owner = QtWidgets.QLabel(parent=self.card14)
-        self.card14Owner.setGeometry(QtCore.QRect(12, 200, 160, 16))
-        self.card14Owner.setStyleSheet("QLabel{\n"
+        self.card1Date.setObjectName("card1Date")
+        self.card1Owner = QtWidgets.QLabel(parent=self.card1)
+        self.card1Owner.setGeometry(QtCore.QRect(11, 188, 180, 16))
+        self.card1Owner.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card14Owner.setObjectName("card14Owner")
-        self.card14Money = QtWidgets.QLabel(parent=self.card14)
-        self.card14Money.setGeometry(QtCore.QRect(14, 220, 220, 20))
-        self.card14Money.setStyleSheet("QLabel{\n"
+        self.card1Owner.setObjectName("card1Owner")
+        self.card1Money = QtWidgets.QLabel(parent=self.card1)
+        self.card1Money.setGeometry(QtCore.QRect(12, 210, 220, 20))
+        self.card1Money.setStyleSheet("QLabel{\n"
 "    color:#7C4A73;\n"
 "    font-size:10px;\n"
 "    font-weight:900;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card14Money.setText("")
-        self.card14Money.setObjectName("card14Money")
-        self.card14Progress = QtWidgets.QProgressBar(parent=self.card14)
-        self.card14Progress.setGeometry(QtCore.QRect(16, 238, 260, 8))
-        self.card14Progress.setStyleSheet("QProgressBar{\n"
+        self.card1Money.setObjectName("card1Money")
+        self.card1Progress = QtWidgets.QProgressBar(parent=self.card1)
+        self.card1Progress.setGeometry(QtCore.QRect(14, 228, 242, 8))
+        self.card1Progress.setStyleSheet("QProgressBar{\n"
 "    background:#F6DCE8;\n"
 "    border:none;\n"
 "    border-radius:4px;\n"
@@ -298,82 +369,81 @@ class Ui_MainWindow(object):
 "    background:#F2AED0;\n"
 "    border-radius:4px;\n"
 "}")
-        self.card14Progress.setProperty("value", 0)
-        self.card14Progress.setTextVisible(False)
-        self.card14Progress.setObjectName("card14Progress")
-        self.card14More = QtWidgets.QLabel(parent=self.card14)
-        self.card14More.setGeometry(QtCore.QRect(24, 238, 80, 18))
-        self.card14More.setStyleSheet("QLabel{\n"
+        self.card1Progress.setProperty("value", 30)
+        self.card1Progress.setTextVisible(False)
+        self.card1Progress.setObjectName("card1Progress")
+        self.card1More = QtWidgets.QLabel(parent=self.card1)
+        self.card1More.setGeometry(QtCore.QRect(18, 236, 70, 16))
+        self.card1More.setStyleSheet("QLabel{\n"
 "    color:#9A5C8B;\n"
 "    font-size:8px;\n"
 "    font-weight:700;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card14More.setObjectName("card14More")
-        self.card15 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card15.setGeometry(QtCore.QRect(406, 231, 318, 265))
-        self.card15.setStyleSheet("QFrame{\n"
+        self.card1More.setObjectName("card1More")
+        self.card2 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.card2.setGeometry(QtCore.QRect(644, 185, 295, 261))
+        self.card2.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
 "    border-radius:20px;\n"
 "}")
-        self.card15.setObjectName("card15")
-        self.card15Image = QtWidgets.QLabel(parent=self.card15)
-        self.card15Image.setGeometry(QtCore.QRect(1, 1, 316, 136))
-        self.card15Image.setStyleSheet("QLabel{\n"
+        self.card2.setObjectName("card2")
+        self.card2Image = QtWidgets.QLabel(parent=self.card2)
+        self.card2Image.setGeometry(QtCore.QRect(1, 1, 293, 126))
+        self.card2Image.setStyleSheet("QLabel{\n"
+"    background:#DADADA;\n"
+"    color:#666;\n"
 "    border:none;\n"
 "    border-top-left-radius:19px;\n"
 "    border-top-right-radius:19px;\n"
-"    background:#E7E7E7;\n"
 "}")
-        self.card15Image.setPixmap(QtGui.QPixmap("GiaoDuc\\campaign15.png"))
-        self.card15Image.setScaledContents(True)
-        self.card15Image.setObjectName("card15Image")
-        self.card15Title = QtWidgets.QLabel(parent=self.card15)
-        self.card15Title.setGeometry(QtCore.QRect(12, 148, 290, 34))
-        self.card15Title.setStyleSheet("QLabel{\n"
+        self.card2Image.setPixmap(QtGui.QPixmap("Giaoduc\\campaign15"))
+        self.card2Image.setScaledContents(True)
+        self.card2Image.setObjectName("card2Image")
+        self.card2Title = QtWidgets.QLabel(parent=self.card2)
+        self.card2Title.setGeometry(QtCore.QRect(7, 136, 279, 46))
+        self.card2Title.setStyleSheet("QLabel{\n"
 "    color:#78496F;\n"
 "    font-size:11px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card15Title.setWordWrap(True)
-        self.card15Title.setObjectName("card15Title")
-        self.card15Date = QtWidgets.QLabel(parent=self.card15)
-        self.card15Date.setGeometry(QtCore.QRect(12, 184, 145, 16))
-        self.card15Date.setStyleSheet("QLabel{\n"
+        self.card2Title.setWordWrap(True)
+        self.card2Title.setObjectName("card2Title")
+        self.card2Date = QtWidgets.QLabel(parent=self.card2)
+        self.card2Date.setGeometry(QtCore.QRect(11, 176, 170, 16))
+        self.card2Date.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card15Date.setObjectName("card15Date")
-        self.card15Owner = QtWidgets.QLabel(parent=self.card15)
-        self.card15Owner.setGeometry(QtCore.QRect(12, 200, 160, 16))
-        self.card15Owner.setStyleSheet("QLabel{\n"
+        self.card2Date.setObjectName("card2Date")
+        self.card2Owner = QtWidgets.QLabel(parent=self.card2)
+        self.card2Owner.setGeometry(QtCore.QRect(11, 191, 180, 16))
+        self.card2Owner.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card15Owner.setObjectName("card15Owner")
-        self.card15Money = QtWidgets.QLabel(parent=self.card15)
-        self.card15Money.setGeometry(QtCore.QRect(14, 220, 220, 20))
-        self.card15Money.setStyleSheet("QLabel{\n"
+        self.card2Owner.setObjectName("card2Owner")
+        self.card2Money = QtWidgets.QLabel(parent=self.card2)
+        self.card2Money.setGeometry(QtCore.QRect(12, 210, 220, 20))
+        self.card2Money.setStyleSheet("QLabel{\n"
 "    color:#7C4A73;\n"
 "    font-size:10px;\n"
 "    font-weight:900;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card15Money.setObjectName("card15Money")
-        self.card15Progress = QtWidgets.QProgressBar(parent=self.card15)
-        self.card15Progress.setGeometry(QtCore.QRect(16, 242, 260, 8))
-        self.card15Progress.setStyleSheet("QProgressBar{\n"
+        self.card2Money.setObjectName("card2Money")
+        self.card2Progress = QtWidgets.QProgressBar(parent=self.card2)
+        self.card2Progress.setGeometry(QtCore.QRect(14, 228, 242, 8))
+        self.card2Progress.setStyleSheet("QProgressBar{\n"
 "    background:#F6DCE8;\n"
 "    border:none;\n"
 "    border-radius:4px;\n"
@@ -382,82 +452,80 @@ class Ui_MainWindow(object):
 "    background:#F2AED0;\n"
 "    border-radius:4px;\n"
 "}")
-        self.card15Progress.setProperty("value", 30)
-        self.card15Progress.setTextVisible(False)
-        self.card15Progress.setObjectName("card15Progress")
-        self.card15More = QtWidgets.QLabel(parent=self.card15)
-        self.card15More.setGeometry(QtCore.QRect(24, 248, 80, 16))
-        self.card15More.setStyleSheet("QLabel{\n"
+        self.card2Progress.setProperty("value", 30)
+        self.card2Progress.setTextVisible(False)
+        self.card2Progress.setObjectName("card2Progress")
+        self.card2More = QtWidgets.QLabel(parent=self.card2)
+        self.card2More.setGeometry(QtCore.QRect(18, 236, 70, 16))
+        self.card2More.setStyleSheet("QLabel{\n"
 "    color:#9A5C8B;\n"
 "    font-size:8px;\n"
 "    font-weight:700;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card15More.setObjectName("card15More")
-        self.card16 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card16.setGeometry(QtCore.QRect(33, 537, 318, 268))
-        self.card16.setStyleSheet("QFrame{\n"
+        self.card2More.setObjectName("card2More")
+        self.card3 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.card3.setGeometry(QtCore.QRect(315, 472, 295, 261))
+        self.card3.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
 "    border-radius:20px;\n"
 "}")
-        self.card16.setObjectName("card16")
-        self.card16Image = QtWidgets.QLabel(parent=self.card16)
-        self.card16Image.setGeometry(QtCore.QRect(1, 1, 316, 136))
-        self.card16Image.setStyleSheet("QLabel{\n"
+        self.card3.setObjectName("card3")
+        self.card3Image = QtWidgets.QLabel(parent=self.card3)
+        self.card3Image.setGeometry(QtCore.QRect(1, 1, 293, 126))
+        self.card3Image.setStyleSheet("QLabel{\n"
+"    background:#DADADA;\n"
 "    border:none;\n"
 "    border-top-left-radius:19px;\n"
 "    border-top-right-radius:19px;\n"
-"    background:#E7E7E7;\n"
 "}")
-        self.card16Image.setPixmap(QtGui.QPixmap("GiaoDuc\\campaign16.png"))
-        self.card16Image.setScaledContents(True)
-        self.card16Image.setObjectName("card16Image")
-        self.card16Title = QtWidgets.QLabel(parent=self.card16)
-        self.card16Title.setGeometry(QtCore.QRect(12, 148, 290, 34))
-        self.card16Title.setStyleSheet("QLabel{\n"
+        self.card3Image.setPixmap(QtGui.QPixmap("Giaoduc\\campaign16"))
+        self.card3Image.setScaledContents(True)
+        self.card3Image.setObjectName("card3Image")
+        self.card3Title = QtWidgets.QLabel(parent=self.card3)
+        self.card3Title.setGeometry(QtCore.QRect(7, 136, 279, 42))
+        self.card3Title.setStyleSheet("QLabel{\n"
 "    color:#78496F;\n"
 "    font-size:11px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card16Title.setWordWrap(True)
-        self.card16Title.setObjectName("card16Title")
-        self.card16Date = QtWidgets.QLabel(parent=self.card16)
-        self.card16Date.setGeometry(QtCore.QRect(12, 186, 145, 16))
-        self.card16Date.setStyleSheet("QLabel{\n"
+        self.card3Title.setWordWrap(True)
+        self.card3Title.setObjectName("card3Title")
+        self.card3Date = QtWidgets.QLabel(parent=self.card3)
+        self.card3Date.setGeometry(QtCore.QRect(11, 173, 170, 16))
+        self.card3Date.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card16Date.setObjectName("card16Date")
-        self.card16Owner = QtWidgets.QLabel(parent=self.card16)
-        self.card16Owner.setGeometry(QtCore.QRect(12, 202, 160, 16))
-        self.card16Owner.setStyleSheet("QLabel{\n"
+        self.card3Date.setObjectName("card3Date")
+        self.card3Owner = QtWidgets.QLabel(parent=self.card3)
+        self.card3Owner.setGeometry(QtCore.QRect(11, 188, 180, 16))
+        self.card3Owner.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card16Owner.setObjectName("card16Owner")
-        self.card16Money = QtWidgets.QLabel(parent=self.card16)
-        self.card16Money.setGeometry(QtCore.QRect(14, 222, 220, 20))
-        self.card16Money.setStyleSheet("QLabel{\n"
+        self.card3Owner.setObjectName("card3Owner")
+        self.card3Money = QtWidgets.QLabel(parent=self.card3)
+        self.card3Money.setGeometry(QtCore.QRect(12, 210, 220, 20))
+        self.card3Money.setStyleSheet("QLabel{\n"
 "    color:#7C4A73;\n"
 "    font-size:10px;\n"
 "    font-weight:900;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card16Money.setObjectName("card16Money")
-        self.card16Progress = QtWidgets.QProgressBar(parent=self.card16)
-        self.card16Progress.setGeometry(QtCore.QRect(16, 244, 260, 8))
-        self.card16Progress.setStyleSheet("QProgressBar{\n"
+        self.card3Money.setObjectName("card3Money")
+        self.card3Progress = QtWidgets.QProgressBar(parent=self.card3)
+        self.card3Progress.setGeometry(QtCore.QRect(14, 228, 242, 8))
+        self.card3Progress.setStyleSheet("QProgressBar{\n"
 "    background:#F6DCE8;\n"
 "    border:none;\n"
 "    border-radius:4px;\n"
@@ -466,83 +534,80 @@ class Ui_MainWindow(object):
 "    background:#F2AED0;\n"
 "    border-radius:4px;\n"
 "}")
-        self.card16Progress.setProperty("value", 30)
-        self.card16Progress.setTextVisible(False)
-        self.card16Progress.setObjectName("card16Progress")
-        self.card16More = QtWidgets.QLabel(parent=self.card16)
-        self.card16More.setGeometry(QtCore.QRect(24, 250, 80, 16))
-        self.card16More.setStyleSheet("QLabel{\n"
+        self.card3Progress.setProperty("value", 30)
+        self.card3Progress.setTextVisible(False)
+        self.card3Progress.setObjectName("card3Progress")
+        self.card3More = QtWidgets.QLabel(parent=self.card3)
+        self.card3More.setGeometry(QtCore.QRect(18, 236, 70, 16))
+        self.card3More.setStyleSheet("QLabel{\n"
 "    color:#9A5C8B;\n"
 "    font-size:8px;\n"
 "    font-weight:700;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card16More.setObjectName("card16More")
-        self.card17 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card17.setGeometry(QtCore.QRect(401, 539, 318, 268))
-        self.card17.setStyleSheet("QFrame{\n"
+        self.card3More.setObjectName("card3More")
+        self.card4 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.card4.setGeometry(QtCore.QRect(644, 472, 295, 261))
+        self.card4.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
 "    border-radius:20px;\n"
 "}")
-        self.card17.setObjectName("card17")
-        self.card17Image = QtWidgets.QLabel(parent=self.card17)
-        self.card17Image.setGeometry(QtCore.QRect(1, 1, 316, 136))
-        self.card17Image.setStyleSheet("QLabel{\n"
+        self.card4.setObjectName("card4")
+        self.card4Image = QtWidgets.QLabel(parent=self.card4)
+        self.card4Image.setGeometry(QtCore.QRect(1, 1, 293, 126))
+        self.card4Image.setStyleSheet("QLabel{\n"
+"    background:#DADADA;\n"
 "    border:none;\n"
 "    border-top-left-radius:19px;\n"
 "    border-top-right-radius:19px;\n"
-"    background:#E7E7E7;\n"
 "}")
-        self.card17Image.setPixmap(QtGui.QPixmap("GiaoDuc\\campaign17.png"))
-        self.card17Image.setScaledContents(True)
-        self.card17Image.setObjectName("card17Image")
-        self.card17Title = QtWidgets.QLabel(parent=self.card17)
-        self.card17Title.setGeometry(QtCore.QRect(12, 148, 290, 36))
-        self.card17Title.setStyleSheet("QLabel{\n"
+        self.card4Image.setPixmap(QtGui.QPixmap("Giaoduc\\campaign17"))
+        self.card4Image.setScaledContents(True)
+        self.card4Image.setObjectName("card4Image")
+        self.card4Title = QtWidgets.QLabel(parent=self.card4)
+        self.card4Title.setGeometry(QtCore.QRect(7, 136, 279, 42))
+        self.card4Title.setStyleSheet("QLabel{\n"
 "    color:#78496F;\n"
 "    font-size:11px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card17Title.setWordWrap(True)
-        self.card17Title.setObjectName("card17Title")
-        self.card17Date = QtWidgets.QLabel(parent=self.card17)
-        self.card17Date.setGeometry(QtCore.QRect(12, 186, 145, 16))
-        self.card17Date.setStyleSheet("QLabel{\n"
+        self.card4Title.setWordWrap(True)
+        self.card4Title.setObjectName("card4Title")
+        self.card4Date = QtWidgets.QLabel(parent=self.card4)
+        self.card4Date.setGeometry(QtCore.QRect(11, 173, 170, 16))
+        self.card4Date.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card17Date.setObjectName("card17Date")
-        self.card17Owner = QtWidgets.QLabel(parent=self.card17)
-        self.card17Owner.setGeometry(QtCore.QRect(12, 202, 160, 16))
-        self.card17Owner.setStyleSheet("QLabel{\n"
+        self.card4Date.setObjectName("card4Date")
+        self.card4Owner = QtWidgets.QLabel(parent=self.card4)
+        self.card4Owner.setGeometry(QtCore.QRect(11, 188, 180, 16))
+        self.card4Owner.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card17Owner.setObjectName("card17Owner")
-        self.card17Money = QtWidgets.QLabel(parent=self.card17)
-        self.card17Money.setGeometry(QtCore.QRect(14, 222, 220, 20))
-        self.card17Money.setStyleSheet("QLabel{\n"
+        self.card4Owner.setObjectName("card4Owner")
+        self.card4Money = QtWidgets.QLabel(parent=self.card4)
+        self.card4Money.setGeometry(QtCore.QRect(12, 210, 220, 20))
+        self.card4Money.setStyleSheet("QLabel{\n"
 "    color:#7C4A73;\n"
 "    font-size:10px;\n"
 "    font-weight:900;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card17Money.setText("")
-        self.card17Money.setObjectName("card17Money")
-        self.card17Progress = QtWidgets.QProgressBar(parent=self.card17)
-        self.card17Progress.setGeometry(QtCore.QRect(16, 244, 260, 8))
-        self.card17Progress.setStyleSheet("QProgressBar{\n"
+        self.card4Money.setObjectName("card4Money")
+        self.card4Progress = QtWidgets.QProgressBar(parent=self.card4)
+        self.card4Progress.setGeometry(QtCore.QRect(14, 228, 242, 8))
+        self.card4Progress.setStyleSheet("QProgressBar{\n"
 "    background:#F6DCE8;\n"
 "    border:none;\n"
 "    border-radius:4px;\n"
@@ -551,82 +616,80 @@ class Ui_MainWindow(object):
 "    background:#F2AED0;\n"
 "    border-radius:4px;\n"
 "}")
-        self.card17Progress.setProperty("value", 0)
-        self.card17Progress.setTextVisible(False)
-        self.card17Progress.setObjectName("card17Progress")
-        self.card17More = QtWidgets.QLabel(parent=self.card17)
-        self.card17More.setGeometry(QtCore.QRect(24, 250, 80, 16))
-        self.card17More.setStyleSheet("QLabel{\n"
+        self.card4Progress.setProperty("value", 30)
+        self.card4Progress.setTextVisible(False)
+        self.card4Progress.setObjectName("card4Progress")
+        self.card4More = QtWidgets.QLabel(parent=self.card4)
+        self.card4More.setGeometry(QtCore.QRect(18, 236, 70, 16))
+        self.card4More.setStyleSheet("QLabel{\n"
 "    color:#9A5C8B;\n"
 "    font-size:8px;\n"
 "    font-weight:700;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card17More.setObjectName("card17More")
-        self.card18 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card18.setGeometry(QtCore.QRect(33, 850, 318, 271))
-        self.card18.setStyleSheet("QFrame{\n"
+        self.card4More.setObjectName("card4More")
+        self.card5 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.card5.setGeometry(QtCore.QRect(315, 759, 295, 261))
+        self.card5.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
 "    border-radius:20px;\n"
 "}")
-        self.card18.setObjectName("card18")
-        self.card18Image = QtWidgets.QLabel(parent=self.card18)
-        self.card18Image.setGeometry(QtCore.QRect(1, 1, 316, 136))
-        self.card18Image.setStyleSheet("QLabel{\n"
+        self.card5.setObjectName("card5")
+        self.card5Image = QtWidgets.QLabel(parent=self.card5)
+        self.card5Image.setGeometry(QtCore.QRect(1, 1, 293, 126))
+        self.card5Image.setStyleSheet("QLabel{\n"
+"    background:#DADADA;\n"
 "    border:none;\n"
 "    border-top-left-radius:19px;\n"
 "    border-top-right-radius:19px;\n"
-"    background:#E7E7E7;\n"
 "}")
-        self.card18Image.setPixmap(QtGui.QPixmap("GiaoDuc\\campaign18.png"))
-        self.card18Image.setScaledContents(True)
-        self.card18Image.setObjectName("card18Image")
-        self.card18Title = QtWidgets.QLabel(parent=self.card18)
-        self.card18Title.setGeometry(QtCore.QRect(12, 150, 290, 40))
-        self.card18Title.setStyleSheet("QLabel{\n"
+        self.card5Image.setPixmap(QtGui.QPixmap("Giaoduc\\campaign18"))
+        self.card5Image.setScaledContents(True)
+        self.card5Image.setObjectName("card5Image")
+        self.card5Title = QtWidgets.QLabel(parent=self.card5)
+        self.card5Title.setGeometry(QtCore.QRect(7, 136, 279, 42))
+        self.card5Title.setStyleSheet("QLabel{\n"
 "    color:#78496F;\n"
 "    font-size:11px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card18Title.setWordWrap(True)
-        self.card18Title.setObjectName("card18Title")
-        self.card18Date = QtWidgets.QLabel(parent=self.card18)
-        self.card18Date.setGeometry(QtCore.QRect(12, 188, 145, 16))
-        self.card18Date.setStyleSheet("QLabel{\n"
+        self.card5Title.setWordWrap(True)
+        self.card5Title.setObjectName("card5Title")
+        self.card5Date = QtWidgets.QLabel(parent=self.card5)
+        self.card5Date.setGeometry(QtCore.QRect(11, 173, 170, 16))
+        self.card5Date.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card18Date.setObjectName("card18Date")
-        self.card18Owner = QtWidgets.QLabel(parent=self.card18)
-        self.card18Owner.setGeometry(QtCore.QRect(12, 204, 160, 16))
-        self.card18Owner.setStyleSheet("QLabel{\n"
+        self.card5Date.setObjectName("card5Date")
+        self.card5Owner = QtWidgets.QLabel(parent=self.card5)
+        self.card5Owner.setGeometry(QtCore.QRect(11, 188, 180, 16))
+        self.card5Owner.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card18Owner.setObjectName("card18Owner")
-        self.card18Money = QtWidgets.QLabel(parent=self.card18)
-        self.card18Money.setGeometry(QtCore.QRect(14, 224, 220, 20))
-        self.card18Money.setStyleSheet("QLabel{\n"
+        self.card5Owner.setObjectName("card5Owner")
+        self.card5Money = QtWidgets.QLabel(parent=self.card5)
+        self.card5Money.setGeometry(QtCore.QRect(12, 210, 220, 20))
+        self.card5Money.setStyleSheet("QLabel{\n"
 "    color:#7C4A73;\n"
 "    font-size:10px;\n"
 "    font-weight:900;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card18Money.setObjectName("card18Money")
-        self.card18Progress = QtWidgets.QProgressBar(parent=self.card18)
-        self.card18Progress.setGeometry(QtCore.QRect(16, 246, 260, 8))
-        self.card18Progress.setStyleSheet("QProgressBar{\n"
+        self.card5Money.setObjectName("card5Money")
+        self.card5Progress = QtWidgets.QProgressBar(parent=self.card5)
+        self.card5Progress.setGeometry(QtCore.QRect(14, 228, 242, 8))
+        self.card5Progress.setStyleSheet("QProgressBar{\n"
 "    background:#F6DCE8;\n"
 "    border:none;\n"
 "    border-radius:4px;\n"
@@ -635,82 +698,80 @@ class Ui_MainWindow(object):
 "    background:#F2AED0;\n"
 "    border-radius:4px;\n"
 "}")
-        self.card18Progress.setProperty("value", 30)
-        self.card18Progress.setTextVisible(False)
-        self.card18Progress.setObjectName("card18Progress")
-        self.card18More = QtWidgets.QLabel(parent=self.card18)
-        self.card18More.setGeometry(QtCore.QRect(24, 252, 80, 16))
-        self.card18More.setStyleSheet("QLabel{\n"
+        self.card5Progress.setProperty("value", 30)
+        self.card5Progress.setTextVisible(False)
+        self.card5Progress.setObjectName("card5Progress")
+        self.card5More = QtWidgets.QLabel(parent=self.card5)
+        self.card5More.setGeometry(QtCore.QRect(18, 236, 70, 16))
+        self.card5More.setStyleSheet("QLabel{\n"
 "    color:#9A5C8B;\n"
 "    font-size:8px;\n"
 "    font-weight:700;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card18More.setObjectName("card18More")
-        self.card19 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card19.setGeometry(QtCore.QRect(401, 850, 318, 271))
-        self.card19.setStyleSheet("QFrame{\n"
+        self.card5More.setObjectName("card5More")
+        self.card6 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.card6.setGeometry(QtCore.QRect(644, 759, 295, 261))
+        self.card6.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
 "    border-radius:20px;\n"
 "}")
-        self.card19.setObjectName("card19")
-        self.card19Image = QtWidgets.QLabel(parent=self.card19)
-        self.card19Image.setGeometry(QtCore.QRect(1, 1, 316, 136))
-        self.card19Image.setStyleSheet("QLabel{\n"
+        self.card6.setObjectName("card6")
+        self.card6Image = QtWidgets.QLabel(parent=self.card6)
+        self.card6Image.setGeometry(QtCore.QRect(1, 1, 293, 126))
+        self.card6Image.setStyleSheet("QLabel{\n"
+"    background:#DADADA;\n"
 "    border:none;\n"
 "    border-top-left-radius:19px;\n"
 "    border-top-right-radius:19px;\n"
-"    background:#E7E7E7;\n"
 "}")
-        self.card19Image.setPixmap(QtGui.QPixmap("GiaoDuc\\campaign19.png"))
-        self.card19Image.setScaledContents(True)
-        self.card19Image.setObjectName("card19Image")
-        self.card19Title = QtWidgets.QLabel(parent=self.card19)
-        self.card19Title.setGeometry(QtCore.QRect(12, 150, 290, 40))
-        self.card19Title.setStyleSheet("QLabel{\n"
+        self.card6Image.setPixmap(QtGui.QPixmap("Giaoduc\\campaign19"))
+        self.card6Image.setScaledContents(True)
+        self.card6Image.setObjectName("card6Image")
+        self.card6Title = QtWidgets.QLabel(parent=self.card6)
+        self.card6Title.setGeometry(QtCore.QRect(7, 136, 279, 42))
+        self.card6Title.setStyleSheet("QLabel{\n"
 "    color:#78496F;\n"
 "    font-size:11px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card19Title.setWordWrap(True)
-        self.card19Title.setObjectName("card19Title")
-        self.card19Date = QtWidgets.QLabel(parent=self.card19)
-        self.card19Date.setGeometry(QtCore.QRect(12, 188, 145, 16))
-        self.card19Date.setStyleSheet("QLabel{\n"
+        self.card6Title.setWordWrap(True)
+        self.card6Title.setObjectName("card6Title")
+        self.card6Date = QtWidgets.QLabel(parent=self.card6)
+        self.card6Date.setGeometry(QtCore.QRect(11, 173, 170, 16))
+        self.card6Date.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card19Date.setObjectName("card19Date")
-        self.card19Owner = QtWidgets.QLabel(parent=self.card19)
-        self.card19Owner.setGeometry(QtCore.QRect(12, 204, 160, 16))
-        self.card19Owner.setStyleSheet("QLabel{\n"
+        self.card6Date.setObjectName("card6Date")
+        self.card6Owner = QtWidgets.QLabel(parent=self.card6)
+        self.card6Owner.setGeometry(QtCore.QRect(11, 188, 180, 16))
+        self.card6Owner.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card19Owner.setObjectName("card19Owner")
-        self.card19Money = QtWidgets.QLabel(parent=self.card19)
-        self.card19Money.setGeometry(QtCore.QRect(14, 224, 220, 20))
-        self.card19Money.setStyleSheet("QLabel{\n"
+        self.card6Owner.setObjectName("card6Owner")
+        self.card6Money = QtWidgets.QLabel(parent=self.card6)
+        self.card6Money.setGeometry(QtCore.QRect(12, 210, 220, 20))
+        self.card6Money.setStyleSheet("QLabel{\n"
 "    color:#7C4A73;\n"
 "    font-size:10px;\n"
 "    font-weight:900;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card19Money.setObjectName("card19Money")
-        self.card19Progress = QtWidgets.QProgressBar(parent=self.card19)
-        self.card19Progress.setGeometry(QtCore.QRect(16, 246, 260, 8))
-        self.card19Progress.setStyleSheet("QProgressBar{\n"
+        self.card6Money.setObjectName("card6Money")
+        self.card6Progress = QtWidgets.QProgressBar(parent=self.card6)
+        self.card6Progress.setGeometry(QtCore.QRect(14, 228, 242, 8))
+        self.card6Progress.setStyleSheet("QProgressBar{\n"
 "    background:#F6DCE8;\n"
 "    border:none;\n"
 "    border-radius:4px;\n"
@@ -719,82 +780,80 @@ class Ui_MainWindow(object):
 "    background:#F2AED0;\n"
 "    border-radius:4px;\n"
 "}")
-        self.card19Progress.setProperty("value", 30)
-        self.card19Progress.setTextVisible(False)
-        self.card19Progress.setObjectName("card19Progress")
-        self.card19More = QtWidgets.QLabel(parent=self.card19)
-        self.card19More.setGeometry(QtCore.QRect(24, 252, 80, 16))
-        self.card19More.setStyleSheet("QLabel{\n"
+        self.card6Progress.setProperty("value", 30)
+        self.card6Progress.setTextVisible(False)
+        self.card6Progress.setObjectName("card6Progress")
+        self.card6More = QtWidgets.QLabel(parent=self.card6)
+        self.card6More.setGeometry(QtCore.QRect(18, 236, 70, 16))
+        self.card6More.setStyleSheet("QLabel{\n"
 "    color:#9A5C8B;\n"
 "    font-size:8px;\n"
 "    font-weight:700;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card19More.setObjectName("card19More")
-        self.card20 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
-        self.card20.setGeometry(QtCore.QRect(33, 1168, 318, 271))
-        self.card20.setStyleSheet("QFrame{\n"
+        self.card6More.setObjectName("card6More")
+        self.card7 = QtWidgets.QFrame(parent=self.scrollAreaWidgetContents)
+        self.card7.setGeometry(QtCore.QRect(315, 1046, 295, 261))
+        self.card7.setStyleSheet("QFrame{\n"
 "    background:#FFF9FC;\n"
 "    border:1px solid #D0A8BD;\n"
 "    border-radius:20px;\n"
 "}")
-        self.card20.setObjectName("card20")
-        self.card20Image = QtWidgets.QLabel(parent=self.card20)
-        self.card20Image.setGeometry(QtCore.QRect(1, 1, 316, 136))
-        self.card20Image.setStyleSheet("QLabel{\n"
+        self.card7.setObjectName("card7")
+        self.card7Image = QtWidgets.QLabel(parent=self.card7)
+        self.card7Image.setGeometry(QtCore.QRect(1, 1, 293, 126))
+        self.card7Image.setStyleSheet("QLabel{\n"
+"    background:#DADADA;\n"
 "    border:none;\n"
 "    border-top-left-radius:19px;\n"
 "    border-top-right-radius:19px;\n"
-"    background:#E7E7E7;\n"
 "}")
-        self.card20Image.setPixmap(QtGui.QPixmap("GiaoDuc\\campaign20.png"))
-        self.card20Image.setScaledContents(True)
-        self.card20Image.setObjectName("card20Image")
-        self.card20Title = QtWidgets.QLabel(parent=self.card20)
-        self.card20Title.setGeometry(QtCore.QRect(12, 150, 290, 40))
-        self.card20Title.setStyleSheet("QLabel{\n"
+        self.card7Image.setPixmap(QtGui.QPixmap("Giaoduc\\campaign20"))
+        self.card7Image.setScaledContents(True)
+        self.card7Image.setObjectName("card7Image")
+        self.card7Title = QtWidgets.QLabel(parent=self.card7)
+        self.card7Title.setGeometry(QtCore.QRect(7, 136, 279, 42))
+        self.card7Title.setStyleSheet("QLabel{\n"
 "    color:#78496F;\n"
 "    font-size:11px;\n"
 "    font-weight:800;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card20Title.setWordWrap(True)
-        self.card20Title.setObjectName("card20Title")
-        self.card20Date = QtWidgets.QLabel(parent=self.card20)
-        self.card20Date.setGeometry(QtCore.QRect(12, 188, 145, 16))
-        self.card20Date.setStyleSheet("QLabel{\n"
+        self.card7Title.setWordWrap(True)
+        self.card7Title.setObjectName("card7Title")
+        self.card7Date = QtWidgets.QLabel(parent=self.card7)
+        self.card7Date.setGeometry(QtCore.QRect(11, 173, 170, 16))
+        self.card7Date.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card20Date.setObjectName("card20Date")
-        self.card20Owner = QtWidgets.QLabel(parent=self.card20)
-        self.card20Owner.setGeometry(QtCore.QRect(12, 204, 160, 16))
-        self.card20Owner.setStyleSheet("QLabel{\n"
+        self.card7Date.setObjectName("card7Date")
+        self.card7Owner = QtWidgets.QLabel(parent=self.card7)
+        self.card7Owner.setGeometry(QtCore.QRect(11, 188, 180, 16))
+        self.card7Owner.setStyleSheet("QLabel{\n"
 "    color:#222;\n"
 "    font-size:8px;\n"
-"    font-weight:500;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card20Owner.setObjectName("card20Owner")
-        self.card20Money = QtWidgets.QLabel(parent=self.card20)
-        self.card20Money.setGeometry(QtCore.QRect(14, 224, 220, 20))
-        self.card20Money.setStyleSheet("QLabel{\n"
+        self.card7Owner.setObjectName("card7Owner")
+        self.card7Money = QtWidgets.QLabel(parent=self.card7)
+        self.card7Money.setGeometry(QtCore.QRect(12, 210, 220, 20))
+        self.card7Money.setStyleSheet("QLabel{\n"
 "    color:#7C4A73;\n"
 "    font-size:10px;\n"
 "    font-weight:900;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card20Money.setObjectName("card20Money")
-        self.card20Progress = QtWidgets.QProgressBar(parent=self.card20)
-        self.card20Progress.setGeometry(QtCore.QRect(16, 246, 260, 8))
-        self.card20Progress.setStyleSheet("QProgressBar{\n"
+        self.card7Money.setObjectName("card7Money")
+        self.card7Progress = QtWidgets.QProgressBar(parent=self.card7)
+        self.card7Progress.setGeometry(QtCore.QRect(14, 228, 242, 8))
+        self.card7Progress.setStyleSheet("QProgressBar{\n"
 "    background:#F6DCE8;\n"
 "    border:none;\n"
 "    border-radius:4px;\n"
@@ -803,19 +862,19 @@ class Ui_MainWindow(object):
 "    background:#F2AED0;\n"
 "    border-radius:4px;\n"
 "}")
-        self.card20Progress.setProperty("value", 30)
-        self.card20Progress.setTextVisible(False)
-        self.card20Progress.setObjectName("card20Progress")
-        self.card20More = QtWidgets.QLabel(parent=self.card20)
-        self.card20More.setGeometry(QtCore.QRect(24, 252, 80, 16))
-        self.card20More.setStyleSheet("QLabel{\n"
+        self.card7Progress.setProperty("value", 30)
+        self.card7Progress.setTextVisible(False)
+        self.card7Progress.setObjectName("card7Progress")
+        self.card7More = QtWidgets.QLabel(parent=self.card7)
+        self.card7More.setGeometry(QtCore.QRect(18, 236, 70, 16))
+        self.card7More.setStyleSheet("QLabel{\n"
 "    color:#9A5C8B;\n"
 "    font-size:8px;\n"
 "    font-weight:700;\n"
 "    background:transparent;\n"
 "    border:none;\n"
 "}")
-        self.card20More.setObjectName("card20More")
+        self.card7More.setObjectName("card7More")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -824,54 +883,56 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Giáo dục & Khởi nghiệp"))
-        self.logoIcon.setText(_translate("MainWindow", "🕊"))
-        self.logoTitle.setText(_translate("MainWindow", "Donarity"))
-        self.logoSub.setText(_translate("MainWindow", "by group 10"))
-        self.navHome.setText(_translate("MainWindow", "⌂ Trang chủ"))
-        self.navStats.setText(_translate("MainWindow", "⌛ Thống kê"))
-        self.navChatbot.setText(_translate("MainWindow", "◕Chatbot"))
-        self.notifIcon.setText(_translate("MainWindow", "🔔"))
-        self.notifBadge.setText(_translate("MainWindow", "0"))
-        self.settingsIcon.setText(_translate("MainWindow", "⚙"))
-        self.userIcon.setText(_translate("MainWindow", "◉"))
-        self.backLabel.setText(_translate("MainWindow", "← Quay lại"))
-        self.titleIcon.setText(_translate("MainWindow", "📚"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Chiến dịch của tôi"))
+        self.logoImage.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; color:#9c4f74;\">🕊</span></p></body></html>"))
+        self.brandTitle.setText(_translate("MainWindow", "Donarity"))
+        self.brandSubtitle.setText(_translate("MainWindow", "by group 10"))
+        self.btnHome.setText(_translate("MainWindow", "🏛 Trang chủ"))
+        self.btnCreate.setText(_translate("MainWindow", "🎞 Thống kê"))
+        self.btnFollow.setText(_translate("MainWindow", "📠 Chatbot"))
+        self.btnPublic.setText(_translate("MainWindow", "👁 Công khai"))
+        self.btnNotify.setText(_translate("MainWindow", "🔔"))
+        self.notifyBadge.setText(_translate("MainWindow", " 0"))
+        self.btnSetting.setText(_translate("MainWindow", "⚙"))
+        self.btnProfile.setText(_translate("MainWindow", "👤"))
+        self.titleIcon.setText(_translate("MainWindow", "🎀"))
         self.mainTitle.setText(_translate("MainWindow", "Giáo dục & Khởi nghiệp"))
         self.searchEdit.setPlaceholderText(_translate("MainWindow", "Search for..."))
         self.searchIcon.setText(_translate("MainWindow", "⌕"))
         self.categoryCombo.setItemText(0, _translate("MainWindow", "All Categories"))
         self.searchButton.setText(_translate("MainWindow", "Search"))
-        self.card14Title.setText(_translate("MainWindow", "Saigon Children\'s Charity (Học bổng giáo dục)"))
-        self.card14Date.setText(_translate("MainWindow", "Date:      1992-05-20"))
-        self.card14Owner.setText(_translate("MainWindow", "Owner:   Damien Roberts"))
-        self.card14More.setText(_translate("MainWindow", "Xem thêm"))
-        self.card15Title.setText(_translate("MainWindow", "Quỹ Hy Vọng (Xây trường vùng cao)"))
-        self.card15Date.setText(_translate("MainWindow", "Date:      2022-01-05"))
-        self.card15Owner.setText(_translate("MainWindow", "Owner:   Nguyễn Xuân Tú"))
-        self.card15Money.setText(_translate("MainWindow", "1000000000/15000000000"))
-        self.card15More.setText(_translate("MainWindow", "Xem thêm"))
-        self.card16Title.setText(_translate("MainWindow", "Chương trình Máy tính cho em"))
-        self.card16Date.setText(_translate("MainWindow", "Date:      2021-09-01"))
-        self.card16Owner.setText(_translate("MainWindow", "Owner:   Nguyễn Anh Tuấn"))
-        self.card16Money.setText(_translate("MainWindow", "1000000000/15000000000"))
-        self.card16More.setText(_translate("MainWindow", "Xem thêm"))
-        self.card17Title.setText(_translate("MainWindow", "Quỹ Học bổng Thắp sáng Niềm tin"))
-        self.card17Date.setText(_translate("MainWindow", "Date:      2019-06-15"))
-        self.card17Owner.setText(_translate("MainWindow", "Owner:   Nguyễn Thu Hà"))
-        self.card17More.setText(_translate("MainWindow", "Xem thêm"))
-        self.card18Title.setText(_translate("MainWindow", "Dự án Xây trường cho em (Vùng cao)"))
-        self.card18Date.setText(_translate("MainWindow", "Date:      2020-12-20"))
-        self.card18Owner.setText(_translate("MainWindow", "Owner:   Hoàng Hoa Trung"))
-        self.card18Money.setText(_translate("MainWindow", "1000000000/15000000000"))
-        self.card18More.setText(_translate("MainWindow", "Xem thêm"))
-        self.card19Title.setText(_translate("MainWindow", "Phổ cập Tin học cho trẻ em xa xôi"))
-        self.card19Date.setText(_translate("MainWindow", "Date:      2020-03-12"))
-        self.card19Owner.setText(_translate("MainWindow", "Owner:   Nguyễn Văn Hạnh"))
-        self.card19Money.setText(_translate("MainWindow", "1000000000/15000000000"))
-        self.card19More.setText(_translate("MainWindow", "Xem thêm"))
-        self.card20Title.setText(_translate("MainWindow", "Tủ sách cho em (Vùng cao phía Bắc)"))
-        self.card20Date.setText(_translate("MainWindow", "Date:      2023-05-20"))
-        self.card20Owner.setText(_translate("MainWindow", "Owner:   Nguyễn Xuân Tú"))
-        self.card20Money.setText(_translate("MainWindow", "1000000000/15000000000"))
-        self.card20More.setText(_translate("MainWindow", "Xem thêm"))
+        self.card1Title.setText(_translate("MainWindow", "Saigon Children\'s Charity (Học bổng giáo dục)"))
+        self.card1Date.setText(_translate("MainWindow", "Date:     1992-05-20"))
+        self.card1Owner.setText(_translate("MainWindow", "Owner: Damien Roberts"))
+        self.card1Money.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.card1More.setText(_translate("MainWindow", "Xem thêm"))
+        self.card2Title.setText(_translate("MainWindow", "Quỹ Hy Vọng (Xây trường vùng cao)"))
+        self.card2Date.setText(_translate("MainWindow", "Date:     2022-01-05"))
+        self.card2Owner.setText(_translate("MainWindow", "Owner: Nguyễn Xuân Tú"))
+        self.card2Money.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.card2More.setText(_translate("MainWindow", "Xem thêm"))
+        self.card3Title.setText(_translate("MainWindow", "Chương trình Máy tính cho em"))
+        self.card3Date.setText(_translate("MainWindow", "Date:     2021-09-01"))
+        self.card3Owner.setText(_translate("MainWindow", "Owner: Nguyễn Anh Tuấn"))
+        self.card3Money.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.card3More.setText(_translate("MainWindow", "Xem thêm"))
+        self.card4Title.setText(_translate("MainWindow", "Quỹ Học bổng Thắp sáng Niềm tin"))
+        self.card4Date.setText(_translate("MainWindow", "Date:     2019-06-15"))
+        self.card4Owner.setText(_translate("MainWindow", "Owner: Nguyễn Thu Hà"))
+        self.card4Money.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.card4More.setText(_translate("MainWindow", "Xem thêm"))
+        self.card5Title.setText(_translate("MainWindow", "Dự án Xây trường cho em (Vùng cao)"))
+        self.card5Date.setText(_translate("MainWindow", "Date:     2020-12-20"))
+        self.card5Owner.setText(_translate("MainWindow", "Owner: Hoàng Hoa Trung"))
+        self.card5Money.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.card5More.setText(_translate("MainWindow", "Xem thêm"))
+        self.card6Title.setText(_translate("MainWindow", "Phổ cập Tin học cho trẻ em xa xôi"))
+        self.card6Date.setText(_translate("MainWindow", "Date:     2020-03-12"))
+        self.card6Owner.setText(_translate("MainWindow", "Owner: Nguyễn Văn Hạnh"))
+        self.card6Money.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.card6More.setText(_translate("MainWindow", "Xem thêm"))
+        self.card7Title.setText(_translate("MainWindow", "Tủ sách cho em (Vùng cao phía Bắc)"))
+        self.card7Date.setText(_translate("MainWindow", "Date:     2023-05-20"))
+        self.card7Owner.setText(_translate("MainWindow", "Owner: Nguyễn Xuân Tú"))
+        self.card7Money.setText(_translate("MainWindow", "1000000000/15000000000"))
+        self.card7More.setText(_translate("MainWindow", "Xem thêm"))
