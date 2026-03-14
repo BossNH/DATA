@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\successful_campaign.ui'
+# Form implementation generated from reading ui file 'C:\Users\ADMIN\PycharmProjects\DoAnKTLT\done\successful_campaign.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -15,38 +15,94 @@ class Ui_MainWindow(object):
         MainWindow.resize(1200, 760)
         MainWindow.setMinimumSize(QtCore.QSize(1200, 760))
         MainWindow.setMaximumSize(QtCore.QSize(1200, 760))
-        MainWindow.setStyleSheet("QMainWindow, QWidget{\n"
-"background:#FFF3F9;\n"
-"font-family:\"Segoe UI\";\n"
+        MainWindow.setStyleSheet("QMainWindow, QWidget {\n"
+"    background: #FFF3F9;\n"
+"    font-family: \"Segoe UI\";\n"
 "}\n"
 "\n"
-"QFrame#topBar{\n"
-"background:#F4D8E3;\n"
-"border:none;\n"
+"QFrame#navFrame {\n"
+"    background: #F5DCE6;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
 "}\n"
 "\n"
-"QLabel#logoText{\n"
-"font-size:18px;\n"
-"font-weight:700;\n"
-"color:#7A4E6A;\n"
+"QLabel#logoImage {\n"
+"    background: transparent;\n"
+"    border: none;\n"
 "}\n"
 "\n"
-"QLabel#menu1, QLabel#menu2, QLabel#menu3, QLabel#menu4{\n"
-"font-size:14px;\n"
-"font-weight:600;\n"
-"color:#2F2A2E;\n"
-"padding:6px 10px;\n"
+"QLabel#brandTitle {\n"
+"    color: #9C4F74;\n"
+"    font-size: 18pt;\n"
+"    font-weight: 800;\n"
+"    background: transparent;\n"
 "}\n"
 "\n"
-"QLabel#menu2{\n"
-"background:#E8BFD0;\n"
-"border-radius:14px;\n"
-"padding:8px 14px;\n"
+"QLabel#brandSubtitle {\n"
+"    color: #9D8A93;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
 "}\n"
 "\n"
-"QLabel#bellIcon, QLabel#userIcon{\n"
-"font-size:20px;\n"
-"color:#2F2A2E;\n"
+"QPushButton#btnHome,\n"
+"QPushButton#btnCreate,\n"
+"QPushButton#btnFollow,\n"
+"QPushButton#btnPublic {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    padding: 10px 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 11pt;\n"
+"    font-weight: 600;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:hover,\n"
+"QPushButton#btnCreate:hover,\n"
+"QPushButton#btnFollow:hover,\n"
+"QPushButton#btnPublic:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QPushButton#btnHome:pressed,\n"
+"QPushButton#btnCreate:pressed,\n"
+"QPushButton#btnFollow:pressed,\n"
+"QPushButton#btnPublic:pressed {\n"
+"    background: #E2B5C7;\n"
+"}\n"
+"\n"
+"QPushButton#btnCreate {\n"
+"    background: #C98AA5;\n"
+"    color: white;\n"
+"    font-weight: 700;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify,\n"
+"QToolButton#btnSetting,\n"
+"QToolButton#btnProfile {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    border-radius: 18px;\n"
+"    color: #2C2328;\n"
+"    font-size: 16pt;\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"QToolButton#btnNotify:hover,\n"
+"QToolButton#btnSetting:hover,\n"
+"QToolButton#btnProfile:hover {\n"
+"    background: #EEC9D8;\n"
+"}\n"
+"\n"
+"QLabel#notifyBadge {\n"
+"    background: #E74C3C;\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    font-size: 8pt;\n"
+"    font-weight: 700;\n"
+"    padding: 0px;\n"
 "}\n"
 "\n"
 "QLabel#titleLabel{\n"
@@ -84,43 +140,108 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.mainLayout = QtWidgets.QVBoxLayout(self.centralwidget)
-        self.mainLayout.setContentsMargins(0, 0, 0, 0)
+        self.mainLayout.setContentsMargins(12, 10, 12, 0)
         self.mainLayout.setSpacing(14)
         self.mainLayout.setObjectName("mainLayout")
-        self.topBar = QtWidgets.QFrame(parent=self.centralwidget)
-        self.topBar.setMinimumSize(QtCore.QSize(0, 54))
-        self.topBar.setMaximumSize(QtCore.QSize(16777215, 54))
-        self.topBar.setObjectName("topBar")
-        self.topBarLayout = QtWidgets.QHBoxLayout(self.topBar)
-        self.topBarLayout.setContentsMargins(16, 0, 16, 0)
-        self.topBarLayout.setSpacing(18)
-        self.topBarLayout.setObjectName("topBarLayout")
-        self.logoText = QtWidgets.QLabel(parent=self.topBar)
-        self.logoText.setObjectName("logoText")
-        self.topBarLayout.addWidget(self.logoText)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.topBarLayout.addItem(spacerItem)
-        self.menu1 = QtWidgets.QLabel(parent=self.topBar)
-        self.menu1.setObjectName("menu1")
-        self.topBarLayout.addWidget(self.menu1)
-        self.menu2 = QtWidgets.QLabel(parent=self.topBar)
-        self.menu2.setObjectName("menu2")
-        self.topBarLayout.addWidget(self.menu2)
-        self.menu3 = QtWidgets.QLabel(parent=self.topBar)
-        self.menu3.setObjectName("menu3")
-        self.topBarLayout.addWidget(self.menu3)
-        self.menu4 = QtWidgets.QLabel(parent=self.topBar)
-        self.menu4.setObjectName("menu4")
-        self.topBarLayout.addWidget(self.menu4)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.topBarLayout.addItem(spacerItem1)
-        self.bellIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.bellIcon.setObjectName("bellIcon")
-        self.topBarLayout.addWidget(self.bellIcon)
-        self.userIcon = QtWidgets.QLabel(parent=self.topBar)
-        self.userIcon.setObjectName("userIcon")
-        self.topBarLayout.addWidget(self.userIcon)
-        self.mainLayout.addWidget(self.topBar)
+        self.navFrame = QtWidgets.QFrame(parent=self.centralwidget)
+        self.navFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
+        self.navFrame.setObjectName("navFrame")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.navFrame)
+        self.horizontalLayout.setContentsMargins(18, 10, 18, 10)
+        self.horizontalLayout.setSpacing(18)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.logoLayout = QtWidgets.QHBoxLayout()
+        self.logoLayout.setSpacing(8)
+        self.logoLayout.setObjectName("logoLayout")
+        self.logoImage = QtWidgets.QLabel(parent=self.navFrame)
+        self.logoImage.setMinimumSize(QtCore.QSize(54, 54))
+        self.logoImage.setMaximumSize(QtCore.QSize(54, 54))
+        self.logoImage.setScaledContents(False)
+        self.logoImage.setObjectName("logoImage")
+        self.logoLayout.addWidget(self.logoImage)
+        self.brandLayout = QtWidgets.QVBoxLayout()
+        self.brandLayout.setSpacing(0)
+        self.brandLayout.setObjectName("brandLayout")
+        self.brandTitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandTitle.setObjectName("brandTitle")
+        self.brandLayout.addWidget(self.brandTitle)
+        self.brandSubtitle = QtWidgets.QLabel(parent=self.navFrame)
+        self.brandSubtitle.setObjectName("brandSubtitle")
+        self.brandLayout.addWidget(self.brandSubtitle)
+        self.logoLayout.addLayout(self.brandLayout)
+        self.horizontalLayout.addLayout(self.logoLayout)
+        self.menuLayout = QtWidgets.QHBoxLayout()
+        self.menuLayout.setSpacing(10)
+        self.menuLayout.setObjectName("menuLayout")
+        self.btnHome = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnHome.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnHome.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnHome.setObjectName("btnHome")
+        self.menuLayout.addWidget(self.btnHome)
+        self.btnCreate = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnCreate.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnCreate.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnCreate.setObjectName("btnCreate")
+        self.menuLayout.addWidget(self.btnCreate)
+        self.btnFollow = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnFollow.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnFollow.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnFollow.setObjectName("btnFollow")
+        self.menuLayout.addWidget(self.btnFollow)
+        self.btnPublic = QtWidgets.QPushButton(parent=self.navFrame)
+        self.btnPublic.setMinimumSize(QtCore.QSize(0, 42))
+        self.btnPublic.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnPublic.setObjectName("btnPublic")
+        self.menuLayout.addWidget(self.btnPublic)
+        self.horizontalLayout.addLayout(self.menuLayout)
+        self.rightActionsWidget = QtWidgets.QWidget(parent=self.navFrame)
+        self.rightActionsWidget.setMinimumSize(QtCore.QSize(150, 50))
+        self.rightActionsWidget.setStyleSheet("background: transparent;\n"
+"border: none;\n"
+"")
+        self.rightActionsWidget.setObjectName("rightActionsWidget")
+        self.rightActionsLayout = QtWidgets.QHBoxLayout(self.rightActionsWidget)
+        self.rightActionsLayout.setContentsMargins(0, 0, 0, 0)
+        self.rightActionsLayout.setSpacing(8)
+        self.rightActionsLayout.setObjectName("rightActionsLayout")
+        self.notifyWrapper = QtWidgets.QWidget(parent=self.rightActionsWidget)
+        self.notifyWrapper.setMinimumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setMaximumSize(QtCore.QSize(36, 36))
+        self.notifyWrapper.setObjectName("notifyWrapper")
+        self.btnNotify = QtWidgets.QToolButton(parent=self.notifyWrapper)
+        self.btnNotify.setGeometry(QtCore.QRect(0, -7, 41, 41))
+        self.btnNotify.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnNotify.setObjectName("btnNotify")
+        self.notifyBadge = QtWidgets.QLabel(parent=self.notifyWrapper)
+        self.notifyBadge.setGeometry(QtCore.QRect(20, 0, 16, 16))
+        self.notifyBadge.setStyleSheet("QLabel {\n"
+"    background-color: #E95B4F;\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    min-width: 16px;\n"
+"    min-height: 16px;\n"
+"    max-width: 16px;\n"
+"    max-height: 16px;\n"
+"    padding: 0px;\n"
+"    font: 600 7pt \"Segoe UI\";\n"
+"}\n"
+"")
+        self.notifyBadge.setObjectName("notifyBadge")
+        self.rightActionsLayout.addWidget(self.notifyWrapper)
+        self.btnSetting = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnSetting.setMinimumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setMaximumSize(QtCore.QSize(36, 36))
+        self.btnSetting.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnSetting.setObjectName("btnSetting")
+        self.rightActionsLayout.addWidget(self.btnSetting)
+        self.btnProfile = QtWidgets.QToolButton(parent=self.rightActionsWidget)
+        self.btnProfile.setMinimumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setMaximumSize(QtCore.QSize(40, 40))
+        self.btnProfile.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btnProfile.setObjectName("btnProfile")
+        self.rightActionsLayout.addWidget(self.btnProfile)
+        self.horizontalLayout.addWidget(self.rightActionsWidget)
+        self.mainLayout.addWidget(self.navFrame)
         self.backLayout = QtWidgets.QHBoxLayout()
         self.backLayout.setContentsMargins(12, 0, 0, 0)
         self.backLayout.setObjectName("backLayout")
@@ -128,14 +249,14 @@ class Ui_MainWindow(object):
         self.backButton.setMinimumSize(QtCore.QSize(100, 28))
         self.backButton.setObjectName("backButton")
         self.backLayout.addWidget(self.backButton)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.backLayout.addItem(spacerItem2)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.backLayout.addItem(spacerItem)
         self.mainLayout.addLayout(self.backLayout)
         self.contentOuterLayout = QtWidgets.QHBoxLayout()
         self.contentOuterLayout.setContentsMargins(42, 10, 42, 32)
         self.contentOuterLayout.setObjectName("contentOuterLayout")
-        spacerItem3 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.contentOuterLayout.addItem(spacerItem3)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.contentOuterLayout.addItem(spacerItem1)
         self.contentFrame = QtWidgets.QFrame(parent=self.centralwidget)
         self.contentFrame.setMinimumSize(QtCore.QSize(1040, 580))
         self.contentFrame.setMaximumSize(QtCore.QSize(1040, 580))
@@ -144,13 +265,13 @@ class Ui_MainWindow(object):
         self.contentLayout.setContentsMargins(40, 34, 40, 24)
         self.contentLayout.setSpacing(18)
         self.contentLayout.setObjectName("contentLayout")
-        spacerItem4 = QtWidgets.QSpacerItem(20, 8, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.contentLayout.addItem(spacerItem4)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 8, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.contentLayout.addItem(spacerItem2)
         self.checkIcon = QtWidgets.QLabel(parent=self.contentFrame)
         self.checkIcon.setMinimumSize(QtCore.QSize(110, 110))
         self.checkIcon.setMaximumSize(QtCore.QSize(110, 110))
         self.checkIcon.setText("")
-        self.checkIcon.setPixmap(QtGui.QPixmap("check_success.png"))
+        self.checkIcon.setPixmap(QtGui.QPixmap("C:\\Users\\ADMIN\\PycharmProjects\\DoAnKTLT\\done\\check_success.png"))
         self.checkIcon.setScaledContents(True)
         self.checkIcon.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.checkIcon.setObjectName("checkIcon")
@@ -166,22 +287,22 @@ class Ui_MainWindow(object):
         self.descLabel.setWordWrap(True)
         self.descLabel.setObjectName("descLabel")
         self.contentLayout.addWidget(self.descLabel, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 6, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.contentLayout.addItem(spacerItem5)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 6, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.contentLayout.addItem(spacerItem3)
         self.coinImage = QtWidgets.QLabel(parent=self.contentFrame)
         self.coinImage.setMinimumSize(QtCore.QSize(250, 170))
         self.coinImage.setMaximumSize(QtCore.QSize(250, 170))
         self.coinImage.setText("")
-        self.coinImage.setPixmap(QtGui.QPixmap("donation_box.png"))
+        self.coinImage.setPixmap(QtGui.QPixmap("C:\\Users\\ADMIN\\PycharmProjects\\DoAnKTLT\\done\\donation_box.png"))
         self.coinImage.setScaledContents(True)
         self.coinImage.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.coinImage.setObjectName("coinImage")
         self.contentLayout.addWidget(self.coinImage, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignBottom)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.contentLayout.addItem(spacerItem6)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.contentLayout.addItem(spacerItem4)
         self.contentOuterLayout.addWidget(self.contentFrame)
-        spacerItem7 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.contentOuterLayout.addItem(spacerItem7)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.contentOuterLayout.addItem(spacerItem5)
         self.mainLayout.addLayout(self.contentOuterLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -194,13 +315,17 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Donarity - Tạo chiến dịch thành công"))
-        self.logoText.setText(_translate("MainWindow", "💗 Donarity"))
-        self.menu1.setText(_translate("MainWindow", "🏠 Trang chủ"))
-        self.menu2.setText(_translate("MainWindow", "➕ Tạo chiến dịch"))
-        self.menu3.setText(_translate("MainWindow", "📁 Theo dõi chiến dịch"))
-        self.menu4.setText(_translate("MainWindow", "🌐 Công khai"))
-        self.bellIcon.setText(_translate("MainWindow", "🔔"))
-        self.userIcon.setText(_translate("MainWindow", "👤"))
+        self.logoImage.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; color:#9c4f74;\">🕊</span></p></body></html>"))
+        self.brandTitle.setText(_translate("MainWindow", "Donarity"))
+        self.brandSubtitle.setText(_translate("MainWindow", "by group 10"))
+        self.btnHome.setText(_translate("MainWindow", "🏛 Trang chủ"))
+        self.btnCreate.setText(_translate("MainWindow", "+  Tạo chiến dịch"))
+        self.btnFollow.setText(_translate("MainWindow", "🎞  Theo dõi chiến dịch"))
+        self.btnPublic.setText(_translate("MainWindow", "👁 Công khai"))
+        self.btnNotify.setText(_translate("MainWindow", "🔔"))
+        self.notifyBadge.setText(_translate("MainWindow", " 0"))
+        self.btnSetting.setText(_translate("MainWindow", "⚙"))
+        self.btnProfile.setText(_translate("MainWindow", "👤"))
         self.backButton.setText(_translate("MainWindow", "← Quay lại"))
         self.titleLabel.setText(_translate("MainWindow", "Tạo chiến dịch thành công!"))
         self.descLabel.setText(_translate("MainWindow", "Chiến dịch của bạn đã được xác nhận thành công và sẵn sàng hoạt động.\n"
